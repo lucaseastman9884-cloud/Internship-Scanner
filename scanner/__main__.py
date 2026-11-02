@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 def _print_summary(meta: dict) -> None:
     print(f"{'Company':38} {'ATS':16} {'Status':18} {'Fetched':>7} {'Kept':>5} {'Excl':>5}")
     print("-" * 94)
-    order = {"ok": 0, "error": 1, "blocked_by_robots": 2, "skipped": 3, "manual": 4}
+    order = {"ok": 0, "error": 1, "manual_fallback": 2, "skipped": 3, "manual": 4}
     for row in sorted(meta["companies"], key=lambda r: (order.get(r["status"], 9), r["company"])):
         print(f"{row['company'][:38]:38} {row['ats']:16} {row['status']:18} {row['fetched']:>7} {row['kept']:>5} {row['excluded']:>5}")
     t = meta["totals"]
@@ -23,7 +23,11 @@ def _print_summary(meta: dict) -> None:
     print(f"Totals: fetched {t['fetched']}, kept {t['kept']}, excluded {t['excluded']}")
     print(f"Stored listings: {t['listings_before']} before, {t['listings_new']} new, "
           f"{t['listings_updated']} updated, {t['listings_after']} after")
+    print(f"Status changes: {t['status_changes']}")
+    print(f"Database: {t['database_total']} total, {t['database_open']} open, "
+          f"{t['open_at_or_above_min_score']} open at or above email.min_score")
     print(f"Source health: {meta['source_health']}")
+    print(f"Requests per host: {meta['requests_by_host']}")
     for problem in meta["errors"]:
         print(f"Problem: {problem['company']}: {problem['error']}")
 
@@ -43,7 +47,7 @@ def main(argv=None) -> int:
         return 2
     _print_summary(meta)
     # If adapters exist but every one of them failed, a scheduler should see a failed run.
-    attempted = [r for r in meta["companies"] if r["status"] in ("ok", "error", "blocked_by_robots")]
+    attempted = [r for r in meta["companies"] if r["status"] in ("ok", "error", "manual_fallback")]
     if attempted and not any(r["status"] == "ok" for r in attempted):
         print("Every source failed.", file=sys.stderr)
         return 1

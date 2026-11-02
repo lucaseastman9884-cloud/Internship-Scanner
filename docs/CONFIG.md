@@ -27,8 +27,8 @@ seasons:
   - { name: "Fall 2027",            weight: 0.8 }
   - { name: "Winter 2028",          weight: 0.8 }
   - { name: "Spring 2028",          weight: 0.8 }
-  - { name: "Spring 2027",          weight: 0.6 }
-  - { name: "Winter 2027",          weight: 0.6 }
+  - { name: "Spring 2027",          weight: 0.6, max_miles_from_home: 60 }   # D-016
+  - { name: "Winter 2027",          weight: 0.6, max_miles_from_home: 60 }   # D-016
 
 role_categories:
   investment_banking: ["investment banking", "summer analyst", "M&A", "capital markets"]
@@ -36,10 +36,15 @@ role_categories:
   banking:            ["commercial banking", "credit analyst", "retail banking", "treasury management", "banking intern"]
   investments:        ["investment analyst", "equity research", "asset management", "wealth management", "financial advisor intern", "private wealth"]
   accounting:         ["accounting intern", "audit intern", "tax intern", "assurance", "advisory intern"]
-  insurance_risk:     ["actuarial", "underwriting", "risk intern", "risk management", "claims analyst intern"]
+  insurance_risk:     ["actuarial", "underwriting", "risk intern", "risk management", "claims analyst intern",
+                       "claims adjuster", "claims", "underwriting intern"]
   early_career:       ["sophomore", "freshman", "insight", "discovery", "early career", "rotational intern", "leadership program"]
 
 must_be_one_of: ["intern", "internship", "summer analyst", "co-op", "insight", "discovery", "early career program"]
+
+# D-018: a title without one of those terms still counts if it has a season and year
+# (e.g. "Summer 2027") plus one of these words.
+program_title_terms: ["analyst", "program", "associate program", "scholar"]
 
 exclude_keywords: ["senior", "director", "vice president", "manager", "PhD", "MBA", "graduate degree",
                    "master's", "full-time analyst", "experienced", "CPA required"]
@@ -51,6 +56,33 @@ status:
   possibly_closed_after_missed_runs: 2
   closed_after_missed_runs: 5
 new_badge_days: 3
+
+scoring:                         # D-020: every point value lives here
+  role_in_title: 40
+  role_only_in_description: -10
+  no_role_signal: -15
+  target_area: 20
+  whole_state_or_home_radius: 10
+  location_unknown: 0
+  season_max: 25                 # multiplied by the season's weight
+  season_not_stated: 8
+  eligible: 10
+  eligibility_unclear: 0
+  ineligible: -50
+  early_career: 5
+  no_role_cap: 35                # D-021: no role-category match can never score above this
+  max_score: 100
+
+workday:                         # D-002
+  search_terms: ["intern", "internship", "summer analyst", "summer program"]
+  page_size: 20
+  max_results_per_term: 200      # stop here per company and search term
+
+geocoding:
+  # Off: Nominatim's robots.txt disallows /search for all crawlers (see D-022).
+  enabled: false
+  min_seconds_between_requests: 15   # the usage policy caps scheduled scripts at 4 per minute
+  max_lookups_per_run: 50
 
 email:
   min_score: 50

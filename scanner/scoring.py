@@ -1,76 +1,71 @@
-"""Rule-based relevance score, 0 to 100. Every point change adds a readable reason.
+"""Rule-based relevance score. Every point change adds a readable reason.
 
-Which keywords, places, and season weights count comes from config. The point values below are
-first-pass settings, to be calibrated in the QA spot check.
+Every number comes from the scoring block in config (D-020). None may be written in this file;
+tests/test_location_and_scoring.py checks that.
 """
 from __future__ import annotations
 
 from .normalize import description_role_keyword, role_match
 
-ROLE_IN_TITLE = 40
-ROLE_ONLY_IN_DESCRIPTION = -10
-NO_ROLE_SIGNAL = -15
-TARGET_AREA = 20
-WHOLE_STATE_OR_HOME_RADIUS = 10
-SEASON_MAX = 25
-SEASON_NOT_STATED = 8
-ELIGIBLE = 10
-INELIGIBLE = -50
-EARLY_CAREER = 5
 
-
-def _signed(points: int) -> str:
-    return f"{points:+d}"
+def _signed(points) -> str:
+    return f"{points:+g}"
 
 
 def score(listing: dict, place: dict, cfg: dict) -> tuple:
+    points = cfg["scoring"]
     total, reasons = 0, []
 
-    def add(points: int, why: str) -> None:
+    def add(value, why: str) -> None:
         nonlocal total
-        total += points
-        reasons.append(f"{_signed(points)} {why}")
+        total += value
+        reasons.append(f"{_signed(value)} {why}")
 
     role = role_match(listing["title"], cfg)
     if role["category"]:
-        add(ROLE_IN_TITLE, f"role: '{role['keyword']}' in title ({role['category']})")
+        add(points["role_in_title"], f"role: '{role['keyword']}' in title ({role['category']})")
     else:
         keyword = description_role_keyword(listing["_description"], cfg)
         if keyword:
-            add(ROLE_ONLY_IN_DESCRIPTION, f"role: '{keyword}' only in description, which may be company boilerplate")
+            add(points["role_only_in_description"], f"role: '{keyword}' only in description, which may be company boilerplate")
         else:
-            add(NO_ROLE_SIGNAL, "role: no target role keyword found")
+            add(points["no_role_signal"], "role: no target role keyword found")
 
     if place["tier"] == "target_area":
-        add(TARGET_AREA, f"location: {place['detail']}")
+        add(points["target_area"], f"location: {place['detail']}")
     elif place["tier"] == "whole_state":
-        add(WHOLE_STATE_OR_HOME_RADIUS, f"location: in {place['detail']}")
+        add(points["whole_state_or_home_radius"], f"location: in {place['detail']}")
     elif place["tier"] == "home_radius":
-        add(WHOLE_STATE_OR_HOME_RADIUS, f"location: {place['detail']}")
+        add(points["whole_state_or_home_radius"], f"location: {place['detail']}")
+    elif place["tier"] == "unknown":
+        add(points["location_unknown"], "location: unknown")
     else:
         add(0, "location: outside target locations")
 
     season = listing["season"]
     weights = {s["name"]: s["weight"] for s in cfg["seasons"]}
     if season in weights:
-        add(round(SEASON_MAX * weights[season]), f"season: {season} (weight {weights[season]})")
+        add(round(points["season_max"] * weights[season]), f"season: {season} (weight {weights[season]})")
     elif season:
         add(0, f"season: {season} is not in config")
     else:
-        add(SEASON_NOT_STATED, "season: not stated")
+        add(points["season_not_stated"], "season: not stated")
 
     status = listing["eligibility"]["status"]
     if status == "eligible":
-        add(ELIGIBLE, "eligibility: eligible")
+        add(points["eligible"], "eligibility: eligible")
     elif status == "ineligible":
-        add(INELIGIBLE, "eligibility: ineligible")
+        add(points["ineligible"], "eligibility: ineligible")
     else:
-        add(0, "eligibility: unclear")
+        add(points["eligibility_unclear"], "eligibility: unclear")
 
     if role["early_signals"]:
-        add(EARLY_CAREER, f"early-career signal: '{role['early_signals'][0]}'")
+        add(points["early_career"], f"early-career signal: '{role['early_signals'][0]}'")
 
-    final = max(0, min(100, total))
+    final = max(0, min(points["max_score"], total))
     if final != total:
         reasons.append(f"score limited to {final} (raw total {total})")
+    if not role["category"] and final > points["no_role_cap"]:
+        final = points["no_role_cap"]
+        reasons.append(f"score capped at {final}: no role category matched (raw total {total})")
     return final, reasons

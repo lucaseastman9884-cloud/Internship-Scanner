@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 
+from .normalize import title_season
 from .text import canon, has_phrase, sentences
 
 # These words describe a job's level. They are checked in titles only, because descriptions
@@ -15,7 +16,23 @@ _RISING_SENIOR = re.compile(r"\brising seniors?\b", re.I)
 
 
 def is_internship(title: str, cfg: dict) -> bool:
-    return any(has_phrase(title, keyword) for keyword in cfg["must_be_one_of"])
+    if any(has_phrase(title, keyword) for keyword in cfg["must_be_one_of"]):
+        return True
+    # D-018: "Analyst Program - Summer 2027" is an internship in all but name.
+    return bool(title_season(title)) and any(has_phrase(title, term) for term in cfg["program_title_terms"])
+
+
+def season_limit_problem(listing: dict, place: dict, cfg: dict):
+    """D-016: some seasons are realistic only close to home. Returns the reason, or None."""
+    limit = next((s.get("max_miles_from_home") for s in cfg["seasons"] if s["name"] == listing["season"]), None)
+    if limit is None:
+        return None
+    miles = place.get("miles_from_home")
+    if miles is None:
+        return f"{listing['season']} is kept only within {limit} miles of home, and this distance is unknown"
+    if miles > limit:
+        return f"{listing['season']} is kept only within {limit} miles of home; this is {miles:.0f}"
+    return None
 
 
 def title_exclude_keyword(title: str, cfg: dict):
@@ -60,4 +77,8 @@ def evaluate(listing: dict, place: dict, cfg: dict) -> list:
         reasons.append(("ineligible", listing["eligibility"]["reason"]))
     elif listing["season"] and listing["season"] not in {s["name"] for s in cfg["seasons"]}:
         reasons.append(("season", f"Season {listing['season']} is not in config"))
+    else:
+        problem = season_limit_problem(listing, place, cfg)
+        if problem:
+            reasons.append(("season_distance", problem))
     return reasons

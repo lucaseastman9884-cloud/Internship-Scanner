@@ -41,6 +41,25 @@ def write_json(path: Path, data) -> None:
         raise
 
 
+def load_listings(data_dir: Path) -> list:
+    """Join each listing with its last_seen date, which is stored apart (see save_listings)."""
+    records = read_json(data_dir / "internships.json", [])
+    last_seen = read_json(data_dir / "last_seen.json", {})
+    for record in records:
+        # setdefault also carries files written before P3, which kept last_seen inside the listing.
+        record["last_seen"] = last_seen.get(record["id"], record.get("last_seen"))
+        record.setdefault("filtered_reason", None)
+        record.setdefault("location_label", "Location unknown")
+    return records
+
+
+def save_listings(data_dir: Path, records: list) -> None:
+    """last_seen moves every day, so it has its own file. internships.json then changes only when a
+    listing really changes, which P4's "commit only when data changes" depends on (D-023)."""
+    write_json(data_dir / "internships.json", [{k: v for k, v in r.items() if k != "last_seen"} for r in records])
+    write_json(data_dir / "last_seen.json", {r["id"]: r["last_seen"] for r in records})
+
+
 def public_fields(listing: dict) -> dict:
     return {k: v for k, v in listing.items() if not k.startswith("_")}
 
@@ -49,7 +68,7 @@ def dedupe_key(listing: dict) -> tuple:
     return (listing["company_id"], normalized_title(listing["title"]), (listing["city"] or "").lower())
 
 
-def _source_key(source: dict) -> tuple:
+def source_key(source: dict) -> tuple:
     return (source["source_name"], str(source["source_job_id"]))
 
 
@@ -57,7 +76,7 @@ def _merge_sources(*groups) -> list:
     merged = {}
     for group in groups:
         for source in group:
-            merged.setdefault(_source_key(source), source)
+            merged.setdefault(source_key(source), source)
     return [merged[k] for k in sorted(merged)]
 
 
@@ -81,12 +100,12 @@ def upsert(existing: list, incoming: list, today: str) -> tuple:
     for record in records.values():
         by_key[dedupe_key(record)] = record["id"]
         for source in record["sources"]:
-            by_source[_source_key(source)] = record["id"]
+            by_source[source_key(source)] = record["id"]
 
     added = updated = 0
     for listing in dedupe(incoming):
         fresh = public_fields(listing)
-        match = next((by_source[_source_key(s)] for s in fresh["sources"] if _source_key(s) in by_source), None)
+        match = next((by_source[source_key(s)] for s in fresh["sources"] if source_key(s) in by_source), None)
         match = match or by_key.get(dedupe_key(fresh))
         if match:
             old = records[match]
@@ -100,24 +119,30 @@ def upsert(existing: list, incoming: list, today: str) -> tuple:
             added += 1
         by_key[dedupe_key(records[target])] = target
         for source in records[target]["sources"]:
-            by_source[_source_key(source)] = target
+            by_source[source_key(source)] = target
 
     return [records[i] for i in sorted(records)], added, updated
 
 
 def update_company_status(previous: dict, company: dict, checked_at: str, ok: bool, today: str,
-                          open_count: int = 0, latest_title=None, error=None) -> dict:
+                          open_count: int = 0, latest_title=None, error=None, status: str = "error",
+                          careers_url=None, complete: bool = True) -> dict:
     """One company's permanent record. A failed fetch keeps the last known counts."""
     entry = dict(previous or {})
-    entry.update(company_id=company["company_id"], company=company["name"], ats=company["ats"], last_checked=checked_at)
+    entry.update(company_id=company["company_id"], company=company["name"], ats=company["ats"], careers_url=careers_url)
+    entry.setdefault("last_checked", None)
+    if status != "manual":  # a manual company is a link; nothing was checked
+        entry["last_checked"] = checked_at
     entry.setdefault("last_intern_posting_seen", None)
     entry.setdefault("open_intern_count", 0)
     if ok:
         entry["open_intern_count"] = open_count
         if latest_title:
             entry["last_intern_posting_seen"] = {"title": latest_title, "seen_on": today}
-        entry["fetch_health"] = {"status": "ok", "consecutive_failures": 0, "last_error": None}
+        entry["fetch_health"] = {"status": "ok", "consecutive_failures": 0, "last_error": None, "complete": complete}
     else:
-        failures = (entry.get("fetch_health") or {}).get("consecutive_failures", 0) + 1
-        entry["fetch_health"] = {"status": "error", "consecutive_failures": failures, "last_error": error}
+        failures = (entry.get("fetch_health") or {}).get("consecutive_failures", 0)
+        if status != "manual":
+            failures += 1
+        entry["fetch_health"] = {"status": status, "consecutive_failures": failures, "last_error": error, "complete": False}
     return entry

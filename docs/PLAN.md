@@ -1,4 +1,4 @@
-# PLAN — Internship Scanner (written in Phase 1, updated in Phase 2, 2026-11-02)
+# PLAN — Internship Scanner (written in Phase 1, updated in Phase 3, 2026-11-02)
 Approved by Lucas. SPEC.md and DECISIONS.md remain the source of truth; if this plan disagrees with them, they win.
 
 "Tested" below means we ran it on 2026-11-02. "Documented" means an official page says so. They are reported separately on purpose (SPEC constraint 5).
@@ -9,7 +9,7 @@ Items marked *(later)* do not exist yet.
 ```
 config/config.yaml          Lucas's settings
 config/companies.yaml       Company registry
-config/cities.yaml          Local city table for distance checks until P3 geocoding
+config/cities.yaml          Local city table for distance checks; coordinates await D-022
 docs/                       SPEC, STATUS, CONFIG, DECISIONS, SOURCES, PLAN
 scanner/                    Python package; run with: python -m scanner run
   __main__.py                 Command line
@@ -17,12 +17,14 @@ scanner/                    Python package; run with: python -m scanner run
   config.py                   Loads and validates the YAML files
   http_client.py              Shared client: User-Agent, ≤1 request/second/host, robots.txt, one retry
   adapters/base.py            The common adapter interface
-  adapters/greenhouse.py, lever.py, ashby.py, smartrecruiters.py; workday.py, usajobs.py (later)
+  adapters/greenhouse.py, lever.py, ashby.py, workday.py; usajobs.py (later)
+  adapters/smartrecruiters.py Kept but not registered, so it makes no requests (D-015)
   normalize.py, location.py, eligibility.py, filtering.py, scoring.py, store.py, text.py
-  geocode.py                  (later, P3)
+  history.py                  Status transitions and recurring programs
+  geocode.py                  Nominatim with a cache; off until D-022
   email/                      (later, P5) HTML email and sending
 tests/fixtures/             Saved sample responses, so tests make no network calls
-data/                       internships.json, meta.json, companies_status.json; geocache.json (P3)
+data/                       internships.json, last_seen.json, meta.json, companies_status.json, geocache.json
                             excluded_last_run.json is a local debug report and is not committed
 .github/workflows/          (later, P4) Daily and manual runs
 web/                        (later, P7) Static site
@@ -93,9 +95,9 @@ Checked 2026-11-02. "Live test" is one small unauthenticated request. **Doc page
 |---|---|---|---|---|---|---|---|
 | Greenhouse | `GET boards-api.greenhouse.io/v1/boards/{board_token}/jobs` (`?content=true` for descriptions) | None for GET (documented) | Not stated | None on doc page. Overall terms UNVERIFIED | https://docs.greenhouse.io/job-board.html (old developers.greenhouse.io URL redirects here) | 200; 3 registry boards | USE |
 | Lever | `GET api.lever.co/v0/postings/{site}?mode=json` (`skip`, `limit`; EU host exists) | None stated for GET; published postings are "publicly viewable" | Not stated for GET. The only documented limit, 2 per second, is for application POSTs | None on doc page. Overall terms UNVERIFIED | https://github.com/lever/postings-api | 200 on `leverdemo`; no registry company uses it yet | USE |
-| Ashby | `GET api.ashbyhq.com/posting-api/job-board/{name}` (`includeCompensation=true` optional) | Not stated | Not stated | None on doc page. Overall terms UNVERIFIED | https://developers.ashbyhq.com/docs/public-job-posting-api | 200 on `ashby`; no registry company uses it yet | USE, low priority |
-| SmartRecruiters | `/postings` and `/postings/{postingId}` documented. **Full URL `api.smartrecruiters.com/v1/companies/{id}/postings` comes from our test, not the docs read: UNVERIFIED** | Docs: API key or OAuth supported; a special scope is needed only for internal postings. No-auth public access not stated, but worked in testing | UNVERIFIED: a Rate Limiting guide exists; contents not retrieved | None on doc page. Overall terms UNVERIFIED | https://developers.smartrecruiters.com/docs/posting-api ; https://developers.smartrecruiters.com/docs/endpoints | 200 with no credentials; 2 registry boards | **BLOCKED by robots.txt** pending D-015; adapter built and tested offline only |
-| Workday CXS | `POST {tenant}.wdN.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` with JSON `appliedFacets`, `limit`, `offset`, `searchText` | None in testing | **UNVERIFIED** (no public documentation; use D-002's ≤1 per second) | **See risk R1.** Workday site terms prohibit scraping and unconsented apps on its "Sites"; they do not say whether customer career sites are covered | **Endpoint: UNVERIFIED, no official doc.** Terms: https://www.workday.com/en-us/legal/site-terms.html | 200 and robots.txt allows the path on all 16 registry boards | USE politely under D-002, pending D-010 |
+| Ashby | `GET api.ashbyhq.com/posting-api/job-board/{name}` (`includeCompensation=true` optional) | Not stated | Not stated | None on doc page. Overall terms UNVERIFIED | https://developers.ashbyhq.com/docs/public-job-posting-api | 200 on `ashby`; Mariner runs live since P3 | USE |
+| SmartRecruiters | `/postings` and `/postings/{postingId}` documented. **Full URL `api.smartrecruiters.com/v1/companies/{id}/postings` comes from our test, not the docs read: UNVERIFIED** | Docs: API key or OAuth supported; a special scope is needed only for internal postings. No-auth public access not stated, but worked in testing | UNVERIFIED: a Rate Limiting guide exists; contents not retrieved | None on doc page. Overall terms UNVERIFIED | https://developers.smartrecruiters.com/docs/posting-api ; https://developers.smartrecruiters.com/docs/endpoints | 200 with no credentials; 2 registry boards | **Not used (D-015):** robots.txt disallows us; adapter kept, tested offline only |
+| Workday CXS | `POST {tenant}.wdN.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` with JSON `appliedFacets`, `limit`, `offset`, `searchText` | None in testing | **UNVERIFIED** (no public documentation; use D-002's ≤1 per second) | **See risk R1.** Workday site terms prohibit scraping and unconsented apps on its "Sites"; they do not say whether customer career sites are covered | **Endpoint: UNVERIFIED, no official doc.** Terms: https://www.workday.com/en-us/legal/site-terms.html | 200 and robots.txt allows the path on all 42 registry boards (full runs, P3) | USE politely under D-002 |
 | USAJOBS | `GET data.usajobs.gov/api/Search` (`HiringPath=student` or `graduates`) | Required headers: `Host`, `User-Agent` (**the email used to request the key**), `Authorization-Key`. Whether the key is free: UNVERIFIED on the pages read | 10,000 rows per query, 500 per page; OPM may add limits without notice | Public Data may be reused. Encourages naming USAJOBS as the source and disclosing no OPM endorsement; link to the official posting; do not circumvent limits or share credentials | https://developer.usajobs.gov/api-reference/get-api-search ; /guides/authentication ; /guides/rate-limiting ; /guides/terms-of-service (same host) | 401 without key, as expected. Search itself untested | LATER |
 | Oracle Cloud, iCIMS, Jobvite, Avature, Taleo, Paylocity, UKG | Varies | UNVERIFIED | UNVERIFIED | UNVERIFIED | UNVERIFIED: not researched | Not tested | LATER; `manual` for now (D-011) |
 | Community internship lists | Varies | None | N/A | Sample only: SimplifyJobs showed no license on its repo page and focuses on tech roles. Other lists UNVERIFIED | https://github.com/SimplifyJobs/Summer2026-Internships (redirected content describes Summer 2027) | Page read only | HOLD (D-013) |
@@ -105,11 +107,13 @@ Checked 2026-11-02. "Live test" is one small unauthenticated request. **Doc page
 **What "Not stated" means:** the page we read gave no limit. It does not mean unlimited. Every adapter stays at ≤1 request per second regardless.
 
 ## 6. Company registry result
-44 companies: the 19 seeds plus 25 additions. **21 have confirmed boards** (16 Workday, 3 Greenhouse, 2 SmartRecruiters) and 23 are `manual`. As of P2, only the 3 Greenhouse boards are fetched live: Workday arrives in P3, and SmartRecruiters is blocked by robots.txt (D-015).
+**As of P3:** 106 companies. 58 are fetched live (42 Workday, 15 Greenhouse, 1 Ashby) and 48 are `manual`. BGM Group was removed (D-019), and RR Donnelley and Northwestern Medicine became manual (D-015). The rest of this section describes the P1 result, which had 44 companies.
+
+P1 result: the 19 seeds plus 25 additions. **21 had confirmed boards** (16 Workday, 3 Greenhouse, 2 SmartRecruiters) and 23 were `manual`.
 
 - All ATS hints in STATUS.md that could be checked held up. Pella's Oracle hint could not be confirmed.
 - American Equity (Greenhouse) and William Blair (Greenhouse) offer the cleanest official feeds among target firms.
-- Cities are labeled "observed" or "expected" in each entry's notes. Several additions are **not yet confirmed to hire interns in a target city**, because their pages were blocked or only the first 20 results were sampled. P3's first full run will settle this for those with live boards.
+- Cities are labeled "observed" or "expected" in each entry's notes. Several additions are **not yet confirmed to hire interns in a target city**, because their pages were blocked or only the first 20 results were sampled. P3's full runs settled this for those with live boards: `data/companies_status.json` shows each company's open intern count.
 
 ## 7. Morning email method
 **Recommendation: Gmail SMTP with an app password (D-009).** Set up in P5, not now.
@@ -156,7 +160,7 @@ Sources:
 ## 9. Risks
 | # | Risk | Severity | Response |
 |---|---|---|---|
-| R1 | **Workday terms.** Updated 08/13/2026, they prohibit scraping and unconsented apps on "Sites," and "Workday APIs" without a separate agreement. "Sites" is defined around www.workday.com and associated pages and includes "the Workday APIs." They do not say whether customer career sites or the CXS endpoint are covered. This is a plain reading, not legal advice | High, because 16 of 21 live boards rely on it | D-002 stands until Lucas decides. D-010 asks him to reconfirm before P3. No Workday code before then. Fallback: manual links |
+| R1 | **Workday terms.** Updated 08/13/2026, they prohibit scraping and unconsented apps on "Sites," and "Workday APIs" without a separate agreement. "Sites" is defined around www.workday.com and associated pages and includes "the Workday APIs." They do not say whether customer career sites or the CXS endpoint are covered. This is a plain reading, not legal advice | High, because 42 of 58 live boards rely on it | D-002 stands. Lucas directed the Workday adapter in P3. Blocks and format changes fall back to manual links |
 | R2 | Workday's undocumented endpoint could change or block us | Medium | D-002 fallback; isolated adapter; `meta.json` logging |
 | R3 | False matches, e.g. "Internal Audit" or "International Tax Senior" passing `must_be_one_of` | Medium; seen live | D-012, plus fixtures from those real titles |
 | R4 | Off-season missed: "Spring 2027" and "Winter 2027" internships exist on live boards (Corient, UHY) | Resolved | Added with lower weights (D-014) |
@@ -169,6 +173,6 @@ Sources:
 | R11 | SPEC says Engine B "sends or drafts" email, while constraint 7 says outreach is drafts only | Low | Reading it as: the email goes only to Lucas, and outreach stays drafts. To confirm in P6 |
 | R12 | Registry goes stale as companies change ATS | Low | Failures show in `fetch_health`; discovery list per SPEC |
 | R13 | SmartRecruiters robots.txt blocks 2 companies | Medium | D-015; they appear as blocked with a "check manually" link |
-| R14 | `config/cities.yaml` is incomplete and its coordinates are approximate, written from memory. A listing in a missing city outside Iowa is excluded | Medium | Logged under `unresolved_locations` in `meta.json`; geocoding in P3 replaces this |
+| R14 | `config/cities.yaml` is incomplete and its coordinates are approximate, written from memory. A listing in a missing city outside Iowa is excluded | Medium | Logged under `unresolved_locations` in `meta.json`. A listing in a nearby state is now kept as "Location unknown." The real fix waits on D-022 |
 | R15 | Job descriptions could contain a person's name or contact details | Medium | Only a scrubbed snippet is stored: emails, phones, and profile links are removed, and sentences inviting contact are dropped. A bare name in other text would not be caught, so the QA PII scan matters |
-| R16 | P3's closing logic must tell "gone from the board" apart from "filtered out after a config change" and from a failed fetch | Medium | Handle explicitly when building status transitions in P3 |
+| R16 | P3's closing logic must tell "gone from the board" apart from "filtered out after a config change" and from a failed fetch | Medium | Handled in `scanner/history.py` and tested. A real outage on 2026-11-02 left internships.json byte-identical |

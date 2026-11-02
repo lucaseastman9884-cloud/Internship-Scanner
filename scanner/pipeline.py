@@ -5,10 +5,11 @@ import datetime as dt
 from collections import Counter
 from pathlib import Path
 
-from . import eligibility, filtering, normalize, scoring, store
+from . import eligibility, filtering, history, normalize, scoring, store
 from .adapters import ADAPTERS
 from .config import load_cities, load_companies, load_config
-from .http_client import HttpClient, RobotsBlocked
+from .geocode import Geocoder
+from .http_client import FormatChanged, HttpClient, HttpError, RobotsBlocked, RobotsUnreadable
 from .location import LocationResolver
 from .text import scrub_contact_data
 
@@ -17,7 +18,8 @@ MAX_UNRESOLVED_LOGGED = 50
 
 def _evaluate(listing, cfg, resolver):
     """Run a listing through normalization, eligibility, filtering, and scoring, in place."""
-    place = normalize.enrich(listing, cfg, resolver)
+    # Only possible internships may use the geocoder; other jobs are dropped whatever their city.
+    place = normalize.enrich(listing, cfg, resolver, allow_lookup=filtering.is_internship(listing["title"], cfg))
     listing["eligibility"] = eligibility.evaluate(listing["title"], listing["_description"], listing["season"], cfg)
     exclusions = filtering.evaluate(listing, place, cfg)
     listing["relevance_score"], listing["match_reasons"] = scoring.score(listing, place, cfg)
@@ -26,7 +28,7 @@ def _evaluate(listing, cfg, resolver):
 
 def _wants_detail(cfg, resolver):
     def check(listing):
-        if not filtering.is_internship(listing["title"], cfg):
+        if not filtering.is_internship(listing["title"], cfg) or filtering.title_exclude_keyword(listing["title"], cfg):
             return False
         place = resolver.resolve(listing["location_raw"], listing["is_remote"])
         if place["is_remote"]:
@@ -40,9 +42,24 @@ def _fallback(company):
     board = str(company["board"] or "")
     if board.startswith("https://"):
         return board
-    if company["ats"] == "smartrecruiters" and board:
-        return f"https://careers.smartrecruiters.com/{board}"
-    return None
+    if not board:
+        return None
+    return {
+        "smartrecruiters": f"https://careers.smartrecruiters.com/{board}",
+        "greenhouse": f"https://job-boards.greenhouse.io/{board}",
+        "lever": f"https://jobs.lever.co/{board}",
+        "ashby": f"https://jobs.ashbyhq.com/{board}",
+    }.get(company["ats"])
+
+
+def _needs_manual_fallback(err) -> bool:
+    """Blocked or changed: retrying tomorrow would not help, so a person should look (D-002).
+    Server errors and timeouts are ordinary failures and stay "error"."""
+    if isinstance(err, RobotsUnreadable):
+        return False
+    if isinstance(err, (RobotsBlocked, FormatChanged)):
+        return True
+    return isinstance(err, HttpError) and err.status is not None and 400 <= err.status < 500
 
 
 def _base_row(company):
@@ -52,6 +69,7 @@ def _base_row(company):
 
 
 def _process_company(company, adapter, cfg, resolver, unresolved):
+    # The adapter sets "complete" during fetch, so this must run before the caller reads it.
     listings = adapter.fetch(company, _wants_detail(cfg, resolver))
     kept, excluded = [], []
     open_interns, latest = 0, None
@@ -82,40 +100,48 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
     cities = load_cities(config_dir / "cities.yaml")
     cfg = load_config(config_dir / "config.yaml", cities)
     companies = load_companies(config_dir / "companies.yaml")
-    resolver = LocationResolver(cfg, cities)
     client = client or HttpClient()
+    geocache_path = data_dir / "geocache.json"
+    geocache = store.read_json(geocache_path, {})
+    geocoder = Geocoder(client, geocache, cfg["geocoding"])
+    resolver = LocationResolver(cfg, cities, geocoder)
     adapters = ADAPTERS if adapters is None else adapters
 
     # Read history first, so damaged files stop the run before any network traffic.
-    listings_path = data_dir / "internships.json"
     status_path = data_dir / "companies_status.json"
-    existing = store.read_json(listings_path, [])
+    existing = store.load_listings(data_dir)
     statuses = store.read_json(status_path, {})
 
     rows, all_kept, excluded_report = [], [], []
+    results = {}  # only companies fetched successfully; history must not touch the others
     unresolved = Counter()
     for company in companies:
         row = _base_row(company)
         ats = company["ats"]
         if ats == "manual":
             row.update(status="manual", fallback_link=_fallback(company))
+            statuses[company["company_id"]] = store.update_company_status(
+                statuses.get(company["company_id"]), company, started, False, today, status="manual", careers_url=_fallback(company))
         elif ats not in adapters:
-            row.update(status="skipped", error="adapter not built yet (Workday arrives in P3)", fallback_link=_fallback(company))
+            row.update(status="skipped", error=f"no {ats} adapter is active", fallback_link=_fallback(company))
         else:
-            adapter = adapters[ats](client)
+            adapter = adapters[ats](client, cfg)
             cid = company["company_id"]
             try:
                 listings, kept, excluded, open_interns, latest = _process_company(company, adapter, cfg, resolver, unresolved)
             except Exception as err:  # deliberately broad: any failure stays inside this company
-                blocked = isinstance(err, RobotsBlocked)
+                status = "manual_fallback" if _needs_manual_fallback(err) else "error"
                 message = scrub_contact_data(f"{type(err).__name__}: {err}")
-                row.update(status="blocked_by_robots" if blocked else "error", error=message, fallback_link=_fallback(company))
-                statuses[cid] = store.update_company_status(statuses.get(cid), company, started, False, today, error=message)
+                row.update(status=status, error=message, fallback_link=_fallback(company))
+                statuses[cid] = store.update_company_status(statuses.get(cid), company, started, False, today, error=message,
+                                                            status=status, careers_url=_fallback(company))
             else:
                 reasons = Counter(code for _, ex in excluded for code, _text in ex[:1])
                 row.update(status="ok", fetched=len(listings), kept=len(kept), excluded=len(excluded),
                            exclusion_reasons=dict(sorted(reasons.items())), warnings=adapter.warnings)
                 all_kept.extend(kept)
+                results[cid] = {"kept": kept, "complete": adapter.complete,
+                                "excluded": [(listing, "; ".join(text for _, text in ex)) for listing, ex in excluded]}
                 for listing, ex in excluded:
                     excluded_report.append({
                         "company": listing["company"], "title": listing["title"], "location_raw": listing["location_raw"],
@@ -124,10 +150,14 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
                         "excluded_because": [text for _, text in ex], "primary_reason": ex[0][0],
                     })
                 statuses[cid] = store.update_company_status(statuses.get(cid), company, started, True, today,
-                                                            open_count=open_interns, latest_title=latest)
+                                                            open_count=open_interns, latest_title=latest,
+                                                            careers_url=_fallback(company), complete=adapter.complete)
         rows.append(row)
 
     merged, added, updated = store.upsert(existing, all_kept, today)
+    changes = history.update_statuses(merged, results, today, cfg)
+    history.update_recurring(merged)
+    is_open = [r for r in merged if r["status"] == "open"]
     health = {}
     for row in rows:
         counts = health.setdefault(row["ats"], {})
@@ -147,15 +177,25 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
             "listings_new": added,
             "listings_updated": updated,
             "listings_after": len(merged),
+            "status_changes": changes,
+            "database_total": len(merged),
+            "database_open": len(is_open),
+            "open_at_or_above_min_score": sum(r["relevance_score"] >= cfg["email"]["min_score"] for r in is_open),
         },
         "source_health": dict(sorted(health.items())),
         "companies": rows,
         "errors": [{"company": r["company"], "ats": r["ats"], "status": r["status"], "error": r["error"]}
-                   for r in rows if r["status"] in ("error", "blocked_by_robots")],
+                   for r in rows if r["status"] in ("error", "manual_fallback")],
+        # What the email's "check manually" section will list (D-002, D-011).
+        "check_manually": [{"company": r["company"], "url": r["fallback_link"], "reason": r["status"], "detail": r["error"]}
+                           for r in rows if r["status"] in ("manual", "manual_fallback", "skipped", "error")],
+        "requests_by_host": dict(sorted(getattr(client, "request_counts", {}).items())),
+        "geocoding": {"enabled": geocoder.enabled, **geocoder.stats},
         "unresolved_locations": dict(unresolved.most_common(MAX_UNRESOLVED_LOGGED)),
     }
 
-    store.write_json(listings_path, merged)
+    store.save_listings(data_dir, merged)
+    store.write_json(geocache_path, geocache)
     store.write_json(status_path, dict(sorted(statuses.items())))
     store.write_json(data_dir / "meta.json", meta)
     store.write_json(data_dir / "excluded_last_run.json",

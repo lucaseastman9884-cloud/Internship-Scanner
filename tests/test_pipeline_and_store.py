@@ -42,7 +42,7 @@ def client():
         "boards/good/": load_fixture("greenhouse_board.json"),
         "boards/broken/": RuntimeError("board exploded"),
         "postings/leverco": load_fixture("lever_postings.json"),
-        "smartrecruiters.com": RobotsBlocked("robots.txt does not allow this request"),
+        "w.wd1.myworkdayjobs.com": {"total": 0, "jobPostings": []},
     })
 
 
@@ -89,16 +89,19 @@ def test_an_adapter_of_any_type_raising_is_isolated(workspace):
 
 
 def test_robots_block_is_reported_with_a_manual_link(workspace):
-    row = by_company(run_pipeline(workspace))["RR Donnelley"]
-    assert row["status"] == "blocked_by_robots"
-    assert row["fallback_link"] == "https://careers.smartrecruiters.com/RRDonnelley"
+    fake = client()
+    fake.routes["boards/good/"] = RobotsBlocked("robots.txt does not allow this request")
+    row = by_company(run(workspace / "config", workspace / "data", client=fake, now=NOW))["American Equity"]
+    assert row["status"] == "manual_fallback"
+    assert row["fallback_link"] == "https://job-boards.greenhouse.io/good"
 
 
-def test_workday_is_skipped_and_makes_no_request(workspace):
+def test_smartrecruiters_makes_no_request_d015(workspace):
     fake = client()
     meta = run(workspace / "config", workspace / "data", client=fake, now=NOW)
-    assert by_company(meta)["Workday Co"]["status"] == "skipped"
-    assert not any("myworkdayjobs" in url for url in fake.requested)
+    row = by_company(meta)["RR Donnelley"]
+    assert row["status"] == "skipped" and row["fallback_link"] == "https://careers.smartrecruiters.com/RRDonnelley"
+    assert not any("smartrecruiters" in url for url in fake.requested)
 
 
 def test_manual_company_makes_no_request_and_keeps_its_link(workspace):
@@ -114,7 +117,6 @@ def test_manual_company_makes_no_request_and_keeps_its_link(workspace):
 def healthy_client():
     fake = client()
     fake.routes["boards/broken/"] = {"jobs": []}
-    fake.routes["smartrecruiters.com"] = {"totalFound": 0, "content": []}
     return fake
 
 
@@ -165,9 +167,19 @@ def test_input_order_does_not_change_the_output(workspace):
 def test_later_run_keeps_first_seen_and_updates_last_seen(workspace):
     run_pipeline(workspace, NOW)
     run_pipeline(workspace, LATER)
+    last_seen = data(workspace, "last_seen.json")
     for listing in data(workspace, "internships.json"):
         assert listing["first_seen"] == "2026-11-02"
-        assert listing["last_seen"] == "2026-11-03"
+        assert last_seen[listing["id"]] == "2026-11-03"
+
+
+def test_a_new_day_with_no_changes_leaves_internships_json_untouched(workspace):
+    """P4 commits only when data changes, so the daily last_seen must live elsewhere."""
+    run_pipeline(workspace, NOW)
+    first = (workspace / "data" / "internships.json").read_bytes()
+    run_pipeline(workspace, LATER)
+    assert (workspace / "data" / "internships.json").read_bytes() == first
+    assert b"last_seen" not in first and b"run_started" not in first
 
 
 def test_listing_missing_later_is_never_deleted(workspace):
@@ -179,7 +191,8 @@ def test_listing_missing_later_is_never_deleted(workspace):
     after = data(workspace, "internships.json")
     assert {x["id"] for x in after} == before
     gone = next(x for x in after if x["title"] == "Accounting Intern")
-    assert gone["last_seen"] == "2026-11-02" and gone["status"] == "open"  # transitions come in P3
+    assert data(workspace, "last_seen.json")[gone["id"]] == "2026-11-02"
+    assert gone["status"] == "open" and gone["missed_runs"] == 1  # one miss is below N
 
 
 # --- Dedupe ---
@@ -242,7 +255,8 @@ def test_stored_listings_have_every_spec_field_and_no_working_fields(workspace):
         assert not [k for k in listing if k.startswith("_")]
         assert listing["relevance_score"] >= 0 and listing["match_reasons"]
         assert listing["eligibility"]["reason"]
-        assert listing["lat"] is None and listing["lng"] is None
+        assert isinstance(listing["lat"], float) and isinstance(listing["lng"], float)  # from the city table
+        assert listing["location_label"] != "Location unknown"
 
 
 def test_meta_has_counts_and_times(workspace):

@@ -44,12 +44,22 @@ class FakeClient:
     def __init__(self, routes):
         self.routes = routes
         self.requested = []
+        self.posted = []
 
-    def get_json(self, url):
+    def _reply(self, url, payload=None):
         self.requested.append(url)
         for fragment, response in self.routes.items():
             if fragment in url:
+                if callable(response):
+                    response = response(url, payload)
                 if isinstance(response, Exception):
                     raise response
                 return response
         raise AssertionError(f"no fixture for {url}")
+
+    def get_json(self, url):
+        return self._reply(url)
+
+    def post_json(self, url, payload):
+        self.posted.append(payload)
+        return self._reply(url, payload)

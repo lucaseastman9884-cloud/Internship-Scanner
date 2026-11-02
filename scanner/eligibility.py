@@ -11,6 +11,8 @@ from .text import canon, scrub_contact_data, sentences
 _GRAD_TALK = re.compile(r"\bgraduat|\bclass of\b", re.I)
 _RESTRICTIVE = re.compile(r"\b(only|must|required|requires?|between|no later than|exclusively|limited to|eligible)\b", re.I)
 _YEAR = re.compile(r"\b(20\d\d)\b")
+# "Graduating December 2027 or later" has no upper limit, so it cannot rule out a later graduate.
+_OPEN_ENDED = re.compile(r"\b20\d\d\s*(?:or|and|&)\s*(?:later|after|beyond|onwards?)\b|\b20\d\d\s+onwards?\b", re.I)
 _SEASON_START_MONTH = {"Spring": 1, "Winter": 1, "Summer": 6, "Fall": 9}
 
 
@@ -26,7 +28,7 @@ def _graduation_restriction(text: str, grad_year: int, restricted: set) -> tuple
             continue
         years = {int(y) for y in _YEAR.findall(sentence)}
         # A list or range reaching his year or later does not rule him out.
-        if not (years & restricted) or max(years) >= grad_year:
+        if not (years & restricted) or max(years) >= grad_year or _OPEN_ENDED.search(sentence):
             continue
         if _RESTRICTIVE.search(sentence):
             return "explicit", sentence

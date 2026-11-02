@@ -40,9 +40,13 @@ def _search_season(text: str, patterns: list) -> Optional[str]:
     return _format_season(season, year)
 
 
+def title_season(title: str) -> Optional[str]:
+    return _search_season(title, _IN_TITLE)
+
+
 def detect_season(title: str, description: str, cfg: dict) -> tuple:
     """Return (season, where it was found). The title is trusted over the description."""
-    season = _search_season(title, _IN_TITLE)
+    season = title_season(title)
     if season:
         return season, "title"
     if role_match(title, cfg)["early_signals"]:
@@ -133,7 +137,7 @@ def new_listing(company: dict, source_name: str, source_job_id, title: str, loca
         "ats": source_name,
         "location_raw": re.sub(r"\s+", " ", location_raw or "").strip(),
         "city": None, "state": None, "country": None,
-        "lat": None, "lng": None,  # filled by geocoding in P3
+        "lat": None, "lng": None, "location_label": "Location unknown",
         "is_remote": bool(is_remote),
         "sources": [{"source_name": source_name, "url": apply_url, "source_job_id": job_id}],
         "apply_url": apply_url,
@@ -145,17 +149,26 @@ def new_listing(company: dict, source_name: str, source_job_id, title: str, loca
         "eligibility": {"status": "unclear", "reason": "not evaluated"},
         "relevance_score": 0, "match_reasons": [],
         "description_snippet": make_snippet(description),
-        "recurring": False, "last_known_open": None,  # filled in P3
-        "missed_runs": 0,  # counted in P3
+        "recurring": False, "last_known_open": None,
+        "missed_runs": 0, "filtered_reason": None,
         # Working field for this run only. It never reaches the data files (see store.py).
         "_description": description or "",
     }
 
 
-def enrich(listing: dict, cfg: dict, resolver) -> dict:
+def _location_label(place: dict) -> str:
+    if place["is_remote"]:
+        return "Remote"
+    if place.get("lat") is None:
+        return "Location unknown"  # never a map marker (SPEC QA checklist)
+    return ", ".join(x for x in (place["city"], place["state"]) if x)
+
+
+def enrich(listing: dict, cfg: dict, resolver, allow_lookup: bool = True) -> dict:
     """Add the fields that depend on config. Returns the location details for filtering and scoring."""
-    place = resolver.resolve(listing["location_raw"], listing["is_remote"])
-    listing.update(city=place["city"], state=place["state"], country=place["country"], is_remote=place["is_remote"])
+    place = resolver.resolve(listing["location_raw"], listing["is_remote"], allow_lookup)
+    listing.update(city=place["city"], state=place["state"], country=place["country"], is_remote=place["is_remote"],
+                   lat=place.get("lat"), lng=place.get("lng"), location_label=_location_label(place))
     listing["title"] = scrub_contact_data(listing["title"])
     season, _where = detect_season(listing["title"], listing["_description"], cfg)
     listing["season"] = season
