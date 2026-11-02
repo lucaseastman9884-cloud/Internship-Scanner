@@ -64,6 +64,8 @@ def test_credential_mentions_that_allow_undergrads_do_not_exclude(cfg):
     ("Fall 2029 Intern", "", "ineligible"),
     ("Summer Analyst", "Candidates graduating 2027 or 2028 only.", "ineligible"),
     ("Summer 2028 Analyst", "Must be graduating in 2028.", "ineligible"),
+    ("Summer 2027 Analyst", "Must be a current, matriculated student in an accredited program graduating December 2027 or later.", "eligible"),  # real
+    ("Summer 2027 Analyst", "Must graduate by August 2028.", "ineligible"),  # real
     ("Accounting Intern", "", "unclear"),
     ("Summer Analyst", "Students graduating in 2028 have enjoyed this program.", "unclear"),
     ("Summer 2028 Analyst", "Open to students graduating 2028 or 2029 only.", "eligible"),
