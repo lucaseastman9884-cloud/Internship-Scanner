@@ -1,0 +1,321 @@
+# Company registry. Checked 2026-11-02 by reading each company's own careers page.
+#
+# ats: greenhouse | lever | ashby | smartrecruiters | workday | manual
+#   manual = no adapter is planned for this company yet, so it becomes a "check manually" link.
+#            notes say why (unconfirmed ATS, blocked page, or an ATS with no adapter).
+# board: Greenhouse/SmartRecruiters slug, Workday career-site URL, or careers URL for manual.
+# cities: target-area cities. notes say whether each was "observed" in a live posting
+#         or is only "expected" from the company's known presence (not confirmed).
+# priority: 1 = finance-relevant intern roles seen in a target city, 2 = likely fit, 3 = weak or distant fit.
+#           Priorities are a first proposal; change them freely.
+
+companies:
+  # --- Seed list (docs/STATUS.md) ---
+  - name: "Bankers Trust"
+    ats: manual
+    board: "https://www.bankerstrust.com/careers"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "ATS unconfirmed: careers page returned 403 to our identified request and we do not work around blocks. City expected."
+
+  - name: "Wintrust Financial"
+    ats: workday
+    board: "https://wintrust.wd1.myworkdayjobs.com/Search"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "Link on company careers page. Observed Summer 2027 Commercial Banking and Wealth Management interns in Chicago."
+
+  - name: "Federal Reserve Bank of Kansas City"
+    ats: workday
+    board: "https://rb.wd5.myworkdayjobs.com/FRS"
+    cities: ["Kansas City", "Chicago"]
+    priority: 1
+    notes: "Link on kansascityfed.org careers page. This board is shared by the Federal Reserve System, so results include other Reserve Banks. Chicago interns observed; Kansas City expected, not seen in the first 20 results."
+
+  - name: "CIBC"
+    ats: workday
+    board: "https://cibc.wd3.myworkdayjobs.com/search"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "Link on company careers page. Observed 2027 Summer Interns in Chicago. A smaller campus-only site also exists at https://cibc.wd3.myworkdayjobs.com/campus."
+
+  - name: "Corient"
+    ats: workday
+    board: "https://ci.wd3.myworkdayjobs.com/CORIENT_EXTERNAL_CAREER-SITE"
+    cities: []
+    priority: 2
+    notes: "Link on company careers page. Observed a Spring 2027 Tax Intern; its city was not captured, so cities is left empty."
+
+  - name: "Commerce Bank"
+    ats: workday
+    board: "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs"
+    cities: ["Kansas City"]
+    priority: 1
+    notes: "Workday links found in search results on careers.commercebank.com. Observed Summer 2027 interns in Kansas City, including Commercial Payments and Bank Operations."
+
+  - name: "UHY"
+    ats: workday
+    board: "https://uhyus.wd12.myworkdayjobs.com/uhy"
+    cities: ["West Des Moines"]
+    priority: 1
+    notes: "Link on company careers page. Observed 2027 Summer Tax and CAS interns in West Des Moines; also Bettendorf, IA."
+
+  - name: "Northwestern Medicine"
+    ats: smartrecruiters
+    board: "NorthwesternMedicine"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "SmartRecruiters ID found on jobs.nm.org. Observed Chicago interns, but those seen were not finance roles."
+
+  - name: "RR Donnelley"
+    ats: smartrecruiters
+    board: "RRDonnelley"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Link on company job-listings page. Observed Tax Intern - Summer 2027 in Chicago."
+
+  - name: "Pella"
+    ats: manual
+    board: "https://www.pella.com/careers/"
+    cities: ["Pella"]
+    priority: 3
+    notes: "ATS unconfirmed: STATUS.md hints Oracle Cloud, but no Oracle link appears on the careers page we could read. City expected."
+
+  - name: "BMO"
+    ats: manual
+    board: "https://jobs.bmo.com/us/en"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "ATS unconfirmed: the site runs on Phenom, which hides the underlying system, and no public board link was visible. City expected."
+
+  - name: "Fifth Third"
+    ats: manual
+    board: "https://www.53.com/content/fifth-third/en/careers.html"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "ATS unconfirmed: no ATS link in the page HTML; the job list likely loads through JavaScript. City expected."
+
+  - name: "Lazard"
+    ats: manual
+    board: "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardStudentCareers/jobs"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Oracle Cloud confirmed from company careers page, but no adapter is planned yet (SOURCES: LATER). City expected."
+
+  - name: "CliftonLarsonAllen"
+    ats: workday
+    board: "https://cliftonlarsonallen.wd115.myworkdayjobs.com/CLA"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Link on company careers page. Observed a Winter 2027 Internal Operations intern in Kansas City; finance-specific roles in target cities not yet confirmed."
+
+  - name: "Forvis Mazars"
+    ats: manual
+    board: "https://forvis.avature.net/campuscareers/"
+    cities: []
+    priority: 2
+    notes: "Avature confirmed from company careers page, but it has no adapter. Campus careers page lists jobs; cities not checked."
+
+  - name: "American Equity"
+    ats: greenhouse
+    board: "americanequityinvestmentlifeinsurancecompany"
+    cities: ["Des Moines"]
+    priority: 1
+    notes: "Greenhouse embed on company openings page. Observed Accounting Intern in Des Moines."
+
+  - name: "Bank Iowa"
+    ats: manual
+    board: "https://recruiting.paylocity.com/Recruiting/Jobs/All/ed33f90b-749c-444c-b08c-2cf14c75f65f/BANK-IOWA-CORPORATION"
+    cities: []
+    priority: 2
+    notes: "Paylocity confirmed from company careers page, but it has no adapter. Iowa locations are covered by include_whole_states; specific cities not checked."
+
+  - name: "BGM Group"
+    ats: manual
+    board: "https://www.bgmcpa.com/careers"
+    cities: []
+    priority: 3
+    notes: "ATS unconfirmed: no ATS link found. Both bgmcpa.com and bgmgroup.com answered, and we could not confirm which one is the firm from the old log. Lucas should check."
+
+  - name: "KPMG"
+    ats: manual
+    board: "https://www.kpmguscareers.com/early-career/"
+    cities: []
+    priority: 2
+    notes: "ATS unconfirmed: the job search shows no ATS link in its HTML. The only one found was an Avature scholarship page, which does not prove what the job board uses."
+
+  # --- Added in Phase 1 ---
+  - name: "Principal Financial Group"
+    ats: manual
+    board: "https://careers.principal.com/internships"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "iCIMS confirmed from company careers site, but it has no adapter. City expected."
+
+  - name: "EMC Insurance"
+    ats: workday
+    board: "https://emcins.wd5.myworkdayjobs.com/EMC_Careers"
+    cities: ["Des Moines"]
+    priority: 1
+    notes: "Link on company careers page. Observed claims interns listed under 'Iowa', including an 'Iowa - Work From Home' location. Des Moines itself is expected."
+
+  - name: "Athene"
+    ats: workday
+    board: "https://athene.wd5.myworkdayjobs.com/athene_careers"
+    cities: ["West Des Moines"]
+    priority: 1
+    notes: "Link on company careers page. Observed Sales and Operations Reporting & Analytics interns in West Des Moines."
+
+  - name: "Farm Bureau Financial Services"
+    ats: manual
+    board: "https://www.fbfs.com/careers"
+    cities: ["West Des Moines"]
+    priority: 2
+    notes: "ATS unconfirmed: we could not read robots.txt, so we did not fetch the page. City expected."
+
+  - name: "Holmes Murphy"
+    ats: workday
+    board: "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers"
+    cities: ["Waukee", "West Des Moines", "Kansas City"]
+    priority: 1
+    notes: "Link on company careers page. Observed Summer 2027 Sales and Client Service interns in Waukee and Kansas City, and an HR intern in West Des Moines."
+
+  - name: "Sammons Financial Group"
+    ats: manual
+    board: "https://careers.sammonsfinancialgroup.com/jobs"
+    cities: ["West Des Moines"]
+    priority: 2
+    notes: "iCIMS confirmed from company careers site, but it has no adapter. City expected."
+
+  - name: "Nationwide"
+    ats: manual
+    board: "https://www.nationwide.com/personal/about-us/careers/"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "ATS unconfirmed: the page mentions Workday but shows no board URL, so we did not guess one. City expected."
+
+  - name: "Wells Fargo"
+    ats: manual
+    board: "https://www.wellsfargojobs.com/"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "ATS unconfirmed: careers site returned 403 to our identified request and we do not work around blocks. City expected."
+
+  - name: "Dupaco Credit Union"
+    ats: manual
+    board: "https://recruiting.ultipro.com/DUP1002/JobBoard/4ce3b278-e14c-755d-e1dd-e0a47790ea2b/"
+    cities: ["Dubuque"]
+    priority: 2
+    notes: "UKG confirmed from company careers page, but it has no adapter. City expected."
+
+  - name: "Cottingham & Butler"
+    ats: greenhouse
+    board: "cottinghambutlerinsuranceservicesinc"
+    cities: ["Dubuque"]
+    priority: 1
+    notes: "Greenhouse links on company careers page. Observed 2027 Summer Claims Adjuster and Client Service internships in Dubuque."
+
+  - name: "RSM US"
+    ats: workday
+    board: "https://rsm.wd1.myworkdayjobs.com/RSMCareers"
+    cities: ["Des Moines", "Chicago", "Kansas City"]
+    priority: 2
+    notes: "Link on jobs.rsmus.com. Board confirmed, but no intern titles in the first 20 search results. Cities expected."
+
+  - name: "UMB Financial"
+    ats: workday
+    board: "https://umb.wd1.myworkdayjobs.com/UMBExternal"
+    cities: ["Kansas City"]
+    priority: 1
+    notes: "Link on company careers page. Observed Public Finance Intern in Kansas City."
+
+  - name: "H&R Block"
+    ats: manual
+    board: "https://www.hrblock.com/corporate/careers/"
+    cities: ["Kansas City"]
+    priority: 3
+    notes: "ATS unconfirmed: careers page returned 403 to our identified request and we do not work around blocks. City expected."
+
+  - name: "American Century Investments"
+    ats: workday
+    board: "https://americancentury.wd5.myworkdayjobs.com/AmericanCenturyInvestments"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Link on company careers page. Observed Corporate Communications Intern in Kansas City; finance-specific roles not yet confirmed."
+
+  - name: "Lockton"
+    ats: manual
+    board: "https://careers.lockton.com/"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Taleo confirmed from company careers site, but it has no adapter. City expected."
+
+  - name: "Northern Trust"
+    ats: workday
+    board: "https://ntrs.wd1.myworkdayjobs.com/northerntrust"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "careers.northerntrust.com redirects to this board. Observed Wealth Management Legal Intern in Chicago; other finance interns expected."
+
+  - name: "William Blair"
+    ats: greenhouse
+    board: "williamblair"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "Company job-search page loads this Greenhouse board. Observed Summer 2027 technology programs in Chicago; finance programs expected, not yet confirmed."
+
+  - name: "Morningstar"
+    ats: manual
+    board: "https://www.morningstar.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "ATS unconfirmed: page answered 202 with no ATS link. City expected."
+
+  - name: "Allstate"
+    ats: workday
+    board: "https://allstate.wd5.myworkdayjobs.com/allstate_careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Link on allstate.jobs. Board confirmed, but no intern titles in the first 20 search results. Chicago-area location expected."
+
+  - name: "CME Group"
+    ats: manual
+    board: "https://www.cmegroup.com/careers.html"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "ATS unconfirmed: we could not read robots.txt, so we did not fetch the page. City expected."
+
+  - name: "Grant Thornton"
+    ats: manual
+    board: "https://ehzq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Oracle Cloud confirmed from company careers page, but no adapter is planned yet (SOURCES: LATER). City expected."
+
+  - name: "Baker Tilly"
+    ats: workday
+    board: "https://bakertilly.wd5.myworkdayjobs.com/BTCareers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Link on company careers page. Board confirmed, but no intern titles in the first 20 search results. City expected."
+
+  - name: "Workiva"
+    ats: manual
+    board: "https://www.workiva.com/careers"
+    cities: ["Ames"]
+    priority: 2
+    notes: "ATS unconfirmed: careers page returned 403 to our identified request and we do not work around blocks. City expected. A financial-reporting software company, so roles may lean technical."
+
+  - name: "West Bank"
+    ats: manual
+    board: "https://www.westbankstrong.com/career-opportunities"
+    cities: ["West Des Moines"]
+    priority: 3
+    notes: "No ATS found: jobs appear to be posted directly on the bank's own site. City expected; intern hiring not confirmed."
+
+  - name: "Ames National Corporation"
+    ats: manual
+    board: "https://www.amesnational.com/careers"
+    cities: ["Ames"]
+    priority: 2
+    notes: "ATS unconfirmed: site returned 403 to our identified request and we do not work around blocks. City expected; intern hiring not confirmed."
