@@ -18,8 +18,8 @@
     "id": "009b7f652e2b57cc",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City, MO",
     "match_reasons": [
@@ -42,7 +42,55 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Software Engineer Intern (C++)"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-27-Marketing-Technology-Intern_JR-03246-1",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-28",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. Count on us. Our \"we-care\"...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "03e7ff029bfea4a3",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Grand Rapids; Wakefield; Chicago Riverside Plaza; Denver Tech Center",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear",
+      "score limited to 0 (raw total -2)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 0,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03246-1",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-27-Marketing-Technology-Intern_JR-03246-1"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Marketing Technology Intern"
   },
   {
     "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/KS---Overland-Park/Legal-Intern_R-52970",
@@ -63,8 +111,8 @@
     "id": "048f20d1c49b2e36",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "KS - Overland Park",
     "match_reasons": [
@@ -87,6 +135,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Legal Intern"
   },
   {
@@ -108,8 +157,8 @@
     "id": "0574d7fcc2e2d233",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -132,6 +181,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Platform Engineer Intern, Summer 2027"
   },
   {
@@ -153,8 +203,8 @@
     "id": "06a23e7c84be1d2e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6117,
-    "lng": -93.8852,
+    "lat": 41.59048,
+    "lng": -93.882818,
     "location_label": "Waukee, IA",
     "location_raw": "Waukee",
     "match_reasons": [
@@ -178,6 +228,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Sales Intern - Summer 2027"
   },
   {
@@ -194,11 +245,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MO - St. Louis (294 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "06f508e77ccbbb32",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -223,7 +274,8 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Legal Intern"
   },
   {
@@ -245,8 +297,8 @@
     "id": "074803d1ffbebfae",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago Office",
     "match_reasons": [
@@ -269,6 +321,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Python Developer Intern"
   },
   {
@@ -290,8 +343,8 @@
     "id": "083059145b320110",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -314,6 +367,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 Tax Solutions Group Intern"
   },
   {
@@ -335,8 +389,8 @@
     "id": "08e7109957e227b6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, IA",
     "match_reasons": [
@@ -359,6 +413,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 TRC Winter Internship - West Des Moines"
   },
   {
@@ -390,7 +445,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -404,6 +459,7 @@
     ],
     "state": "IL",
     "status": "possibly_closed",
+    "tags": [],
     "title": "PMO Data Engineering Intern"
   },
   {
@@ -425,8 +481,8 @@
     "id": "09ba5b3f977ca623",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -449,6 +505,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Actuarial Intern – Summer 2027"
   },
   {
@@ -470,8 +527,8 @@
     "id": "0c8474e020e82cc3",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "New York - 1166; Boston - High St; San Francisco - Embarcadero; Hartford - Church; Philadelphia - South 17th; Houston - Dallas; Milwaukee - E. Wisconsin; Washington - L Street; Seattle - Fifth Avenue; Atlanta - Lenox; Los Angeles - West 5th; Charlotte - North Tryon; Chicago - 155 Wacker",
     "match_reasons": [
@@ -494,6 +551,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Oliver Wyman Actuarial - Internship - Summer 2027"
   },
   {
@@ -515,8 +573,8 @@
     "id": "0d9dd2fe8c84a806",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -539,6 +597,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 State and Local Tax (SALT) Intern"
   },
   {
@@ -560,8 +619,8 @@
     "id": "0f53a4c2093edad9",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -584,6 +643,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Undergraduate Internal Audit Majors"
   },
   {
@@ -605,8 +665,8 @@
     "id": "10fdce5d283b8725",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Southfield; Wakefield; Traverse City; Toledo; Broomfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Chicago Riverside Plaza; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -629,7 +689,54 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 Audit or Tax Intern"
+  },
+  {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cherokee-Distribution-Center-Cherokee-IA/Supply-Chain-Internship---Summer-2027_R260193",
+    "ats": "workday",
+    "city": "Cherokee",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-02",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. SUPPLY...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "14e976c2255ed8c5",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 42.749499,
+    "lng": -95.552159,
+    "location_label": "Cherokee, IA",
+    "location_raw": "Cherokee Distribution Center, Cherokee, IA",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+10 location: in IA",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 30,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "hyvee:R260193",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cherokee-Distribution-Center-Cherokee-IA/Supply-Chain-Internship---Summer-2027_R260193"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Supply Chain Internship - Summer 2027"
   },
   {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/West-Des-Moines/Event-Management-Intern---Summer-2027_R0001024",
@@ -650,8 +757,8 @@
     "id": "154a3b854938ba4d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -675,6 +782,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Event Management Intern - Summer 2027"
   },
   {
@@ -696,8 +804,8 @@
     "id": "16260cfcad8e6412",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago; New York",
     "match_reasons": [
@@ -720,6 +828,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus AI Research Engineer (Intern)"
   },
   {
@@ -741,8 +850,8 @@
     "id": "1882d1e7dc11e95f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "IL - Chicago; IL - Downers Grove",
     "match_reasons": [
@@ -765,6 +874,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Legal Intern"
   },
   {
@@ -781,11 +891,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MN - St. Paul (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "18fc0a9cd7d12073",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -809,7 +919,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Risk Control Intern"
   },
   {
@@ -831,8 +942,8 @@
     "id": "19dc50e858b8f1fc",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9953,
-    "lng": -87.8845,
+    "lat": 41.988978,
+    "lng": -87.871739,
     "location_label": "Rosemont, IL",
     "location_raw": "Rosemont, IL",
     "match_reasons": [
@@ -856,6 +967,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Legal"
   },
   {
@@ -901,6 +1013,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Human Resources Intern"
   },
   {
@@ -922,8 +1035,8 @@
     "id": "201dcbdf69f6d33f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -946,6 +1059,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Sales Intern, Eagle Life"
   },
   {
@@ -967,8 +1081,8 @@
     "id": "20c5a999968ea46b",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -991,6 +1105,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (Cybersecurity)"
   },
   {
@@ -1012,8 +1127,8 @@
     "id": "20eae0871a0dec53",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -1037,6 +1152,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern-Cloud Engineering"
   },
   {
@@ -1058,8 +1174,8 @@
     "id": "221eb96f47e3f6c0",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6117,
-    "lng": -93.8852,
+    "lat": 41.59048,
+    "lng": -93.882818,
     "location_label": "Waukee, IA",
     "location_raw": "Waukee",
     "match_reasons": [
@@ -1083,6 +1199,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Communications Intern - Summer 2027"
   },
   {
@@ -1099,11 +1216,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "location unknown: Kansas",
     "first_seen": "2026-11-02",
     "id": "22c87dd695e8c1b4",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -1127,7 +1244,8 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Underwriting Intern - South Central Region (Wichita)"
   },
   {
@@ -1149,8 +1267,8 @@
     "id": "23be6734cda77634",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -1174,6 +1292,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern-Cybersecurity and Information Security"
   },
   {
@@ -1195,13 +1314,13 @@
     "id": "25bdc6aa5d10b97b",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.2565,
-    "lng": -95.9345,
+    "lat": 41.264013,
+    "lng": -96.056496,
     "location_label": "Omaha, NE",
     "location_raw": "Omaha #11, 178th St, Omaha, NE",
     "match_reasons": [
       "-10 role: 'assurance' only in description, which may be company boilerplate",
-      "+10 location: 130 miles from Ames",
+      "+10 location: 136 miles from Ames",
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
@@ -1224,6 +1343,7 @@
     ],
     "state": "NE",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
   },
   {
@@ -1245,8 +1365,8 @@
     "id": "27478289e8311f4d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL; Kansas City, MO; New York, NY",
     "match_reasons": [
@@ -1269,6 +1389,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Software Engineer Intern"
   },
   {
@@ -1290,8 +1411,8 @@
     "id": "278efa72b23ec119",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "KS - Overland Park",
     "match_reasons": [
@@ -1314,6 +1435,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Risk Control Intern"
   },
   {
@@ -1335,8 +1457,8 @@
     "id": "2840bd997b6d6b70",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9953,
-    "lng": -87.8845,
+    "lat": 41.988978,
+    "lng": -87.871739,
     "location_label": "Rosemont, IL",
     "location_raw": "Rosemont, IL",
     "match_reasons": [
@@ -1360,6 +1482,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Customer Contact Center"
   },
   {
@@ -1381,8 +1504,8 @@
     "id": "28ae474e23fdcde6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL; Kansas City, MO; New York, NY",
     "match_reasons": [
@@ -1405,6 +1528,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Infrastructure Intern"
   },
   {
@@ -1426,8 +1550,8 @@
     "id": "2a23f4f5b7c6a64c",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City MO",
     "match_reasons": [
@@ -1450,6 +1574,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Institutional Custody Administrator Intern"
   },
   {
@@ -1495,6 +1620,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Cybersecurity Intern"
   },
   {
@@ -1516,8 +1642,8 @@
     "id": "2cb901ac228fe60a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -1540,6 +1666,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Software Engineer Internship Summer 2027 (Hybrid)"
   },
   {
@@ -1561,8 +1688,8 @@
     "id": "2cbece1a226d3148",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -1585,6 +1712,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technical Business Analyst Intern"
   },
   {
@@ -1606,8 +1734,8 @@
     "id": "2cf48506d1f09966",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Trust Building (922 Walnut) (64106)",
     "match_reasons": [
@@ -1631,6 +1759,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - IT (Summer 2027)"
   },
   {
@@ -1662,7 +1791,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -1676,6 +1805,7 @@
     ],
     "state": "IA",
     "status": "possibly_closed",
+    "tags": [],
     "title": "Human Resources Intern"
   },
   {
@@ -1697,8 +1827,8 @@
     "id": "2fae6cce75222689",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -1722,6 +1852,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern-Networking and Computer Engineering"
   },
   {
@@ -1743,8 +1874,8 @@
     "id": "2fb74d4ac807c498",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -1768,6 +1899,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Talent & Culture (HR) Intern - Summer 2027"
   },
   {
@@ -1789,8 +1921,8 @@
     "id": "3161cbc48af4261a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -1813,6 +1945,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Accounting Intern"
   },
   {
@@ -1834,8 +1967,8 @@
     "id": "3486f2b0bdddbe3f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Bank Building (1000 Walnut) (64106)",
     "match_reasons": [
@@ -1859,6 +1992,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Sales Enablement (Summer 2027)"
   },
   {
@@ -1880,8 +2014,8 @@
     "id": "3510dd2edce0d25d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -1904,6 +2038,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Graphic Design Intern"
   },
   {
@@ -1925,8 +2060,8 @@
     "id": "392a73191293eff6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "New York - 1166; Boston - High St; San Francisco - Embarcadero; White Plains - Hamilton; Chicago - 155 Wacker; Washington - Pennsylvania",
     "match_reasons": [
@@ -1949,6 +2084,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "NERA Summer Internship (Summer 2028 Grads) (Multiple Locations)"
   },
   {
@@ -1970,8 +2106,8 @@
     "id": "3a07910a35f65d54",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9953,
-    "lng": -87.8845,
+    "lat": 41.988978,
+    "lng": -87.871739,
     "location_label": "Rosemont, IL",
     "location_raw": "Rosemont, IL",
     "match_reasons": [
@@ -1995,6 +2131,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Information Technology"
   },
   {
@@ -2016,8 +2153,8 @@
     "id": "3bc56e5e9b4a1bb0",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -2040,6 +2177,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer Intern Equity Research (Buy Side) Chicago"
   },
   {
@@ -2061,8 +2199,8 @@
     "id": "3f2a189f1d6690d3",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, Illinois, United States",
     "match_reasons": [
@@ -2086,6 +2224,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Software Engineering Summer Intern"
   },
   {
@@ -2107,8 +2246,8 @@
     "id": "3f55ae0e821749f2",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Eco Center",
     "match_reasons": [
@@ -2131,6 +2270,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Safety Intern"
   },
   {
@@ -2147,11 +2287,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MN - St. Paul (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "3f9c94f100f3f57d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -2176,7 +2316,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Claim Professional Development Program Intern"
   },
   {
@@ -2198,8 +2339,8 @@
     "id": "4274a2adec47eb90",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -2222,6 +2363,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Risk Co-op"
   },
   {
@@ -2243,8 +2385,8 @@
     "id": "427c285c3d05de60",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -2267,6 +2409,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Sales Intern"
   },
   {
@@ -2288,8 +2431,8 @@
     "id": "433805a17864ff8d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -2312,6 +2455,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Wealth Management"
   },
   {
@@ -2333,8 +2477,8 @@
     "id": "4344f5eeb367a7ac",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "St. Louis Maplewood, MO; Kansas City, MO; Nashville, TN",
     "match_reasons": [
@@ -2357,6 +2501,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "2027 TRC Fall Internship"
   },
   {
@@ -2373,11 +2518,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: Saint Paul, MN Campus (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "44a91639b5abf1a4",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -2401,7 +2546,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Engineering Internship - Summer 2027"
   },
   {
@@ -2423,8 +2569,8 @@
     "id": "44c6c7bf8ec85f08",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -2448,6 +2594,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Economic Research - Chicago"
   },
   {
@@ -2464,11 +2611,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MO - Southeast - Cape Girardeau - Cape Girardeau Main (63703) (391 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "46c159e95c5ebb79",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -2492,7 +2639,8 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Intern - Commercial Banking, Cape Girardeau (Summer 2027)"
   },
   {
@@ -2514,8 +2662,8 @@
     "id": "4735951e660b8d41",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA",
     "match_reasons": [
@@ -2539,6 +2687,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Equipment Purchasing Intern - Summer 2027"
   },
   {
@@ -2560,8 +2709,8 @@
     "id": "4a2687764d39321e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago; New York",
     "match_reasons": [
@@ -2584,7 +2733,55 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus Quantitative Researcher, UG/MS (Intern)"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Marketing-Intern---Client-Experience_JR-03328",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-12",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. Count on us. Our \"we-care\"...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "4ad22115751a02ea",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Chicago Riverside Plaza",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear",
+      "score limited to 0 (raw total -2)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 0,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03328",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Marketing-Intern---Client-Experience_JR-03328"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Marketing Intern - Client Experience"
   },
   {
     "apply_url": "https://vermeer.wd5.myworkdayjobs.com/externalcareersite/job/Pella-Iowa-USA---Corporate-Office/Data-Analytics-and-Corporate-Strategy-Intern_REQ-22176",
@@ -2605,8 +2802,8 @@
     "id": "4b9ceb6d5318974d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Corporate Office",
     "match_reasons": [
@@ -2629,6 +2826,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Corporate Research Intern"
   },
   {
@@ -2650,8 +2848,8 @@
     "id": "4bddc50408f4e1e6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "IL - Chicago; TX - Richardson",
     "match_reasons": [
@@ -2674,6 +2872,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Early Careers – Product Engineering Developer Associate Intern"
   },
   {
@@ -2695,8 +2894,8 @@
     "id": "4e500043285cca49",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Southfield; Schaumburg; Macomb; Grand Rapids; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Chicago Riverside Plaza; Auburn Hills",
     "match_reasons": [
@@ -2719,6 +2918,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 National Tax Office - M&A Tax Consulting Intern"
   },
   {
@@ -2740,8 +2940,8 @@
     "id": "4f9ab14ae2e20710",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL; Kansas City, MO; New York, NY",
     "match_reasons": [
@@ -2764,6 +2964,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Linux Engineer Intern"
   },
   {
@@ -2785,8 +2986,8 @@
     "id": "4fc8ed83b44f7ebf",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Corporate Office",
     "match_reasons": [
@@ -2809,6 +3010,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Training and Development Specialist Intern - Summer 2027"
   },
   {
@@ -2830,13 +3032,13 @@
     "id": "4fda684427cb15b1",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.2565,
-    "lng": -95.9345,
+    "lat": 41.264013,
+    "lng": -96.056496,
     "location_label": "Omaha, NE",
     "location_raw": "Omaha",
     "match_reasons": [
       "-10 role: 'risk management' only in description, which may be company boilerplate",
-      "+10 location: 130 miles from Ames",
+      "+10 location: 136 miles from Ames",
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
@@ -2854,6 +3056,7 @@
     ],
     "state": "NE",
     "status": "open",
+    "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
   {
@@ -2875,8 +3078,8 @@
     "id": "50e31bf0e5cde555",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -2899,6 +3102,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Business Majors - ex. Business Administration , Finance"
   },
   {
@@ -2920,8 +3124,8 @@
     "id": "514bf856cf4d3e4f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -2944,6 +3148,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (AI Engineering)"
   },
   {
@@ -2965,8 +3170,8 @@
     "id": "5181a577f817d940",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City, Missouri",
     "match_reasons": [
@@ -2989,6 +3194,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Corporate Communications Intern"
   },
   {
@@ -3010,8 +3216,8 @@
     "id": "51e72de6a2cf4de4",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6117,
-    "lng": -93.8852,
+    "lat": 41.59048,
+    "lng": -93.882818,
     "location_label": "Waukee, IA",
     "location_raw": "Waukee",
     "match_reasons": [
@@ -3035,6 +3241,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Population Health Intern - Summer 2027"
   },
   {
@@ -3056,8 +3263,8 @@
     "id": "5290e3892ad8c8b8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Corporate Office",
     "match_reasons": [
@@ -3080,6 +3287,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Electrical Engineer Internship Summer 2027"
   },
   {
@@ -3101,8 +3309,8 @@
     "id": "5333e7f74d19570d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -3125,6 +3333,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "IT Intern, SAP Security"
   },
   {
@@ -3146,8 +3355,8 @@
     "id": "565bc0a702f63dd3",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6117,
-    "lng": -93.8852,
+    "lat": 41.59048,
+    "lng": -93.882818,
     "location_label": "Waukee, IA",
     "location_raw": "Waukee",
     "match_reasons": [
@@ -3171,7 +3380,54 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Client Service Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Wealth-Management-Marketing-Summer-Intern_JR-03244",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-08",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. The marketing team is poised...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "595966eff6d9c6cf",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Chicago Riverside Plaza",
+    "match_reasons": [
+      "+40 role: 'wealth management' in title (investments)",
+      "+0 location: unknown",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 75,
+    "role_category": "investments",
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03244",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Wealth-Management-Marketing-Summer-Intern_JR-03244"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Summer Wealth Management Marketing Intern"
   },
   {
     "apply_url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-811-Main-825-Main-64105/Intern-Commercial-Loan-Servicing-Summer-2027_38469",
@@ -3192,8 +3448,8 @@
     "id": "5a3a8e0f3572db4d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown 811 Main (825 Main) (64105)",
     "match_reasons": [
@@ -3217,6 +3473,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Commercial Loan Servicing (Summer 2027)"
   },
   {
@@ -3262,6 +3519,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Learning, Culture & Inclusion Intern"
   },
   {
@@ -3283,8 +3541,8 @@
     "id": "5d04d8fc5b9a0a2d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -3308,6 +3566,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Marketing, Communications, Journalism Majors"
   },
   {
@@ -3329,8 +3588,8 @@
     "id": "5e31f8d0fd29bc7a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -3353,6 +3612,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 State and Local Tax (SALT) Intern"
   },
   {
@@ -3374,8 +3634,8 @@
     "id": "5f3225882c96282e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Plant 3",
     "match_reasons": [
@@ -3398,6 +3658,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Quality Engineer Intern - Summer 2027"
   },
   {
@@ -3419,8 +3680,8 @@
     "id": "6100b8fb2fe9b79e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, Illinois, United States",
     "match_reasons": [
@@ -3443,6 +3704,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 IT-Product & Strategy Summer Intern"
   },
   {
@@ -3459,11 +3721,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: CT - Hartford; MN - St. Paul (1074 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "63ec0e7fad3f3af9",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -3487,7 +3749,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Actuarial Leadership Development Program (ALDP) Intern"
   },
   {
@@ -3509,8 +3772,8 @@
     "id": "661d8848af77cdb8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -3533,6 +3796,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Product Marketing Intern"
   },
   {
@@ -3554,8 +3818,8 @@
     "id": "67325cc0713ee4ab",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, Illinois, United States",
     "match_reasons": [
@@ -3579,6 +3843,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 IT Operations Summer Intern"
   },
   {
@@ -3600,8 +3865,8 @@
     "id": "683f5c9cfce25de8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "IL - Chicago",
     "match_reasons": [
@@ -3624,6 +3889,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Risk Control Intern"
   },
   {
@@ -3645,12 +3911,58 @@
     "id": "6be7f2821191aab0",
     "is_remote": false,
     "last_known_open": null,
-    "lat": null,
-    "lng": null,
-    "location_label": "Location unknown",
+    "lat": 38.986835,
+    "lng": -94.636195,
+    "location_label": "Prairie Village, KS",
     "location_raw": "Prairie Village, State Line Rd, Prairie Village, KS",
     "match_reasons": [
       "-10 role: 'assurance' only in description, which may be company boilerplate",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R244369",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Prairie-Village-State-Line-Rd-Prairie-Village-KS/Retail-Pharmacy-Intern_R244369"
+      }
+    ],
+    "state": "KS",
+    "status": "open",
+    "tags": [],
+    "title": "Retail Pharmacy Intern"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Realpoint-Project-Analyst-Intern_JR-03158",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-08",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "6de4391e18a18f9c",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Denver Tech Center; Chicago Riverside Plaza",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
       "+0 location: unknown",
       "+8 season: not stated",
       "+0 eligibility: unclear",
@@ -3663,14 +3975,15 @@
     "season": null,
     "sources": [
       {
-        "source_job_id": "hyvee:R244369",
+        "source_job_id": "plantemoran:JR-03158",
         "source_name": "workday",
-        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Prairie-Village-State-Line-Rd-Prairie-Village-KS/Retail-Pharmacy-Intern_R244369"
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Realpoint-Project-Analyst-Intern_JR-03158"
       }
     ],
-    "state": "KS",
+    "state": null,
     "status": "open",
-    "title": "Retail Pharmacy Intern"
+    "tags": [],
+    "title": "2027 Realpoint Project Analyst Intern"
   },
   {
     "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/MN---St-Paul/Bond-and-Specialty-Insurance-Intern--Underwriting-Professional-Development-Program--UPDP-_R-53091",
@@ -3686,11 +3999,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MN - St. Paul (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "70e4c4addb334105",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -3714,17 +4027,18 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Bond and Specialty Insurance Intern: Underwriting Professional Development Program (UPDP)"
   },
   {
-    "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Illinois/Underwriting-Intern_R6559-1",
+    "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa/Underwriting-Intern_R6530-1",
     "ats": "workday",
     "city": null,
     "company": "EMC Insurance",
     "company_id": "emc-insurance",
     "country": "United States",
-    "date_posted": "2026-09-28",
+    "date_posted": "2026-09-17",
     "deadline": null,
     "description_snippet": "At EMC, we’re all about working together to make an impact. As part of our team, you’ll have the opportunity to grow, contribute, and gain experience that matters. We strive to be caring leaders, close partners, and responsive experts—always supporting each other to do our best...",
     "eligibility": {
@@ -3739,16 +4053,16 @@
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
-    "location_raw": "Illinois",
+    "location_raw": "Iowa",
     "match_reasons": [
       "+40 role: 'underwriting' in title (insurance_risk)",
-      "+0 location: unknown",
+      "+10 location: in IA",
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
     "missed_runs": 0,
     "recurring": false,
-    "relevance_score": 48,
+    "relevance_score": 58,
     "role_category": "insurance_risk",
     "season": null,
     "sources": [
@@ -3763,8 +4077,9 @@
         "url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Illinois/Underwriting-Intern_R6559-1"
       }
     ],
-    "state": "IL",
+    "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Underwriting Intern"
   },
   {
@@ -3786,8 +4101,8 @@
     "id": "720e25cacf733c85",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago - 155 Wacker; Seattle - Fifth Avenue; Atlanta - Lenox",
     "match_reasons": [
@@ -3810,6 +4125,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Oliver Wyman Actuarial - Life Internship - Summer 2027"
   },
   {
@@ -3831,13 +4147,13 @@
     "id": "7413c819e0f62b2a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.2565,
-    "lng": -95.9345,
+    "lat": 41.264013,
+    "lng": -96.056496,
     "location_label": "Omaha, NE",
     "location_raw": "Omaha #1, 5150 Center Street, Omaha, NE",
     "match_reasons": [
       "-10 role: 'claims' only in description, which may be company boilerplate",
-      "+10 location: 130 miles from Ames",
+      "+10 location: 136 miles from Ames",
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
@@ -3855,6 +4171,7 @@
     ],
     "state": "NE",
     "status": "open",
+    "tags": [],
     "title": "Certified Pharmacy Intern"
   },
   {
@@ -3876,8 +4193,8 @@
     "id": "7564805e05111f83",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9779,
-    "lng": -91.6656,
+    "lat": 41.964226,
+    "lng": -91.679164,
     "location_label": "Cedar Rapids, IA",
     "location_raw": "Cedar Rapids Drugstore #1, Sixth Street, Cedar Rapids, IA",
     "match_reasons": [
@@ -3905,6 +4222,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
   },
   {
@@ -3926,8 +4244,8 @@
     "id": "77a7060c4cc102bc",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Trust Building (922 Walnut) (64106)",
     "match_reasons": [
@@ -3951,6 +4269,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Human Resources (Summer 2027)"
   },
   {
@@ -3972,8 +4291,8 @@
     "id": "78c4a4d9ca26977d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - The Center",
     "match_reasons": [
@@ -3996,6 +4315,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Manufacturing Engineer Intern - Summer 2027"
   },
   {
@@ -4012,11 +4332,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: CT - Hartford; MN - St. Paul (1074 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "7a4375fb7da798e6",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -4041,7 +4361,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Business Insights & Analytics Leadership Development Program (BI&A LDP) Intern"
   },
   {
@@ -4063,8 +4384,8 @@
     "id": "7a65076961e756f6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -4087,6 +4408,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "IT Intern, Digital Platforms"
   },
   {
@@ -4108,8 +4430,8 @@
     "id": "7bd055e58619815b",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, Illinois, United States",
     "match_reasons": [
@@ -4132,6 +4454,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Compliance Intern – Regulatory Advisory"
   },
   {
@@ -4153,8 +4476,8 @@
     "id": "7c39352ac74a0989",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -4177,6 +4500,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (Data Analytics)"
   },
   {
@@ -4198,8 +4522,8 @@
     "id": "7c7a53ee386dec5e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -4222,7 +4546,54 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Derivates Operations Co-op (2027)"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Summer-Healthcare-Value-Based-Care-Intern_JR-03406",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-16",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. Our management consulting...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "7c7f062c1eee57d1",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Chicago Riverside Plaza",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 25,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03406",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Summer-Healthcare-Value-Based-Care-Intern_JR-03406"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Summer Healthcare Value Based Care Intern"
   },
   {
     "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/IL---Chicago/Bond-and-Specialty-Insurance-Intern--Underwriting-Professional-Development-Program_R-53090",
@@ -4243,8 +4614,8 @@
     "id": "7db8349e0b4eed2d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "IL - Chicago",
     "match_reasons": [
@@ -4267,6 +4638,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Bond and Specialty Insurance Intern: Underwriting Professional Development Program"
   },
   {
@@ -4288,8 +4660,8 @@
     "id": "7f50d7e9e09facff",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, IA",
     "match_reasons": [
@@ -4313,6 +4685,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer CAS Internship - West Des Moines"
   },
   {
@@ -4334,8 +4707,8 @@
     "id": "7f7ba5874d3f2f5a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City MO",
     "match_reasons": [
@@ -4358,6 +4731,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Corporate Trust Internship"
   },
   {
@@ -4379,8 +4753,8 @@
     "id": "81eadc9d815ed786",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.5006,
-    "lng": -90.6646,
+    "lat": 42.498901,
+    "lng": -90.707258,
     "location_label": "Dubuque, IA",
     "location_raw": "Dubuque, Iowa, United States",
     "match_reasons": [
@@ -4404,6 +4778,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer Sales Internship"
   },
   {
@@ -4425,8 +4800,8 @@
     "id": "840fa42fde10d849",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.5006,
-    "lng": -90.6646,
+    "lat": 42.498901,
+    "lng": -90.707258,
     "location_label": "Dubuque, IA",
     "location_raw": "Dubuque, Iowa, United States",
     "match_reasons": [
@@ -4449,6 +4824,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer Claims Adjuster Internship"
   },
   {
@@ -4470,8 +4846,8 @@
     "id": "850be41b0dee1cf2",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Bank Building (1000 Walnut) (64106)",
     "match_reasons": [
@@ -4495,6 +4871,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Commercial Marketing (Summer 2027)"
   },
   {
@@ -4540,6 +4917,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Intern-Claims"
   },
   {
@@ -4561,8 +4939,8 @@
     "id": "86dfe29b303aa124",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Trust Building (922 Walnut) (64106)",
     "match_reasons": [
@@ -4586,6 +4964,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Bank Operations (Summer 2027)"
   },
   {
@@ -4607,8 +4986,8 @@
     "id": "876d8beca557299a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Schaumburg; Detroit; Columbus",
     "match_reasons": [
@@ -4631,7 +5010,55 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Audit or Tax Japanese Business Services Intern"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Expo---Summer-Student-Leadership-Program_JR-03362",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-26",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "8900cd763b8c385a",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Grand Rapids; Wakefield; Chicago Riverside Plaza; Denver Tech Center; Columbus",
+    "match_reasons": [
+      "+40 role: 'leadership program' in title (early_career)",
+      "+0 location: unknown",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "+5 early-career signal: 'leadership program'"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 80,
+    "role_category": "early_career",
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03362",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Expo---Summer-Student-Leadership-Program_JR-03362"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Expo - Summer Student Leadership Program"
   },
   {
     "apply_url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-Bank-Building-1000-Walnut-64106/Intern-Commercial-Payments-Summer-2027_38466",
@@ -4652,8 +5079,8 @@
     "id": "89ffdd3c6f48a5b7",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Bank Building (1000 Walnut) (64106)",
     "match_reasons": [
@@ -4677,6 +5104,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Intern - Commercial Payments (Summer 2027)"
   },
   {
@@ -4698,8 +5126,8 @@
     "id": "8b31a974e387be5f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -4722,6 +5150,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "IT Intern, Solutions Architecture - AI"
   },
   {
@@ -4743,8 +5172,8 @@
     "id": "8be8c74a6e1d0a9a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -4767,6 +5196,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (Agile Product Design)"
   },
   {
@@ -4788,8 +5218,8 @@
     "id": "8dc0a8702e3fadef",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "KS - Overland Park",
     "match_reasons": [
@@ -4812,6 +5242,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)"
   },
   {
@@ -4833,8 +5264,8 @@
     "id": "8ed52d215827d9c4",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -4858,6 +5289,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern-Data Science and Business Analytics"
   },
   {
@@ -4879,8 +5311,8 @@
     "id": "91f7e00d6072be11",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago; New York",
     "match_reasons": [
@@ -4903,6 +5335,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus Quantitative Trader (Intern)"
   },
   {
@@ -4924,8 +5357,8 @@
     "id": "92e044c7c0de0ab2",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Schaumburg - Martingale",
     "match_reasons": [
@@ -4948,6 +5381,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Insurance Summer Intern"
   },
   {
@@ -4969,8 +5403,8 @@
     "id": "96f4ef1f1584e43f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6441,
-    "lng": -93.4647,
+    "lat": 41.653452,
+    "lng": -93.482793,
     "location_label": "Altoona, IA",
     "location_raw": "Altoona, 8th St SW, Altoona, IA",
     "match_reasons": [
@@ -4993,6 +5427,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
   },
   {
@@ -5014,8 +5449,8 @@
     "id": "9724da10601ca7cb",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -5038,6 +5473,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Commercial Banking"
   },
   {
@@ -5059,8 +5495,8 @@
     "id": "99693843c8f6433a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago; New York",
     "match_reasons": [
@@ -5083,6 +5519,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus AI Research Engineer – Research Automation (Intern)"
   },
   {
@@ -5104,8 +5541,8 @@
     "id": "9a022579dc0bcdf9",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago",
     "match_reasons": [
@@ -5128,6 +5565,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Risk Consulting Intern - Summer 2027"
   },
   {
@@ -5149,8 +5587,8 @@
     "id": "9a1c4426d377a76d",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -5173,6 +5611,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "IT Intern, Information Security"
   },
   {
@@ -5194,8 +5633,8 @@
     "id": "9b3c27ea414d3711",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines #4, Mills Civic, West Des Moines, IA",
     "match_reasons": [
@@ -5223,6 +5662,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
   },
   {
@@ -5244,8 +5684,8 @@
     "id": "9db06c98f4d679e7",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, Illinois, United States",
     "match_reasons": [
@@ -5269,6 +5709,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Cybersecurity Summer Intern"
   },
   {
@@ -5285,11 +5726,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MO - Springfield Area - Springfield - Springfield Battlefield (65804) (334 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "9e0b603f0480a516",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -5313,7 +5754,8 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Intern - Commercial Banking, Springfield (Summer 2027)"
   },
   {
@@ -5335,8 +5777,8 @@
     "id": "9f0d3b721404f4f3",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City",
     "match_reasons": [
@@ -5360,7 +5802,56 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Sales Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa---Work-From-Home/Claims-Intern---Worker-s-Compensation_R6548-1",
+    "ats": "workday",
+    "city": null,
+    "company": "EMC Insurance",
+    "company_id": "emc-insurance",
+    "country": null,
+    "date_posted": "2026-09-23",
+    "deadline": null,
+    "description_snippet": "Explore a variety of careers in insurance with EMC! By participating in our paid intern program, you’ll develop industry-related knowledge, enhance skills that are transferable to any professional setting and do meaningful work to help achieve our goals. Your daily...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "9f3e99206fd263cd",
+    "is_remote": true,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Remote",
+    "location_raw": "Iowa - Work From Home",
+    "match_reasons": [
+      "+40 role: 'claims' in title (insurance_risk)",
+      "+10 location: remote, tied to IA",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 85,
+    "role_category": "insurance_risk",
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "emcins:R6548-1",
+        "source_name": "workday",
+        "url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa---Work-From-Home/Claims-Intern---Worker-s-Compensation_R6548-1"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [
+      "remote_iowa"
+    ],
+    "title": "Claims Intern - Workers' Compensation"
   },
   {
     "apply_url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE/job/Chicago-IL/Quant---Data-Analytics-Intern_R-4708",
@@ -5381,8 +5872,8 @@
     "id": "9fc3bdea243e4dc6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -5405,6 +5896,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Quant & Data Analytics Intern"
   },
   {
@@ -5426,8 +5918,8 @@
     "id": "a17f3fe5a5c4c4cc",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City, MO",
     "match_reasons": [
@@ -5450,6 +5942,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Data Pipeline Engineer Intern"
   },
   {
@@ -5471,8 +5964,8 @@
     "id": "a24b13aabef62171",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -5496,6 +5989,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Non-Business Majors - ex. Criminal Justice, International Affairs, Liberal Arts"
   },
   {
@@ -5512,11 +6006,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: St Louis, MO (294 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "a41dd82b021ae6d0",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -5540,7 +6034,8 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "2027 Summer Intern - Commercial Real Estate"
   },
   {
@@ -5562,8 +6057,8 @@
     "id": "a4e22e717da97f71",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago Office",
     "match_reasons": [
@@ -5586,6 +6081,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Trade Support Engineer Intern"
   },
   {
@@ -5607,8 +6103,8 @@
     "id": "a671d1d8002377e8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.5006,
-    "lng": -90.6646,
+    "lat": 42.498901,
+    "lng": -90.707258,
     "location_label": "Dubuque, IA",
     "location_raw": "Dubuque, Iowa, United States",
     "match_reasons": [
@@ -5632,6 +6128,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer Client Service Internship"
   },
   {
@@ -5653,8 +6150,8 @@
     "id": "a6758c1e6bee7dfe",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -5677,6 +6174,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Strategic Analyst Intern"
   },
   {
@@ -5698,8 +6196,8 @@
     "id": "a6c0bbd7dd09e864",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago",
     "match_reasons": [
@@ -5722,6 +6220,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus Systems Engineer (Intern)"
   },
   {
@@ -5743,8 +6242,8 @@
     "id": "a727e41062218e78",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City #3, NW 64th, Kansas City, MO",
     "match_reasons": [
@@ -5767,7 +6266,54 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Finance-and-Accounting-Advisory-Services-Consulting-Internship_JR-03095",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-12",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "a8f5d8c61dedb909",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Denver Tech Center; Chicago Riverside Plaza",
+    "match_reasons": [
+      "+40 role: 'finance intern' in title (corporate_finance)",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 48,
+    "role_category": "corporate_finance",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03095",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Finance-and-Accounting-Advisory-Services-Consulting-Internship_JR-03095"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Finance and Accounting Advisory Services Consulting Internship"
   },
   {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/Omaha/Sales-Intern---Summer-2027_R0000966",
@@ -5788,13 +6334,13 @@
     "id": "a9238e812a27a330",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.2565,
-    "lng": -95.9345,
+    "lat": 41.264013,
+    "lng": -96.056496,
     "location_label": "Omaha, NE",
     "location_raw": "Omaha",
     "match_reasons": [
       "-10 role: 'risk management' only in description, which may be company boilerplate",
-      "+10 location: 130 miles from Ames",
+      "+10 location: 136 miles from Ames",
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
@@ -5812,6 +6358,7 @@
     ],
     "state": "NE",
     "status": "open",
+    "tags": [],
     "title": "Sales Intern - Summer 2027"
   },
   {
@@ -5833,8 +6380,8 @@
     "id": "ac3dce7329187e44",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Southfield; Traverse City; Toledo; Broomfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Chicago Riverside Plaza; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -5857,6 +6404,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 National Tax Office - Emerging Tax and Tax Controversy Intern"
   },
   {
@@ -5878,8 +6426,8 @@
     "id": "ad580e18f4dc328a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.975,
-    "lng": -88.0073,
+    "lat": 41.976616,
+    "lng": -88.018775,
     "location_label": "Itasca, IL",
     "location_raw": "Itasca, IL; Addison, IL; Wood Dale, IL; Bloomingdale, IL; Barrington, IL",
     "match_reasons": [
@@ -5902,6 +6450,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Retail Banking"
   },
   {
@@ -5923,8 +6472,8 @@
     "id": "adfe45aeca4dd244",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines, Iowa, United States",
     "match_reasons": [
@@ -5947,6 +6496,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Tax Intern"
   },
   {
@@ -5968,8 +6518,8 @@
     "id": "aeb4c2d9dc65d8fa",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines #5, Army Post Rd, Des Moines, IA",
     "match_reasons": [
@@ -5992,6 +6542,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Retail Pharmacy Intern"
   },
   {
@@ -6013,8 +6564,8 @@
     "id": "b1554f87373c804e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Wakefield; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -6037,6 +6588,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Audit or Tax Intern"
   },
   {
@@ -6082,6 +6634,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Community Involvement Intern"
   },
   {
@@ -6103,8 +6656,8 @@
     "id": "b426ba7fdb235458",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - The Center",
     "match_reasons": [
@@ -6127,6 +6680,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Design Engineer Intern - Summer 2027"
   },
   {
@@ -6148,8 +6702,8 @@
     "id": "b6060cc8b68f889a",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago Office",
     "match_reasons": [
@@ -6172,6 +6726,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Systems Support Analyst Intern"
   },
   {
@@ -6193,8 +6748,8 @@
     "id": "b6ddc673789a2223",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City MO",
     "match_reasons": [
@@ -6217,6 +6772,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Public Finance Intern"
   },
   {
@@ -6238,8 +6794,8 @@
     "id": "b6e8c6fe2d4f6e2e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "Chesterfield - Maryville; Overland Park - College",
     "match_reasons": [
@@ -6263,6 +6819,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Insurance"
   },
   {
@@ -6284,8 +6841,8 @@
     "id": "b70767f22d531893",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -6309,6 +6866,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Information and Library Science"
   },
   {
@@ -6330,8 +6888,8 @@
     "id": "b7c03014ff3b4a33",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.6117,
-    "lng": -93.8852,
+    "lat": 41.59048,
+    "lng": -93.882818,
     "location_label": "Waukee, IA",
     "location_raw": "Waukee; Denver",
     "match_reasons": [
@@ -6354,7 +6912,100 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Risk & Safety Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Business-Technology-Advisory-Consulting-Intern_JR-03218",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-12",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "b7f31b0c33415723",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Denver Tech Center; Chicago Riverside Plaza",
+    "match_reasons": [
+      "+40 role: 'advisory intern' in title (accounting)",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 48,
+    "role_category": "accounting",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03218",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Business-Technology-Advisory-Consulting-Intern_JR-03218"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Business Technology Advisory Consulting Intern"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Denver-Tech-Center/XMLNAME-2027-Summer-Transfer-Pricing-Intern_JR-03340",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-16",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. Whether you intend to...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "b82d6b6973c31b50",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Denver Tech Center; Chicago Riverside Plaza",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 25,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03340",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Denver-Tech-Center/XMLNAME-2027-Summer-Transfer-Pricing-Intern_JR-03340"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Summer Transfer Pricing Intern"
   },
   {
     "apply_url": "https://cna.wd1.myworkdayjobs.com/CNA_Careers/job/Chicago-IL-USA/Technology-Internship-Program--Data-Engineering-_R-8129",
@@ -6375,8 +7026,8 @@
     "id": "b888fd4cd7115672",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -6399,6 +7050,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (Data Engineering)"
   },
   {
@@ -6420,8 +7072,8 @@
     "id": "b88e97fd41cb173f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "KS - Overland Park",
     "match_reasons": [
@@ -6444,6 +7096,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Claim Professional Development Program Intern"
   },
   {
@@ -6465,8 +7118,8 @@
     "id": "b98186485fd885cd",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City",
     "match_reasons": [
@@ -6490,6 +7143,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
   {
@@ -6511,8 +7165,8 @@
     "id": "b99bb9f4994d3603",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL, USA",
     "match_reasons": [
@@ -6535,6 +7189,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Technology Internship Program (Software Engineering)"
   },
   {
@@ -6556,8 +7211,8 @@
     "id": "bbb98f2e1e7e4aa6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, IA",
     "match_reasons": [
@@ -6580,6 +7235,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Winter Tax Internship - West Des Moines"
   },
   {
@@ -6601,8 +7257,8 @@
     "id": "bd4e52266b73eb95",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL; Kansas City, MO; New York, NY",
     "match_reasons": [
@@ -6625,6 +7281,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Surveillance Analyst Intern"
   },
   {
@@ -6646,8 +7303,8 @@
     "id": "be0bc9239ed25c0f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Southfield; Schaumburg; Macomb; Grand Rapids; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Chicago Riverside Plaza; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -6670,6 +7327,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 National Tax Office - Federal Tax Consulting Intern"
   },
   {
@@ -6691,8 +7349,8 @@
     "id": "bea4b7f10ffb17d8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Corporate Office",
     "match_reasons": [
@@ -6715,6 +7373,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Embedded Software Engineer Internship Summer 2027"
   },
   {
@@ -6736,8 +7395,8 @@
     "id": "bf9ca9cdccfe9c6f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago; New York",
     "match_reasons": [
@@ -6760,6 +7419,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus AI Research Engineer - Deep Learning (Intern)"
   },
   {
@@ -6781,8 +7441,8 @@
     "id": "bfa072a467a2d0aa",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City, MO",
     "match_reasons": [
@@ -6805,6 +7465,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Operational Resilience & Technical Content Intern"
   },
   {
@@ -6850,6 +7511,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Claims Intern - Medical Management"
   },
   {
@@ -6871,13 +7533,13 @@
     "id": "c2f9afc63a9e07bd",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.2565,
-    "lng": -95.9345,
+    "lat": 41.264013,
+    "lng": -96.056496,
     "location_label": "Omaha, NE",
     "location_raw": "Omaha - Southport",
     "match_reasons": [
       "-10 role: 'risk management' only in description, which may be company boilerplate",
-      "+10 location: 130 miles from Ames",
+      "+10 location: 136 miles from Ames",
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
@@ -6895,6 +7557,7 @@
     ],
     "state": "NE",
     "status": "open",
+    "tags": [],
     "title": "Insurance Intern"
   },
   {
@@ -6916,8 +7579,8 @@
     "id": "c6c1332a6ead3713",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Southfield; Grand Rapids; Cleveland; Chicago Riverside Plaza; Schaumburg; Auburn Hills; Macomb",
     "match_reasons": [
@@ -6940,6 +7603,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 Tax Operations and Innovation Intern"
   },
   {
@@ -6961,8 +7625,8 @@
     "id": "c76c0a80e4a83cbb",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, Iowa",
     "match_reasons": [
@@ -6985,6 +7649,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Operations Reporting & Analytics Intern"
   },
   {
@@ -7030,6 +7695,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Intern- Claims (Property)"
   },
   {
@@ -7051,8 +7717,8 @@
     "id": "c8779d0789c49091",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -7076,6 +7742,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Growth & Development Intern - Summer 2027"
   },
   {
@@ -7097,8 +7764,8 @@
     "id": "c87a7c18eba1e9ec",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -7121,6 +7788,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Strategy & Operations Internship Summer 2027 (Hybrid)"
   },
   {
@@ -7142,8 +7810,8 @@
     "id": "c897653e0d598883",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -7166,6 +7834,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Tax Solutions Group Intern"
   },
   {
@@ -7187,8 +7856,8 @@
     "id": "c8a3d50f7f982db6",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -7211,6 +7880,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 International Tax Services Intern"
   },
   {
@@ -7232,8 +7902,8 @@
     "id": "ca227bc01a5d6661",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago",
     "match_reasons": [
@@ -7256,6 +7926,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus Data Engineer (Intern)"
   },
   {
@@ -7277,8 +7948,8 @@
     "id": "cb07da7ad2494676",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9779,
-    "lng": -91.6656,
+    "lat": 41.964226,
+    "lng": -91.679164,
     "location_label": "Cedar Rapids, IA",
     "location_raw": "Cedar Rapids",
     "match_reasons": [
@@ -7301,6 +7972,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
   {
@@ -7322,8 +7994,8 @@
     "id": "cd4ed4d96767215e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City MO",
     "match_reasons": [
@@ -7346,6 +8018,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Corporate Legal Intern"
   },
   {
@@ -7367,8 +8040,8 @@
     "id": "cf4e4316b14a0ed1",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9953,
-    "lng": -87.8845,
+    "lat": 41.988978,
+    "lng": -87.871739,
     "location_label": "Rosemont, IL",
     "location_raw": "Rosemont, IL",
     "match_reasons": [
@@ -7392,6 +8065,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Human Resources"
   },
   {
@@ -7423,7 +8097,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -7437,6 +8111,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Finance / Accounting Internship Program (Summer 2027)"
   },
   {
@@ -7458,8 +8133,8 @@
     "id": "d1ae91da63a537b1",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.9953,
-    "lng": -87.8845,
+    "lat": 41.988978,
+    "lng": -87.871739,
     "location_label": "Rosemont, IL",
     "location_raw": "Rosemont, IL",
     "match_reasons": [
@@ -7482,6 +8157,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wintrust 2027 Summer Internship: Finance/Accounting"
   },
   {
@@ -7498,11 +8174,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MN - St. Paul (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "d25fd01c8018c427",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -7526,7 +8202,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Finance and Accounting Leadership Development Program (FALDP) Intern"
   },
   {
@@ -7548,8 +8225,8 @@
     "id": "d351a061af811b70",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -7572,6 +8249,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern - Accounting Majors"
   },
   {
@@ -7617,6 +8295,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Intern - Fast Track Claims"
   },
   {
@@ -7633,11 +8312,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: MN - St. Paul (204 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "d57439ab11c81b18",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -7661,8 +8340,56 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Human Resources Leadership Development Program Internship - Summer 2027"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Regulatory-Compliance-Consultant-Intern_JR-03150",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-08",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "d5f7b4ef07f32c92",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Chicago Riverside Plaza",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear",
+      "score limited to 0 (raw total -2)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 0,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03150",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Regulatory-Compliance-Consultant-Intern_JR-03150"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Regulatory Compliance Consultant Intern"
   },
   {
     "apply_url": "https://www.jumptrading.com/hr/job?gh_jid=8002989",
@@ -7683,8 +8410,8 @@
     "id": "d73e80152f0b63d8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago",
     "match_reasons": [
@@ -7707,6 +8434,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus Software Engineer (Intern)"
   },
   {
@@ -7728,8 +8456,8 @@
     "id": "d73ff830004e8885",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - The Center",
     "match_reasons": [
@@ -7752,6 +8480,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Advanced Manufacturing Intern - Summer 2027"
   },
   {
@@ -7773,8 +8502,8 @@
     "id": "d8e6f9df4844f08c",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -7798,6 +8527,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Marketing Intern - Summer 2027"
   },
   {
@@ -7819,8 +8549,8 @@
     "id": "ddb39efb357756e8",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -7844,7 +8574,54 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Summer 2027 Intern-Computer Science and Software Engineering"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Risk-and-Accounting-Advisory-Services-Consulting-Internship_JR-03143",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-08",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "ddb5d09fc92f5651",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Denver Tech Center; Chicago Riverside Plaza",
+    "match_reasons": [
+      "+40 role: 'accounting intern' in title (accounting)",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 48,
+    "role_category": "accounting",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03143",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Risk-and-Accounting-Advisory-Services-Consulting-Internship_JR-03143"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Risk and Accounting Advisory Services Consulting Internship"
   },
   {
     "apply_url": "https://jobs.ashbyhq.com/mariner-careers/5c912513-f92b-4f28-a193-a8ddb9da7a0d",
@@ -7865,8 +8642,8 @@
     "id": "ddce09af7db3913e",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 38.9822,
-    "lng": -94.6708,
+    "lat": 38.889042,
+    "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "Cincinnati, OH; Overland Park, KS",
     "match_reasons": [
@@ -7889,6 +8666,7 @@
     ],
     "state": "KS",
     "status": "open",
+    "tags": [],
     "title": "Intern, Tax- Cincinnati, OH"
   },
   {
@@ -7910,8 +8688,8 @@
     "id": "dfbb0dae86f67453",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines, IA",
     "match_reasons": [
@@ -7934,6 +8712,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "2027 Summer Tax Internship - West Des Moines"
   },
   {
@@ -7955,8 +8734,8 @@
     "id": "dfcfbb5df0c842e3",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5868,
-    "lng": -93.625,
+    "lat": 41.57259,
+    "lng": -93.610243,
     "location_label": "Des Moines, IA",
     "location_raw": "Des Moines #3, Park Avenue, Des Moines, IA",
     "match_reasons": [
@@ -7979,6 +8758,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Pharmacy Intern"
   },
   {
@@ -8000,8 +8780,8 @@
     "id": "e08b133931644b07",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "US-IL-Chicago-10 SWacker-3100",
     "match_reasons": [
@@ -8024,6 +8804,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Wealth Management Intern (Summer 2027, Chicago)"
   },
   {
@@ -8045,8 +8826,8 @@
     "id": "e1305f2bcb34e600",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.408,
-    "lng": -92.9163,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - Corporate Office",
     "match_reasons": [
@@ -8069,6 +8850,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "IT Software Engineer Internship Summer 2027"
   },
   {
@@ -8085,11 +8867,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: CT - Hartford; MN - St. Paul (1074 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "e6444adeb63a6483",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8114,7 +8896,8 @@
       }
     ],
     "state": "MN",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Business Insights & Analytics Leadership Development Program (BI&A LDP) Geospatial Intern"
   },
   {
@@ -8136,8 +8919,8 @@
     "id": "e8c55c2f029cb601",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 42.0334,
-    "lng": -88.0834,
+    "lat": 42.028423,
+    "lng": -88.084745,
     "location_label": "Schaumburg, IL",
     "location_raw": "Chicago Riverside Plaza; Traverse City; Toledo; Southfield; Schaumburg; Macomb; Kalamazoo; Grand Rapids; Fort Collins; Flint; East Lansing; Detroit; Denver Tech Center; Columbus; Cleveland; Cincinnati; Auburn Hills; Ann Arbor",
     "match_reasons": [
@@ -8160,6 +8943,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2028 National Tax Office & Transactional Specialist Intern"
   },
   {
@@ -8181,8 +8965,8 @@
     "id": "ea7648d93f535e07",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -8206,6 +8990,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Information Technology Intern - Summer 2027"
   },
   {
@@ -8227,8 +9012,8 @@
     "id": "ec59434a9545f8ce",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago",
     "match_reasons": [
@@ -8251,6 +9036,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Campus UI Software Engineer (Intern)"
   },
   {
@@ -8271,7 +9057,7 @@
     "first_seen": "2026-11-02",
     "id": "ecbc8331fb77291f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8282,7 +9068,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -8295,7 +9081,8 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
+    "tags": [],
     "title": "Corporate Communications Intern"
   },
   {
@@ -8317,8 +9104,8 @@
     "id": "edecbd0b3951e42c",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -8341,6 +9128,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Finance Intern - Summer 2027"
   },
   {
@@ -8362,8 +9150,8 @@
     "id": "edfacf9b5f01a474",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -8386,7 +9174,55 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Accounting Intern (Term-Time, Part-Time)"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Information-Technology-Consulting--Public-Sector---Intern_JR-03131",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-20",
+    "deadline": null,
+    "description_snippet": "Applications are accepted on an ongoing basis. Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "efc4e3b1e1f10095",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Chicago Riverside Plaza; Denver Tech Center",
+    "match_reasons": [
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear",
+      "score limited to 0 (raw total -2)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 0,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03131",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Information-Technology-Consulting--Public-Sector---Intern_JR-03131"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2027 Public Sector & Infrastructure Consulting Intern"
   },
   {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Missouri/Underwriting-Intern---South-Central-Region_R6529-1",
@@ -8402,11 +9238,11 @@
       "reason": "No season or graduation year stated",
       "status": "unclear"
     },
-    "filtered_reason": null,
+    "filtered_reason": "location unknown: Missouri",
     "first_seen": "2026-11-02",
     "id": "f1190b3eb0354415",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8430,7 +9266,8 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Underwriting Intern - South Central Region"
   },
   {
@@ -8452,8 +9289,8 @@
     "id": "f1e0cf0b122867ba",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 39.0997,
-    "lng": -94.5786,
+    "lat": 39.125155,
+    "lng": -94.550313,
     "location_label": "Kansas City, MO",
     "location_raw": "Kansas City MO",
     "match_reasons": [
@@ -8476,6 +9313,7 @@
     ],
     "state": "MO",
     "status": "open",
+    "tags": [],
     "title": "Capital Markets Sales Intern"
   },
   {
@@ -8497,8 +9335,8 @@
     "id": "f23e3a9ed8e2458f",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8089,
-    "lng": -88.0112,
+    "lat": 41.79503,
+    "lng": -88.021055,
     "location_label": "Downers Grove, IL",
     "location_raw": "IL - Downers Grove",
     "match_reasons": [
@@ -8521,6 +9359,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)"
   },
   {
@@ -8537,11 +9376,11 @@
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
     },
-    "filtered_reason": null,
+    "filtered_reason": "Outside target locations: IL - Central Illinois - Bloomington - Bloomington Main (61701); 401 Main Street (264 miles from Ames)",
     "first_seen": "2026-11-02",
     "id": "f2706873d44e018c",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8565,7 +9404,8 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "filtered",
+    "tags": [],
     "title": "Intern - Business Banking, Illinois (Summer 2027)"
   },
   {
@@ -8587,8 +9427,8 @@
     "id": "f60ba45fc13adbbf",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Minneapolis, MN; Chicago, IL",
     "match_reasons": [
@@ -8611,6 +9451,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "2027 Payment Sales Intern"
   },
   {
@@ -8656,6 +9497,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Intern- Claims (Data)"
   },
   {
@@ -8677,8 +9519,8 @@
     "id": "faecb41e3d97159b",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -8701,7 +9543,54 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Marketing Intern"
+  },
+  {
+    "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2028-PMCF-Investment-Summer-Analyst_JR-03424",
+    "ats": "workday",
+    "city": "Chicago Riverside Plaza",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "country": null,
+    "date_posted": "2026-10-08",
+    "deadline": null,
+    "description_snippet": "Count on us. Our \"we-care\" culture is more than just a motto; it's a promise. From day one, we prioritize your growth, well-being, and success. You can count on us to support your career journey and help you achieve your professional goals. Join us. PMCF, a U.S. registered...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-02",
+    "id": "fc4caa43efe9f520",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "Southfield; Grand Rapids; Chicago Riverside Plaza; Denver Tech Center",
+    "match_reasons": [
+      "+40 role: 'investment banking' in title (investment_banking)",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 48,
+    "role_category": "investment_banking",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "plantemoran:JR-03424",
+        "source_name": "workday",
+        "url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2028-PMCF-Investment-Summer-Analyst_JR-03424"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "2028 PMCF Investment Banking Summer Analyst"
   },
   {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/West-Des-Moines/Creative-Risk-Solutions-Intern---Summer-2027_R0001045",
@@ -8722,8 +9611,8 @@
     "id": "fcb001d23bb28b37",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.5772,
-    "lng": -93.7113,
+    "lat": 41.549937,
+    "lng": -93.781351,
     "location_label": "West Des Moines, IA",
     "location_raw": "West Des Moines",
     "match_reasons": [
@@ -8746,6 +9635,7 @@
     ],
     "state": "IA",
     "status": "open",
+    "tags": [],
     "title": "Creative Risk Solutions Intern - Summer 2027"
   },
   {
@@ -8767,8 +9657,8 @@
     "id": "fd22561c297b51b9",
     "is_remote": false,
     "last_known_open": null,
-    "lat": 41.8781,
-    "lng": -87.6298,
+    "lat": 41.837045,
+    "lng": -87.684939,
     "location_label": "Chicago, IL",
     "location_raw": "Chicago, IL",
     "match_reasons": [
@@ -8791,6 +9681,7 @@
     ],
     "state": "IL",
     "status": "open",
+    "tags": [],
     "title": "Legal Intern"
   }
 ]
