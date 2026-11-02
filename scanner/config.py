@@ -14,7 +14,12 @@ WORKDAY_URL = re.compile(r"^https://[\w-]+\.wd\d+\.myworkdayjobs\.com/[\w-]+$")
 TOP_LEVEL_KEYS = {
     "profile", "home", "radius_miles", "target_areas", "include_whole_states", "remote",
     "seasons", "role_categories", "must_be_one_of", "exclude_keywords", "eligibility",
-    "status", "new_badge_days", "email", "contacts",
+    "status", "new_badge_days", "email", "contacts", "program_title_terms", "scoring", "workday", "geocoding",
+}
+SCORING_KEYS = {
+    "role_in_title", "role_only_in_description", "no_role_signal", "target_area", "whole_state_or_home_radius",
+    "location_unknown", "season_max", "season_not_stated", "eligible", "eligibility_unclear", "ineligible",
+    "early_career", "no_role_cap", "max_score",
 }
 COMPANY_KEYS = {"name", "ats", "board", "cities", "priority", "notes"}
 
@@ -119,9 +124,12 @@ def load_config(path: Path, cities: list) -> dict:
         seasons = []
     seen = set()
     for i, season in enumerate(seasons):
-        if not isinstance(season, dict) or set(season) != {"name", "weight"}:
-            errors.append(f"seasons[{i}]: must have exactly name and weight, e.g. {{ name: \"Summer 2027\", weight: 1.0 }}")
+        if not isinstance(season, dict) or not {"name", "weight"} <= set(season) <= {"name", "weight", "max_miles_from_home"}:
+            errors.append(f"seasons[{i}]: must have exactly name and weight, plus optional max_miles_from_home, "
+                          f"e.g. {{ name: \"Summer 2027\", weight: 1.0 }}")
             continue
+        if "max_miles_from_home" in season and not (_is_number(season["max_miles_from_home"]) and season["max_miles_from_home"] > 0):
+            errors.append(f"seasons[{i}]: max_miles_from_home must be a number above 0")
         if not (isinstance(season["name"], str) and SEASON_NAME.match(season["name"])):
             errors.append(f"seasons[{i}]: name '{season['name']}' must look like 'Summer 2027' or be 'Early-career program'")
         if not _is_number(season["weight"]) or not 0 <= season["weight"] <= 1:
@@ -133,7 +141,7 @@ def load_config(path: Path, cities: list) -> dict:
     roles = cfg.get("role_categories")
     if not isinstance(roles, dict) or not roles or not all(_is_string_list(v) and v for v in roles.values()):
         errors.append("role_categories must map each category to a non-empty list of keywords")
-    for key in ("must_be_one_of", "exclude_keywords"):
+    for key in ("must_be_one_of", "exclude_keywords", "program_title_terms"):
         if not _is_string_list(cfg.get(key)) or not cfg.get(key):
             errors.append(f"{key} must be a non-empty list of strings")
 
@@ -151,6 +159,32 @@ def load_config(path: Path, cities: list) -> dict:
     email = cfg.get("email") or {}
     if not (_is_number(email.get("min_score")) and 0 <= email["min_score"] <= 100):
         errors.append("email.min_score must be a number from 0 to 100")
+
+    scoring = cfg.get("scoring")
+    if not isinstance(scoring, dict) or set(scoring) != SCORING_KEYS:
+        have = set(scoring) if isinstance(scoring, dict) else set()
+        errors.append(f"scoring must have exactly these settings; missing {sorted(SCORING_KEYS - have)}, unknown {sorted(have - SCORING_KEYS)}")
+    else:
+        for key, value in sorted(scoring.items()):
+            if not _is_number(value):
+                errors.append(f"scoring.{key} must be a number")
+        if _is_number(scoring["no_role_cap"]) and _is_number(scoring["max_score"]) and not 0 <= scoring["no_role_cap"] <= scoring["max_score"]:
+            errors.append("scoring.no_role_cap must be from 0 to max_score")
+
+    workday = cfg.get("workday") or {}
+    if not _is_string_list(workday.get("search_terms")) or not workday.get("search_terms"):
+        errors.append("workday.search_terms must be a non-empty list of strings")
+    for key in ("page_size", "max_results_per_term"):
+        if not (isinstance(workday.get(key), int) and not isinstance(workday.get(key), bool) and workday.get(key) > 0):
+            errors.append(f"workday.{key} must be a whole number above 0")
+
+    geocoding = cfg.get("geocoding") or {}
+    if not isinstance(geocoding.get("enabled"), bool):
+        errors.append("geocoding.enabled must be true or false")
+    if not (_is_number(geocoding.get("min_seconds_between_requests")) and geocoding.get("min_seconds_between_requests") >= 1):
+        errors.append("geocoding.min_seconds_between_requests must be 1 or more")
+    if not (isinstance(geocoding.get("max_lookups_per_run"), int) and geocoding.get("max_lookups_per_run") >= 0):
+        errors.append("geocoding.max_lookups_per_run must be a whole number, 0 or more")
 
     _fail_if_any(path, errors)
     return cfg
