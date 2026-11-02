@@ -1,0 +1,51 @@
+{
+  "jobs": [
+    {
+      "id": 5228997007,
+      "title": "Accounting Intern",
+      "absolute_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997007",
+      "location": {"name": "Des Moines, Iowa, United States"},
+      "first_published": "2026-09-03T15:46:17-04:00",
+      "updated_at": "2026-10-23T10:35:31-04:00",
+      "application_deadline": null,
+      "content": "&lt;p&gt;You will support month-end close and account reconciliations.&lt;/p&gt;&lt;p&gt;Summer 2027 program.&lt;/p&gt;"
+    },
+    {
+      "id": 5228997008,
+      "title": "IT Intern, SAP Security",
+      "absolute_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997008",
+      "location": {"name": "Des Moines, Iowa, United States"},
+      "first_published": "2026-09-03T15:46:17-04:00",
+      "application_deadline": null,
+      "content": "&lt;p&gt;Support access reviews for finance systems.&lt;/p&gt;"
+    },
+    {
+      "id": 5228997009,
+      "title": "Director, Internal Sales",
+      "absolute_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997009",
+      "location": {"name": "Des Moines, Iowa, United States"},
+      "first_published": "2026-08-01T00:00:00-04:00",
+      "application_deadline": null,
+      "content": "&lt;p&gt;Lead the internal sales team.&lt;/p&gt;"
+    },
+    {
+      "id": 5228997010,
+      "title": "2027 Summer Sales Internship",
+      "absolute_url": "https://example.com/careers?gh_jid=5228997010",
+      "location": {"name": "Dallas, Texas, United States"},
+      "first_published": "2026-09-10T00:00:00-04:00",
+      "application_deadline": null,
+      "content": "&lt;p&gt;Learn the insurance sales process.&lt;/p&gt;"
+    },
+    {
+      "id": 5228997011,
+      "title": "Tax Intern",
+      "absolute_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997011",
+      "location": {"name": "Des Moines, Iowa, United States"},
+      "first_published": null,
+      "application_deadline": "2027-02-15T00:00:00-05:00",
+      "content": "&lt;p&gt;Prepare tax workpapers. Questions? Contact the hiring team.&lt;/p&gt;"
+    }
+  ],
+  "meta": {"total": 5}
+}

@@ -1,0 +1,19 @@
+{
+  "offset": 0,
+  "limit": 100,
+  "totalFound": 2,
+  "content": [
+    {
+      "id": "744000158084730",
+      "name": "Tax Intern - Summer 2027",
+      "releasedDate": "2026-10-01T12:00:00.000Z",
+      "location": {"city": "Chicago", "region": "IL", "country": "us", "remote": false, "hybrid": false, "fullLocation": "Chicago, IL, United States"}
+    },
+    {
+      "id": "744000159154090",
+      "name": "Switchboard Operator - 2nd Shift (On-site)",
+      "releasedDate": "2026-11-02T14:24:44.088Z",
+      "location": {"city": "Wheeling", "region": "WV", "country": "us", "remote": false, "hybrid": false, "fullLocation": "Wheeling, WV, United States"}
+    }
+  ]
+}

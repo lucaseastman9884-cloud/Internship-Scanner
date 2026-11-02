@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ad208490-4052-4f91-a57e-433f2d1e484b",
+    "text": "Wealth Management Intern - Summer 2028",
+    "categories": {"commitment": "Intern", "location": "Chicago, Illinois", "allLocations": ["Chicago, Illinois", "Atlanta, Georgia"]},
+    "createdAt": 1788199939703,
+    "descriptionPlain": "Work with client advisors.",
+    "lists": [{"text": "What you bring", "content": "<li>Coursework in finance</li>"}],
+    "additionalPlain": "",
+    "workplaceType": "hybrid",
+    "hostedUrl": "https://jobs.lever.co/example/ad208490-4052-4f91-a57e-433f2d1e484b",
+    "applyUrl": "https://jobs.lever.co/example/ad208490-4052-4f91-a57e-433f2d1e484b/apply"
+  }
+]
