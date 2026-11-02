@@ -58,10 +58,15 @@ class WorkdayAdapter(Adapter):
             if not isinstance(data, dict) or not isinstance(data.get("jobPostings"), list):
                 raise FormatChanged(f"unexpected Workday response for {company['board']}")
             page = data["jobPostings"]
-            for job in page:
-                if not (isinstance(job, dict) and job.get("title") and job.get("externalPath")):
-                    raise FormatChanged(f"Workday posting without title or path for {company['board']}")
-            jobs.extend(page)
+            usable = [j for j in page if isinstance(j, dict) and j.get("title") and j.get("externalPath")]
+            if page and not usable:
+                raise FormatChanged(f"Workday postings without title or path for {company['board']}")
+            if len(usable) < len(page):
+                # Live boards return the occasional blank entry. It proves nothing about the format,
+                # but it is a job we could not see, so this fetch cannot prove anything is gone.
+                self.complete = False
+                self.warnings.append(f"search '{term}' returned {len(page) - len(usable)} posting(s) without a title or path")
+            jobs.extend(usable)
             # Later pages can report a total of 0, so trust the first page's number.
             total = data.get("total") if total is None else total
             offset += len(page)

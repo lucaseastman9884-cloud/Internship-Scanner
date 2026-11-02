@@ -33,6 +33,11 @@ class RobotsBlocked(HttpError):
     """The host's robots.txt does not allow this request, so it was never sent."""
 
 
+class RobotsUnreadable(RobotsBlocked):
+    """robots.txt could not be read (outage or server error). We stay away, as RFC 9309 says, but
+    the site has not refused us, so this must not look like a real block."""
+
+
 class FormatChanged(HttpError):
     """The source answered, but not in the shape we expect."""
 
@@ -106,7 +111,7 @@ class HttpClient:
             self._robots[base] = self._load_robots(base, parsed.netloc)
         rules = self._robots[base]
         if rules is False:
-            raise RobotsBlocked(f"could not read {base}/robots.txt, so the request was not sent")
+            raise RobotsUnreadable(f"could not read {base}/robots.txt, so the request was not sent")
         if rules is not None and not rules.can_fetch(USER_AGENT, url):
             raise RobotsBlocked(f"{base}/robots.txt does not allow this request, so it was not sent")
 

@@ -9,7 +9,7 @@ from . import eligibility, filtering, history, normalize, scoring, store
 from .adapters import ADAPTERS
 from .config import load_cities, load_companies, load_config
 from .geocode import Geocoder
-from .http_client import FormatChanged, HttpClient, HttpError, RobotsBlocked
+from .http_client import FormatChanged, HttpClient, HttpError, RobotsBlocked, RobotsUnreadable
 from .location import LocationResolver
 from .text import scrub_contact_data
 
@@ -55,6 +55,8 @@ def _fallback(company):
 def _needs_manual_fallback(err) -> bool:
     """Blocked or changed: retrying tomorrow would not help, so a person should look (D-002).
     Server errors and timeouts are ordinary failures and stay "error"."""
+    if isinstance(err, RobotsUnreadable):
+        return False
     if isinstance(err, (RobotsBlocked, FormatChanged)):
         return True
     return isinstance(err, HttpError) and err.status is not None and 400 <= err.status < 500

@@ -210,6 +210,13 @@ def test_workday_changed_format_raises(reply):
         WorkdayAdapter(FakeClient({"myworkdayjobs.com": reply}), WD_SETTINGS).fetch(WD_COMPANY)
 
 
+def test_workday_one_blank_posting_is_skipped_and_marks_the_fetch_incomplete():
+    jobs = [{"title": "Tax Intern", "externalPath": "/job/x/Tax_1", "locationsText": "Chicago, IL"}, {"bulletFields": ["R1"]}]
+    adapter = WorkdayAdapter(FakeClient({"myworkdayjobs.com": {"total": 2, "jobPostings": jobs}}), WD_SETTINGS)
+    assert len(adapter.fetch(WD_COMPANY, lambda listing: False)) == 1
+    assert adapter.complete is False and "without a title or path" in adapter.warnings[0]
+
+
 def test_workday_changed_detail_format_raises():
     fake = wd_client(details={"261936": {"nope": 1}, "261941-1": {"nope": 1}, "JR102224": {"nope": 1}})
     with pytest.raises(FormatChanged):

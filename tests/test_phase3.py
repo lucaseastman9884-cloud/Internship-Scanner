@@ -12,7 +12,7 @@ from scanner import filtering, history, scoring, store
 from scanner.adapters import ADAPTERS
 from scanner.config import ConfigError, load_config
 from scanner.geocode import Geocoder, cache_key
-from scanner.http_client import FormatChanged, HttpClient, HttpError, RobotsBlocked
+from scanner.http_client import FormatChanged, HttpClient, HttpError, RobotsBlocked, RobotsUnreadable
 from scanner.location import LocationResolver
 from scanner.normalize import new_listing
 from scanner.pipeline import run
@@ -189,6 +189,11 @@ def test_blocked_or_changed_workday_falls_back_to_manual(space, failure):
 
 def test_a_server_error_is_an_ordinary_error_not_a_fallback(space):
     meta = go(space, 0, workday=HttpError("HTTP 503 after 1 retry", 503))
+    assert company_row(meta, "Wintrust Financial")["status"] == "error"
+
+
+def test_an_unreadable_robots_file_is_an_outage_not_a_block(space):
+    meta = go(space, 0, workday=RobotsUnreadable("could not read robots.txt"))
     assert company_row(meta, "Wintrust Financial")["status"] == "error"
 
 
