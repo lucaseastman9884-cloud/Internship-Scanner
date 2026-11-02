@@ -21,6 +21,8 @@ US_NAMES = {"us", "usa", "u.s.", "u.s.a.", "united states", "united states of am
 BOTH_CITY_AND_STATE = {"new york", "washington"}  # alone, these usually mean the city
 _REMOTE = re.compile(r"\b(remote|work from home|wfh|telecommute|virtual)\b", re.I)
 _ZIP = re.compile(r"\s+\d{5}(?:-\d{4})?$")
+# Workday's list view says "3 Locations" until the detail page names them.
+_PLACEHOLDER = re.compile(r"^(\d+|multiple)\s+locations?$", re.I)
 
 
 def _miles(a: dict, b: dict) -> float:
@@ -56,7 +58,8 @@ def _parse_place(text: str) -> dict:
 
 
 class LocationResolver:
-    def __init__(self, cfg: dict, cities: list):
+    def __init__(self, cfg: dict, cities: list, geocoder=None):
+        self.geocoder = geocoder
         self.by_key = {(c["city"].lower(), c["state"].upper()): c for c in cities}
         self.by_city: dict = {}
         for c in cities:
@@ -69,6 +72,14 @@ class LocationResolver:
             city, state = [p.strip() for p in area["center"].split(",")]
             self.areas.append({"name": area["name"], "radius": area["radius_miles"],
                                "center": self.by_key[(city.lower(), state.upper())]})
+        # While geocoding is unavailable, distance to an unlisted city cannot be measured. Keeping
+        # every such listing would flood the results with Dallas and New York, so only states with
+        # a table city inside a target area or the home radius stay in play.
+        self.nearby_states = {c["state"].upper() for c in cities if self._near_a_target(c)}
+
+    def _near_a_target(self, point: dict) -> bool:
+        return (_miles(point, self.home) <= self.radius
+                or any(_miles(point, area["center"]) <= area["radius"] for area in self.areas))
 
     def _lookup(self, place: dict):
         name = (place["city"] or "").lower()
@@ -77,32 +88,63 @@ class LocationResolver:
         # A bare city is accepted only when no country says it is somewhere else.
         return None if place["country"] not in (None, "United States") else self.by_city.get(name)
 
-    def _classify(self, place: dict) -> dict:
+    def _coordinates(self, place: dict, allow_lookup: bool):
+        """City table first, then the geocoder's cache or service. Returns a point or None."""
         known = self._lookup(place)
         if known:
-            place = {**place, "state": known["state"], "country": "United States"}
-            for area in self.areas:
-                if _miles(known, area["center"]) <= area["radius"]:
-                    return {**place, "tier": "target_area", "detail": area["name"], "resolved": True}
-            if known["state"] in self.whole_states:
-                return {**place, "tier": "whole_state", "detail": known["state"], "resolved": True}
-            miles = _miles(known, self.home)
-            detail = f"{miles:.0f} miles from {self.home['city']}"
-            return {**place, "tier": "home_radius" if miles <= self.radius else None, "detail": detail, "resolved": True}
-        if place["state"] in self.whole_states:
-            return {**place, "tier": "whole_state", "detail": place["state"], "resolved": False}
-        return {**place, "tier": None, "detail": "city not in config/cities.yaml", "resolved": False}
+            return known
+        if allow_lookup and self.geocoder and place["city"] and place["state"]:
+            found = self.geocoder.lookup(place["city"], place["state"])
+            if found:
+                return {**found, "state": place["state"]}
+        return None
 
-    def resolve(self, location_raw: str, remote_hint: bool = False) -> dict:
+    def _geocoder_available(self) -> bool:
+        return bool(self.geocoder and self.geocoder.available)
+
+    def _classify(self, place: dict, allow_lookup: bool = True) -> dict:
+        point = self._coordinates(place, allow_lookup)
+        if point:
+            miles = _miles(point, self.home)
+            place = {**place, "state": point["state"], "country": "United States",
+                     "lat": point["lat"], "lng": point["lng"], "miles_from_home": miles, "resolved": True}
+            for area in self.areas:
+                if _miles(point, area["center"]) <= area["radius"]:
+                    return {**place, "tier": "target_area", "detail": area["name"]}
+            if point["state"] in self.whole_states:
+                return {**place, "tier": "whole_state", "detail": point["state"]}
+            detail = f"{miles:.0f} miles from {self.home['city']}"
+            return {**place, "tier": "home_radius" if miles <= self.radius else None, "detail": detail}
+
+        place = {**place, "lat": None, "lng": None, "miles_from_home": None, "resolved": False}
+        if place["state"] in self.whole_states:
+            return {**place, "tier": "whole_state", "detail": place["state"]}
+        if place["country"] not in (None, "United States"):
+            return {**place, "tier": None, "detail": f"outside the United States ({place['country']})"}
+        # Part D: a lookup that really failed keeps the listing as "Location unknown".
+        if self._geocoder_available() or not place["state"] or place["state"] in self.nearby_states:
+            return {**place, "tier": "unknown", "detail": "location unknown"}
+        return {**place, "tier": None, "detail": f"city not in config/cities.yaml, and {place['state']} has no target area"}
+
+    def resolve(self, location_raw: str, remote_hint: bool = False, allow_lookup: bool = True) -> dict:
         """Return the best-matching place. A multi-city posting counts if any of its cities qualifies."""
         pieces = [p.strip() for p in re.split(r";|\s\|\s|\n", location_raw or "") if p.strip()]
         physical = [p for p in pieces if not _REMOTE.search(p)]
         mentions_remote = len(physical) < len(pieces)
-        rank = {"target_area": 0, "whole_state": 1, "home_radius": 2, None: 3}
-        places = [self._classify(_parse_place(p)) for p in physical]
+        rank = {"target_area": 0, "whole_state": 1, "home_radius": 2, "unknown": 3, None: 4}
+        places = []
+        for piece in physical:
+            if _PLACEHOLDER.match(piece):
+                places.append({"city": None, "state": None, "country": None, "tier": "unknown", "detail": "location unknown",
+                               "resolved": True, "lat": None, "lng": None, "miles_from_home": None})
+            else:
+                places.append(self._classify(_parse_place(piece), allow_lookup))
         places.sort(key=lambda p: rank[p["tier"]])  # stable, so posting order breaks ties
-        best = places[0] if places else {"city": None, "state": None, "country": None,
-                                         "tier": None, "detail": "no location given", "resolved": False}
+        best = places[0] if places else {"city": None, "state": None, "country": None, "tier": None, "detail": "no location given",
+                                         "resolved": False, "lat": None, "lng": None, "miles_from_home": None}
+        # A multi-city posting is as close to home as its closest city (D-016).
+        distances = [p["miles_from_home"] for p in places if p["miles_from_home"] is not None]
+        nearest = min(distances) if distances else None
         # The source's remote flag wins: a remote job tagged with a home city is still remote.
         is_remote = remote_hint or (mentions_remote and best["tier"] is None)
-        return {**best, "is_remote": is_remote}
+        return {**best, "miles_from_home": nearest, "is_remote": is_remote}
