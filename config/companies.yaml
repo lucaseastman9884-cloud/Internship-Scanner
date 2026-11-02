@@ -26,12 +26,12 @@ companies:
     priority: 1
     notes: "Link on company careers page. Observed Summer 2027 Commercial Banking and Wealth Management interns in Chicago."
 
-  - name: "Federal Reserve Bank of Kansas City"
+  - name: "Federal Reserve System"
     ats: workday
     board: "https://rb.wd5.myworkdayjobs.com/FRS"
-    cities: ["Kansas City", "Chicago"]
+    cities: []
     priority: 1
-    notes: "Link on kansascityfed.org careers page. This board is shared by the Federal Reserve System, so results include other Reserve Banks. Chicago interns observed; Kansas City expected, not seen in the first 20 results."
+    notes: "Renamed by D-027. This board is shared by the whole Federal Reserve System, so each listing's city comes from its posting. The link was found on kansascityfed.org's careers page."
 
   - name: "CIBC"
     ats: workday
@@ -193,7 +193,7 @@ companies:
     board: "https://www.wellsfargojobs.com/"
     cities: ["Des Moines"]
     priority: 2
-    notes: "Careers site returned 403 to our identified request and we do not work around blocks. A Workday board (wf.wd1.myworkdayjobs.com/WellsFargoJobs) answered one test request in Phase 3 and allows us by robots.txt; it stays manual until Lucas decides whether using it respects that block. City expected."
+    notes: "Manual by D-028: its careers site returned 403 to our identified request and we do not work around blocks. No requests go to any Wells Fargo host. City expected."
 
   - name: "Dupaco Credit Union"
     ats: manual

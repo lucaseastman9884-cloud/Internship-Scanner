@@ -674,11 +674,11 @@
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
-  "federal-reserve-bank-of-kansas-city": {
+  "federal-reserve-system": {
     "ats": "workday",
     "careers_url": "https://rb.wd5.myworkdayjobs.com/FRS",
-    "company": "Federal Reserve Bank of Kansas City",
-    "company_id": "federal-reserve-bank-of-kansas-city",
+    "company": "Federal Reserve System",
+    "company_id": "federal-reserve-system",
     "fetch_health": {
       "complete": true,
       "consecutive_failures": 0,
