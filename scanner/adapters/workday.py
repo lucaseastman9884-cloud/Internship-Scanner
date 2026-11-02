@@ -5,6 +5,7 @@ company to "check manually". It searches instead of paging whole boards, which k
 """
 from __future__ import annotations
 
+import re
 from urllib.parse import urlparse
 
 from ..http_client import FormatChanged, HttpError
@@ -13,6 +14,11 @@ from ..text import html_to_text
 from .base import Adapter
 
 GONE_STATUS = {404, 410}
+# Seen live on 2026-11-02: postings taken down answer 403 and made-up paths answer 404, while open
+# postings on the same hosts answer 200. Only still_open uses this, right after the same host
+# answered this run's search. A 403 anywhere else still means we were blocked.
+REMOVED_STATUS = GONE_STATUS | {403}
+_JOB_PATH = re.compile(r"(/job/[^?#]+)")
 US_NAMES = {"united states of america", "united states"}
 
 
@@ -50,6 +56,22 @@ class WorkdayAdapter(Adapter):
                 listings.append(listing)
         return listings
 
+    def still_open(self, company, record):
+        match = _JOB_PATH.search(record.get("apply_url") or "")
+        if not match:
+            return None  # stored before this company used Workday, so there is nothing to ask
+        host, tenant, site = _board_parts(company["board"])
+        try:
+            detail = self.client.get_json(f"https://{host}/wday/cxs/{tenant}/{site}{match.group(1)}")
+        except HttpError as err:
+            if err.status in REMOVED_STATUS:
+                return False
+            raise
+        info = detail.get("jobPostingInfo") if isinstance(detail, dict) else None
+        if not isinstance(info, dict):
+            raise FormatChanged(f"unexpected Workday detail response for {company['board']}")
+        return info.get("posted") is not False and info.get("canApply") is not False
+
     def _search(self, api, term, settings, company):
         size, cap = settings["page_size"], settings["max_results_per_term"]
         jobs, offset, total = [], 0, None
@@ -73,7 +95,7 @@ class WorkdayAdapter(Adapter):
             if not page or len(page) < size or (isinstance(total, int) and offset >= total):
                 return jobs
             if offset >= cap:
-                # Jobs past the cap are unseen, not gone, so this run cannot count anything as missing.
+                # Jobs past the cap are unseen, not gone, so absence alone proves nothing here (D-025).
                 self.complete = False
                 self.warnings.append(f"search '{term}' stopped at {offset} of {total} results (config cap)")
                 return jobs

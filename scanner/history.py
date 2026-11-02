@@ -3,6 +3,8 @@
 The rules that matter:
 - A failed fetch says nothing about a listing, so it never counts as a miss.
 - A partial fetch (a search that hit its cap) cannot prove absence either.
+- Where the source can answer about one listing, it is asked before a miss is counted (D-025).
+- A closed listing stays closed and unchanged, so the data file does not change for it every day.
 - On the board but rejected by current config is "filtered", not closed.
 """
 from __future__ import annotations
@@ -36,9 +38,13 @@ def _leave_open(record: dict) -> None:
 
 
 def update_statuses(records: list, results: dict, today: str, cfg: dict) -> dict:
-    """results holds only companies fetched successfully: {company_id: {kept, excluded, complete}}."""
+    """results holds only companies fetched successfully: {company_id: {kept, excluded, complete, check}}.
+
+    check(record) answers about one listing: True (open), False (gone), None (no such check; the
+    run's own results decide), or "failed" (proves nothing).
+    """
     near, closed = cfg["status"]["possibly_closed_after_missed_runs"], cfg["status"]["closed_after_missed_runs"]
-    counts = {"filtered": 0, "missed": 0, "possibly_closed": 0, "closed": 0}
+    counts = {"filtered": 0, "missed": 0, "possibly_closed": 0, "closed": 0, "verified_open": 0, "check_failed": 0}
     for record in records:
         result = results.get(record["company_id"])
         if result is None:
@@ -50,7 +56,20 @@ def update_statuses(records: list, results: dict, today: str, cfg: dict) -> dict
             _leave_open(record)
             record.update(status="filtered", filtered_reason=reason, missed_runs=0, last_seen=today)
             counts["filtered"] += 1
-        elif result["complete"]:
+            continue
+        if record["status"] == "closed":
+            continue
+        check = result.get("check")
+        verdict = check(record) if check else None
+        if verdict == "failed":
+            counts["check_failed"] += 1
+        elif verdict is True:
+            # Still open, just absent from this run's search results.
+            record.update(missed_runs=0, last_seen=today)
+            if record["status"] == "possibly_closed":
+                record["status"] = "open"
+            counts["verified_open"] += 1
+        elif verdict is False or result["complete"]:
             record["missed_runs"] = record.get("missed_runs", 0) + 1
             counts["missed"] += 1
             if record["missed_runs"] >= closed:

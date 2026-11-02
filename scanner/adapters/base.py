@@ -25,3 +25,11 @@ class Adapter:
         for relevant jobs, which keeps request counts low on large boards.
         """
         raise NotImplementedError
+
+    def still_open(self, company: dict, record: dict) -> Optional[bool]:
+        """D-025: ask the source about one stored listing that this run's results did not include.
+
+        True means open, False means gone. None means this source has no such check, so the
+        run's own results decide. Raising means the check failed, which proves nothing.
+        """
+        return None

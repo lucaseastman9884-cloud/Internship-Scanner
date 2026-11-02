@@ -16,6 +16,19 @@ from .text import scrub_contact_data
 MAX_UNRESOLVED_LOGGED = 50
 
 
+class EmptyResponse(Exception):
+    """A source that had listings suddenly returned none. Far more likely a glitch than every job closing."""
+
+
+FAILED_STATUSES = ("error", "manual_fallback")
+LIVE_STATUSES = ("ok",) + FAILED_STATUSES
+
+
+def too_many_failures(meta: dict) -> bool:
+    """More than half of live companies failing means something bigger than one source is wrong."""
+    return meta["totals"]["companies_failed"] * 2 > meta["totals"]["companies_live"]
+
+
 def _evaluate(listing, cfg, resolver):
     """Run a listing through normalization, eligibility, filtering, and scoring, in place."""
     # Only possible internships may use the geocoder; other jobs are dropped whatever their city.
@@ -32,7 +45,7 @@ def _wants_detail(cfg, resolver):
             return False
         place = resolver.resolve(listing["location_raw"], listing["is_remote"])
         if place["is_remote"]:
-            return cfg["remote"] != "exclude"
+            return filtering.remote_allowed(place, cfg)
         return place["tier"] is not None
     return check
 
@@ -68,9 +81,22 @@ def _base_row(company):
             "error": None, "warnings": [], "fallback_link": None}
 
 
-def _process_company(company, adapter, cfg, resolver, unresolved):
+def _listing_check(company, adapter):
+    """D-025: one listing's check, whose failure proves nothing and never counts as a miss."""
+    def check(record):
+        try:
+            return adapter.still_open(company, record)
+        except Exception as err:  # deliberately broad, as with a whole company's fetch
+            adapter.warnings.append(scrub_contact_data(f"could not check '{record['title']}': {type(err).__name__}: {err}"))
+            return "failed"
+    return check
+
+
+def _process_company(company, adapter, cfg, resolver, unresolved, open_before):
     # The adapter sets "complete" during fetch, so this must run before the caller reads it.
     listings = adapter.fetch(company, _wants_detail(cfg, resolver))
+    if not listings and open_before >= cfg["status"]["empty_response_min_open"]:
+        raise EmptyResponse(f"returned 0 jobs but had {open_before} open listings last run, so this counts as a failed fetch")
     kept, excluded = [], []
     open_interns, latest = 0, None
     for listing in listings:
@@ -115,6 +141,7 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
     rows, all_kept, excluded_report = [], [], []
     results = {}  # only companies fetched successfully; history must not touch the others
     unresolved = Counter()
+    open_before = Counter(r["company_id"] for r in existing if r["status"] == "open")
     for company in companies:
         row = _base_row(company)
         ats = company["ats"]
@@ -128,11 +155,12 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
             adapter = adapters[ats](client, cfg)
             cid = company["company_id"]
             try:
-                listings, kept, excluded, open_interns, latest = _process_company(company, adapter, cfg, resolver, unresolved)
+                listings, kept, excluded, open_interns, latest = _process_company(
+                    company, adapter, cfg, resolver, unresolved, open_before[cid])
             except Exception as err:  # deliberately broad: any failure stays inside this company
                 status = "manual_fallback" if _needs_manual_fallback(err) else "error"
                 message = scrub_contact_data(f"{type(err).__name__}: {err}")
-                row.update(status=status, error=message, fallback_link=_fallback(company))
+                row.update(status=status, error=message, fallback_link=_fallback(company), warnings=adapter.warnings)
                 statuses[cid] = store.update_company_status(statuses.get(cid), company, started, False, today, error=message,
                                                             status=status, careers_url=_fallback(company))
             else:
@@ -140,7 +168,7 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
                 row.update(status="ok", fetched=len(listings), kept=len(kept), excluded=len(excluded),
                            exclusion_reasons=dict(sorted(reasons.items())), warnings=adapter.warnings)
                 all_kept.extend(kept)
-                results[cid] = {"kept": kept, "complete": adapter.complete,
+                results[cid] = {"kept": kept, "complete": adapter.complete, "check": _listing_check(company, adapter),
                                 "excluded": [(listing, "; ".join(text for _, text in ex)) for listing, ex in excluded]}
                 for listing, ex in excluded:
                     excluded_report.append({
@@ -170,6 +198,8 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
         "totals": {
             "companies": len(rows),
             "companies_fetched_ok": sum(r["status"] == "ok" for r in rows),
+            "companies_live": sum(r["status"] in LIVE_STATUSES for r in rows),
+            "companies_failed": sum(r["status"] in FAILED_STATUSES for r in rows),
             "fetched": sum(r["fetched"] for r in rows),
             "kept": sum(r["kept"] for r in rows),
             "excluded": sum(r["excluded"] for r in rows),
@@ -181,6 +211,8 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
             "database_total": len(merged),
             "database_open": len(is_open),
             "open_at_or_above_min_score": sum(r["relevance_score"] >= cfg["email"]["min_score"] for r in is_open),
+            "location_unknown_open": sum(r["location_label"] == "Location unknown" for r in is_open),
+            "remote_iowa_open": sum("remote_iowa" in r["tags"] for r in is_open),
         },
         "source_health": dict(sorted(health.items())),
         "companies": rows,
