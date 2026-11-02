@@ -1,0 +1,78 @@
+{
+  "261936": {
+    "jobPostingInfo": {
+      "id": "abc",
+      "title": "Wintrust 2027 Summer Internship: Commercial Banking",
+      "jobDescription": "<p>Work with commercial banking teams on credit analysis.</p>",
+      "location": "Chicago, IL",
+      "postedOn": "Posted 24 Days Ago",
+      "startDate": "2026-10-08",
+      "timeType": "Full time",
+      "jobReqId": "261936",
+      "country": {
+        "descriptor": "United States of America",
+        "id": "x"
+      },
+      "canApply": true,
+      "posted": true,
+      "externalUrl": "https://wintrust.wd1.myworkdayjobs.com/Search/job/Chicago-IL/Wintrust-2027-Summer-Internship--Commercial-Banking_261936"
+    },
+    "hiringOrganization": {
+      "name": "x"
+    },
+    "similarJobs": [],
+    "userAuthenticated": false
+  },
+  "261941-1": {
+    "jobPostingInfo": {
+      "id": "abc",
+      "title": "Wintrust 2027 Summer Internship: Finance/Accounting",
+      "jobDescription": "<p>Support finance and accounting teams.</p>",
+      "location": "Rosemont, IL",
+      "postedOn": "Posted 24 Days Ago",
+      "startDate": "2026-10-08",
+      "timeType": "Full time",
+      "jobReqId": "261941-1",
+      "country": {
+        "descriptor": "United States of America",
+        "id": "x"
+      },
+      "canApply": true,
+      "posted": true,
+      "externalUrl": "https://wintrust.wd1.myworkdayjobs.com/Search/job/Rosemont-IL/Wintrust-2027-Summer-Internship--Finance-Accounting_261941-1"
+    },
+    "hiringOrganization": {
+      "name": "x"
+    },
+    "similarJobs": [],
+    "userAuthenticated": false
+  },
+  "JR102224": {
+    "jobPostingInfo": {
+      "id": "abc",
+      "title": "2027 Tax Winter Internship - Missouri",
+      "jobDescription": "<p>Tax season internship.</p>",
+      "location": "St. Louis - Maplewood, MO",
+      "postedOn": "Posted 24 Days Ago",
+      "startDate": "2026-10-15",
+      "timeType": "Full time",
+      "jobReqId": "JR102224",
+      "country": {
+        "descriptor": "United States of America",
+        "id": "x"
+      },
+      "canApply": true,
+      "posted": true,
+      "externalUrl": "https://wintrust.wd1.myworkdayjobs.com/Search/job/St-Louis-Maplewood-MO/XMLNAME-2027-Tax-Winter-Internship---Missouri_JR102224",
+      "additionalLocations": [
+        "Kansas City, MO",
+        "Columbia, MO"
+      ]
+    },
+    "hiringOrganization": {
+      "name": "x"
+    },
+    "similarJobs": [],
+    "userAuthenticated": false
+  }
+}
