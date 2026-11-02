@@ -21,6 +21,11 @@ US_NAMES = {"us", "usa", "u.s.", "u.s.a.", "united states", "united states of am
 BOTH_CITY_AND_STATE = {"new york", "washington"}  # alone, these usually mean the city
 _REMOTE = re.compile(r"\b(remote|work from home|wfh|telecommute|virtual)\b", re.I)
 _ZIP = re.compile(r"\s+\d{5}(?:-\d{4})?$")
+_PARENS = re.compile(r"\s*\([^)]*\)")
+_AFTER_COUNTRY = re.compile(r"(,\s*(?:USA|US|United States))\s+[-–—]\s+.*$", re.I)
+_DASH_US = re.compile(r"\s+[-–—]\s+(?:U\.?S\.?A?\.?|United States)$", re.I)
+_SITE_WORD = re.compile(r"\s+(?:campus|office|hq|headquarters)$", re.I)
+_STATE_FIRST = re.compile(r"^([A-Z]{2})\s+[-–—]\s+(.+)$")
 # Workday's list view says "3 Locations" until the detail page names them.
 _PLACEHOLDER = re.compile(r"^(\d+|multiple)\s+locations?$", re.I)
 
@@ -31,8 +36,21 @@ def _miles(a: dict, b: dict) -> float:
     return 3958.8 * 2 * math.asin(math.sqrt(h))
 
 
+def _tidy(text: str) -> str:
+    """Rewrite the shapes real boards use: 'IL - Chicago', 'OH - Columbus (43213)', 'Chicago, IL – U.S.',
+    'Pella, Iowa, USA - Corporate Office', 'Saint Paul, MN Campus', 'Chicago Office'."""
+    text = _PARENS.sub("", text).strip()
+    text = _AFTER_COUNTRY.sub(r"\1", text)
+    text = _DASH_US.sub("", text)
+    text = _SITE_WORD.sub("", text).strip()
+    m = _STATE_FIRST.match(text)
+    if m and m.group(1) in STATE_CODES:
+        return f"{m.group(2)}, {m.group(1)}"
+    return text
+
+
 def _parse_place(text: str) -> dict:
-    parts = [_ZIP.sub("", p).strip() for p in text.split(",")]
+    parts = [_ZIP.sub("", p).strip() for p in _tidy(text).split(",")]
     parts = [p for p in parts if p]
     country = None
     if parts and parts[-1].lower() in US_NAMES:
@@ -53,7 +71,8 @@ def _parse_place(text: str) -> dict:
         elif country is None:
             country = last
             parts = parts[:-1]
-    city = parts[0] if parts else None
+    # With a state, the city sits right before it: 'Des Moines #3, Park Avenue, Des Moines, IA'.
+    city = (parts[-1] if state else parts[0]) if parts else None
     return {"city": city, "state": state, "country": country}
 
 
@@ -73,8 +92,8 @@ class LocationResolver:
             self.areas.append({"name": area["name"], "radius": area["radius_miles"],
                                "center": self.by_key[(city.lower(), state.upper())]})
         # While geocoding is unavailable, distance to an unlisted city cannot be measured. Keeping
-        # every such listing would flood the results with Dallas and New York, so only states with
-        # a table city inside a target area or the home radius stay in play.
+        # every such listing would flood the results with Dallas, Montreal, and "Europe", so only
+        # states with a table city inside a target area or the home radius stay in play.
         self.nearby_states = {c["state"].upper() for c in cities if self._near_a_target(c)}
 
     def _near_a_target(self, point: dict) -> bool:
@@ -122,9 +141,10 @@ class LocationResolver:
         if place["country"] not in (None, "United States"):
             return {**place, "tier": None, "detail": f"outside the United States ({place['country']})"}
         # Part D: a lookup that really failed keeps the listing as "Location unknown".
-        if self._geocoder_available() or not place["state"] or place["state"] in self.nearby_states:
+        if self._geocoder_available() or place["state"] in self.nearby_states:
             return {**place, "tier": "unknown", "detail": "location unknown"}
-        return {**place, "tier": None, "detail": f"city not in config/cities.yaml, and {place['state']} has no target area"}
+        where = f"{place['state']} has no target area" if place["state"] else "no state was given"
+        return {**place, "tier": None, "detail": f"city not in config/cities.yaml, and {where}"}
 
     def resolve(self, location_raw: str, remote_hint: bool = False, allow_lookup: bool = True) -> dict:
         """Return the best-matching place. A multi-city posting counts if any of its cities qualifies."""

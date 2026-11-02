@@ -1,6 +1,6 @@
 # Company registry. Checked 2026-11-02 by reading each company's own careers page.
 #
-# ats: greenhouse | lever | ashby | smartrecruiters | workday | manual
+# ats: greenhouse | lever | ashby | workday | manual (smartrecruiters exists but is unused: D-015)
 #   manual = no adapter is planned for this company yet, so it becomes a "check manually" link.
 #            notes say why (unconfirmed ATS, blocked page, or an ATS with no adapter).
 # board: Greenhouse/SmartRecruiters slug, Workday career-site URL, or careers URL for manual.
@@ -83,18 +83,18 @@ companies:
     notes: "ATS unconfirmed: STATUS.md hints Oracle Cloud, but no Oracle link appears on the careers page we could read. City expected."
 
   - name: "BMO"
-    ats: manual
-    board: "https://jobs.bmo.com/us/en"
+    ats: workday
+    board: "https://bmo.wd3.myworkdayjobs.com/External"
     cities: ["Chicago"]
     priority: 2
-    notes: "ATS unconfirmed: the site runs on Phenom, which hides the underlying system, and no public board link was visible. City expected."
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Moved from manual in Phase 3. City expected."
 
   - name: "Fifth Third"
-    ats: manual
-    board: "https://www.53.com/content/fifth-third/en/careers.html"
+    ats: workday
+    board: "https://fifththird.wd5.myworkdayjobs.com/53careers"
     cities: ["Chicago"]
     priority: 2
-    notes: "ATS unconfirmed: no ATS link in the page HTML; the job list likely loads through JavaScript. City expected."
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Moved from manual in Phase 3. City expected."
 
   - name: "Lazard"
     ats: manual
@@ -193,7 +193,7 @@ companies:
     board: "https://www.wellsfargojobs.com/"
     cities: ["Des Moines"]
     priority: 2
-    notes: "ATS unconfirmed: careers site returned 403 to our identified request and we do not work around blocks. City expected."
+    notes: "Careers site returned 403 to our identified request and we do not work around blocks. A Workday board (wf.wd1.myworkdayjobs.com/WellsFargoJobs) answered one test request in Phase 3 and allows us by robots.txt; it stays manual until Lucas decides whether using it respects that block. City expected."
 
   - name: "Dupaco Credit Union"
     ats: manual
@@ -259,11 +259,11 @@ companies:
     notes: "Company job-search page loads this Greenhouse board. Observed Summer 2027 technology programs in Chicago; finance programs expected, not yet confirmed."
 
   - name: "Morningstar"
-    ats: manual
-    board: "https://www.morningstar.com/careers"
+    ats: workday
+    board: "https://morningstar.wd5.myworkdayjobs.com/Americas"
     cities: ["Chicago"]
     priority: 2
-    notes: "ATS unconfirmed: page answered 202 with no ATS link. City expected."
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Moved from manual in Phase 3. The sample showed only 8 results, all in Mumbai, so this site may not be the right one for US interns."
 
   - name: "Allstate"
     ats: workday
@@ -313,3 +313,447 @@ companies:
     cities: ["Ames"]
     priority: 2
     notes: "ATS unconfirmed: site returned 403 to our identified request and we do not work around blocks. City expected; intern hiring not confirmed."
+
+  # --- Added in Phase 3: boards verified by a live request ---
+  - name: "BlackRock"
+    ats: workday
+    board: "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. City expected."
+
+  - name: "Marsh McLennan"
+    ats: workday
+    board: "https://mmc.wd1.myworkdayjobs.com/MMC"
+    cities: ["Chicago", "Des Moines"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Cities expected."
+
+  - name: "PwC"
+    ats: workday
+    board: "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. This is PwC's experienced-hire site and a separate campus site may exist, so few US interns are expected here."
+
+  - name: "Nuveen / TIAA"
+    ats: workday
+    board: "https://tiaa.wd1.myworkdayjobs.com/Search"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed 2027 Early Talent internships; Charlotte seen, Chicago expected."
+
+  - name: "Raymond James"
+    ats: workday
+    board: "https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. The list view gave no locations in the sample. City expected."
+
+  - name: "U.S. Bank"
+    ats: workday
+    board: "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers"
+    cities: ["Chicago", "Kansas City", "Des Moines"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed 2027 interns. Cities expected."
+
+  - name: "PNC"
+    ats: workday
+    board: "https://pnc.wd5.myworkdayjobs.com/External"
+    cities: ["Chicago", "Kansas City"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed undergraduate interns. Cities expected."
+
+  - name: "CNA Insurance"
+    ats: workday
+    board: "https://cna.wd1.myworkdayjobs.com/CNA_Careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed underwriting roles in Chicago."
+
+  - name: "Ameriprise Financial"
+    ats: workday
+    board: "https://ameriprise.wd5.myworkdayjobs.com/Ameriprise"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. City expected."
+
+  - name: "Sun Life"
+    ats: workday
+    board: "https://sunlife.wd3.myworkdayjobs.com/Experienced-Jobs"
+    cities: ["Kansas City"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed interns outside target areas. Kansas City expected."
+
+  - name: "Cboe Global Markets"
+    ats: workday
+    board: "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Marketing and Legal interns in Chicago."
+
+  - name: "Citigroup"
+    ats: workday
+    board: "https://citi.wd5.myworkdayjobs.com/2"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. A very large global board. City expected."
+
+  - name: "Capital One"
+    ats: workday
+    board: "https://capitalone.wd12.myworkdayjobs.com/Capital_One"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. City expected."
+
+  - name: "Kemper"
+    ats: workday
+    board: "https://kemper.wd5.myworkdayjobs.com/Kemper_Careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Chicago roles; interns not yet confirmed."
+
+  - name: "Securian Financial"
+    ats: workday
+    board: "https://hq.wd12.myworkdayjobs.com/Securian_External"
+    cities: []
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Summer 2027 internship in Saint Paul, outside the target areas."
+
+  - name: "HCSC"
+    ats: workday
+    board: "https://hcsc.wd1.myworkdayjobs.com/HCSC_External"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed an Early Careers intern in Downers Grove and roles in Chicago."
+
+  - name: "Plante Moran"
+    ats: workday
+    board: "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed 2027 and 2028 accounting and tax interns. City expected."
+
+  - name: "Travelers"
+    ats: workday
+    board: "https://travelers.wd5.myworkdayjobs.com/External"
+    cities: ["Des Moines", "Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Legal Interns in California. Cities expected."
+
+  - name: "State Street"
+    ats: workday
+    board: "https://statestreet.wd1.myworkdayjobs.com/Global"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Global board. City expected."
+
+  - name: "Guggenheim Partners"
+    ats: workday
+    board: "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Partners"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Chicago roles. A second site exists at guggenheiminvestment.wd5. Interns not yet confirmed."
+
+  - name: "Alliant Energy"
+    ats: workday
+    board: "https://alliantenergy.wd1.myworkdayjobs.com/alliant"
+    cities: ["Cedar Rapids"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. A utility, included for Iowa coverage; finance interns not confirmed."
+
+  - name: "Vermeer"
+    ats: workday
+    board: "https://vermeer.wd5.myworkdayjobs.com/externalcareersite"
+    cities: ["Pella"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. A manufacturer, included for Iowa coverage. Observed interns in Pella; finance interns not confirmed."
+
+  - name: "Hy-Vee"
+    ats: workday
+    board: "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers"
+    cities: ["West Des Moines"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. A grocery chain, included for Iowa coverage. Many interns are pharmacy roles, which score low; finance interns not confirmed."
+
+  - name: "Mariner"
+    ats: ashby
+    board: "mariner-careers"
+    cities: ["Kansas City", "West Des Moines"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Intern, Tax in Cincinnati and a West Des Moines wealth role. The registry's first Ashby company."
+
+  - name: "DRW"
+    ats: greenhouse
+    board: "drweng"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. A trading firm; roles lean technical."
+
+  - name: "Jump Trading"
+    ats: greenhouse
+    board: "jumptrading"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. A trading firm; campus roles lean technical."
+
+  - name: "Optiver"
+    ats: greenhouse
+    board: "optiverus"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. A trading firm with global campus roles."
+
+  - name: "IMC Trading"
+    ats: greenhouse
+    board: "imc"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. A trading firm with Chicago campus programs."
+
+  - name: "Akuna Capital"
+    ats: greenhouse
+    board: "akunacapital"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Accounting Intern in Chicago."
+
+  - name: "Chicago Trading Company"
+    ats: greenhouse
+    board: "chicagotrading"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Chicago roles; interns not yet confirmed."
+
+  - name: "Geneva Trading"
+    ats: greenhouse
+    board: "genevatrading"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Chicago Office roles; interns not yet confirmed."
+
+  - name: "Enova"
+    ats: greenhouse
+    board: "enova"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Chicago roles; interns not yet confirmed."
+
+  - name: "Tastytrade"
+    ats: greenhouse
+    board: "tastytrade"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Chicago roles; interns not yet confirmed."
+
+  - name: "Ariel Investments"
+    ats: greenhouse
+    board: "arielinvestments"
+    cities: ["Chicago"]
+    priority: 3
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Only one job was open, in New York. City expected."
+
+  - name: "Harris Associates"
+    ats: greenhouse
+    board: "harrisassociates"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Chicago roles; interns not yet confirmed."
+
+  - name: "GCM Grosvenor"
+    ats: greenhouse
+    board: "gcmgrosvenor"
+    cities: ["Chicago"]
+    priority: 1
+    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed 2027 ARS Research Summer Intern in Chicago."
+
+  # --- Added in Phase 3: links only, with the reason in notes ---
+  - name: "Wellmark"
+    ats: manual
+    board: "https://www.wellmark.com/about/careers"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Transamerica"
+    ats: manual
+    board: "https://www.transamerica.com/careers"
+    cities: ["Cedar Rapids"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "GuideOne Insurance"
+    ats: manual
+    board: "https://www.guideone.com/careers"
+    cities: ["West Des Moines"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Grinnell Mutual"
+    ats: manual
+    board: "https://www.grinnellmutual.com/careers"
+    cities: ["Grinnell"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "MidWestOne Bank"
+    ats: manual
+    board: "https://www.midwestone.bank/careers"
+    cities: ["Iowa City"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Corteva"
+    ats: manual
+    board: "https://www.corteva.com/careers.html"
+    cities: ["Johnston"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "MidAmerican Energy"
+    ats: manual
+    board: "https://www.midamericanenergy.com/careers"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Evergy"
+    ats: manual
+    board: "https://www.evergy.com/careers"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Garmin"
+    ats: manual
+    board: "https://careers.garmin.com/"
+    cities: ["Olathe"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Hallmark"
+    ats: manual
+    board: "https://careers.hallmark.com/"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Country Club Bank"
+    ats: manual
+    board: "https://www.countryclubbank.com/careers"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Creative Planning"
+    ats: manual
+    board: "https://creativeplanning.com/careers/"
+    cities: ["Overland Park"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Stifel"
+    ats: manual
+    board: "https://www.stifel.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Piper Sandler"
+    ats: manual
+    board: "https://www.pipersandler.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Mesirow"
+    ats: manual
+    board: "https://www.mesirow.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Aon"
+    ats: manual
+    board: "https://www.aon.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Arthur J. Gallagher"
+    ats: manual
+    board: "https://www.ajg.com/us/careers/"
+    cities: ["Rolling Meadows"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Edward Jones"
+    ats: manual
+    board: "https://careers.edwardjones.com/"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Mutual of Omaha"
+    ats: manual
+    board: "https://www.mutualofomaha.com/careers"
+    cities: ["Omaha"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Zurich North America"
+    ats: manual
+    board: "https://www.zurichna.com/careers"
+    cities: ["Schaumburg"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Liberty Mutual"
+    ats: manual
+    board: "https://jobs.libertymutualgroup.com/"
+    cities: ["Des Moines"]
+    priority: 2
+    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+
+  - name: "Crowe"
+    ats: manual
+    board: "https://www.crowe.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+
+  - name: "Baird"
+    ats: manual
+    board: "https://www.rwbaird.com/careers/"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+
+  - name: "Huntington"
+    ats: manual
+    board: "https://www.huntington.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+
+  - name: "Citizens"
+    ats: manual
+    board: "https://www.citizensbank.com/careers"
+    cities: ["Chicago"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+
+  - name: "Security Benefit"
+    ats: manual
+    board: "https://www.securitybenefit.com/careers"
+    cities: ["Kansas City"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+
+  - name: "Casey's"
+    ats: manual
+    board: "https://www.caseys.com/careers"
+    cities: ["Ankeny"]
+    priority: 2
+    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+

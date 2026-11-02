@@ -379,6 +379,29 @@ def test_only_possible_internships_may_use_the_geocoder(space):
     assert len(lookups) == 1 and "Lombard" in lookups[0]
 
 
+@pytest.mark.parametrize("raw", ["Montreal", "Europe", "Southfield", "Dublin Ireland Office"])
+def test_with_geocoding_off_a_bare_unlisted_name_is_not_kept(cfg, cities, raw):
+    geocoder = Geocoder(FakeClient({}), {}, {**SETTINGS, "enabled": False})
+    assert LocationResolver(cfg, cities, geocoder).resolve(raw)["tier"] is None
+
+
+@pytest.mark.parametrize("raw, city, state", [  # every shape below is real, seen on a live board
+    ("IL - Chicago", "Chicago", "IL"),
+    ("IL - Downers Grove", "Downers Grove", "IL"),
+    ("OH - Columbus (43213)", "Columbus", "OH"),
+    ("Chicago, IL – U.S.", "Chicago", "IL"),
+    ("Chicago, IL, USA", "Chicago", "IL"),
+    ("Pella, Iowa, USA - Corporate Office", "Pella", "IA"),
+    ("Saint Paul, MN Campus", "Saint Paul", "MN"),
+    ("Chicago Office", "Chicago", "IL"),
+    ("Des Moines #3, Park Avenue, Des Moines, IA", "Des Moines", "IA"),
+    ("Altoona,  8th St SW, Altoona, IA", "Altoona", "IA"),
+])
+def test_real_workday_location_shapes(resolver, raw, city, state):
+    place = resolver.resolve(raw)
+    assert (place["city"], place["state"]) == (city, state)
+
+
 # --- D-015, D-019 ---
 
 def test_smartrecruiters_is_not_an_active_adapter():

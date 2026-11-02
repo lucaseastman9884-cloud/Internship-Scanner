@@ -69,7 +69,7 @@ scoring:                         # D-020: every point value lives here
   max_score: 100
 
 workday:                         # D-002
-  search_terms: ["intern", "summer analyst", "summer program"]
+  search_terms: ["intern", "internship", "summer analyst", "summer program"]
   page_size: 20
   max_results_per_term: 200      # stop here per company and search term
 
