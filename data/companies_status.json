@@ -1,72 +1,1732 @@
 {
-  "american-equity": {
+  "akuna-capital": {
     "ats": "greenhouse",
-    "company": "American Equity",
-    "company_id": "american-equity",
+    "careers_url": "https://job-boards.greenhouse.io/akunacapital",
+    "company": "Akuna Capital",
+    "company_id": "akuna-capital",
     "fetch_health": {
+      "complete": true,
       "consecutive_failures": 0,
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Accounting Intern (Term-Time, Part-Time)"
+    },
+    "open_intern_count": 4
+  },
+  "alliant-energy": {
+    "ats": "workday",
+    "careers_url": "https://alliantenergy.wd1.myworkdayjobs.com/alliant",
+    "company": "Alliant Energy",
+    "company_id": "alliant-energy",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "allstate": {
+    "ats": "workday",
+    "careers_url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers",
+    "company": "Allstate",
+    "company_id": "allstate",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "american-century-investments": {
+    "ats": "workday",
+    "careers_url": "https://americancentury.wd5.myworkdayjobs.com/AmericanCenturyInvestments",
+    "company": "American Century Investments",
+    "company_id": "american-century-investments",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Corporate Communications Intern"
+    },
+    "open_intern_count": 3
+  },
+  "american-equity": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/americanequityinvestmentlifeinsurancecompany",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
     "last_intern_posting_seen": {
       "seen_on": "2026-11-02",
       "title": "Strategic Analyst Intern"
     },
     "open_intern_count": 8
   },
-  "cottingham-butler": {
-    "ats": "greenhouse",
-    "company": "Cottingham & Butler",
-    "company_id": "cottingham-butler",
+  "ameriprise-financial": {
+    "ats": "workday",
+    "careers_url": "https://ameriprise.wd5.myworkdayjobs.com/Ameriprise",
+    "company": "Ameriprise Financial",
+    "company_id": "ameriprise-financial",
     "fetch_health": {
+      "complete": true,
       "consecutive_failures": 0,
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Actuarial Intern"
+    },
+    "open_intern_count": 1
+  },
+  "ames-national-corporation": {
+    "ats": "manual",
+    "careers_url": "https://www.amesnational.com/careers",
+    "company": "Ames National Corporation",
+    "company_id": "ames-national-corporation",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "aon": {
+    "ats": "manual",
+    "careers_url": "https://www.aon.com/careers",
+    "company": "Aon",
+    "company_id": "aon",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "ariel-investments": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/arielinvestments",
+    "company": "Ariel Investments",
+    "company_id": "ariel-investments",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "arthur-j-gallagher": {
+    "ats": "manual",
+    "careers_url": "https://www.ajg.com/us/careers/",
+    "company": "Arthur J. Gallagher",
+    "company_id": "arthur-j-gallagher",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "athene": {
+    "ats": "workday",
+    "careers_url": "https://athene.wd5.myworkdayjobs.com/athene_careers",
+    "company": "Athene",
+    "company_id": "athene",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Derivates Operations Co-op (2027)"
+    },
+    "open_intern_count": 7
+  },
+  "baird": {
+    "ats": "manual",
+    "careers_url": "https://www.rwbaird.com/careers/",
+    "company": "Baird",
+    "company_id": "baird",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "baker-tilly": {
+    "ats": "workday",
+    "careers_url": "https://bakertilly.wd5.myworkdayjobs.com/BTCareers",
+    "company": "Baker Tilly",
+    "company_id": "baker-tilly",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Tax or Audit Internship - BPB & Anchin Conversions"
+    },
+    "open_intern_count": 6
+  },
+  "bank-iowa": {
+    "ats": "manual",
+    "careers_url": "https://recruiting.paylocity.com/Recruiting/Jobs/All/ed33f90b-749c-444c-b08c-2cf14c75f65f/BANK-IOWA-CORPORATION",
+    "company": "Bank Iowa",
+    "company_id": "bank-iowa",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "bankers-trust": {
+    "ats": "manual",
+    "careers_url": "https://www.bankerstrust.com/careers",
+    "company": "Bankers Trust",
+    "company_id": "bankers-trust",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "blackrock": {
+    "ats": "workday",
+    "careers_url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional",
+    "company": "BlackRock",
+    "company_id": "blackrock",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Quantitative Masters Internship Program - Sales & Relationship Management - Institutional Wealth - Chicago"
+    },
+    "open_intern_count": 11
+  },
+  "bmo": {
+    "ats": "workday",
+    "careers_url": "https://bmo.wd3.myworkdayjobs.com/External",
+    "company": "BMO",
+    "company_id": "bmo",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "UX/UI Designer, Winter 2027 (Co-op/Internship)- 4 months"
+    },
+    "open_intern_count": 6
+  },
+  "capital-one": {
+    "ats": "workday",
+    "careers_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One",
+    "company": "Capital One",
+    "company_id": "capital-one",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Technology Internship Program - Mexico - 2027"
+    },
+    "open_intern_count": 2
+  },
+  "casey-s": {
+    "ats": "manual",
+    "careers_url": "https://www.caseys.com/careers",
+    "company": "Casey's",
+    "company_id": "casey-s",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "cboe-global-markets": {
+    "ats": "workday",
+    "careers_url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE",
+    "company": "Cboe Global Markets",
+    "company_id": "cboe-global-markets",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Legal Intern"
+    },
+    "open_intern_count": 12
+  },
+  "chicago-trading-company": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/chicagotrading",
+    "company": "Chicago Trading Company",
+    "company_id": "chicago-trading-company",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "cibc": {
+    "ats": "workday",
+    "careers_url": "https://cibc.wd3.myworkdayjobs.com/search",
+    "company": "CIBC",
+    "company_id": "cibc",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Summer Intern - People, Culture & Talent"
+    },
+    "open_intern_count": 24
+  },
+  "citigroup": {
+    "ats": "workday",
+    "careers_url": "https://citi.wd5.myworkdayjobs.com/2",
+    "company": "Citigroup",
+    "company_id": "citigroup",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Technology, Production Support, Summer Analyst, New York - USA, 2027"
+    },
+    "open_intern_count": 90
+  },
+  "citizens": {
+    "ats": "manual",
+    "careers_url": "https://www.citizensbank.com/careers",
+    "company": "Citizens",
+    "company_id": "citizens",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "cliftonlarsonallen": {
+    "ats": "workday",
+    "careers_url": "https://cliftonlarsonallen.wd115.myworkdayjobs.com/CLA",
+    "company": "CliftonLarsonAllen",
+    "company_id": "cliftonlarsonallen",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Internal Operations Intern - Winter 2027 - St. Louis, Missouri"
+    },
+    "open_intern_count": 35
+  },
+  "cme-group": {
+    "ats": "manual",
+    "careers_url": "https://www.cmegroup.com/careers.html",
+    "company": "CME Group",
+    "company_id": "cme-group",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "cna-insurance": {
+    "ats": "workday",
+    "careers_url": "https://cna.wd1.myworkdayjobs.com/CNA_Careers",
+    "company": "CNA Insurance",
+    "company_id": "cna-insurance",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Technology Internship Program (Software Engineering)"
+    },
+    "open_intern_count": 8
+  },
+  "commerce-bank": {
+    "ats": "workday",
+    "careers_url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs",
+    "company": "Commerce Bank",
+    "company_id": "commerce-bank",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Intern - IT (Summer 2027)"
+    },
+    "open_intern_count": 13
+  },
+  "corient": {
+    "ats": "workday",
+    "careers_url": "https://ci.wd3.myworkdayjobs.com/CORIENT_EXTERNAL_CAREER-SITE",
+    "company": "Corient",
+    "company_id": "corient",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Portfolio Implementation Intern (Summer 2027)"
+    },
+    "open_intern_count": 20
+  },
+  "corteva": {
+    "ats": "manual",
+    "careers_url": "https://www.corteva.com/careers.html",
+    "company": "Corteva",
+    "company_id": "corteva",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "cottingham-butler": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/cottinghambutlerinsuranceservicesinc",
+    "company": "Cottingham & Butler",
+    "company_id": "cottingham-butler",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
     "last_intern_posting_seen": {
       "seen_on": "2026-11-02",
       "title": "2027 Summer Sales Internship"
     },
     "open_intern_count": 4
   },
+  "country-club-bank": {
+    "ats": "manual",
+    "careers_url": "https://www.countryclubbank.com/careers",
+    "company": "Country Club Bank",
+    "company_id": "country-club-bank",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "creative-planning": {
+    "ats": "manual",
+    "careers_url": "https://creativeplanning.com/careers/",
+    "company": "Creative Planning",
+    "company_id": "creative-planning",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "crowe": {
+    "ats": "manual",
+    "careers_url": "https://www.crowe.com/careers",
+    "company": "Crowe",
+    "company_id": "crowe",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "drw": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/drweng",
+    "company": "DRW",
+    "company_id": "drw",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "FPGA Intern"
+    },
+    "open_intern_count": 13
+  },
+  "dupaco-credit-union": {
+    "ats": "manual",
+    "careers_url": "https://recruiting.ultipro.com/DUP1002/JobBoard/4ce3b278-e14c-755d-e1dd-e0a47790ea2b/",
+    "company": "Dupaco Credit Union",
+    "company_id": "dupaco-credit-union",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "edward-jones": {
+    "ats": "manual",
+    "careers_url": "https://careers.edwardjones.com/",
+    "company": "Edward Jones",
+    "company_id": "edward-jones",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "emc-insurance": {
+    "ats": "workday",
+    "careers_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers",
+    "company": "EMC Insurance",
+    "company_id": "emc-insurance",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Learning, Culture & Inclusion Intern"
+    },
+    "open_intern_count": 18
+  },
+  "enova": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/enova",
+    "company": "Enova",
+    "company_id": "enova",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Software Engineer Internship Summer 2027 (Hybrid)"
+    },
+    "open_intern_count": 3
+  },
+  "evergy": {
+    "ats": "manual",
+    "careers_url": "https://www.evergy.com/careers",
+    "company": "Evergy",
+    "company_id": "evergy",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "farm-bureau-financial-services": {
+    "ats": "manual",
+    "careers_url": "https://www.fbfs.com/careers",
+    "company": "Farm Bureau Financial Services",
+    "company_id": "farm-bureau-financial-services",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "federal-reserve-bank-of-kansas-city": {
+    "ats": "workday",
+    "careers_url": "https://rb.wd5.myworkdayjobs.com/FRS",
+    "company": "Federal Reserve Bank of Kansas City",
+    "company_id": "federal-reserve-bank-of-kansas-city",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Summer 2027 Intern-Networking and Computer Engineering"
+    },
+    "open_intern_count": 49
+  },
+  "fifth-third": {
+    "ats": "workday",
+    "careers_url": "https://fifththird.wd5.myworkdayjobs.com/53careers",
+    "company": "Fifth Third",
+    "company_id": "fifth-third",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Wealth and Asset Management Co-Op - FULL TIME May 2027-August 2027"
+    },
+    "open_intern_count": 2
+  },
+  "forvis-mazars": {
+    "ats": "manual",
+    "careers_url": "https://forvis.avature.net/campuscareers/",
+    "company": "Forvis Mazars",
+    "company_id": "forvis-mazars",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "garmin": {
+    "ats": "manual",
+    "careers_url": "https://careers.garmin.com/",
+    "company": "Garmin",
+    "company_id": "garmin",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "gcm-grosvenor": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/gcmgrosvenor",
+    "company": "GCM Grosvenor",
+    "company_id": "gcm-grosvenor",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 IT Operations Summer Intern"
+    },
+    "open_intern_count": 5
+  },
+  "geneva-trading": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/genevatrading",
+    "company": "Geneva Trading",
+    "company_id": "geneva-trading",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Trade Support Engineer Intern"
+    },
+    "open_intern_count": 3
+  },
+  "grant-thornton": {
+    "ats": "manual",
+    "careers_url": "https://ehzq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+    "company": "Grant Thornton",
+    "company_id": "grant-thornton",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "grinnell-mutual": {
+    "ats": "manual",
+    "careers_url": "https://www.grinnellmutual.com/careers",
+    "company": "Grinnell Mutual",
+    "company_id": "grinnell-mutual",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "guggenheim-partners": {
+    "ats": "workday",
+    "careers_url": "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Partners",
+    "company": "Guggenheim Partners",
+    "company_id": "guggenheim-partners",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "guideone-insurance": {
+    "ats": "manual",
+    "careers_url": "https://www.guideone.com/careers",
+    "company": "GuideOne Insurance",
+    "company_id": "guideone-insurance",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "h-r-block": {
+    "ats": "manual",
+    "careers_url": "https://www.hrblock.com/corporate/careers/",
+    "company": "H&R Block",
+    "company_id": "h-r-block",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "hallmark": {
+    "ats": "manual",
+    "careers_url": "https://careers.hallmark.com/",
+    "company": "Hallmark",
+    "company_id": "hallmark",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "harris-associates": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/harrisassociates",
+    "company": "Harris Associates",
+    "company_id": "harris-associates",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "hcsc": {
+    "ats": "workday",
+    "careers_url": "https://hcsc.wd1.myworkdayjobs.com/HCSC_External",
+    "company": "HCSC",
+    "company_id": "hcsc",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Early Careers - IT QA Intern"
+    },
+    "open_intern_count": 21
+  },
+  "holmes-murphy": {
+    "ats": "workday",
+    "careers_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers",
+    "company": "Holmes Murphy",
+    "company_id": "holmes-murphy",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Population Health Intern - Summer 2027"
+    },
+    "open_intern_count": 26
+  },
+  "huntington": {
+    "ats": "manual",
+    "careers_url": "https://www.huntington.com/careers",
+    "company": "Huntington",
+    "company_id": "huntington",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "hy-vee": {
+    "ats": "workday",
+    "careers_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Retail Pharmacy Intern"
+    },
+    "open_intern_count": 15
+  },
+  "imc-trading": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/imc",
+    "company": "IMC Trading",
+    "company_id": "imc-trading",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Machine Learning Engineer Intern - Summer 2027"
+    },
+    "open_intern_count": 15
+  },
+  "jump-trading": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/jumptrading",
+    "company": "Jump Trading",
+    "company_id": "jump-trading",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Campus Python Software Engineer (Intern)"
+    },
+    "open_intern_count": 27
+  },
+  "kemper": {
+    "ats": "workday",
+    "careers_url": "https://kemper.wd5.myworkdayjobs.com/Kemper_Careers",
+    "company": "Kemper",
+    "company_id": "kemper",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "kpmg": {
+    "ats": "manual",
+    "careers_url": "https://www.kpmguscareers.com/early-career/",
+    "company": "KPMG",
+    "company_id": "kpmg",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "lazard": {
+    "ats": "manual",
+    "careers_url": "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardStudentCareers/jobs",
+    "company": "Lazard",
+    "company_id": "lazard",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "liberty-mutual": {
+    "ats": "manual",
+    "careers_url": "https://jobs.libertymutualgroup.com/",
+    "company": "Liberty Mutual",
+    "company_id": "liberty-mutual",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "lockton": {
+    "ats": "manual",
+    "careers_url": "https://careers.lockton.com/",
+    "company": "Lockton",
+    "company_id": "lockton",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "mariner": {
+    "ats": "ashby",
+    "careers_url": "https://jobs.ashbyhq.com/mariner-careers",
+    "company": "Mariner",
+    "company_id": "mariner",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Intern, Tax- Cincinnati, OH"
+    },
+    "open_intern_count": 1
+  },
+  "marsh-mclennan": {
+    "ats": "workday",
+    "careers_url": "https://mmc.wd1.myworkdayjobs.com/MMC",
+    "company": "Marsh McLennan",
+    "company_id": "marsh-mclennan",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Summer Internship Program: Sales"
+    },
+    "open_intern_count": 97
+  },
+  "mesirow": {
+    "ats": "manual",
+    "careers_url": "https://www.mesirow.com/careers",
+    "company": "Mesirow",
+    "company_id": "mesirow",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "midamerican-energy": {
+    "ats": "manual",
+    "careers_url": "https://www.midamericanenergy.com/careers",
+    "company": "MidAmerican Energy",
+    "company_id": "midamerican-energy",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "midwestone-bank": {
+    "ats": "manual",
+    "careers_url": "https://www.midwestone.bank/careers",
+    "company": "MidWestOne Bank",
+    "company_id": "midwestone-bank",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "morningstar": {
+    "ats": "workday",
+    "careers_url": "https://morningstar.wd5.myworkdayjobs.com/Americas",
+    "company": "Morningstar",
+    "company_id": "morningstar",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "mutual-of-omaha": {
+    "ats": "manual",
+    "careers_url": "https://www.mutualofomaha.com/careers",
+    "company": "Mutual of Omaha",
+    "company_id": "mutual-of-omaha",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "nationwide": {
+    "ats": "manual",
+    "careers_url": "https://www.nationwide.com/personal/about-us/careers/",
+    "company": "Nationwide",
+    "company_id": "nationwide",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "northern-trust": {
+    "ats": "workday",
+    "careers_url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
+    "company": "Northern Trust",
+    "company_id": "northern-trust",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Wealth Management Legal Intern"
+    },
+    "open_intern_count": 2
+  },
   "northwestern-medicine": {
-    "ats": "smartrecruiters",
+    "ats": "manual",
+    "careers_url": "https://jobs.nm.org",
     "company": "Northwestern Medicine",
     "company_id": "northwestern-medicine",
     "fetch_health": {
+      "complete": false,
       "consecutive_failures": 4,
-      "last_error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
-      "status": "error"
+      "last_error": null,
+      "status": "manual"
     },
     "last_checked": "2026-11-02T15:26:07+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
+  "nuveen-tiaa": {
+    "ats": "workday",
+    "careers_url": "https://tiaa.wd1.myworkdayjobs.com/Search",
+    "company": "Nuveen / TIAA",
+    "company_id": "nuveen-tiaa",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Early Talent Internship: Risk & Compliance"
+    },
+    "open_intern_count": 5
+  },
+  "optiver": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/optiverus",
+    "company": "Optiver",
+    "company_id": "optiver",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Compliance Intern – Regulatory Advisory"
+    },
+    "open_intern_count": 17
+  },
+  "pella": {
+    "ats": "manual",
+    "careers_url": "https://www.pella.com/careers/",
+    "company": "Pella",
+    "company_id": "pella",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "piper-sandler": {
+    "ats": "manual",
+    "careers_url": "https://www.pipersandler.com/careers",
+    "company": "Piper Sandler",
+    "company_id": "piper-sandler",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "plante-moran": {
+    "ats": "workday",
+    "careers_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers",
+    "company": "Plante Moran",
+    "company_id": "plante-moran",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Marketing Technology Intern"
+    },
+    "open_intern_count": 39
+  },
+  "pnc": {
+    "ats": "workday",
+    "careers_url": "https://pnc.wd5.myworkdayjobs.com/External",
+    "company": "PNC",
+    "company_id": "pnc",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Product Innovation Undergraduate Intern"
+    },
+    "open_intern_count": 2
+  },
+  "principal-financial-group": {
+    "ats": "manual",
+    "careers_url": "https://careers.principal.com/internships",
+    "company": "Principal Financial Group",
+    "company_id": "principal-financial-group",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "pwc": {
+    "ats": "workday",
+    "careers_url": "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers",
+    "company": "PwC",
+    "company_id": "pwc",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Technology EPM Junior Consultant - Internship - Rubano (Padova)"
+    },
+    "open_intern_count": 15
+  },
+  "raymond-james": {
+    "ats": "workday",
+    "careers_url": "https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers",
+    "company": "Raymond James",
+    "company_id": "raymond-james",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
   "rr-donnelley": {
-    "ats": "smartrecruiters",
+    "ats": "manual",
+    "careers_url": "https://careers.smartrecruiters.com/RRDonnelley",
     "company": "RR Donnelley",
     "company_id": "rr-donnelley",
     "fetch_health": {
+      "complete": false,
       "consecutive_failures": 4,
-      "last_error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
-      "status": "error"
+      "last_error": null,
+      "status": "manual"
     },
     "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "rsm-us": {
+    "ats": "workday",
+    "careers_url": "https://rsm.wd1.myworkdayjobs.com/RSMCareers",
+    "company": "RSM US",
+    "company_id": "rsm-us",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Technology Risk Consulting Intern - Summer 2027"
+    },
+    "open_intern_count": 13
+  },
+  "sammons-financial-group": {
+    "ats": "manual",
+    "careers_url": "https://careers.sammonsfinancialgroup.com/jobs",
+    "company": "Sammons Financial Group",
+    "company_id": "sammons-financial-group",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "securian-financial": {
+    "ats": "workday",
+    "careers_url": "https://hq.wd12.myworkdayjobs.com/Securian_External",
+    "company": "Securian Financial",
+    "company_id": "securian-financial",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Engineering Internship - Summer 2027"
+    },
+    "open_intern_count": 1
+  },
+  "security-benefit": {
+    "ats": "manual",
+    "careers_url": "https://www.securitybenefit.com/careers",
+    "company": "Security Benefit",
+    "company_id": "security-benefit",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "state-street": {
+    "ats": "workday",
+    "careers_url": "https://statestreet.wd1.myworkdayjobs.com/Global",
+    "company": "State Street",
+    "company_id": "state-street",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "State Street Investment Management -Americas Strategy and Insights Analyst - 2027 Summer Internship"
+    },
+    "open_intern_count": 7
+  },
+  "stifel": {
+    "ats": "manual",
+    "careers_url": "https://www.stifel.com/careers",
+    "company": "Stifel",
+    "company_id": "stifel",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "sun-life": {
+    "ats": "workday",
+    "careers_url": "https://sunlife.wd3.myworkdayjobs.com/Experienced-Jobs",
+    "company": "Sun Life",
+    "company_id": "sun-life",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Risk Management Intern (Jul - Dec 2027 Placement)"
+    },
+    "open_intern_count": 6
+  },
+  "tastytrade": {
+    "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/tastytrade",
+    "company": "Tastytrade",
+    "company_id": "tastytrade",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "transamerica": {
+    "ats": "manual",
+    "careers_url": "https://www.transamerica.com/careers",
+    "company": "Transamerica",
+    "company_id": "transamerica",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "travelers": {
+    "ats": "workday",
+    "careers_url": "https://travelers.wd5.myworkdayjobs.com/External",
+    "company": "Travelers",
+    "company_id": "travelers",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Risk Control Intern"
+    },
+    "open_intern_count": 77
+  },
+  "u-s-bank": {
+    "ats": "workday",
+    "careers_url": "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers",
+    "company": "U.S. Bank",
+    "company_id": "u-s-bank",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Payment Sales Intern"
+    },
+    "open_intern_count": 2
+  },
+  "uhy": {
+    "ats": "workday",
+    "careers_url": "https://uhyus.wd12.myworkdayjobs.com/uhy",
+    "company": "UHY",
+    "company_id": "uhy",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Winter Audit Internship - St. Louis"
+    },
+    "open_intern_count": 14
+  },
+  "umb-financial": {
+    "ats": "workday",
+    "careers_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Public Finance Intern"
+    },
+    "open_intern_count": 11
+  },
+  "vermeer": {
+    "ats": "workday",
+    "careers_url": "https://vermeer.wd5.myworkdayjobs.com/externalcareersite",
+    "company": "Vermeer",
+    "company_id": "vermeer",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Design Engineer Intern - Summer 2027"
+    },
+    "open_intern_count": 12
+  },
+  "wellmark": {
+    "ats": "manual",
+    "careers_url": "https://www.wellmark.com/about/careers",
+    "company": "Wellmark",
+    "company_id": "wellmark",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "wells-fargo": {
+    "ats": "manual",
+    "careers_url": "https://www.wellsfargojobs.com/",
+    "company": "Wells Fargo",
+    "company_id": "wells-fargo",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "west-bank": {
+    "ats": "manual",
+    "careers_url": "https://www.westbankstrong.com/career-opportunities",
+    "company": "West Bank",
+    "company_id": "west-bank",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
   "william-blair": {
     "ats": "greenhouse",
+    "careers_url": "https://job-boards.greenhouse.io/williamblair",
     "company": "William Blair",
     "company_id": "william-blair",
     "fetch_health": {
+      "complete": true,
       "consecutive_failures": 0,
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "wintrust-financial": {
+    "ats": "workday",
+    "careers_url": "https://wintrust.wd1.myworkdayjobs.com/Search",
+    "company": "Wintrust Financial",
+    "company_id": "wintrust-financial",
+    "fetch_health": {
+      "complete": true,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T20:04:32+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Wintrust 2027 Summer Internship: Human Resources"
+    },
+    "open_intern_count": 11
+  },
+  "workiva": {
+    "ats": "manual",
+    "careers_url": "https://www.workiva.com/careers",
+    "company": "Workiva",
+    "company_id": "workiva",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "zurich-north-america": {
+    "ats": "manual",
+    "careers_url": "https://www.zurichna.com/careers",
+    "company": "Zurich North America",
+    "company_id": "zurich-north-america",
+    "fetch_health": {
+      "complete": false,
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "manual"
+    },
+    "last_checked": null,
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   }

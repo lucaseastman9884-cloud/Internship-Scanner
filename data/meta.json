@@ -1,4 +1,294 @@
 {
+  "check_manually": [
+    {
+      "company": "Bankers Trust",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.bankerstrust.com/careers"
+    },
+    {
+      "company": "Northwestern Medicine",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://jobs.nm.org"
+    },
+    {
+      "company": "RR Donnelley",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.smartrecruiters.com/RRDonnelley"
+    },
+    {
+      "company": "Pella",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.pella.com/careers/"
+    },
+    {
+      "company": "Lazard",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardStudentCareers/jobs"
+    },
+    {
+      "company": "Forvis Mazars",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://forvis.avature.net/campuscareers/"
+    },
+    {
+      "company": "Bank Iowa",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://recruiting.paylocity.com/Recruiting/Jobs/All/ed33f90b-749c-444c-b08c-2cf14c75f65f/BANK-IOWA-CORPORATION"
+    },
+    {
+      "company": "KPMG",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.kpmguscareers.com/early-career/"
+    },
+    {
+      "company": "Principal Financial Group",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.principal.com/internships"
+    },
+    {
+      "company": "Farm Bureau Financial Services",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.fbfs.com/careers"
+    },
+    {
+      "company": "Sammons Financial Group",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.sammonsfinancialgroup.com/jobs"
+    },
+    {
+      "company": "Nationwide",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.nationwide.com/personal/about-us/careers/"
+    },
+    {
+      "company": "Wells Fargo",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.wellsfargojobs.com/"
+    },
+    {
+      "company": "Dupaco Credit Union",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://recruiting.ultipro.com/DUP1002/JobBoard/4ce3b278-e14c-755d-e1dd-e0a47790ea2b/"
+    },
+    {
+      "company": "H&R Block",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.hrblock.com/corporate/careers/"
+    },
+    {
+      "company": "Lockton",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.lockton.com/"
+    },
+    {
+      "company": "CME Group",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.cmegroup.com/careers.html"
+    },
+    {
+      "company": "Grant Thornton",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://ehzq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1"
+    },
+    {
+      "company": "Workiva",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.workiva.com/careers"
+    },
+    {
+      "company": "West Bank",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.westbankstrong.com/career-opportunities"
+    },
+    {
+      "company": "Ames National Corporation",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.amesnational.com/careers"
+    },
+    {
+      "company": "Wellmark",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.wellmark.com/about/careers"
+    },
+    {
+      "company": "Transamerica",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.transamerica.com/careers"
+    },
+    {
+      "company": "GuideOne Insurance",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.guideone.com/careers"
+    },
+    {
+      "company": "Grinnell Mutual",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.grinnellmutual.com/careers"
+    },
+    {
+      "company": "MidWestOne Bank",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.midwestone.bank/careers"
+    },
+    {
+      "company": "Corteva",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.corteva.com/careers.html"
+    },
+    {
+      "company": "MidAmerican Energy",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.midamericanenergy.com/careers"
+    },
+    {
+      "company": "Evergy",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.evergy.com/careers"
+    },
+    {
+      "company": "Garmin",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.garmin.com/"
+    },
+    {
+      "company": "Hallmark",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.hallmark.com/"
+    },
+    {
+      "company": "Country Club Bank",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.countryclubbank.com/careers"
+    },
+    {
+      "company": "Creative Planning",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://creativeplanning.com/careers/"
+    },
+    {
+      "company": "Stifel",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.stifel.com/careers"
+    },
+    {
+      "company": "Piper Sandler",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.pipersandler.com/careers"
+    },
+    {
+      "company": "Mesirow",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.mesirow.com/careers"
+    },
+    {
+      "company": "Aon",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.aon.com/careers"
+    },
+    {
+      "company": "Arthur J. Gallagher",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.ajg.com/us/careers/"
+    },
+    {
+      "company": "Edward Jones",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.edwardjones.com/"
+    },
+    {
+      "company": "Mutual of Omaha",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.mutualofomaha.com/careers"
+    },
+    {
+      "company": "Zurich North America",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.zurichna.com/careers"
+    },
+    {
+      "company": "Liberty Mutual",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://jobs.libertymutualgroup.com/"
+    },
+    {
+      "company": "Crowe",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.crowe.com/careers"
+    },
+    {
+      "company": "Baird",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.rwbaird.com/careers/"
+    },
+    {
+      "company": "Huntington",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.huntington.com/careers"
+    },
+    {
+      "company": "Citizens",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.citizensbank.com/careers"
+    },
+    {
+      "company": "Security Benefit",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.securitybenefit.com/careers"
+    },
+    {
+      "company": "Casey's",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.caseys.com/careers"
+    }
+  ],
   "companies": [
     {
       "ats": "manual",
@@ -17,104 +307,130 @@
       "ats": "workday",
       "company": "Wintrust Financial",
       "company_id": "wintrust-financial",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://wintrust.wd1.myworkdayjobs.com/Search",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 72,
+      "exclusion_reasons": {
+        "location": 3,
+        "not_internship": 69
+      },
+      "fallback_link": null,
+      "fetched": 80,
+      "kept": 8,
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "Federal Reserve Bank of Kansas City",
       "company_id": "federal-reserve-bank-of-kansas-city",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://rb.wd5.myworkdayjobs.com/FRS",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 131,
+      "exclusion_reasons": {
+        "excluded_keyword": 2,
+        "location": 37,
+        "not_internship": 92
+      },
+      "fallback_link": null,
+      "fetched": 143,
+      "kept": 12,
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "CIBC",
       "company_id": "cibc",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://cibc.wd3.myworkdayjobs.com/search",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
-      "warnings": []
+      "error": null,
+      "excluded": 204,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "ineligible": 4,
+        "location": 18,
+        "not_internship": 181
+      },
+      "fallback_link": null,
+      "fetched": 206,
+      "kept": 2,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 240 results (config cap)"
+      ]
     },
     {
       "ats": "workday",
       "company": "Corient",
       "company_id": "corient",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://ci.wd3.myworkdayjobs.com/CORIENT_EXTERNAL_CAREER-SITE",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 61,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "ineligible": 2,
+        "location": 17,
+        "not_internship": 41
+      },
+      "fallback_link": null,
+      "fetched": 62,
+      "kept": 1,
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "Commerce Bank",
       "company_id": "commerce-bank",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 90,
+      "exclusion_reasons": {
+        "location": 3,
+        "not_internship": 87
+      },
+      "fallback_link": null,
+      "fetched": 100,
+      "kept": 10,
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "UHY",
       "company_id": "uhy",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://uhyus.wd12.myworkdayjobs.com/uhy",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 103,
+      "exclusion_reasons": {
+        "location": 6,
+        "not_internship": 94,
+        "season_distance": 3
+      },
+      "fallback_link": null,
+      "fetched": 108,
+      "kept": 5,
+      "status": "ok",
       "warnings": []
     },
     {
-      "ats": "smartrecruiters",
+      "ats": "manual",
       "company": "Northwestern Medicine",
       "company_id": "northwestern-medicine",
-      "error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
+      "error": null,
       "excluded": 0,
       "exclusion_reasons": {},
-      "fallback_link": "https://careers.smartrecruiters.com/NorthwesternMedicine",
+      "fallback_link": "https://jobs.nm.org",
       "fetched": 0,
       "kept": 0,
-      "status": "blocked_by_robots",
+      "status": "manual",
       "warnings": []
     },
     {
-      "ats": "smartrecruiters",
+      "ats": "manual",
       "company": "RR Donnelley",
       "company_id": "rr-donnelley",
-      "error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
+      "error": null,
       "excluded": 0,
       "exclusion_reasons": {},
       "fallback_link": "https://careers.smartrecruiters.com/RRDonnelley",
       "fetched": 0,
       "kept": 0,
-      "status": "blocked_by_robots",
+      "status": "manual",
       "warnings": []
     },
     {
@@ -131,30 +447,41 @@
       "warnings": []
     },
     {
-      "ats": "manual",
+      "ats": "workday",
       "company": "BMO",
       "company_id": "bmo",
       "error": null,
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://jobs.bmo.com/us/en",
-      "fetched": 0,
+      "excluded": 206,
+      "exclusion_reasons": {
+        "location": 6,
+        "not_internship": 200
+      },
+      "fallback_link": null,
+      "fetched": 206,
       "kept": 0,
-      "status": "manual",
-      "warnings": []
+      "status": "ok",
+      "warnings": [
+        "search 'intern' returned 1 posting(s) without a title or path",
+        "search 'intern' stopped at 200 of 517 results (config cap)"
+      ]
     },
     {
-      "ats": "manual",
+      "ats": "workday",
       "company": "Fifth Third",
       "company_id": "fifth-third",
       "error": null,
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://www.53.com/content/fifth-third/en/careers.html",
-      "fetched": 0,
+      "excluded": 204,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 202
+      },
+      "fallback_link": null,
+      "fetched": 204,
       "kept": 0,
-      "status": "manual",
-      "warnings": []
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 313 results (config cap)"
+      ]
     },
     {
       "ats": "manual",
@@ -173,13 +500,17 @@
       "ats": "workday",
       "company": "CliftonLarsonAllen",
       "company_id": "cliftonlarsonallen",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://cliftonlarsonallen.wd115.myworkdayjobs.com/CLA",
-      "fetched": 0,
+      "error": null,
+      "excluded": 195,
+      "exclusion_reasons": {
+        "location": 28,
+        "not_internship": 160,
+        "season_distance": 7
+      },
+      "fallback_link": null,
+      "fetched": 195,
       "kept": 0,
-      "status": "skipped",
+      "status": "ok",
       "warnings": []
     },
     {
@@ -200,12 +531,12 @@
       "company": "American Equity",
       "company_id": "american-equity",
       "error": null,
-      "excluded": 21,
+      "excluded": 20,
       "exclusion_reasons": {
-        "not_internship": 21
+        "not_internship": 20
       },
       "fallback_link": null,
-      "fetched": 29,
+      "fetched": 28,
       "kept": 8,
       "status": "ok",
       "warnings": []
@@ -218,19 +549,6 @@
       "excluded": 0,
       "exclusion_reasons": {},
       "fallback_link": "https://recruiting.paylocity.com/Recruiting/Jobs/All/ed33f90b-749c-444c-b08c-2cf14c75f65f/BANK-IOWA-CORPORATION",
-      "fetched": 0,
-      "kept": 0,
-      "status": "manual",
-      "warnings": []
-    },
-    {
-      "ats": "manual",
-      "company": "BGM Group",
-      "company_id": "bgm-group",
-      "error": null,
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": null,
       "fetched": 0,
       "kept": 0,
       "status": "manual",
@@ -266,26 +584,34 @@
       "ats": "workday",
       "company": "EMC Insurance",
       "company_id": "emc-insurance",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 26,
+      "exclusion_reasons": {
+        "location": 3,
+        "not_internship": 21,
+        "remote": 2
+      },
+      "fallback_link": null,
+      "fetched": 39,
+      "kept": 13,
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "Athene",
       "company_id": "athene",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://athene.wd5.myworkdayjobs.com/athene_careers",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 12,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "location": 1,
+        "not_internship": 10
+      },
+      "fallback_link": null,
+      "fetched": 18,
+      "kept": 6,
+      "status": "ok",
       "warnings": []
     },
     {
@@ -305,13 +631,16 @@
       "ats": "workday",
       "company": "Holmes Murphy",
       "company_id": "holmes-murphy",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 28,
+      "exclusion_reasons": {
+        "location": 9,
+        "not_internship": 19
+      },
+      "fallback_link": null,
+      "fetched": 45,
+      "kept": 17,
+      "status": "ok",
       "warnings": []
     },
     {
@@ -386,26 +715,35 @@
       "ats": "workday",
       "company": "RSM US",
       "company_id": "rsm-us",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://rsm.wd1.myworkdayjobs.com/RSMCareers",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
-      "warnings": []
+      "error": null,
+      "excluded": 286,
+      "exclusion_reasons": {
+        "location": 12,
+        "not_internship": 274
+      },
+      "fallback_link": null,
+      "fetched": 287,
+      "kept": 1,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 551 results (config cap)",
+        "search 'internship' stopped at 200 of 324 results (config cap)"
+      ]
     },
     {
       "ats": "workday",
       "company": "UMB Financial",
       "company_id": "umb-financial",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://umb.wd1.myworkdayjobs.com/UMBExternal",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 65,
+      "exclusion_reasons": {
+        "location": 6,
+        "not_internship": 59
+      },
+      "fallback_link": null,
+      "fetched": 70,
+      "kept": 5,
+      "status": "ok",
       "warnings": []
     },
     {
@@ -425,13 +763,16 @@
       "ats": "workday",
       "company": "American Century Investments",
       "company_id": "american-century-investments",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://americancentury.wd5.myworkdayjobs.com/AmericanCenturyInvestments",
-      "fetched": 0,
-      "kept": 0,
-      "status": "skipped",
+      "error": null,
+      "excluded": 14,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 12
+      },
+      "fallback_link": null,
+      "fetched": 15,
+      "kept": 1,
+      "status": "ok",
       "warnings": []
     },
     {
@@ -451,14 +792,20 @@
       "ats": "workday",
       "company": "Northern Trust",
       "company_id": "northern-trust",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
-      "fetched": 0,
+      "error": null,
+      "excluded": 206,
+      "exclusion_reasons": {
+        "ineligible": 1,
+        "location": 1,
+        "not_internship": 204
+      },
+      "fallback_link": null,
+      "fetched": 206,
       "kept": 0,
-      "status": "skipped",
-      "warnings": []
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 345 results (config cap)"
+      ]
     },
     {
       "ats": "greenhouse",
@@ -476,30 +823,40 @@
       "warnings": []
     },
     {
-      "ats": "manual",
+      "ats": "workday",
       "company": "Morningstar",
       "company_id": "morningstar",
       "error": null,
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://www.morningstar.com/careers",
-      "fetched": 0,
+      "excluded": 8,
+      "exclusion_reasons": {
+        "not_internship": 8
+      },
+      "fallback_link": null,
+      "fetched": 8,
       "kept": 0,
-      "status": "manual",
+      "status": "ok",
       "warnings": []
     },
     {
       "ats": "workday",
       "company": "Allstate",
       "company_id": "allstate",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://allstate.wd5.myworkdayjobs.com/allstate_careers",
-      "fetched": 0,
+      "error": null,
+      "excluded": 309,
+      "exclusion_reasons": {
+        "not_internship": 309
+      },
+      "fallback_link": null,
+      "fetched": 309,
       "kept": 0,
-      "status": "skipped",
-      "warnings": []
+      "status": "ok",
+      "warnings": [
+        "search 'intern' returned 1 posting(s) without a title or path",
+        "search 'intern' stopped at 200 of 337 results (config cap)",
+        "search 'summer analyst' returned 1 posting(s) without a title or path",
+        "search 'summer program' returned 1 posting(s) without a title or path",
+        "search 'summer program' stopped at 200 of 303 results (config cap)"
+      ]
     },
     {
       "ats": "manual",
@@ -531,14 +888,19 @@
       "ats": "workday",
       "company": "Baker Tilly",
       "company_id": "baker-tilly",
-      "error": "adapter not built yet (Workday arrives in P3)",
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://bakertilly.wd5.myworkdayjobs.com/BTCareers",
-      "fetched": 0,
+      "error": null,
+      "excluded": 206,
+      "exclusion_reasons": {
+        "location": 6,
+        "not_internship": 200
+      },
+      "fallback_link": null,
+      "fetched": 206,
       "kept": 0,
-      "status": "skipped",
-      "warnings": []
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 519 results (config cap)"
+      ]
     },
     {
       "ats": "manual",
@@ -578,50 +940,1099 @@
       "kept": 0,
       "status": "manual",
       "warnings": []
-    }
-  ],
-  "errors": [
-    {
-      "ats": "smartrecruiters",
-      "company": "Northwestern Medicine",
-      "error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
-      "status": "blocked_by_robots"
     },
     {
-      "ats": "smartrecruiters",
-      "company": "RR Donnelley",
-      "error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
-      "status": "blocked_by_robots"
+      "ats": "workday",
+      "company": "BlackRock",
+      "company_id": "blackrock",
+      "error": null,
+      "excluded": 125,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "ineligible": 1,
+        "location": 10,
+        "not_internship": 113
+      },
+      "fallback_link": null,
+      "fetched": 125,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Marsh McLennan",
+      "company_id": "marsh-mclennan",
+      "error": null,
+      "excluded": 273,
+      "exclusion_reasons": {
+        "excluded_keyword": 2,
+        "ineligible": 3,
+        "location": 88,
+        "not_internship": 180
+      },
+      "fallback_link": null,
+      "fetched": 279,
+      "kept": 6,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 1190 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "PwC",
+      "company_id": "pwc",
+      "error": null,
+      "excluded": 259,
+      "exclusion_reasons": {
+        "location": 15,
+        "not_internship": 244
+      },
+      "fallback_link": null,
+      "fetched": 259,
+      "kept": 0,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 2103 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "Nuveen / TIAA",
+      "company_id": "nuveen-tiaa",
+      "error": null,
+      "excluded": 114,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "location": 5,
+        "not_internship": 108
+      },
+      "fallback_link": null,
+      "fetched": 114,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Raymond James",
+      "company_id": "raymond-james",
+      "error": null,
+      "excluded": 196,
+      "exclusion_reasons": {
+        "not_internship": 196
+      },
+      "fallback_link": null,
+      "fetched": 196,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "U.S. Bank",
+      "company_id": "u-s-bank",
+      "error": null,
+      "excluded": 205,
+      "exclusion_reasons": {
+        "location": 1,
+        "not_internship": 204
+      },
+      "fallback_link": null,
+      "fetched": 206,
+      "kept": 1,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 1141 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "PNC",
+      "company_id": "pnc",
+      "error": null,
+      "excluded": 207,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 205
+      },
+      "fallback_link": null,
+      "fetched": 207,
+      "kept": 0,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 1320 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "CNA Insurance",
+      "company_id": "cna-insurance",
+      "error": null,
+      "excluded": 84,
+      "exclusion_reasons": {
+        "not_internship": 84
+      },
+      "fallback_link": null,
+      "fetched": 92,
+      "kept": 8,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Ameriprise Financial",
+      "company_id": "ameriprise-financial",
+      "error": null,
+      "excluded": 83,
+      "exclusion_reasons": {
+        "location": 1,
+        "not_internship": 82
+      },
+      "fallback_link": null,
+      "fetched": 83,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Sun Life",
+      "company_id": "sun-life",
+      "error": null,
+      "excluded": 113,
+      "exclusion_reasons": {
+        "location": 6,
+        "not_internship": 107
+      },
+      "fallback_link": null,
+      "fetched": 113,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Cboe Global Markets",
+      "company_id": "cboe-global-markets",
+      "error": null,
+      "excluded": 99,
+      "exclusion_reasons": {
+        "location": 1,
+        "not_internship": 98
+      },
+      "fallback_link": null,
+      "fetched": 110,
+      "kept": 11,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Citigroup",
+      "company_id": "citigroup",
+      "error": null,
+      "excluded": 276,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "location": 90,
+        "not_internship": 185
+      },
+      "fallback_link": null,
+      "fetched": 276,
+      "kept": 0,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 2000 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "Capital One",
+      "company_id": "capital-one",
+      "error": null,
+      "excluded": 339,
+      "exclusion_reasons": {
+        "excluded_keyword": 4,
+        "location": 2,
+        "not_internship": 333
+      },
+      "fallback_link": null,
+      "fetched": 339,
+      "kept": 0,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 1233 results (config cap)",
+        "search 'internship' stopped at 200 of 464 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "Kemper",
+      "company_id": "kemper",
+      "error": null,
+      "excluded": 27,
+      "exclusion_reasons": {
+        "not_internship": 27
+      },
+      "fallback_link": null,
+      "fetched": 27,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Securian Financial",
+      "company_id": "securian-financial",
+      "error": null,
+      "excluded": 31,
+      "exclusion_reasons": {
+        "not_internship": 31
+      },
+      "fallback_link": null,
+      "fetched": 32,
+      "kept": 1,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "HCSC",
+      "company_id": "hcsc",
+      "error": null,
+      "excluded": 97,
+      "exclusion_reasons": {
+        "excluded_keyword": 5,
+        "ineligible": 19,
+        "location": 1,
+        "not_internship": 72
+      },
+      "fallback_link": null,
+      "fetched": 98,
+      "kept": 1,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' returned 1 posting(s) without a title or path"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "Plante Moran",
+      "company_id": "plante-moran",
+      "error": null,
+      "excluded": 108,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "location": 26,
+        "not_internship": 81
+      },
+      "fallback_link": null,
+      "fetched": 121,
+      "kept": 13,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Travelers",
+      "company_id": "travelers",
+      "error": null,
+      "excluded": 205,
+      "exclusion_reasons": {
+        "location": 60,
+        "not_internship": 145
+      },
+      "fallback_link": null,
+      "fetched": 222,
+      "kept": 17,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 292 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "State Street",
+      "company_id": "state-street",
+      "error": null,
+      "excluded": 235,
+      "exclusion_reasons": {
+        "location": 7,
+        "not_internship": 228
+      },
+      "fallback_link": null,
+      "fetched": 235,
+      "kept": 0,
+      "status": "ok",
+      "warnings": [
+        "search 'intern' stopped at 200 of 660 results (config cap)"
+      ]
+    },
+    {
+      "ats": "workday",
+      "company": "Guggenheim Partners",
+      "company_id": "guggenheim-partners",
+      "error": null,
+      "excluded": 5,
+      "exclusion_reasons": {
+        "not_internship": 5
+      },
+      "fallback_link": null,
+      "fetched": 5,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Alliant Energy",
+      "company_id": "alliant-energy",
+      "error": null,
+      "excluded": 23,
+      "exclusion_reasons": {
+        "not_internship": 23
+      },
+      "fallback_link": null,
+      "fetched": 23,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Vermeer",
+      "company_id": "vermeer",
+      "error": null,
+      "excluded": 27,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 25
+      },
+      "fallback_link": null,
+      "fetched": 37,
+      "kept": 10,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Hy-Vee",
+      "company_id": "hy-vee",
+      "error": null,
+      "excluded": 89,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 87
+      },
+      "fallback_link": null,
+      "fetched": 102,
+      "kept": 13,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "ashby",
+      "company": "Mariner",
+      "company_id": "mariner",
+      "error": null,
+      "excluded": 25,
+      "exclusion_reasons": {
+        "not_internship": 25
+      },
+      "fallback_link": null,
+      "fetched": 26,
+      "kept": 1,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "DRW",
+      "company_id": "drw",
+      "error": null,
+      "excluded": 163,
+      "exclusion_reasons": {
+        "ineligible": 4,
+        "location": 9,
+        "not_internship": 150
+      },
+      "fallback_link": null,
+      "fetched": 163,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Jump Trading",
+      "company_id": "jump-trading",
+      "error": null,
+      "excluded": 87,
+      "exclusion_reasons": {
+        "excluded_keyword": 2,
+        "location": 18,
+        "not_internship": 67
+      },
+      "fallback_link": null,
+      "fetched": 96,
+      "kept": 9,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Optiver",
+      "company_id": "optiver",
+      "error": null,
+      "excluded": 157,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "ineligible": 1,
+        "location": 15,
+        "not_internship": 140
+      },
+      "fallback_link": null,
+      "fetched": 158,
+      "kept": 1,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "IMC Trading",
+      "company_id": "imc-trading",
+      "error": null,
+      "excluded": 162,
+      "exclusion_reasons": {
+        "excluded_keyword": 2,
+        "ineligible": 4,
+        "location": 11,
+        "not_internship": 145
+      },
+      "fallback_link": null,
+      "fetched": 162,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Akuna Capital",
+      "company_id": "akuna-capital",
+      "error": null,
+      "excluded": 30,
+      "exclusion_reasons": {
+        "ineligible": 2,
+        "not_internship": 28
+      },
+      "fallback_link": null,
+      "fetched": 32,
+      "kept": 2,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Chicago Trading Company",
+      "company_id": "chicago-trading-company",
+      "error": null,
+      "excluded": 18,
+      "exclusion_reasons": {
+        "not_internship": 18
+      },
+      "fallback_link": null,
+      "fetched": 18,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Geneva Trading",
+      "company_id": "geneva-trading",
+      "error": null,
+      "excluded": 7,
+      "exclusion_reasons": {
+        "not_internship": 7
+      },
+      "fallback_link": null,
+      "fetched": 10,
+      "kept": 3,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Enova",
+      "company_id": "enova",
+      "error": null,
+      "excluded": 34,
+      "exclusion_reasons": {
+        "location": 1,
+        "not_internship": 33
+      },
+      "fallback_link": null,
+      "fetched": 36,
+      "kept": 2,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Tastytrade",
+      "company_id": "tastytrade",
+      "error": null,
+      "excluded": 14,
+      "exclusion_reasons": {
+        "not_internship": 14
+      },
+      "fallback_link": null,
+      "fetched": 14,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Ariel Investments",
+      "company_id": "ariel-investments",
+      "error": null,
+      "excluded": 1,
+      "exclusion_reasons": {
+        "not_internship": 1
+      },
+      "fallback_link": null,
+      "fetched": 1,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Harris Associates",
+      "company_id": "harris-associates",
+      "error": null,
+      "excluded": 8,
+      "exclusion_reasons": {
+        "not_internship": 8
+      },
+      "fallback_link": null,
+      "fetched": 8,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "GCM Grosvenor",
+      "company_id": "gcm-grosvenor",
+      "error": null,
+      "excluded": 8,
+      "exclusion_reasons": {
+        "ineligible": 1,
+        "not_internship": 7
+      },
+      "fallback_link": null,
+      "fetched": 12,
+      "kept": 4,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Wellmark",
+      "company_id": "wellmark",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.wellmark.com/about/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Transamerica",
+      "company_id": "transamerica",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.transamerica.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "GuideOne Insurance",
+      "company_id": "guideone-insurance",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.guideone.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Grinnell Mutual",
+      "company_id": "grinnell-mutual",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.grinnellmutual.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "MidWestOne Bank",
+      "company_id": "midwestone-bank",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.midwestone.bank/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Corteva",
+      "company_id": "corteva",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.corteva.com/careers.html",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "MidAmerican Energy",
+      "company_id": "midamerican-energy",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.midamericanenergy.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Evergy",
+      "company_id": "evergy",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.evergy.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Garmin",
+      "company_id": "garmin",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://careers.garmin.com/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Hallmark",
+      "company_id": "hallmark",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://careers.hallmark.com/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Country Club Bank",
+      "company_id": "country-club-bank",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.countryclubbank.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Creative Planning",
+      "company_id": "creative-planning",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://creativeplanning.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Stifel",
+      "company_id": "stifel",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.stifel.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Piper Sandler",
+      "company_id": "piper-sandler",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.pipersandler.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Mesirow",
+      "company_id": "mesirow",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.mesirow.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Aon",
+      "company_id": "aon",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.aon.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Arthur J. Gallagher",
+      "company_id": "arthur-j-gallagher",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.ajg.com/us/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Edward Jones",
+      "company_id": "edward-jones",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://careers.edwardjones.com/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Mutual of Omaha",
+      "company_id": "mutual-of-omaha",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.mutualofomaha.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Zurich North America",
+      "company_id": "zurich-north-america",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.zurichna.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Liberty Mutual",
+      "company_id": "liberty-mutual",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://jobs.libertymutualgroup.com/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Crowe",
+      "company_id": "crowe",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.crowe.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Baird",
+      "company_id": "baird",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.rwbaird.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Huntington",
+      "company_id": "huntington",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.huntington.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Citizens",
+      "company_id": "citizens",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.citizensbank.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Security Benefit",
+      "company_id": "security-benefit",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.securitybenefit.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Casey's",
+      "company_id": "casey-s",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.caseys.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
     }
   ],
-  "run_finished": "2026-11-02T15:26:11+00:00",
-  "run_started": "2026-11-02T15:26:07+00:00",
+  "errors": [],
+  "geocoding": {
+    "blocked": false,
+    "cache_hits": 0,
+    "enabled": false,
+    "failed": 0,
+    "lookups": 0,
+    "not_found": 0
+  },
+  "requests_by_host": {
+    "alliantenergy.wd1.myworkdayjobs.com": 6,
+    "allstate.wd5.myworkdayjobs.com": 26,
+    "americancentury.wd5.myworkdayjobs.com": 6,
+    "ameriprise.wd5.myworkdayjobs.com": 9,
+    "api.ashbyhq.com": 2,
+    "athene.wd5.myworkdayjobs.com": 11,
+    "bakertilly.wd5.myworkdayjobs.com": 15,
+    "blackrock.wd1.myworkdayjobs.com": 12,
+    "bmo.wd3.myworkdayjobs.com": 14,
+    "boards-api.greenhouse.io": 16,
+    "capitalone.wd12.myworkdayjobs.com": 23,
+    "cboe.wd1.myworkdayjobs.com": 21,
+    "ci.wd3.myworkdayjobs.com": 11,
+    "cibc.wd3.myworkdayjobs.com": 20,
+    "citi.wd5.myworkdayjobs.com": 27,
+    "cliftonlarsonallen.wd115.myworkdayjobs.com": 28,
+    "cna.wd1.myworkdayjobs.com": 17,
+    "commercebank.wd1.myworkdayjobs.com": 20,
+    "emcins.wd5.myworkdayjobs.com": 19,
+    "fifththird.wd5.myworkdayjobs.com": 14,
+    "guggenheim.wd1.myworkdayjobs.com": 5,
+    "hcsc.wd1.myworkdayjobs.com": 30,
+    "holmesmurphy.wd1.myworkdayjobs.com": 27,
+    "hq.wd12.myworkdayjobs.com": 7,
+    "hyvee.wd1.myworkdayjobs.com": 23,
+    "kemper.wd5.myworkdayjobs.com": 6,
+    "mmc.wd1.myworkdayjobs.com": 49,
+    "morningstar.wd5.myworkdayjobs.com": 5,
+    "ntrs.wd1.myworkdayjobs.com": 15,
+    "plantemoran.wd1.myworkdayjobs.com": 45,
+    "pnc.wd5.myworkdayjobs.com": 16,
+    "pwc.wd3.myworkdayjobs.com": 16,
+    "raymondjames.wd1.myworkdayjobs.com": 14,
+    "rb.wd5.myworkdayjobs.com": 29,
+    "rsm.wd1.myworkdayjobs.com": 25,
+    "statestreet.wd1.myworkdayjobs.com": 16,
+    "sunlife.wd3.myworkdayjobs.com": 10,
+    "tiaa.wd1.myworkdayjobs.com": 12,
+    "travelers.wd5.myworkdayjobs.com": 41,
+    "uhyus.wd12.myworkdayjobs.com": 18,
+    "umb.wd1.myworkdayjobs.com": 13,
+    "usbank.wd1.myworkdayjobs.com": 15,
+    "vermeer.wd5.myworkdayjobs.com": 16,
+    "wintrust.wd1.myworkdayjobs.com": 16
+  },
+  "run_finished": "2026-11-02T20:52:13+00:00",
+  "run_started": "2026-11-02T20:04:32+00:00",
   "source_health": {
+    "ashby": {
+      "ok": 1
+    },
     "greenhouse": {
-      "ok": 3
+      "ok": 15
     },
     "manual": {
-      "manual": 23
-    },
-    "smartrecruiters": {
-      "blocked_by_robots": 2
+      "manual": 48
     },
     "workday": {
-      "skipped": 16
+      "ok": 42
     }
   },
   "totals": {
-    "companies": 44,
-    "companies_fetched_ok": 3,
-    "excluded": 164,
-    "fetched": 175,
-    "kept": 11,
-    "listings_after": 11,
-    "listings_before": 11,
+    "companies": 106,
+    "companies_fetched_ok": 58,
+    "database_open": 192,
+    "database_total": 194,
+    "excluded": 6523,
+    "fetched": 6718,
+    "kept": 195,
+    "listings_after": 194,
+    "listings_before": 194,
     "listings_new": 0,
-    "listings_updated": 11
+    "listings_updated": 191,
+    "open_at_or_above_min_score": 53,
+    "status_changes": {
+      "closed": 0,
+      "filtered": 0,
+      "missed": 3,
+      "possibly_closed": 2
+    }
   },
   "unresolved_locations": {
-    "Dallas, Texas, United States": 1
+    "Amsterdam, Netherlands": 5,
+    "Atlanta, GA": 23,
+    "Bogota Colombia": 4,
+    "Boise - Broadway": 3,
+    "Boston, Massachusetts": 4,
+    "CA - Diamond Bar": 4,
+    "CT - Hartford": 13,
+    "CT - Hartford; MN - St. Paul": 3,
+    "Cairo - ETIC": 9,
+    "Chiyoda-ku Tokyo Japan": 3,
+    "Cincinnati, OH": 3,
+    "Dallas, TX": 3,
+    "Denver, CO": 3,
+    "GA - Alpharetta": 5,
+    "Golden Valley - Golden": 6,
+    "Hong Kong; Shanghai": 5,
+    "Hunghom, Kowloon, Hong Kong": 4,
+    "Iowa": 10,
+    "Irving Texas United States": 3,
+    "London": 8,
+    "London United Kingdom": 9,
+    "London; Amsterdam": 3,
+    "MN - St. Paul": 5,
+    "Madrid - Castellana": 4,
+    "Mississauga Ontario Canada": 3,
+    "NC - Charlotte": 3,
+    "New York - 1166": 4,
+    "New York New York United States": 3,
+    "New York, NY": 10,
+    "Paris France": 8,
+    "Richmond, VA": 6,
+    "San Francisco, CA": 4,
+    "Sao Paulo Sao Paulo Brazil": 13,
+    "Shanghai Shanghai China": 3,
+    "Shanghai, China": 8,
+    "Singapore": 8,
+    "Singapore Singapore": 3,
+    "Southfield": 4,
+    "Southfield; Chicago Riverside Plaza": 3,
+    "Southfield; Denver Tech Center; Chicago Riverside Plaza": 4,
+    "Spokane - Riverpoint": 4,
+    "TAURUS": 3,
+    "TN - Franklin": 3,
+    "TX - Richardson": 4,
+    "Taguig Philippines": 3,
+    "Taipei Taipei City Taiwan": 3,
+    "Tampa Florida United States": 4,
+    "Toronto, ON": 13,
+    "Toronto, ON, CAN": 4,
+    "Warsaw Poland": 4
   }
 }
