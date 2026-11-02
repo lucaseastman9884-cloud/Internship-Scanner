@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# macOS
+.DS_Store
+
+# Secrets: never commit these. Real values live only in GitHub Actions secrets.
+.env
+.env.*
+!.env.example
