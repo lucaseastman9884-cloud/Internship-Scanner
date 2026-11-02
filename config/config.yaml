@@ -16,12 +16,14 @@ include_whole_states: ["IA"]
 remote: "exclude"                # include | exclude | separate
 
 seasons:
-  - "Summer 2027"
-  - "Fall 2027"
-  - "Winter 2028"
-  - "Spring 2028"
-  - "Summer 2028"
-  - "Early-career program"
+  - { name: "Summer 2027",          weight: 1.0 }
+  - { name: "Summer 2028",          weight: 1.0 }
+  - { name: "Early-career program", weight: 1.0 }
+  - { name: "Fall 2027",            weight: 0.8 }
+  - { name: "Winter 2028",          weight: 0.8 }
+  - { name: "Spring 2028",          weight: 0.8 }
+  - { name: "Spring 2027",          weight: 0.6 }
+  - { name: "Winter 2027",          weight: 0.6 }
 
 role_categories:
   investment_banking: ["investment banking", "summer analyst", "M&A", "capital markets"]

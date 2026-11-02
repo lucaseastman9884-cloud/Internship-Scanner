@@ -1,0 +1,486 @@
+[
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5235618007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-11",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "201dcbdf69f6d33f",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5235618007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5235618007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "Sales Intern, Eagle Life"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-03",
+    "deadline": null,
+    "description_snippet": "At American Equity we offer leading annuity products that help empower our clients to fulfill their needs and wants in retirement. Our success comes from hiring high-energy individuals who embody the beliefs that drive our unique culture. We currently fund over half a million...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "3161cbc48af4261a",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "+40 role: 'accounting intern' in title (accounting)",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 68,
+    "role_category": "accounting",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5228997007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5228997007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "Accounting Intern"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241124007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-17",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "5333e7f74d19570d",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5241124007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241124007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "IT Intern, SAP Security"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5233862007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-09",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "7a65076961e756f6",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5233862007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5233862007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "IT Intern, Digital Platforms"
+  },
+  {
+    "apply_url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290419008?gh_jid=5290419008",
+    "ats": "greenhouse",
+    "city": "Dubuque",
+    "company": "Cottingham & Butler",
+    "company_id": "cottingham-butler",
+    "country": "United States",
+    "date_posted": "2026-08-03",
+    "deadline": null,
+    "description_snippet": "Cottingham & Butler is the 3rd largest privately and independently held insurance brokerage firm. Simply put, we are professional buyers of insurance. As we continue to grow, Cottingham & Butler is actively looking for ambitious and driven sales-minded individuals for our 2027...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "first_seen": "2026-11-02",
+    "id": "81eadc9d815ed786",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Dubuque, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Dubuque",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 40,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "5290419008",
+        "source_name": "greenhouse",
+        "url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290419008?gh_jid=5290419008"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "2027 Summer Sales Internship"
+  },
+  {
+    "apply_url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290326008?gh_jid=5290326008",
+    "ats": "greenhouse",
+    "city": "Dubuque",
+    "company": "Cottingham & Butler",
+    "company_id": "cottingham-butler",
+    "country": "United States",
+    "date_posted": "2026-08-03",
+    "deadline": null,
+    "description_snippet": "Cottingham & Butler is the 3rd largest privately and independently held insurance brokerage firm. Simply put, we are professional buyers of insurance. As we continue to grow, Cottingham & Butler is actively looking for ambitious and driven individuals for our 2027 Summer Claims...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "first_seen": "2026-11-02",
+    "id": "840fa42fde10d849",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Dubuque, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Dubuque",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 40,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "5290326008",
+        "source_name": "greenhouse",
+        "url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290326008?gh_jid=5290326008"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "2027 Summer Claims Adjuster Internship"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241102007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-17",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "8b31a974e387be5f",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5241102007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241102007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "IT Intern, Solutions Architecture - AI"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241077007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-17",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "9a1c4426d377a76d",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5241077007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5241077007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "IT Intern, Information Security"
+  },
+  {
+    "apply_url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290176008?gh_jid=5290176008",
+    "ats": "greenhouse",
+    "city": "Dubuque",
+    "company": "Cottingham & Butler",
+    "company_id": "cottingham-butler",
+    "country": "United States",
+    "date_posted": "2026-07-09",
+    "deadline": null,
+    "description_snippet": "Cottingham & Butler is the 3rd largest privately and independently held insurance brokerage firm. Simply put, we are professional buyers of insurance. As we continue to grow, Cottingham & Butler is actively looking for ambitious and driven individuals for our 2027 Summer Client...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "first_seen": "2026-11-02",
+    "id": "a671d1d8002377e8",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Dubuque, Iowa, United States",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Dubuque",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 40,
+    "role_category": null,
+    "season": "Summer 2027",
+    "sources": [
+      {
+        "source_job_id": "5290176008",
+        "source_name": "greenhouse",
+        "url": "https://boards.greenhouse.io/cottinghambutlerinsuranceservicesinc/jobs/5290176008?gh_jid=5290176008"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "2027 Summer Client Service Internship"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5267601007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-10-16",
+    "deadline": null,
+    "description_snippet": "American Equity Investment Life Insurance Company is a leading provider of annuity solutions designed to help clients protect and grow retirement income. Part of Brookfield Wealth Solutions, we partner with more than 40,000 financial professionals and help fund over half a...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "a6758c1e6bee7dfe",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "-10 role: 'investment banking' only in description, which may be company boilerplate",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5267601007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5267601007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "Strategic Analyst Intern"
+  },
+  {
+    "apply_url": "https://www.american-equity.com/about/careers/openings?gh_jid=5230498007",
+    "ats": "greenhouse",
+    "city": "Des Moines",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "country": "United States",
+    "date_posted": "2026-09-03",
+    "deadline": null,
+    "description_snippet": "At American Equity we offer leading annuity products that help empower our clients to fulfill their needs and wants in retirement. Our success comes from hiring high-energy individuals who embody the beliefs that drive our unique culture. We currently fund over half a million...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "first_seen": "2026-11-02",
+    "id": "adfe45aeca4dd244",
+    "is_remote": false,
+    "last_known_open": null,
+    "last_seen": "2026-11-02",
+    "lat": null,
+    "lng": null,
+    "location_raw": "Des Moines, Iowa, United States",
+    "match_reasons": [
+      "+40 role: 'tax intern' in title (accounting)",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 68,
+    "role_category": "accounting",
+    "season": null,
+    "sources": [
+      {
+        "source_job_id": "5230498007",
+        "source_name": "greenhouse",
+        "url": "https://www.american-equity.com/about/careers/openings?gh_jid=5230498007"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "title": "Tax Intern"
+  }
+]

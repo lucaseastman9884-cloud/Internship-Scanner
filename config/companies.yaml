@@ -4,6 +4,7 @@
 #   manual = no adapter is planned for this company yet, so it becomes a "check manually" link.
 #            notes say why (unconfirmed ATS, blocked page, or an ATS with no adapter).
 # board: Greenhouse/SmartRecruiters slug, Workday career-site URL, or careers URL for manual.
+#        A manual company may use null when no real careers URL is known.
 # cities: target-area cities. notes say whether each was "observed" in a live posting
 #         or is only "expected" from the company's known presence (not confirmed).
 # priority: 1 = finance-relevant intern roles seen in a target city, 2 = likely fit, 3 = weak or distant fit.
@@ -132,10 +133,10 @@ companies:
 
   - name: "BGM Group"
     ats: manual
-    board: "https://www.bgmcpa.com/careers"
+    board: null
     cities: []
     priority: 3
-    notes: "ATS unconfirmed: no ATS link found. Both bgmcpa.com and bgmgroup.com answered, and we could not confirm which one is the firm from the old log. Lucas should check."
+    notes: "Firm not identified. Checked 2026-11-02: bgmcpa.com and bgmgroup.com are both parked domains that redirect to a GoDaddy for-sale page, so neither posted the old log's 'BGM Group Summer 2028 Accounting Intern'. board stays empty until Lucas finds the firm's real careers URL."
 
   - name: "KPMG"
     ats: manual

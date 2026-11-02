@@ -8,6 +8,9 @@ venv/
 build/
 dist/
 
+# Local debug report, rewritten every run
+data/excluded_last_run.json
+
 # macOS
 .DS_Store
 

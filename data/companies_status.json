@@ -1,0 +1,73 @@
+{
+  "american-equity": {
+    "ats": "greenhouse",
+    "company": "American Equity",
+    "company_id": "american-equity",
+    "fetch_health": {
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "Strategic Analyst Intern"
+    },
+    "open_intern_count": 8
+  },
+  "cottingham-butler": {
+    "ats": "greenhouse",
+    "company": "Cottingham & Butler",
+    "company_id": "cottingham-butler",
+    "fetch_health": {
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": {
+      "seen_on": "2026-11-02",
+      "title": "2027 Summer Sales Internship"
+    },
+    "open_intern_count": 4
+  },
+  "northwestern-medicine": {
+    "ats": "smartrecruiters",
+    "company": "Northwestern Medicine",
+    "company_id": "northwestern-medicine",
+    "fetch_health": {
+      "consecutive_failures": 4,
+      "last_error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
+      "status": "error"
+    },
+    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "rr-donnelley": {
+    "ats": "smartrecruiters",
+    "company": "RR Donnelley",
+    "company_id": "rr-donnelley",
+    "fetch_health": {
+      "consecutive_failures": 4,
+      "last_error": "RobotsBlocked: https://api.smartrecruiters.com/robots.txt does not allow this request, so it was not sent",
+      "status": "error"
+    },
+    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  },
+  "william-blair": {
+    "ats": "greenhouse",
+    "company": "William Blair",
+    "company_id": "william-blair",
+    "fetch_health": {
+      "consecutive_failures": 0,
+      "last_error": null,
+      "status": "ok"
+    },
+    "last_checked": "2026-11-02T15:26:07+00:00",
+    "last_intern_posting_seen": null,
+    "open_intern_count": 0
+  }
+}
