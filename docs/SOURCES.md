@@ -8,6 +8,7 @@
 | SmartRecruiters public postings | `api.smartrecruiters.com/v1/companies/{id}/postings` | None | Documented API, but its robots.txt disallows all but LinkedInBot (D-015) | DO NOT USE |
 | Workday career-site JSON | POST `{tenant}.wdN.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` | None | Unofficial; same feed the careers page uses. Searched, not paged whole | USE politely (D-002, D-010) |
 | Oracle Cloud / iCIMS / Jobvite | varies | varies | Verify per vendor | LATER |
+| Census Gazetteer places file (coordinates, not jobs) | `www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_place_national.zip` | None | Official. Downloaded once, stored in `data/reference/`, read offline (D-022) | USE |
 | USAJOBS API | federal | free key | Official | LATER |
 | Community internship lists (GitHub) | varies | None | Check license | VERIFY |
 | Google `site:` search | — | — | Prohibited by Google ToS | SKIP |

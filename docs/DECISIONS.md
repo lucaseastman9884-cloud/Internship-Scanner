@@ -66,16 +66,40 @@ Scoring points move from `scanner/scoring.py` into a `scoring:` block in `config
 ## D-021 — Cap for listings with no role match (ACCEPTED 2026-11-02)
 Listings with no role-category match stay in `internships.json` but are capped at `scoring.no_role_cap` (default 35), so they never reach the email by default.
 
-## D-022 — Nominatim's robots.txt disallows geocoding (PROPOSED 2026-11-02)
-Phase 3 asked for Nominatim geocoding under its usage policy (https://operations.osmfoundation.org/policies/nominatim/, read 2026-11-02). Two findings conflict with that:
-- `nominatim.openstreetmap.org/robots.txt` has `User-agent: *` with `Disallow: /search`. The usage policy does not mention robots.txt. SPEC constraint 2 says to respect robots.txt, and D-015 applied that to a documented API.
-- The policy treats scheduled scripts as bulk use, strongly discourages periodic requests, and caps them at 4 per minute rather than 1 per second.
+## D-022 — Coordinates come from the Census Gazetteer (ACCEPTED 2026-11-02)
+`nominatim.openstreetmap.org/robots.txt` disallows `/search` for all crawlers, and its usage policy (https://operations.osmfoundation.org/policies/nominatim/) strongly discourages periodic requests. So Nominatim stays off. Coordinates come from the U.S. Census Bureau's Gazetteer places file, downloaded once and stored in `data/reference/` with its source URL and year. City and state are looked up offline.
+`config/cities.yaml` keeps city and state names only, for postings that give no state. Its memory-based coordinates are gone.
+A listing with an unknown distance never passes a distance check. It stays as "Location unknown" only if it is in Iowa or names a target metro. Anything else is excluded with the reason "location unknown". The geocoder code stays, tested offline and switched off.
 
-So no request has gone to `/search`. The geocoder and its cache are built and tested offline, and `geocoding.enabled` is false. `config/cities.yaml` keeps its approximate coordinates, because they could not be replaced. While geocoding is off, an unlisted city in a nearby state is kept as "Location unknown", and an unlisted city elsewhere or with no state is excluded and logged in `meta.json`.
-Options: (A) use a static file instead: the US Census Bureau's Gazetteer lists coordinates for US places, needs no live service, and would be read locally; (B) Lucas decides robots.txt is aimed at crawlers and exempts this one service, which changes SPEC constraint 2 and which D-015 chose not to do; (C) stay as is. Recommendation: A, subject to checking the Census file's terms and adding it for review.
+## D-023 — last_seen has its own file (ACCEPTED 2026-11-02)
+A per-listing `last_seen` date changes for every listing, every day, so it lives in `data/last_seen.json`, keyed by listing `id`. The SPEC data model still holds once the two files are joined, which `store.load_listings` does. The automation decides whether to commit from `internships.json` alone.
+Trade-off: on a day with no commit, `last_seen.json`, `meta.json`, and `companies_status.json` are not saved, so they can lag by the days since the last commit.
 
-## D-023 — last_seen moves to its own file (PROPOSED 2026-11-02)
-Phase 3 asks that `internships.json` change only when listings change. A per-listing `last_seen` date changes for every listing, every day, so it now lives in `data/last_seen.json`, keyed by listing `id`. The SPEC data model still holds once the two files are joined by `id`, which `store.load_listings` does. For P4: decide the "commit only when data changes" check on `internships.json` alone, since `last_seen.json`, `meta.json`, and `companies_status.json` change every run. Trade-off: on a day with no commit, those three files are not saved, so a stored `last_seen` can lag by the days since the last commit.
+## D-024 — "filtered" status (ACCEPTED 2026-11-02)
+A status beyond SPEC's `open | possibly_closed | closed`, for a listing still on its board that current config rejects. `filtered_reason` says why. It returns to `open` if config changes back, and it can still close if it leaves the board.
 
-## D-024 — "filtered" status (PROPOSED 2026-11-02)
-Phase 3 adds a status beyond SPEC's `open | possibly_closed | closed`: `filtered`, for a listing still on its board that current config rejects. `filtered_reason` says why. It returns to `open` if config changes back, and it can still close if it leaves the board.
+## D-025 — Larger Workday cap, and check a listing before counting it missing (ACCEPTED 2026-11-02)
+`workday.max_results_per_term` rises from 200 to 500. Before a Workday listing counts as missing, its own posting is requested.
+- Open (200, and not marked closed): not a miss. Its count resets, and a possibly_closed listing returns to open.
+- Gone (403, 404, 410, or `posted`/`canApply` false): a miss, even when the search hit its cap. So listings on big boards can now close.
+- Anything else (server error, timeout, unexpected reply): a failed check, never a miss.
+Built this way because of a live test on 2026-11-02: two postings taken down from Vermeer and EMC answered 403, a made-up path answered 404, and open postings on the same hosts answered 200. So 403 counts as gone only in this check, right after the same host answered that run's search. Everywhere else a 403 still means blocked.
+Limits: the cap is per search term, as the setting's name says, not per company in total. Greenhouse, Lever, and Ashby have no such check, because they return the whole board, so the board is already the proof.
+
+## D-026 — William Blair "Working in Technology" titles stay excluded (ACCEPTED 2026-11-02)
+No change. They have a season and year, but none of the `program_title_terms`.
+
+## D-027 — "Federal Reserve System" (ACCEPTED 2026-11-02)
+Renamed from "Federal Reserve Bank of Kansas City", because the board is shared by the whole system. Each listing's city comes from its posting. `company_id` becomes `federal-reserve-system`, and stored data was moved to it.
+
+## D-028 — Wells Fargo stays manual (ACCEPTED 2026-11-02)
+No more requests to any Wells Fargo host.
+
+## D-029 — Remote listings tied to Iowa get their own section (ACCEPTED 2026-11-02)
+`remote: "separate"` and `remote_allowed_states: ["IA"]`. A remote listing tied to Iowa, such as "Iowa - Work From Home", is kept with `is_remote: true` and the tag `remote_iowa` in a new `tags` list, so the email and UI can show it separately. All other remote listings stay excluded. It scores `whole_state_or_home_radius` for location.
+
+## D-030 — Commit 820b3ab is not rewritten (ACCEPTED 2026-11-02)
+That old commit keeps its author details.
+
+## Empty-response guard (ACCEPTED 2026-11-02)
+For any adapter, a company that returns 0 jobs after having at least `status.empty_response_min_open` (3) open listings counts as a failed fetch. No misses are counted, and it is logged as an error and shown as a warning.
