@@ -33,6 +33,7 @@ def write_json(path: Path, data) -> None:
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             f.write(text)
+        os.chmod(tmp, 0o644)  # temp files start private; these are ordinary project files
         os.replace(tmp, path)
     except BaseException:
         if os.path.exists(tmp):
