@@ -62,18 +62,18 @@ companies:
     notes: "Link on company careers page. Observed 2027 Summer Tax and CAS interns in West Des Moines; also Bettendorf, IA."
 
   - name: "Northwestern Medicine"
-    ats: smartrecruiters
-    board: "NorthwesternMedicine"
+    ats: manual
+    board: "https://jobs.nm.org"
     cities: ["Chicago"]
     priority: 3
-    notes: "SmartRecruiters ID found on jobs.nm.org. Observed Chicago interns, but those seen were not finance roles."
+    notes: "Uses SmartRecruiters, whose API robots.txt disallows us, so this stays a link and no request goes to that API (D-015). Observed Chicago interns in Phase 1, but those seen were not finance roles."
 
   - name: "RR Donnelley"
-    ats: smartrecruiters
-    board: "RRDonnelley"
+    ats: manual
+    board: "https://careers.smartrecruiters.com/RRDonnelley"
     cities: ["Chicago"]
     priority: 2
-    notes: "Link on company job-listings page. Observed Tax Intern - Summer 2027 in Chicago."
+    notes: "Uses SmartRecruiters, whose API robots.txt disallows us, so this stays a link and no request goes to that API (D-015). Observed Tax Intern - Summer 2027 in Chicago in Phase 1."
 
   - name: "Pella"
     ats: manual
@@ -130,13 +130,6 @@ companies:
     cities: []
     priority: 2
     notes: "Paylocity confirmed from company careers page, but it has no adapter. Iowa locations are covered by include_whole_states; specific cities not checked."
-
-  - name: "BGM Group"
-    ats: manual
-    board: null
-    cities: []
-    priority: 3
-    notes: "Firm not identified. Checked 2026-11-02: bgmcpa.com and bgmgroup.com are both parked domains that redirect to a GoDaddy for-sale page, so neither posted the old log's 'BGM Group Summer 2028 Accounting Intern'. board stays empty until Lucas finds the firm's real careers URL."
 
   - name: "KPMG"
     ats: manual
