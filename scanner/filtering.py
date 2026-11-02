@@ -15,6 +15,13 @@ _UNDERGRAD_OK = re.compile(r"\b(bachelor|bachelor's|undergraduate|undergrad)\b",
 _RISING_SENIOR = re.compile(r"\brising seniors?\b", re.I)
 
 
+def remote_allowed(place: dict, cfg: dict) -> bool:
+    """D-029: "separate" keeps only remote jobs tied to remote_allowed_states, for their own section."""
+    if cfg["remote"] == "include":
+        return True
+    return cfg["remote"] == "separate" and place.get("remote_state") is not None
+
+
 def is_internship(title: str, cfg: dict) -> bool:
     if any(has_phrase(title, keyword) for keyword in cfg["must_be_one_of"]):
         return True
@@ -68,10 +75,15 @@ def evaluate(listing: dict, place: dict, cfg: dict) -> list:
         keyword = description_exclude_keyword(listing["_description"], cfg)
         if keyword:
             reasons.append(("excluded_keyword", f"Description requires '{keyword}'"))
-    if listing["is_remote"] and cfg["remote"] == "exclude":
-        reasons.append(("remote", "Remote job, and config says exclude"))
-    elif not listing["is_remote"] and place["tier"] is None:
-        where = listing["location_raw"] or "unknown"
+    where = listing["location_raw"] or "none given"
+    if listing["is_remote"]:
+        if cfg["remote"] == "exclude":
+            reasons.append(("remote", "Remote job, and config says exclude"))
+        elif not remote_allowed(place, cfg):
+            reasons.append(("remote", f"Remote job not tied to {', '.join(cfg['remote_allowed_states'])}"))
+    elif place.get("distance_unknown"):
+        reasons.append(("location_unknown", f"location unknown: {where}"))
+    elif place["tier"] is None:
         reasons.append(("location", f"Outside target locations: {where} ({place['detail']})"))
     if listing["eligibility"]["status"] == "ineligible":
         reasons.append(("ineligible", listing["eligibility"]["reason"]))

@@ -6,13 +6,16 @@ from pathlib import Path
 
 import yaml
 
+from . import gazetteer
+from .location import STATE_NAMES
+
 ATS_VALUES = {"greenhouse", "lever", "ashby", "smartrecruiters", "workday", "manual"}
 REMOTE_VALUES = {"include", "exclude", "separate"}
 SEASON_NAME = re.compile(r"^(Spring|Summer|Fall|Winter) 20\d\d$|^Early-career program$")
 SLUG = re.compile(r"^[A-Za-z0-9_.-]+$")
 WORKDAY_URL = re.compile(r"^https://[\w-]+\.wd\d+\.myworkdayjobs\.com/[\w-]+$")
 TOP_LEVEL_KEYS = {
-    "profile", "home", "radius_miles", "target_areas", "include_whole_states", "remote",
+    "profile", "home", "radius_miles", "target_areas", "include_whole_states", "remote", "remote_allowed_states",
     "seasons", "role_categories", "must_be_one_of", "exclude_keywords", "eligibility",
     "status", "new_badge_days", "email", "contacts", "program_title_terms", "scoring", "workday", "geocoding",
 }
@@ -56,25 +59,29 @@ def company_id(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
-def load_cities(path: Path) -> list:
+def load_cities(path: Path, gaz=None) -> list:
+    """Return the city list with coordinates from the Census Gazetteer (D-022)."""
     data = _read_yaml(path)
-    errors = []
+    try:
+        gaz = gaz or gazetteer.default()
+    except (OSError, ValueError) as err:
+        raise ConfigError(f"The Census Gazetteer could not be read: {err}") from None
+    errors, out = [], []
     cities = data.get("cities") if isinstance(data, dict) else None
     if not isinstance(cities, list) or not cities:
         errors.append("'cities' must be a non-empty list")
         cities = []
     for i, c in enumerate(cities):
-        ok = (
-            isinstance(c, dict)
-            and isinstance(c.get("city"), str)
-            and isinstance(c.get("state"), str)
-            and _is_number(c.get("lat"))
-            and _is_number(c.get("lng"))
-        )
-        if not ok:
-            errors.append(f"cities[{i}]: needs city, state, lat, lng")
+        if not (isinstance(c, dict) and set(c) == {"city", "state"} and isinstance(c["city"], str) and isinstance(c["state"], str)):
+            errors.append(f"cities[{i}]: needs exactly city and state; coordinates come from the Census Gazetteer")
+            continue
+        found = gaz.lookup(c["city"], c["state"])
+        if found:
+            out.append(found)
+        else:
+            errors.append(f"cities[{i}]: {c['city']}, {c['state']} is not in the Census Gazetteer")
     _fail_if_any(path, errors)
-    return cities
+    return out
 
 
 def load_config(path: Path, cities: list) -> dict:
@@ -117,6 +124,9 @@ def load_config(path: Path, cities: list) -> dict:
         errors.append("include_whole_states must be a list of state codes")
     if cfg.get("remote") not in REMOTE_VALUES:
         errors.append(f"remote must be one of {sorted(REMOTE_VALUES)}")
+    allowed = cfg.get("remote_allowed_states")
+    if not (isinstance(allowed, list) and all(isinstance(s, str) and s in STATE_NAMES for s in allowed)):
+        errors.append("remote_allowed_states must be a list of two-letter state codes, such as [\"IA\"]")
 
     seasons = cfg.get("seasons")
     if not isinstance(seasons, list) or not seasons:
@@ -153,6 +163,9 @@ def load_config(path: Path, cities: list) -> dict:
     near, closed = status.get("possibly_closed_after_missed_runs"), status.get("closed_after_missed_runs")
     if not (isinstance(near, int) and isinstance(closed, int) and 0 < near <= closed):
         errors.append("status: possibly_closed_after_missed_runs must be above 0 and not more than closed_after_missed_runs")
+    guard = status.get("empty_response_min_open")
+    if not (isinstance(guard, int) and not isinstance(guard, bool) and guard > 0):
+        errors.append("status.empty_response_min_open must be a whole number above 0")
     if not isinstance(cfg.get("new_badge_days"), int) or cfg.get("new_badge_days", 0) < 0:
         errors.append("new_badge_days must be a whole number, 0 or more")
 

@@ -6,6 +6,7 @@ import hashlib
 import re
 from typing import Optional
 
+from .location import remote_tag
 from .text import canon, has_phrase, make_snippet, normalized_title, scrub_contact_data
 
 _SEASON = r"(spring|summer|fall|autumn|winter)"
@@ -150,7 +151,7 @@ def new_listing(company: dict, source_name: str, source_job_id, title: str, loca
         "relevance_score": 0, "match_reasons": [],
         "description_snippet": make_snippet(description),
         "recurring": False, "last_known_open": None,
-        "missed_runs": 0, "filtered_reason": None,
+        "missed_runs": 0, "filtered_reason": None, "tags": [],
         # Working field for this run only. It never reaches the data files (see store.py).
         "_description": description or "",
     }
@@ -169,6 +170,8 @@ def enrich(listing: dict, cfg: dict, resolver, allow_lookup: bool = True) -> dic
     place = resolver.resolve(listing["location_raw"], listing["is_remote"], allow_lookup)
     listing.update(city=place["city"], state=place["state"], country=place["country"], is_remote=place["is_remote"],
                    lat=place.get("lat"), lng=place.get("lng"), location_label=_location_label(place))
+    if place["is_remote"] and place.get("remote_state") and cfg["remote"] == "separate":
+        listing["tags"] = [remote_tag(place["remote_state"])]  # D-029: its own section in the email and UI
     listing["title"] = scrub_contact_data(listing["title"])
     season, _where = detect_season(listing["title"], listing["_description"], cfg)
     listing["season"] = season
