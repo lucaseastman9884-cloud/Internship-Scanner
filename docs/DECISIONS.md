@@ -44,5 +44,38 @@ SPEC allows only openly licensed lists. The one list sampled showed no license o
 ## D-014 — Spring 2027 and Winter 2027 seasons (ACCEPTED 2026-11-02)
 Add Spring 2027 and Winter 2027. They fall during Lucas's sophomore spring semester, so they are realistic only near Ames/Des Moines. Include them but score them lower than Summer 2027 and Summer 2028.
 
-## D-015 — SmartRecruiters API and robots.txt (PROPOSED 2026-11-02)
-`api.smartrecruiters.com/robots.txt` allows LinkedInBot and disallows every other crawler (`User-agent: *`, `Disallow: /`), even though SmartRecruiters documents a public Posting API. SPEC constraint 2 says to respect robots.txt, so the adapter is built and tested offline, the shared HTTP client blocks it in live runs, and RR Donnelley and Northwestern Medicine appear in `meta.json` as blocked with a "check manually" link. Options: (A) keep respecting robots.txt, and ask SmartRecruiters whether the rule is meant to cover this API; (B) Lucas decides the documented API is exempt, which would change SPEC constraint 2. Recommendation: A.
+## D-015 — Respect SmartRecruiters' robots.txt (ACCEPTED 2026-11-02)
+`api.smartrecruiters.com/robots.txt` allows LinkedInBot and disallows every other crawler, even though SmartRecruiters documents a public Posting API. Respect it. RR Donnelley and Northwestern Medicine stay manual links, and no more requests go to that API. The adapter file stays, tested offline but unregistered, so the pipeline cannot call it.
+
+## D-016 — Off-season 2027 listings stay near home (ACCEPTED 2026-11-02)
+Spring 2027 and Winter 2027 listings are only kept within 60 miles of home (config: `seasons[].max_miles_from_home`). This makes D-014's "realistic only near Ames/Des Moines" a real limit. A multi-city posting counts by its closest city. If the distance is unknown, the listing is not kept, because it cannot be shown to be within the limit.
+
+## D-017 — Claims and underwriting roles (ACCEPTED 2026-11-02)
+Add role keywords "claims adjuster", "claims", and "underwriting intern" under `insurance_risk`.
+
+## D-018 — Program titles without the word "intern" (ACCEPTED 2026-11-02)
+A title counts as an internship/program if it contains an internship term, or a season+year pattern (e.g., "Summer 2027", "2028 Summer") with "analyst", "program", "associate program", or "scholar" (config: `program_title_terms`).
+Finding when built: William Blair's real "Working in Technology (WiT) ... - Summer 2027" titles have a season and year but none of those words, so this rule does not admit them. Tests record that. Adding "working in technology" to `program_title_terms` would admit them; see STATUS.
+
+## D-019 — Remove BGM Group (ACCEPTED 2026-11-02)
+Removed from `config/companies.yaml` because both domains are parked.
+
+## D-020 — Scoring points live in config (ACCEPTED 2026-11-02)
+Scoring points move from `scanner/scoring.py` into a `scoring:` block in `config/config.yaml` and `docs/CONFIG.md`. No scoring numbers are hard-coded in code; a test checks this.
+
+## D-021 — Cap for listings with no role match (ACCEPTED 2026-11-02)
+Listings with no role-category match stay in `internships.json` but are capped at `scoring.no_role_cap` (default 35), so they never reach the email by default.
+
+## D-022 — Nominatim's robots.txt disallows geocoding (PROPOSED 2026-11-02)
+Phase 3 asked for Nominatim geocoding under its usage policy (https://operations.osmfoundation.org/policies/nominatim/, read 2026-11-02). Two findings conflict with that:
+- `nominatim.openstreetmap.org/robots.txt` has `User-agent: *` with `Disallow: /search`. The usage policy does not mention robots.txt. SPEC constraint 2 says to respect robots.txt, and D-015 applied that to a documented API.
+- The policy treats scheduled scripts as bulk use, strongly discourages periodic requests, and caps them at 4 per minute rather than 1 per second.
+
+So no request has gone to `/search`. The geocoder and its cache are built and tested offline, and `geocoding.enabled` is false. `config/cities.yaml` keeps its approximate coordinates, because they could not be replaced. While geocoding is off, an unlisted city in a nearby state is kept as "Location unknown", and an unlisted city elsewhere or with no state is excluded and logged in `meta.json`.
+Options: (A) use a static file instead: the US Census Bureau's Gazetteer lists coordinates for US places, needs no live service, and would be read locally; (B) Lucas decides robots.txt is aimed at crawlers and exempts this one service, which changes SPEC constraint 2 and which D-015 chose not to do; (C) stay as is. Recommendation: A, subject to checking the Census file's terms and adding it for review.
+
+## D-023 — last_seen moves to its own file (PROPOSED 2026-11-02)
+Phase 3 asks that `internships.json` change only when listings change. A per-listing `last_seen` date changes for every listing, every day, so it now lives in `data/last_seen.json`, keyed by listing `id`. The SPEC data model still holds once the two files are joined by `id`, which `store.load_listings` does. For P4: decide the "commit only when data changes" check on `internships.json` alone, since `last_seen.json`, `meta.json`, and `companies_status.json` change every run. Trade-off: on a day with no commit, those three files are not saved, so a stored `last_seen` can lag by the days since the last commit.
+
+## D-024 — "filtered" status (PROPOSED 2026-11-02)
+Phase 3 adds a status beyond SPEC's `open | possibly_closed | closed`: `filtered`, for a listing still on its board that current config rejects. `filtered_reason` says why. It returns to `open` if config changes back, and it can still close if it leaves the board.
