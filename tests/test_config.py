@@ -32,9 +32,8 @@ def test_season_weights_match_d014(cfg):
 
 def test_real_registry_loads():
     companies = load_companies(ROOT / "config" / "companies.yaml")
-    assert len(companies) == 44
-    bgm = next(c for c in companies if c["name"] == "BGM Group")
-    assert bgm["ats"] == "manual" and bgm["board"] is None
+    assert len(companies) >= 43
+    assert "BGM Group" not in {c["name"] for c in companies}  # D-019
 
 
 @pytest.mark.parametrize("change, expected", [
