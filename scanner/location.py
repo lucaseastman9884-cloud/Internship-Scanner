@@ -25,7 +25,10 @@ _PARENS = re.compile(r"\s*\([^)]*\)")
 _AFTER_COUNTRY = re.compile(r"(,\s*(?:USA|US|United States))\s+[-–—]\s+.*$", re.I)
 _DASH_US = re.compile(r"\s+[-–—]\s+(?:U\.?S\.?A?\.?|United States)$", re.I)
 _SITE_WORD = re.compile(r"\s+(?:campus|office|hq|headquarters)$", re.I)
-_STATE_FIRST = re.compile(r"^([A-Z]{2})\s+[-–—]\s+(.+)$")
+_DASH = re.compile(r"\s+[-–—]\s+")
+_US_DASHED = re.compile(r"^US-([A-Z]{2})-([^-]+)")
+_USA_SPACED = re.compile(r"^USA ([A-Z]{2}) (.+)$")
+_ENDS_US = re.compile(r"^(.+?)\s+(?:United States|USA)$", re.I)
 # Workday's list view says "3 Locations" until the detail page names them.
 _PLACEHOLDER = re.compile(r"^(\d+|multiple)\s+locations?$", re.I)
 
@@ -36,16 +39,42 @@ def _miles(a: dict, b: dict) -> float:
     return 3958.8 * 2 * math.asin(math.sqrt(h))
 
 
+def _state_code(word: str):
+    if word.upper() in STATE_CODES:
+        return word.upper()
+    return STATES.get(word.lower())
+
+
 def _tidy(text: str) -> str:
-    """Rewrite the shapes real boards use: 'IL - Chicago', 'OH - Columbus (43213)', 'Chicago, IL – U.S.',
-    'Pella, Iowa, USA - Corporate Office', 'Saint Paul, MN Campus', 'Chicago Office'."""
+    """Rewrite the shapes real boards use into 'City, ST'. Every pattern here was seen on a live board."""
     text = _PARENS.sub("", text).strip()
     text = _AFTER_COUNTRY.sub(r"\1", text)
     text = _DASH_US.sub("", text)
     text = _SITE_WORD.sub("", text).strip()
-    m = _STATE_FIRST.match(text)
-    if m and m.group(1) in STATE_CODES:
+    m = _US_DASHED.match(text)  # 'US-IL-Chicago-10 SWacker-3100'
+    if m:
         return f"{m.group(2)}, {m.group(1)}"
+    m = _USA_SPACED.match(text)  # 'USA NM Albuquerque'
+    if m:
+        return f"{m.group(2)}, {m.group(1)}"
+    pieces = _DASH.split(text)
+    if len(pieces) >= 2 and pieces[0] in STATE_CODES:
+        # 'IL - Chicago', and 'MO - Southeast - Cape Girardeau - Cape Girardeau Main'
+        return f"{pieces[2] if len(pieces) >= 4 else pieces[-1]}, {pieces[0]}"
+    if "," in text:
+        return text
+    if len(pieces) >= 2:
+        return pieces[0]  # 'Chicago - 155 Wacker' is a city and a building
+    m = _ENDS_US.match(text)  # 'Tampa Florida United States'
+    if m:
+        text = m.group(1)
+    for size in (2, 1):  # 'New York New York', 'Kansas City MO', 'Ogden UT'
+        words = text.split()
+        if len(words) > size and _state_code(" ".join(words[-size:])):
+            # A lowercase or full-word match needs care: 'Iowa City' has no state after it.
+            ending = " ".join(words[-size:])
+            if m or ending in STATE_CODES:
+                return f"{' '.join(words[:-size])}, {_state_code(ending)}"
     return text
 
 
@@ -146,6 +175,17 @@ class LocationResolver:
         where = f"{place['state']} has no target area" if place["state"] else "no state was given"
         return {**place, "tier": None, "detail": f"city not in config/cities.yaml, and {where}"}
 
+    def _split_city_lists(self, pieces: list) -> list:
+        """'Chicago, New York City' lists two cities, but would parse as Chicago in New York State."""
+        out = []
+        for piece in pieces:
+            parts = [p.strip() for p in piece.split(",")]
+            if len(parts) == 2 and parts[0].lower() in self.by_city and parts[1].lower().startswith("new york"):
+                out += [parts[0], parts[1]]
+            else:
+                out.append(piece)
+        return out
+
     def resolve(self, location_raw: str, remote_hint: bool = False, allow_lookup: bool = True) -> dict:
         """Return the best-matching place. A multi-city posting counts if any of its cities qualifies."""
         pieces = [p.strip() for p in re.split(r";|\s\|\s|\n", location_raw or "") if p.strip()]
@@ -153,7 +193,7 @@ class LocationResolver:
         mentions_remote = len(physical) < len(pieces)
         rank = {"target_area": 0, "whole_state": 1, "home_radius": 2, "unknown": 3, None: 4}
         places = []
-        for piece in physical:
+        for piece in self._split_city_lists(physical):
             if _PLACEHOLDER.match(piece):
                 places.append({"city": None, "state": None, "country": None, "tier": "unknown", "detail": "location unknown",
                                "resolved": True, "lat": None, "lng": None, "miles_from_home": None})

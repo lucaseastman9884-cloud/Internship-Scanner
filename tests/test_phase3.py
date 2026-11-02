@@ -396,10 +396,27 @@ def test_with_geocoding_off_a_bare_unlisted_name_is_not_kept(cfg, cities, raw):
     ("Chicago Office", "Chicago", "IL"),
     ("Des Moines #3, Park Avenue, Des Moines, IA", "Des Moines", "IA"),
     ("Altoona,  8th St SW, Altoona, IA", "Altoona", "IA"),
+    ("Kansas City MO", "Kansas City", "MO"),
+    ("Ogden UT", "Ogden", "UT"),
+    ("Chicago - 155 Wacker", "Chicago", "IL"),
+    ("US-IL-Chicago-10 SWacker-3100", "Chicago", "IL"),
+    ("USA NM Albuquerque", "Albuquerque", "NM"),
+    ("Tampa Florida United States", "Tampa", "FL"),
+    ("New York New York United States", "New York", "NY"),
+    ("MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Bank Building (1000 Walnut) (64106)", "Kansas City", "MO"),
+    ("MO - Southeast - Cape Girardeau - Cape Girardeau Main (63703)", "Cape Girardeau", "MO"),
+    ("Iowa City, IA", "Iowa City", "IA"),
+    ("Iowa City", "Iowa City", "IA"),
+    ("Kansas City", "Kansas City", "MO"),
 ])
 def test_real_workday_location_shapes(resolver, raw, city, state):
     place = resolver.resolve(raw)
     assert (place["city"], place["state"]) == (city, state)
+
+
+def test_a_comma_list_of_two_cities_is_not_a_city_and_state(resolver):
+    place = resolver.resolve("Chicago, New York City")
+    assert place["city"] == "Chicago" and place["tier"] == "target_area"
 
 
 # --- D-015, D-019 ---
