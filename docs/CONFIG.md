@@ -34,7 +34,10 @@ seasons:
 role_categories:
   investment_banking: ["investment banking", "summer analyst", "M&A", "capital markets"]
   corporate_finance:  ["finance intern", "financial analyst intern", "FP&A", "treasury", "corporate finance"]
-  banking:            ["commercial banking", "credit analyst", "retail banking", "treasury management", "banking intern"]
+  # P5.1: "credit risk" and "market risk" are bank roles. banking is listed before insurance_risk,
+  # so "Credit Risk Intern" gets role_category banking and the email doesn't hide it (D-034).
+  banking:            ["commercial banking", "credit analyst", "retail banking", "treasury management", "banking intern",
+                       "credit risk", "market risk"]
   investments:        ["investment analyst", "equity research", "asset management", "wealth management", "financial advisor intern", "private wealth"]
   accounting:         ["accounting intern", "audit intern", "tax intern", "assurance", "advisory intern"]
   insurance_risk:     ["actuarial", "underwriting", "risk intern", "risk management", "claims analyst intern",
@@ -49,6 +52,10 @@ program_title_terms: ["analyst", "program", "associate program", "scholar"]
 
 exclude_keywords: ["senior", "director", "vice president", "manager", "PhD", "MBA", "graduate degree",
                    "master's", "full-time analyst", "experienced", "CPA required"]
+
+# P5.1: a title with one of these is kept only within radius_miles of home, where a student could
+# work during the school year. Elsewhere it becomes "filtered" (D-024). "part-time" also matches "part time".
+exclude_keywords_outside_home: ["part-time", "term-time"]
 
 eligibility:
   exclude_if_restricted_to_grad_years: [2027, 2028]   # season year ≠ class year; see SPEC
@@ -74,6 +81,10 @@ scoring:                         # D-020: every point value lives here
   early_career: 5
   no_role_cap: 35                # D-021: no role-category match can never score above this
   max_score: 100
+  # P5.1: off-target words in the title, as whole words. Not applied when the title matches one of
+  # title_penalty_exempt_categories, so "Technology Investment Banking Summer Analyst" keeps its score.
+  title_penalty_keywords: { technology: -30, marketing: -30 }
+  title_penalty_exempt_categories: ["investment_banking"]
 
 workday:                         # D-002
   search_terms: ["intern", "internship", "summer analyst", "summer program"]
@@ -93,6 +104,9 @@ email:
   deadline_window_days: 14
   areas: "all"
   seasons: "all"
+  max_manual: 10                 # P5.1 (D-033): manual links shown; the rest become "...and N more"
+  # D-034: hide a listing whose title matches only these role categories. It stays in the data.
+  exclude_role_categories: ["insurance_risk"]
 
 contacts:
   daily_candidates: 15
