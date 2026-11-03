@@ -52,10 +52,10 @@ web/                        (later, P7) Static site
 | `eligibility.exclude_if_restricted_to_grad_years` | list of years | D-006 |
 | `status` | `possibly_closed_after_missed_runs`, `closed_after_missed_runs` | Closing logic (N, M) |
 | `new_badge_days` | integer | "New" window (X) |
-| `email` | `min_score`, `max_new`, `max_top_open`, `deadline_window_days`, `areas`, `seasons`, `max_manual`, `exclude_role_categories` (P5.1) | Email filters |
+| `email` | `min_score`, `max_new`, `max_top_open`, `deadline_window_days`, `areas`, `seasons`, `max_manual`, `exclude_role_categories` (P5.1), `manual_first_tags` (P5.2) | Email filters |
 | `contacts` | budget and priority settings | Engine B only |
 
-`config/companies.yaml` holds a top-level `companies:` list. Each entry has `name`, `ats`, `board`, `cities`, `priority`, and `notes`.
+`config/companies.yaml` holds a top-level `companies:` list. Each entry has `name`, `ats`, `board`, `cities`, `priority`, and `notes`, plus an optional `tags` list (P5.2), such as `["ib"]`.
 - `ats`: `greenhouse`, `lever`, `ashby`, `smartrecruiters`, `workday`, or `manual`
 - `board`: a slug, a Workday career-site URL, or a careers URL when `manual`
 - `priority`: 1 to 3
@@ -112,6 +112,8 @@ Checked 2026-11-02. "Live test" is one small unauthenticated request. **Doc page
 **What "Not stated" means:** the page we read gave no limit. It does not mean unlimited. Every adapter stays at ≤1 request per second regardless.
 
 ## 6. Company registry result
+**As of P5.2 (2026-11-03):** 114 companies. 61 are fetched live (44 Workday, 16 Greenhouse, 1 Ashby) and 53 are `manual`. 16 carry the `ib` tag. P5.2 added Piper Sandler and Stout (Workday) and Lincoln International (Greenhouse) as live boards, and Houlihan Lokey, Moelis, D.A. Davidson, Fireclay Partners, Jefferies and Kroll as manual links. See docs/reports/P5_2_REPORT.md.
+
 **As of P3:** 106 companies. 58 are fetched live (42 Workday, 15 Greenhouse, 1 Ashby) and 48 are `manual`. BGM Group was removed (D-019), and RR Donnelley and Northwestern Medicine became manual (D-015). The rest of this section describes the P1 result, which had 44 companies.
 
 P1 result: the 19 seeds plus 25 additions. **21 had confirmed boards** (16 Workday, 3 Greenhouse, 2 SmartRecruiters) and 23 were `manual`.
