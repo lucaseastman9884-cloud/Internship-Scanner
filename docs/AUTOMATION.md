@@ -2,7 +2,7 @@
 
 GitHub Actions is GitHub's free service for running code on a schedule. Every morning it starts a temporary computer, runs the tests, runs the scanner, and saves any changed listings back to this repo. The instructions it follows are in `.github/workflows/scan.yml`.
 
-**You don't need your Mac on for this.** No keys or passwords are used in this phase.
+**You don't need your Mac on for this.** The only passwords it uses are the three email secrets in section 10, which live in GitHub's secrets store and never in a file.
 
 ## 1. Push this branch and merge it
 The workflow can't run until it's on `main`, because GitHub only offers the **Run workflow** button and the schedule for files on the default branch.
@@ -54,6 +54,7 @@ One of these happened:
 - More than half of the live companies failed. This usually means something big, like GitHub's computers being blocked or a network problem.
 - The run hit its 90-minute limit.
 - The data couldn't be saved.
+- The morning email couldn't be sent (Gmail refused the login, for example). The data **is** still saved in this case. See section 10.
 
 A single red X isn't an emergency: your stored listings are safe, and the next morning's run tries again.
 
@@ -64,7 +65,9 @@ A single red X isn't an emergency: your stored listings are safe, and the next m
 4. The table from the summary page, if there is one.
 5. Whether anything changed recently, such as a config edit.
 
-**To get an email when a run fails:** in your GitHub account's notification settings, find the **Actions** section and choose to be notified only about failed runs. GitHub sends scheduled-run notifications to whoever created the workflow, or last changed its schedule. The commit that adds this file is under your name, so that should be you, but this hasn't been tried. The exact menu labels may differ too.
+**Failure email:** once the email secrets are set (section 10), a red X also sends you a short "Scan failed (date)" email with a link to the run. If the failure was Gmail itself refusing to send, that email can't get through either, so the Actions tab stays the reliable record.
+
+**GitHub's own notice:** in your GitHub account's notification settings, find the **Actions** section and choose to be notified only about failed runs. GitHub sends scheduled-run notifications to whoever created the workflow, or last changed its schedule. The commit that adds this file is under your name, so that should be you, but this hasn't been tried. The exact menu labels may differ too.
 
 ## 6. Why you must click Pull origin first
 The bot now saves to `main` on GitHub on its own. So GitHub often has newer files than your Mac. If you edit an old copy, Git may refuse your push or report a conflict.
@@ -100,7 +103,48 @@ Why the keepalive exists: GitHub automatically turns off scheduled workflows in 
 - A job may run for up to 6 hours. Ours stops itself at 90 minutes.
 - A run waiting in line is cancelled after 24 hours. A second run waits for the first to finish rather than overlapping it.
 
-## Sources (read 2026-11-02)
+## 10. The morning email (Phase 5)
+After a successful scan, the **Send morning email** step emails you a summary. It sends from a separate Gmail account used only for sending (D-009), to your personal inbox.
+
+### The three secrets
+The code reads exactly these names. Spelling and capitals must match.
+
+| Secret name | What to paste as its value |
+|---|---|
+| `SMTP_USERNAME` | The sending Gmail account's full address |
+| `SMTP_APP_PASSWORD` | That account's 16-letter app password. Spaces are fine; the code removes them |
+| `EMAIL_TO` | The inbox that should receive the email (yours). Several can be separated by commas |
+
+If any is missing, the run stays green: the email step logs a yellow warning naming the missing secret and skips sending. The values are never printed, and GitHub also hides secret values in logs.
+
+### Make the app password (in the sending account)
+1. Sign in to the **sending** Gmail account, not your personal one.
+2. Turn on 2-Step Verification for it. Google only offers app passwords with it on, and not if it uses security keys only or has Advanced Protection.
+3. Go to https://myaccount.google.com/apppasswords, type a name such as "Internship Scanner", and click **Create**.
+4. Copy the 16-letter password Google shows. You won't be able to see it again, but you can always make a new one.
+
+### Add the secrets to GitHub
+1. On GitHub, open the repo and click **Settings** (under the repo name).
+2. In the left sidebar, under **Security**, click **Secrets and variables**, then **Actions**.
+3. On the **Secrets** tab, click **New repository secret**.
+4. Type `SMTP_USERNAME` as the **Name**, paste the value into **Secret**, and click **Add secret**.
+5. Repeat for `SMTP_APP_PASSWORD` and `EMAIL_TO`.
+
+Secrets are never given to runs started from someone else's copy (fork) of the repo, so strangers can't read them.
+
+### Try it without sending
+On your Mac, `python -m scanner email --dry-run` writes the email to `outputs/email_preview.html` (open it in a browser) and `outputs/email_preview.txt`. It sends nothing and needs no secrets. `outputs/` is ignored by git.
+
+### "New since last email"
+After a send, the time and the ids of the listings already covered go into `data/meta.json` under `email`. No address or other personal data is stored. Before the first send, "new" means first seen within `new_badge_days`. On a day when no listing changed, nothing is committed (section 8), so that record isn't saved. That is harmless: no listing was added that day, so the next email still shows exactly what's new.
+
+### If the email doesn't arrive
+- Open the run's **Send morning email** step. "Email sent" means Gmail accepted it, so check spam first.
+- "Missing secret(s)": add the named secret.
+- `SMTPAuthenticationError`: the username or app password is wrong, or the app password was removed. Changing the sending account's Google password also removes its app passwords. Make a new one and update `SMTP_APP_PASSWORD`.
+- To stop the emails, delete the secrets, or remove the app password in the sending account.
+
+## Sources (read 2026-11-02, email sources 2026-11-03)
 - Schedule syntax, delays, timezone, 60-day rule, and default-branch rule: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows and https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 - Disabling and enabling workflows: https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows
 - `GITHUB_TOKEN`, including that its commits don't start other workflows: https://docs.github.com/en/actions/concepts/security/github_token
@@ -108,3 +152,7 @@ Why the keepalive exists: GitHub automatically turns off scheduled workflows in 
 - Limits: https://docs.github.com/en/actions/reference/limits
 - Billing: https://docs.github.com/en/billing/concepts/product-billing/github-actions
 - Bot name and email: https://github.com/actions/checkout
+- Gmail SMTP for personal accounts (`smtp.gmail.com`, TLS/STARTTLS on port 587, authentication required): https://support.google.com/mail/answer/7104828
+- Gmail SMTP ports (465 for SSL, 587 for TLS), Workspace admin page: https://knowledge.workspace.google.com/admin/gmail/send-email-from-a-printer-scanner-or-app
+- App passwords: https://support.google.com/mail/answer/185833
+- Repository secrets, and forks not receiving them: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets

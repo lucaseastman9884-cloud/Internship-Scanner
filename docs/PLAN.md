@@ -23,7 +23,7 @@ scanner/                    Python package; run with: python -m scanner run
   history.py                  Status transitions and recurring programs
   gazetteer.py                Offline coordinates from the Census Gazetteer (D-022)
   geocode.py                  Nominatim with a cache; off (D-022)
-  email/                      (later, P5) HTML email and sending
+  email_report.py             Morning email and failure email: build, preview, send (P5)
 tests/fixtures/             Saved sample responses, so tests make no network calls
 data/                       internships.json, last_seen.json, meta.json, companies_status.json, geocache.json
                             excluded_last_run.json is a local debug report and is not committed
@@ -140,7 +140,7 @@ The trade-off, stated plainly:
 Sources:
 - App passwords: https://support.google.com/mail/answer/185833
 - Sending limit: https://support.google.com/mail/answer/22839
-- SMTP host and ports (`smtp.gmail.com`, 465 SSL or 587 TLS): https://knowledge.workspace.google.com/admin/gmail/send-email-from-a-printer-scanner-or-app. **This page is written for Workspace admins; confirmation for personal accounts is UNVERIFIED and will be tested in P5.**
+- SMTP host and ports (`smtp.gmail.com`, 465 SSL or 587 TLS): https://knowledge.workspace.google.com/admin/gmail/send-email-from-a-printer-scanner-or-app. This page is written for Workspace admins. **P5 (2026-11-03):** Gmail's own help page for personal accounts, https://support.google.com/mail/answer/7104828, documents `smtp.gmail.com`, "Requires TLS: Yes (if available)", "Requires Authentication: Yes", "Port for TLS/STARTTLS: 587". P5 uses 587 with STARTTLS. Documented, not yet tested: no real email has been sent.
 - Resend: https://resend.com/pricing and https://resend.com/docs/dashboard/domains/introduction
 - GitHub secrets: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets
 - Brevo's pricing page returned only a title and its help center returned 403, so everything about Brevo is UNVERIFIED.
