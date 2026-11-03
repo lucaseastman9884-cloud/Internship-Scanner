@@ -22,16 +22,26 @@ _IN_TITLE = _ADJACENT + [(re.compile(rf"\b{_SEASON}{_GAP}{_YEAR}(?!\d)", re.I), 
 # the classes Lucas could apply for; a year outside it is more likely part of a program name.
 _LONE_YEAR = re.compile(r"(?<![\w'])(20(?:2[6-9]|30))(?!\d)")
 _SEASON_WORD = re.compile(rf"\b{_SEASON}\b", re.I)
+_ANY_YEAR = re.compile(rf"(?<![\w']){_YEAR}(?!\d)", re.I)
+# F (P5.2): a season and a year this far apart still pair, as in the real "2028 PMCF Investment Banking
+# Summer Analyst". Same range as _LONE_YEAR: a far-off year outside it is more likely a program name.
+_FAR_PAIR_YEARS = range(2026, 2031)
 LOCATION_CONFLICT = "location_conflict"
 _DEADLINE = re.compile(
     r"(?:application\s+deadline|apply\s+by|applications?\s+(?:are\s+)?due(?:\s+by)?)\W+"
     r"((?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s+20\d\d)", re.I)
 
 
+def _season_word(season: str) -> str:
+    return "Fall" if season.lower() == "autumn" else season.capitalize()
+
+
+def _full_year(year: str) -> str:
+    return "20" + year[1:] if year.startswith("'") else year
+
+
 def _format_season(season: str, year: str) -> str:
-    season = "Fall" if season.lower() == "autumn" else season.capitalize()
-    year = "20" + year[1:] if year.startswith("'") else year
-    return f"{season} {year}"
+    return f"{_season_word(season)} {_full_year(year)}"
 
 
 def _search_season(text: str, patterns: list) -> Optional[str]:
@@ -46,15 +56,42 @@ def _search_season(text: str, patterns: list) -> Optional[str]:
     return _format_season(season, year)
 
 
+def _season_and_conflict(title: str) -> tuple:
+    """(season, None), or (None, why) when the title names two seasons or two years.
+
+    F (P5.2): one season word and one year anywhere in the title pair up. Two different ones, as in
+    "2027 Summer / 2028 Winter Program", could mean either, so nothing is picked: guessing could
+    hide a real listing behind the wrong season."""
+    text = title or ""
+    seasons = sorted({_season_word(s) for s in _SEASON_WORD.findall(text)})
+    years = sorted({_full_year(y) for y in _ANY_YEAR.findall(text)})
+    if len(seasons) > 1:
+        return None, f"title names more than one season ({', '.join(seasons)}), so none was picked"
+    if len(years) > 1:
+        return None, f"title names more than one year ({', '.join(years)}), so none was picked"
+    if not (seasons and years):
+        return None, None
+    # Side by side or a couple of words apart, any year counts, as before P5.2.
+    near = _search_season(text, _IN_TITLE)
+    if near:
+        return near, None
+    return (f"{seasons[0]} {years[0]}" if int(years[0]) in _FAR_PAIR_YEARS else None), None
+
+
 def title_season(title: str) -> Optional[str]:
-    return _search_season(title, _IN_TITLE)
+    return _season_and_conflict(title)[0]
+
+
+def title_season_conflict(title: str) -> Optional[str]:
+    """Why a title's season was left unstated, or None. Scoring records it in match_reasons."""
+    return _season_and_conflict(title)[1]
 
 
 def title_year_only(title: str) -> Optional[int]:
     """The year a title states with no season word anywhere, or None. The season is never guessed.
 
-    "2028 PMCF Investment Banking Summer Analyst" names a season too far from its year for
-    title_season to pair them, so it is not year-only either; it stays plain "Not stated"."""
+    A title with any season word is never year-only, even one whose season was left unstated
+    because it names two seasons or two years (D-036 item 5)."""
     if title_season(title) or _SEASON_WORD.search(title or ""):
         return None
     m = _LONE_YEAR.search(title or "")
@@ -63,9 +100,12 @@ def title_year_only(title: str) -> Optional[int]:
 
 def detect_season(title: str, description: str, cfg: dict) -> tuple:
     """Return (season, where it was found). The title is trusted over the description."""
-    season = title_season(title)
+    season, conflict = _season_and_conflict(title)
     if season:
         return season, "title"
+    if conflict:
+        # The description could name one of the two, but picking it would still be a guess.
+        return None, None
     if role_match(title, cfg)["early_signals"]:
         return "Early-career program", "title"
     # A description may mention other terms ("classes begin Fall 2026"), so only a season the

@@ -9,6 +9,8 @@
 #         or is only "expected" from the company's known presence (not confirmed).
 # priority: 1 = finance-relevant intern roles seen in a target city, 2 = likely fit, 3 = weak or distant fit.
 #           Priorities are a first proposal; change them freely.
+# tags: optional list of words (P5.2). "ib" marks investment-banking and advisory firms; manual companies
+#       with a tag in email.manual_first_tags are listed first in the email (D-035).
 
 companies:
   # --- Seed list (docs/STATUS.md) ---
@@ -100,8 +102,9 @@ companies:
     ats: manual
     board: "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardStudentCareers/jobs"
     cities: ["Chicago"]
-    priority: 3
-    notes: "Oracle Cloud confirmed from company careers page, but no adapter is planned yet (SOURCES: LATER). City expected."
+    priority: 1
+    tags: ["ib"]
+    notes: "Re-verified 2026-11-03 (P5.2): www.lazard.com/careers/ (200) links Oracle Cloud sites LazardStudentCareers and LazardProfessionalCareers on icbpjb.fa.ocs.oraclecloud.com. No Oracle adapter (D-011), so it stays manual and no request went to Oracle. City expected."
 
   - name: "CliftonLarsonAllen"
     ats: workday
@@ -256,7 +259,8 @@ companies:
     board: "williamblair"
     cities: ["Chicago"]
     priority: 1
-    notes: "Company job-search page loads this Greenhouse board. Observed Summer 2027 technology programs in Chicago; finance programs expected, not yet confirmed."
+    tags: ["ib"]
+    notes: "Tagged ib in P5.2. Company job-search page loads this Greenhouse board. Observed Summer 2027 technology programs in Chicago; finance programs expected, not yet confirmed."
 
   - name: "Morningstar"
     ats: workday
@@ -347,8 +351,9 @@ companies:
     ats: workday
     board: "https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers"
     cities: ["Chicago"]
-    priority: 3
-    notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. The list view gave no locations in the sample. City expected."
+    priority: 1
+    tags: ["ib"]
+    notes: "Tagged ib and raised to priority 1 in P5.2 (priority only orders the manual list, so a live board is unaffected). Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. The list view gave no locations in the sample. City expected."
 
   - name: "U.S. Bank"
     ats: workday
@@ -452,8 +457,9 @@ companies:
     ats: workday
     board: "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Partners"
     cities: ["Chicago"]
-    priority: 2
-    notes: "Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Chicago roles. A second site exists at guggenheiminvestment.wd5. Interns not yet confirmed."
+    priority: 1
+    tags: ["ib"]
+    notes: "Tagged ib and raised to priority 1 in P5.2 (priority only orders the manual list, so a live board is unaffected). Verified 2026-11-02 by a live request that returned jobs. Board link found on the company's careers page. Observed Chicago roles. A second site exists at guggenheiminvestment.wd5. Interns not yet confirmed."
 
   - name: "Alliant Energy"
     ats: workday
@@ -654,24 +660,27 @@ companies:
 
   - name: "Stifel"
     ats: manual
-    board: "https://www.stifel.com/careers"
+    board: "https://careers-stifel.icims.com/jobs/search?mode=job&iis=Company+Website"
     cities: ["Chicago"]
-    priority: 2
-    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+    priority: 1
+    tags: ["ib"]
+    notes: "Verified 2026-11-03 (P5.2): www.stifel.com/careers (200) links iCIMS at careers-stifel.icims.com. No iCIMS adapter (D-011), so it stays manual and no request went to iCIMS. City expected."
 
   - name: "Piper Sandler"
-    ats: manual
-    board: "https://www.pipersandler.com/careers"
-    cities: ["Chicago"]
-    priority: 2
-    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+    ats: workday
+    board: "https://pipersandler.wd501.myworkdayjobs.com/Piper_Sandler_Careers"
+    cities: ["Des Moines", "Leawood", "Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "LINKED, verified 2026-11-03 (P5.2): www.pipersandler.com/careers (200) links this Workday site (inside a urldefense.com wrapper). robots.txt allows the path; one search for 'intern' answered 200 with 39 results. Observed 2027 Summer Public Finance interns in Des Moines and Leawood, KS, and a 2027 IB Summer Associate in Chicago."
 
   - name: "Mesirow"
     ats: manual
-    board: "https://www.mesirow.com/careers"
+    board: "https://recruiting2.ultipro.com/MES1003MFAC/JobBoard/69451223-cdce-4faf-9407-23a2cd5ac83b/?q=&o=postedDateDesc"
     cities: ["Chicago"]
-    priority: 2
-    notes: "Careers page answered but showed no Greenhouse, Lever, Ashby, or Workday link, so the ATS is unconfirmed and we did not guess one. Cities expected."
+    priority: 1
+    tags: ["ib"]
+    notes: "Verified 2026-11-03 (P5.2): www.mesirow.com/careers (200) links a UKG (UltiPro) job board on recruiting2.ultipro.com. No UKG adapter (D-011), so it stays manual and no request went to UKG. City expected (Chicago headquarters)."
 
   - name: "Aon"
     ats: manual
@@ -726,8 +735,9 @@ companies:
     ats: manual
     board: "https://www.rwbaird.com/careers/"
     cities: ["Chicago"]
-    priority: 2
-    notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
+    priority: 1
+    tags: ["ib"]
+    notes: "Careers page returned 403 to our identified request on 2026-11-02. Not requested again in P5.2: the protocol stops probing a host after a 403, and the Workday tenant hint (rwbaird) did not come from a company page, so using it would be a guessed hostname. ATS unconfirmed. Cities expected."
 
   - name: "Huntington"
     ats: manual
@@ -757,3 +767,69 @@ companies:
     priority: 2
     notes: "Careers page returned 403 to our identified request and we do not work around blocks, so the ATS is unconfirmed. Cities expected."
 
+  # --- P5.2: IB coverage (D-035), verified 2026-11-03 ---
+  # Each firm's own careers page was read first; ATS hosts came only from links on it. One request per
+  # endpoint, through the pipeline's HttpClient (identifying User-Agent, robots.txt, 1 per second per host).
+  - name: "Lincoln International"
+    ats: greenhouse
+    board: "lincolninternational"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "LINKED, verified 2026-11-03: the campus page lincolninternational.com/careers-and-culture/careers/campus-early-careers/ loads Greenhouse board 'lincolninternational' (a second board, 'switzerlandlincolninternational', is Swiss and not added). One request answered 200 with 42 jobs. Observed 2028 Summer Analyst Intern (M&A, CAG) and a 2027 M&A Summer Associate Intern in Chicago."
+
+  - name: "Stout"
+    ats: workday
+    board: "https://stout.wd5.myworkdayjobs.com/Stout-Student-Careers"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "LINKED, verified 2026-11-03: www.stout.com/en/careers (200) links three Workday sites: Stout-Careers, Stout-Experienced-Careers and Stout-Student-Careers. Both Careers and Student-Careers were searched for 'intern' (200, 15 and 5 results) and listed the same three Summer 2027 interns, so only the student site is used. No intern seen in a target city yet; Chicago expected."
+
+  - name: "Houlihan Lokey"
+    ats: manual
+    board: "https://hl.com/careers/"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Checked 2026-11-03: hl.com/careers/ answered with an Incapsula bot-check page and no content. We do not get past bot checks, so the ATS is unconfirmed and no other host was tried. City expected."
+
+  - name: "Moelis & Company"
+    ats: manual
+    board: "https://www.moelis.com/careers/"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Verified 2026-11-03: www.moelis.com/careers/ (200) links campus hiring to TalentLink (moelis-careers.tal.net) and experienced hiring to Workday (moelis.wd1, site Experienced-Hires). One Workday search for 'intern' (200, 17 results) showed no internships, so the feed would add nothing; campus roles need TalentLink, which has no adapter. City expected."
+
+  - name: "D.A. Davidson"
+    ats: manual
+    board: "https://www.dadavidson.com/careers"
+    cities: ["Des Moines", "Kansas City", "Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Checked 2026-11-03: www.dadavidson.com/careers returned 403 to our identified request. We do not work around blocks, so the ATS is unconfirmed and the host was not requested again. Cities expected."
+
+  - name: "Fireclay Partners"
+    ats: manual
+    board: "https://fireclaypartners.com/careers/"
+    cities: ["Kansas City"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Verified 2026-11-03: fireclaypartners.com/careers/ (200) embeds Breezy HR (fireclay-partners.breezy.hr). No Breezy adapter, so it is manual and no request went to Breezy. The page lists an 'Investment Banking Analyst (Current Student - Remote)' role. Kansas City firm."
+
+  - name: "Jefferies"
+    ats: manual
+    board: "https://www.jefferies.com/careers/"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Verified 2026-11-03: www.jefferies.com/careers/ (200) links TalentLink at jefferies.tal.net. No TalentLink adapter, so it is manual and no request went to tal.net. City expected."
+
+  - name: "Kroll"
+    ats: manual
+    board: "https://careers.kroll.com/en"
+    cities: ["Chicago"]
+    priority: 1
+    tags: ["ib"]
+    notes: "Checked 2026-11-03: www.kroll.com/en links careers.kroll.com, a TalentBrew site whose early-careers listing is filled in by script, so the ATS behind it is unconfirmed and no ATS host was guessed. Valuation and M&A advisory. City expected."

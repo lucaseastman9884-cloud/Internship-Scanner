@@ -62,7 +62,7 @@ def shown(report):
 # ------------------------------------------------------------ settings
 
 def test_shipped_p5_1_settings(cfg):
-    assert cfg["email"]["max_manual"] == 10
+    # The cap's own value is set by D-041 and checked in test_p5_2; these tests pin P5.1's 10 themselves.
     assert cfg["email"]["exclude_role_categories"] == ["insurance_risk"]
     assert cfg["exclude_keywords_outside_home"] == ["part-time", "term-time"]
     assert cfg["scoring"]["title_penalty_keywords"] == {"technology": -30, "marketing": -30}
@@ -114,11 +114,16 @@ def manual_companies(failed=3, manual=45):
     return out + [{"name": f"Manual {i:02d}", "priority": [3, 1, 2][i % 3]} for i in range(manual)]
 
 
+# P5.1's cap. The shipped value changed in D-041, so these fixtures pin the one they were written for.
+P5_1_CAP = 10
+
+
 def test_48_manual_companies_show_10_failed_first_then_by_priority(cfg, resolver):
+    cfg = with_cfg(cfg, "email", max_manual=P5_1_CAP)
     report = er.build_email([], manual_meta(), cfg, manual_companies(), resolver, NOW)
     s = report["sections"]
     names = [m["company"] for m in s["manual"]]
-    assert len(names) == cfg["email"]["max_manual"] == 10
+    assert len(names) == P5_1_CAP
     assert s["manual_more"] == 38
     # Failed today first, alphabetical, whatever their priority.
     assert names[:3] == ["Failed X", "Failed Y", "Failed Z"]
@@ -146,7 +151,8 @@ def test_max_manual_zero_shows_only_the_count(cfg, resolver):
 
 
 def test_one_more_is_singular(cfg, resolver):
-    report = er.build_email([], manual_meta(0, 11), cfg, manual_companies(0, 11), resolver, NOW)
+    n = cfg["email"]["max_manual"] + 1
+    report = er.build_email([], manual_meta(0, n), cfg, manual_companies(0, n), resolver, NOW)
     assert "…and 1 more manual company." in report["text"]
 
 
@@ -537,7 +543,8 @@ SAMPLE_HIDDEN = ["Actuarial Intern - Summer 2027", "Claims Intern - Summer 2028"
 
 def test_sample_email_shows_everything_p5_1_changed(cfg, resolver):
     rows, meta, companies = sample_inputs(cfg, resolver)
-    report = er.build_email(rows, meta, cfg, companies, resolver, NOW)
+    # docs/reports/P5_1_sample_email.html was made with P5.1's cap of 10.
+    report = er.build_email(rows, meta, with_cfg(cfg, "email", max_manual=P5_1_CAP), companies, resolver, NOW)
     page = report["html"]
     assert "Overland Park, KS (title says Cincinnati, OH)" in page
     assert "2028 · season not stated" in page

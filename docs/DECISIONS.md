@@ -131,3 +131,43 @@ Lucas wants many more investment banking opportunities. This is the first work a
 - Use only legitimate public feeds (D-001, D-002, D-015).
 - Add the firms that have feeds. The rest stay manual links, grouped at the top of the manual list.
 Spec impact: COMPANY REGISTRY grows. A new phase P5.2 (IB coverage) is inserted before P6.
+
+## D-036 — P5.1 build choices and the two email filters (ACCEPTED 2026-11-03)
+Confirms the P5.1 build (PR merged 2026-11-03):
+1. Part-time / term-time: `exclude_keywords_outside_home: ["part-time", "term-time"]`. Such titles are kept only within the home radius (150 mi); farther away they become `filtered` with a reason. Remote listings are exempt; an unknown distance does not pass (as D-016).
+2. Title penalties: `scoring.title_penalty_keywords` (technology −30, marketing −30), skipped when the title matches a category in `scoring.title_penalty_exempt_categories: ["investment_banking"]`.
+3. `email.max_manual: 10`; order is failed-today, then priority 1–3, alphabetical within each; then "…and N more manual companies."
+4. `email.exclude_role_categories: ["insurance_risk"]` is the final key name for D-034. "credit risk" and "market risk" are banking keywords, so bank risk roles stay visible. The health line reads "{n} insurance-only listings hidden."
+5. Year-only titles store `season_year`; a title with a season word anywhere is not year-only.
+6. Mariner's location: not a parser bug. Its Ashby record lists Cincinnati, OH plus a secondary Overland Park, KS; the scanner keeps the qualifying city and tags `location_conflict`.
+7. The failure email is TESTED (manual run #3 with simulate_failure, 2026-11-03).
+
+## D-037 — Company tags and IB-first manual links (ACCEPTED 2026-11-03, P5.2)
+`config/companies.yaml` entries may carry an optional `tags` list of words. Every firm whose core business is investment banking or deal advisory is tagged `ib`, and has priority 1. That is 16 firms: Baird, D.A. Davidson, Fireclay Partners, Guggenheim Partners, Houlihan Lokey, Jefferies, Kroll, Lazard, Lincoln International, Mesirow, Moelis & Company, Piper Sandler, Raymond James, Stifel, Stout and William Blair. Universal banks with IB arms (Citi, BMO, CIBC and others) aren't tagged, because their manual or live status doesn't depend on IB.
+`email.manual_first_tags: ["ib"]` orders the manual list:
+1. failed today;
+2. always-manual companies with a listed tag;
+3. the other always-manual companies.
+
+Within each group: priority, then alphabetical. Then `max_manual` (10) and "…and N more." The email gives the tagged group its own line, "IB firms, no feed:". `[]` restores exactly the P5.1 order, and a test checks that.
+Trade-off: there are exactly 10 IB-tagged manual firms today, so with a cap of 10, a day with failures moves some IB links into "…and N more." D-041 raises the cap to 12.
+
+## D-038 — Season and year pair anywhere in a title (ACCEPTED 2026-11-03, P5.2)
+One season word and one year anywhere in a title now pair, when the year is 2026–2030. "2028 PMCF Investment Banking Summer Analyst" becomes Summer 2028. Side by side, or up to 2 words apart, any year still pairs, as before.
+A title naming two different season words ("Fall 2027/Winter 2028") or two different years ("Summer 2027 … 2028 graduates") gets no season. It also doesn't take one from the description, because that would still be a guess. The score's reason says why: "season: not stated (title names more than one season (Fall, Winter), so none was picked)". A title with any season word is still never year-only.
+Effect on stored data at the time of the change: two stored listings change. Plante Moran's IB Summer Analyst gets +25 instead of +8 for its season, and GCM Grosvenor "2027 IT-Product & Strategy Summer Intern" goes 18 → 35, held by `no_role_cap`. Among the last run's excluded listings, 79 titles gain a season (58 Citigroup, 14 Marsh McLennan, 4 Optiver, and 1 each from Plante Moran, U.S. Bank and UHY) and 11 lose one (9 RSM "Fall 2027/Winter 2028", 1 Jump Trading "Winter/Spring 2027", 1 Citigroup title naming 2026 and 2027). A check of D-018's program-title rule against every one of these titles found none whose kept or excluded status changes.
+
+## D-039 — P5.2 feed and manual changes (ACCEPTED 2026-11-03)
+Baird stays manual. No further requests to its careers host (D-028).
+Verified from each firm's own careers page, one endpoint request each:
+- Now live: Piper Sandler (was manual) on Workday `pipersandler.wd501/Piper_Sandler_Careers`; Stout on Workday `stout.wd5/Stout-Student-Careers`; Lincoln International on Greenhouse `lincolninternational`.
+- Manual, no adapter for their ATS: Lazard (Oracle), Stifel (iCIMS), Jefferies (TalentLink), Mesirow (UKG/UltiPro), Fireclay Partners (Breezy HR), Moelis & Company (campus on TalentLink; its Workday site lists experienced roles only, with no internships).
+- Manual, blocked or unreadable: Houlihan Lokey (Incapsula bot check), D.A. Davidson (403), Kroll (script-filled TalentBrew site, ATS unconfirmed).
+- Baird: kept manual without a new request. Its careers host returned 403 on 2026-11-02, and the `rwbaird` Workday hint didn't come from a company page. Decided: it stays manual (see the first line of this entry).
+
+## D-040 — P5.2 scope calls (ACCEPTED 2026-11-03)
+- Five Elms Capital is not added, because it's private equity only, outside D-035. It can be added later if Lucas approves it.
+- Adapter candidates for a later decision, ordered by how many IB firms each would unlock: TalentLink (Jefferies, Moelis), then Oracle Cloud (Lazard, plus Grant Thornton per D-011), iCIMS (Stifel, plus Principal and Sammons per D-011), UKG (Mesirow) and Breezy HR (Fireclay). Each would need its docs, terms and robots.txt checked first.
+
+## D-041 — email.max_manual raised to 12 (ACCEPTED 2026-11-03)
+There are 10 IB manual firms. With a cap of 10, any failed company pushes an IB firm into "…and N more" (Stifel on 2026-11-03). A cap of 12 leaves room for two failures.

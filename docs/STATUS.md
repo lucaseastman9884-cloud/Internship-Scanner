@@ -7,8 +7,9 @@ P2 — Pipeline core: DONE and merged to main.
 P3 — Full pipeline: DONE and merged to main.
 P4 — Automation: DONE and merged to main (PR #4). The first GitHub run, started by hand, succeeded on 2026-11-03.
 P5 — Morning email: merged to main (PR #5). Whether a real email has arrived is **not confirmed** in the repo.
-P5.1 — Email polish: built on branch `p5.1-email-polish`, **not pushed, awaiting Lucas's approval**. Tested offline only. Report: docs/reports/P5_1_REPORT.md.
-P5.2 — IB coverage (D-035): next.
+P5.1 — Email polish: merged to main (PR #6).
+P5.2 — IB coverage (D-035): built on branch `p5-2-ib-coverage`, **not pushed**. Lucas has accepted D-036 to D-041 (2026-11-03). Tested offline, plus one full run and email dry run on a copy of real data (nothing sent). Report: docs/reports/P5_2_REPORT.md.
+P6 — Contacts (Engine B): next.
 
 ## Environment
 - Repo: github.com/lucaseastman9884-cloud/Internship-Scanner (public)
@@ -23,54 +24,61 @@ P5.2 — IB coverage (D-035): next.
 - P2: the `scanner` package, Greenhouse, Lever, and Ashby adapters, normalization, eligibility, filtering, scoring, dedupe, upsert, data files, and offline tests.
 - P3: Workday adapter with manual fallback; open → possibly_closed → closed; filtered status; recurring programs; full companies_status.json; scoring in config; registry grown to 106 companies.
 - P4: decisions D-022 to D-030 and the empty-response guard; Census Gazetteer coordinates; remote_iowa tag; Workday cap of 500 with a per-listing check before a miss; daily workflow; commit-on-change and summary scripts; docs/AUTOMATION.md.
-- First GitHub run (manual, 2026-11-03, 05:46–06:12 UTC, about 27 minutes): green. All 58 live companies answered, 0 failed. The bot saved the data as commit b743974.
-- P5: `scanner/email_report.py` (morning email, failure email, dry run, Gmail SMTP on port 587 with STARTTLS); `python -m scanner email`; workflow email steps; docs/AUTOMATION.md section 10.
-- Docs: D-031 and D-032; SPEC v2.2 with D-033 to D-035 folded in (P5.1).
-- P5.1:
-  - Manual links capped at `email.max_manual` (10): failed today first, then priority 1, 2, 3, alphabetical, then "…and N more manual companies." (D-033)
-  - Email hides listings whose title matches only `insurance_risk` (`email.exclude_role_categories`); the health line counts them. They stay in the data (D-034). "credit risk" and "market risk" now match `banking`.
-  - Part-time/term-time titles kept only within 150 miles of home (`exclude_keywords_outside_home`).
-  - Technology/marketing titles get −30 each (`scoring.title_penalty_keywords`), except investment-banking titles.
-  - Titles naming a different "City, ST" get the tag `location_conflict`, and the email adds "(title says …)".
-  - Year-only titles store `season_year`; the email shows "2028 · season not stated".
-  - Workflow: manual-run checkbox `simulate_failure` to test the failure email (docs/AUTOMATION.md section 10).
+- First GitHub run (manual, 2026-11-03, about 27 minutes): green, all 58 live companies answered.
+- P5: `scanner/email_report.py` (morning email, failure email, dry run, Gmail SMTP on port 587 with STARTTLS); `python -m scanner email`; workflow email steps.
+- P5.1 (D-036, ACCEPTED): manual links capped at `email.max_manual` (10 then, 12 since D-041); insurance-only listings hidden from the email (D-034); part-time/term-time titles kept only near home; technology/marketing titles −30 unless IB; `location_conflict` tag; `season_year`; `simulate_failure` checkbox.
+- P5.2 (on branch; D-037 to D-041 ACCEPTED 2026-11-03):
+  - Registry: 114 companies, 61 live (44 Workday, 16 Greenhouse, 1 Ashby) and 53 manual.
+  - New live boards: Piper Sandler and Stout (Workday), Lincoln International (Greenhouse).
+  - New manual links: Houlihan Lokey, Moelis & Company, D.A. Davidson, Fireclay Partners, Jefferies, Kroll.
+  - Lazard, Stifel and Mesirow are confirmed manual, with their ATS recorded.
+  - Every firm was verified from its own careers page, with one request per endpoint.
+  - Optional `tags` on companies. 16 IB and advisory firms are tagged `ib` and set to priority 1.
+  - `email.manual_first_tags: ["ib"]`: the manual list shows failed today, then IB firms, then the rest.
+  - `email.max_manual` raised from 10 to 12, leaving room for two failures ahead of the 10 IB manual firms (D-041).
+  - Baird stays manual, and no further requests go to its careers host (D-039, D-028).
+  - Seasons: a season word and a 2026–2030 year anywhere in a title now pair. Two different seasons or years give "Not stated", with the reason in `match_reasons`.
 
 ## How to run
 From the project folder, after the one-time setup in README.md:
-- Run the pipeline: `python -m scanner run` (about 35 to 60 minutes, because of the polite delays)
+- Run the pipeline: `python -m scanner run` (about 30 to 35 minutes, because of the polite delays)
 - Preview the email: `python -m scanner email --dry-run`, then open `outputs/email_preview.html`
 - Run the tests: `pytest` (never uses the network, never sends email)
 - Run it on GitHub: see docs/AUTOMATION.md
 - Test the failure email: Actions → Daily scan → Run workflow → tick `simulate_failure`
 
-## Current coverage (first GitHub run, 2026-11-03)
-- 106 companies: 58 fetched live (42 Workday, 15 Greenhouse, 1 Ashby) and 48 manual links.
-- Database: 209 listings. 189 open, 16 filtered, 4 possibly_closed, 0 closed. 53 open at or above email.min_score (50).
-- P5.1 dry run on this data (before the next scan rescores it): 34 new (25 shown), 9 top open, 0 remote Iowa, 10 manual links + "…and 38 more", 19 insurance-only listings hidden.
-- After the next scan rescores: Plante Moran "2027 Summer Wealth Management Marketing Intern" drops 75 → 45 (below 50), and Akuna Capital "Accounting Intern (Term-Time, Part-Time)" in Chicago becomes `filtered`.
-- The goal of "hundreds of qualifying listings" is **not met**. IB coverage (P5.2) is the response.
+## Current coverage (P5.2 dry run, 2026-11-03, on a copy of the data)
+- Run time: 31.6 minutes locally. The new firms add about 14 requests (about 20 seconds).
+- Database: 215 listings, 193 open, 57 open at or above email.min_score (50).
+- New from P5.2:
+  - Lincoln International "2028 Summer Analyst Intern" (CAG and M&A, Chicago, 95);
+  - Piper Sandler "2027 Summer Internship Program – Public Finance" (Des Moines and Leawood, 85).
+- Plante Moran "2028 PMCF Investment Banking Summer Analyst" is now Summer 2028, scoring 75 (was 48). It ranks 14th among top open matches, so the cap of 10 keeps it out of the email.
+- The goal of "hundreds of qualifying listings" is **still not met**. Most remaining IB firms use an ATS with no adapter (TalentLink, Oracle, iCIMS, UKG, Breezy) or block us.
 
 ## Next
-1. Lucas reviews P5.1: pushes `p5.1-email-polish`, opens and merges the PR (docs/reports/P5_1_REPORT.md).
-2. Run **Daily scan** by hand with `simulate_failure` ticked, and check the "Scan failed" email arrives. Then a normal run, and check the morning email.
-3. Per D-032: compress, `/clear`, and start P5.2 — IB coverage (D-035).
+1. Push `p5-2-ib-coverage` with GitHub Desktop, then open and merge the PR.
+2. After the merge, do a normal **Daily scan** run and check the morning email. The failure email is already tested (D-036 item 7).
+3. Per D-032: compress, `/clear`, and start **P6 — Contacts (Engine B)**.
 
 ## Open questions
+- Raise `email.max_top_open`, or show IB listings separately? Plante Moran's IB listing qualifies but ranks 14th.
+- Which adapter, if any, comes next? TalentLink would unlock Jefferies and Moelis (D-040).
 - Does a commit by github-actions[bot] count as "repository activity" for GitHub's 60-day rule? GitHub's docs don't say. The weekly keepalive assumes yes.
-- Will careers sites keep answering GitHub's computers? On the first run all 58 did. One run isn't a trend.
-- Commerce Bank lists some internships by street address only, such as "811 Main, Flr 12". They are excluded because no city can be read. Should a company's known cities be used for this?
-- Season detection pairs a year and season only up to 2 words apart, so "2028 PMCF Investment Banking Summer Analyst" (Plante Moran, score 48) is "Season not stated" instead of Summer 2028. Widening the gap would raise such scores (+8 → +25). Change it in P5.2?
+- Will careers sites keep answering GitHub's computers? One run isn't a trend.
+- Commerce Bank lists some internships by street address only. Should a company's known cities be used for this?
 - Apollo Gmail-account search and monthly reset — test in P6.
 
 ## Known limits
-- The Workday cap is per search term, not per company in total. 10 big boards still hit 500 for "intern," so interns past that rank can be missed. Listings on those boards can now close, because each is checked individually.
+- The Workday cap is per search term, not per company in total. 10 big boards still hit 500 for "intern."
+- Stout is fetched from its student site only; an intern posted only on Stout-Careers would be missed.
 - D-025's "403 means gone" rests on two real postings seen on 2026-11-02.
 - A failed run commits nothing, including what the healthy companies found. The next run finds those again.
-- On a day with no commit, `meta.json`, `last_seen.json`, and `companies_status.json` aren't saved (D-023). So `consecutive_failures` can undercount, and the Actions summary is the record.
+- On a day with no commit, `meta.json`, `last_seen.json`, and `companies_status.json` aren't saved (D-023).
 - A second run on the same day counts as a miss. Runs are counted, not days.
-- A filtered listing keeps its old score and location label until it's next kept. Filter by status first (the email does).
-- The role-category exclusion reads titles only. A listing whose title matches no category isn't hidden, even if it is insurance work (e.g. EMC "Insurance Intern", which scores below 50 anyway).
-- `location_conflict` reads "City, ST" text only. A title naming a city without a state, or in another shape, isn't flagged.
-- Many board names in the registry were guessed, then verified with a live request. Each entry's notes say GUESS or LINKED.
-- If Gmail itself refuses to send, the failure email can't get through either. The Actions tab stays the reliable record.
+- A filtered listing keeps its old score and location label until it's next kept.
+- The role-category exclusion reads titles only.
+- `location_conflict` reads "City, ST" text only.
+- Many board names in the registry were guessed, then verified with a live request. Each entry's notes say GUESS or LINKED; P5.2 entries were all found from the firm's own page.
+- If Gmail itself refuses to send, the failure email can't get through either.
 - UNVERIFIED items are listed in PLAN sections 5 and 7.
