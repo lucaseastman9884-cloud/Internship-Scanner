@@ -37,6 +37,30 @@ _ENDS_US = re.compile(r"^(.+?)\s+(?:United States|USA)$", re.I)
 _PLACEHOLDER = re.compile(r"^(\d+|multiple)\s+locations?$", re.I)
 
 
+# One to three capitalized words, then a comma and a state code: "Cincinnati, OH", "St. Louis, MO",
+# "King of Prussia, PA", "Winston-Salem, NC". A trailing hyphen ends a word, so "Tax- Cincinnati, OH"
+# gives Cincinnati. The city needs a lowercase letter, so "Remote (IL, CA, NY)" names no city.
+_WORD = r"[A-Z][A-Za-z.'’]*(?:-[A-Z][A-Za-z.'’]*)*"
+_TITLE_PLACE = re.compile(rf"(?<![\w-])((?:{_WORD} (?:(?:of|de|la|del|du) )?){{0,2}}{_WORD}), ?([A-Z]{{2}})(?![\w-])")
+
+
+def title_place(title: str):
+    """The (city, state code) a title names, or None. Text only: it is never geocoded (D-022)."""
+    for m in _TITLE_PLACE.finditer(title or ""):
+        if m.group(2) in STATE_CODES and re.search(r"[a-z]", m.group(1)):
+            return m.group(1), m.group(2)
+    return None
+
+
+def title_names_city(named_city: str, city: str) -> bool:
+    """True when the title's text ends with the city, cut at a space or hyphen.
+
+    The pattern can't tell "Winston-Salem" from "Advisor-Pella", so "Wealth Management
+    Advisor-Pella" counts as naming Pella, and "Central Salt Lake City" as Salt Lake City."""
+    text, city = named_city.lower(), city.lower()
+    return any(text[i:] == city for i in range(len(text)) if i == 0 or text[i - 1] in " -")
+
+
 def _miles(a: dict, b: dict) -> float:
     lat1, lng1, lat2, lng2 = map(math.radians, (a["lat"], a["lng"], b["lat"], b["lng"]))
     h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
