@@ -445,7 +445,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1791,7 +1791,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -6528,7 +6528,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -8086,7 +8086,7 @@
     "first_seen": "2026-11-02",
     "id": "d1769fdf83350421",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": 41.8781,
     "lng": -87.6298,
     "location_label": "Chicago, IL",
@@ -8097,7 +8097,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -8110,7 +8110,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Finance / Accounting Internship Program (Summer 2027)"
   },
@@ -9068,7 +9068,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
