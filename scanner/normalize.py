@@ -21,6 +21,7 @@ _IN_TITLE = _ADJACENT + [(re.compile(rf"\b{_SEASON}{_GAP}{_YEAR}(?!\d)", re.I), 
 # E (P5.1): a year with no season word, as in the real "2028 Audit or Tax Intern". The range covers
 # the classes Lucas could apply for; a year outside it is more likely part of a program name.
 _LONE_YEAR = re.compile(r"(?<![\w'])(20(?:2[6-9]|30))(?!\d)")
+_SEASON_WORD = re.compile(rf"\b{_SEASON}\b", re.I)
 LOCATION_CONFLICT = "location_conflict"
 _DEADLINE = re.compile(
     r"(?:application\s+deadline|apply\s+by|applications?\s+(?:are\s+)?due(?:\s+by)?)\W+"
@@ -50,8 +51,11 @@ def title_season(title: str) -> Optional[str]:
 
 
 def title_year_only(title: str) -> Optional[int]:
-    """The year a title states without a season, or None. The season itself is never guessed."""
-    if title_season(title):
+    """The year a title states with no season word anywhere, or None. The season is never guessed.
+
+    "2028 PMCF Investment Banking Summer Analyst" names a season too far from its year for
+    title_season to pair them, so it is not year-only either; it stays plain "Not stated"."""
+    if title_season(title) or _SEASON_WORD.search(title or ""):
         return None
     m = _LONE_YEAR.search(title or "")
     return int(m.group(1)) if m else None

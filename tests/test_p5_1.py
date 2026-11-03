@@ -6,6 +6,7 @@ import copy
 import datetime as dt
 import json
 import shutil
+import zlib
 
 import pytest
 import yaml
@@ -26,7 +27,7 @@ COMPANY = {"company_id": "acme", "name": "Acme Financial"}
 def make(cfg, resolver, title, location, description="", job_id=None, company=COMPANY, first_seen="2026-10-01"):
     """One listing as the pipeline would build it. Returns (listing, exclusion codes)."""
     listing = new_listing(company, "greenhouse", job_id or title, title, location,
-                          f"https://boards.greenhouse.io/acme/jobs/{abs(hash(title)) % 10**8}", description=description)
+                          f"https://boards.greenhouse.io/acme/jobs/{zlib.crc32((job_id or title).encode())}", description=description)
     _place, exclusions = _evaluate(listing, cfg, resolver)
     listing = store.public_fields(listing)
     listing.update(first_seen=first_seen, last_seen=TODAY)
@@ -373,6 +374,8 @@ def test_year_only_title_keeps_season_not_stated(cfg, resolver):
     ("2028 Audit or Tax Intern", 2028), ("Audit Intern (2026)", 2026), ("2030 Tax Intern", 2030),
     ("2031 Tax Intern", None), ("2025 Tax Intern", None), ("Summer 2028 Tax Intern", None),
     ("2027 Tax Winter Internship", None), ("Tax Intern 12028", None), ("Tax Intern", None),
+    # A season word too far from the year for title_season still means it isn't year-only.
+    ("2028 PMCF Investment Banking Summer Analyst", None),
 ])
 def test_title_year_only(title, year):
     assert title_year_only(title) == year
@@ -541,6 +544,7 @@ def test_sample_email_shows_everything_p5_1_changed(cfg, resolver):
     assert "Credit Risk Intern - Summer 2027" in page
     assert "Underwriting and Commercial Banking Intern - Summer 2027" in page
     assert "2027 Technology Investment Banking Summer Analyst" in page
+    assert page.count("2028 · season not stated") == 1  # the IB title has a season word, so it isn't year-only
     assert "Accounting Intern (Term-Time, Part-Time)" in page and page.count("Term-Time, Part-Time") == 1  # Ames only
     assert "Ames, IA" in page
     for title in SAMPLE_HIDDEN:
