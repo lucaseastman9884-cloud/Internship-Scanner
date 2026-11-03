@@ -42,6 +42,25 @@ def season_limit_problem(listing: dict, place: dict, cfg: dict):
     return None
 
 
+def outside_home_problem(title: str, place: dict, cfg: dict):
+    """C (P5.1): part-time and term-time jobs are workable only near campus. Returns the reason, or None.
+
+    "part-time" also matches "part time" and "Part-Time". A multi-city posting counts by its closest
+    city (D-016). An unknown distance can't be shown to be near home, so it doesn't pass. A remote job
+    has no commute, so the rule doesn't apply to it."""
+    if place.get("is_remote"):
+        return None
+    for keyword in cfg["exclude_keywords_outside_home"]:
+        if has_phrase(title, keyword.replace("-", " ")):
+            limit, miles = cfg["radius_miles"], place.get("miles_from_home")
+            if miles is None:
+                return f"Title says '{keyword}', kept only within {limit} miles of home, and this distance is unknown"
+            if miles > limit:
+                return f"Title says '{keyword}', kept only within {limit} miles of home; this is {miles:.0f}"
+            return None
+    return None
+
+
 def title_exclude_keyword(title: str, cfg: dict):
     cleaned = _RISING_SENIOR.sub(" ", canon(title))
     for keyword in cfg["exclude_keywords"]:
@@ -75,6 +94,9 @@ def evaluate(listing: dict, place: dict, cfg: dict) -> list:
         keyword = description_exclude_keyword(listing["_description"], cfg)
         if keyword:
             reasons.append(("excluded_keyword", f"Description requires '{keyword}'"))
+    problem = outside_home_problem(title, place, cfg)
+    if problem:
+        reasons.append(("outside_home_keyword", problem))
     where = listing["location_raw"] or "none given"
     if listing["is_remote"]:
         if cfg["remote"] == "exclude":

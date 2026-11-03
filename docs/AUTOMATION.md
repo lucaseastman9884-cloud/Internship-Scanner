@@ -144,6 +144,16 @@ After a send, the time and the ids of the listings already covered go into `data
 - `SMTPAuthenticationError`: the username or app password is wrong, or the app password was removed. Changing the sending account's Google password also removes its app passwords. Make a new one and update `SMTP_APP_PASSWORD`.
 - To stop the emails, delete the secrets, or remove the app password in the sending account.
 
+### Test the failure email (P5.1)
+This makes one run fail on purpose, so you can see the "Scan failed" email arrive. It needs the three secrets.
+1. On GitHub, click **Actions**, then **Daily scan** in the left sidebar.
+2. Click **Run workflow** on the right. Leave the branch as `main`.
+3. Tick **simulate_failure**, then click the green **Run workflow** button.
+4. The run turns red within a few minutes. The step **Simulate a failure** fails right after **Run tests**, so **Run scanner**, **Send morning email** and **Commit data if listings changed** are skipped: nothing is scanned or saved, and no morning email goes out.
+5. **Send failure email** runs. You should get "Scan failed ({date})" saying `simulated failure: failure`, with a link to the run.
+
+Scheduled runs are unaffected. GitHub fills `inputs` only for manual (and reusable) runs, and a missing value counts as empty, which is false, so the step is skipped at 5:33 AM.
+
 ## Sources (read 2026-11-02, email sources 2026-11-03)
 - Schedule syntax, delays, timezone, 60-day rule, and default-branch rule: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows and https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 - Disabling and enabling workflows: https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows
@@ -155,4 +165,5 @@ After a send, the time and the ids of the listings already covered go into `data
 - Gmail SMTP for personal accounts (`smtp.gmail.com`, TLS/STARTTLS on port 587, authentication required): https://support.google.com/mail/answer/7104828
 - Gmail SMTP ports (465 for SSL, 587 for TLS), Workspace admin page: https://knowledge.workspace.google.com/admin/gmail/send-email-from-a-printer-scanner-or-app
 - App passwords: https://support.google.com/mail/answer/185833
+- `inputs` context ("only available in a reusable workflow or in a workflow triggered by the workflow_dispatch event") and a nonexistent property evaluating to an empty string (read 2026-11-03): https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
 - Repository secrets, and forks not receiving them: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets

@@ -103,3 +103,31 @@ That old commit keeps its author details.
 
 ## Empty-response guard (ACCEPTED 2026-11-02)
 For any adapter, a company that returns 0 jobs after having at least `status.empty_response_min_open` (3) open listings counts as a failed fetch. No misses are counted, and it is logged as an error and shown as a warning.
+
+## D-033 — P5 email behavior choices (ACCEPTED 2026-11-03)
+Confirms the P5 build's choices:
+- Remote — Iowa listings appear only in their own section. They get a NEW badge and count in the subject. The areas filter doesn't apply to them; min_score and seasons do.
+- Top open matches excludes listings already shown under New.
+- `email.areas` accepts target-area names and/or state codes. `email.seasons` accepts season names plus "Not stated" (most listings state no season).
+- Gmail SMTP uses port 587 with STARTTLS (Google support 7104828).
+- The failure email fires on any failed step and names the step.
+- The data commit runs whenever the scan succeeds, even if the email fails, so no data is lost.
+- The manual-links block stays as built for now. A follow-up will add an `email.max_manual` cap.
+Spec impact: none beyond 01_SPEC v2.2's MORNING EMAIL section (already 6 sections).
+Built in P5.1: `email.max_manual` (10). Failed-today companies come first, then priority 1, 2, 3, alphabetical within each group, then "…and N more manual companies."
+
+## D-034 — Email focuses on banking; insurance/actuarial stay in the database only (ACCEPTED 2026-11-03)
+Lucas's goal is investment banking, so actuarial, insurance and claims roles are noise in the email.
+- The scanner keeps collecting and scoring the `insurance_risk` category, so those listings stay in `data/internships.json` and will show in the web app.
+- The email hides listings whose ONLY role match is `insurance_risk`, via a config list (proposed key `email.exclude_role_categories: ["insurance_risk"]`, final name set in P5.1).
+- A listing that also matches banking, IB, corporate finance, investments or accounting still appears.
+- Bank risk roles: confirm in P5.1 how bank credit or market-risk titles are categorized, so they aren't hidden by mistake.
+Spec impact: MORNING EMAIL filters gain a role-category exclusion. 02_CONFIG `email:` block gains the key.
+Built in P5.1: the key is `email.exclude_role_categories`. Only categories matched in the title count; `early_career` is a signal, not a role, so it doesn't keep an insurance listing in the email. "credit risk" and "market risk" were added to `role_categories.banking`, which is listed before `insurance_risk`, so such titles get `role_category: banking` and are shown. The health line says "{n} insurance-only listings hidden."
+
+## D-035 — IB coverage is the top scanner priority (ACCEPTED 2026-11-03)
+Lucas wants many more investment banking opportunities. This is the first work after P5.1 and comes before P6 contacts.
+- Research which ATS each IB-relevant firm uses: currently-manual Lazard, Piper Sandler, Baird, Stifel and Mesirow, plus new IB firms in or near the target areas (Chicago, Kansas City, Des Moines, Dubuque).
+- Use only legitimate public feeds (D-001, D-002, D-015).
+- Add the firms that have feeds. The rest stay manual links, grouped at the top of the manual list.
+Spec impact: COMPANY REGISTRY grows. A new phase P5.2 (IB coverage) is inserted before P6.

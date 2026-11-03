@@ -18,13 +18,17 @@ TOP_LEVEL_KEYS = {
     "profile", "home", "radius_miles", "target_areas", "include_whole_states", "remote", "remote_allowed_states",
     "seasons", "role_categories", "must_be_one_of", "exclude_keywords", "eligibility",
     "status", "new_badge_days", "email", "contacts", "program_title_terms", "scoring", "workday", "geocoding",
+    "exclude_keywords_outside_home",
 }
 SCORING_KEYS = {
     "role_in_title", "role_only_in_description", "no_role_signal", "target_area", "whole_state_or_home_radius",
     "location_unknown", "season_max", "season_not_stated", "eligible", "eligibility_unclear", "ineligible",
     "early_career", "no_role_cap", "max_score",
 }
-EMAIL_KEYS = {"min_score", "max_new", "max_top_open", "deadline_window_days", "areas", "seasons"}
+# The two P5.1 scoring settings that aren't single numbers.
+SCORING_LIST_KEYS = {"title_penalty_keywords", "title_penalty_exempt_categories"}
+EMAIL_KEYS = {"min_score", "max_new", "max_top_open", "deadline_window_days", "areas", "seasons",
+              "max_manual", "exclude_role_categories"}
 COMPANY_KEYS ={"name", "ats", "board", "cities", "priority", "notes"}
 
 
@@ -155,6 +159,10 @@ def load_config(path: Path, cities: list) -> dict:
     for key in ("must_be_one_of", "exclude_keywords", "program_title_terms"):
         if not _is_string_list(cfg.get(key)) or not cfg.get(key):
             errors.append(f"{key} must be a non-empty list of strings")
+    # May be empty, which turns the rule off.
+    if not _is_string_list(cfg.get("exclude_keywords_outside_home")):
+        errors.append("exclude_keywords_outside_home must be a list of strings (it may be empty)")
+    category_names = set(roles) if isinstance(roles, dict) else set()
 
     years = (cfg.get("eligibility") or {}).get("exclude_if_restricted_to_grad_years")
     if not (isinstance(years, list) and all(isinstance(y, int) and not isinstance(y, bool) for y in years)):
@@ -177,7 +185,7 @@ def load_config(path: Path, cities: list) -> dict:
         errors.append(f"unknown setting 'email.{key}'")
     if not (_is_number(email.get("min_score")) and 0 <= email["min_score"] <= 100):
         errors.append("email.min_score must be a number from 0 to 100")
-    for key in ("max_new", "max_top_open", "deadline_window_days"):
+    for key in ("max_new", "max_top_open", "deadline_window_days", "max_manual"):
         value = email.get(key)
         if not (isinstance(value, int) and not isinstance(value, bool) and value >= 0):
             errors.append(f"email.{key} must be a whole number, 0 or more")
@@ -202,14 +210,34 @@ def load_config(path: Path, cities: list) -> dict:
                 if name not in season_names:
                     errors.append(f"email.seasons: '{name}' is not in seasons (or \"Not stated\")")
 
+    hidden = email.get("exclude_role_categories")
+    if not _is_string_list(hidden):
+        errors.append("email.exclude_role_categories must be a list of role_categories names (it may be empty)")
+    else:
+        for name in hidden:
+            if name not in category_names:
+                errors.append(f"email.exclude_role_categories: '{name}' is not in role_categories")
+
     scoring = cfg.get("scoring")
-    if not isinstance(scoring, dict) or set(scoring) != SCORING_KEYS:
+    expected = SCORING_KEYS | SCORING_LIST_KEYS
+    if not isinstance(scoring, dict) or set(scoring) != expected:
         have = set(scoring) if isinstance(scoring, dict) else set()
-        errors.append(f"scoring must have exactly these settings; missing {sorted(SCORING_KEYS - have)}, unknown {sorted(have - SCORING_KEYS)}")
+        errors.append(f"scoring must have exactly these settings; missing {sorted(expected - have)}, unknown {sorted(have - expected)}")
     else:
         for key, value in sorted(scoring.items()):
-            if not _is_number(value):
+            if key not in SCORING_LIST_KEYS and not _is_number(value):
                 errors.append(f"scoring.{key} must be a number")
+        penalties = scoring["title_penalty_keywords"]
+        if not (isinstance(penalties, dict) and all(isinstance(k, str) and k.strip() and _is_number(v)
+                                                    for k, v in penalties.items())):
+            errors.append("scoring.title_penalty_keywords must map each title word to a number, e.g. { marketing: -30 }")
+        exempt = scoring["title_penalty_exempt_categories"]
+        if not _is_string_list(exempt):
+            errors.append("scoring.title_penalty_exempt_categories must be a list of role_categories names")
+        else:
+            for name in exempt:
+                if name not in category_names:
+                    errors.append(f"scoring.title_penalty_exempt_categories: '{name}' is not in role_categories")
         if _is_number(scoring["no_role_cap"]) and _is_number(scoring["max_score"]) and not 0 <= scoring["no_role_cap"] <= scoring["max_score"]:
             errors.append("scoring.no_role_cap must be from 0 to max_score")
 

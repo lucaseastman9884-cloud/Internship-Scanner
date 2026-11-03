@@ -6,7 +6,7 @@ import hashlib
 import re
 from typing import Optional
 
-from .location import remote_tag
+from .location import remote_tag, title_names_city, title_place
 from .text import canon, has_phrase, make_snippet, normalized_title, scrub_contact_data
 
 _SEASON = r"(spring|summer|fall|autumn|winter)"
@@ -18,6 +18,11 @@ _ADJACENT = [(re.compile(rf"\b{_SEASON}\W+{_YEAR}(?!\d)", re.I), 1, 2),
 # longer and noisier, so they must state the season and year side by side.
 _IN_TITLE = _ADJACENT + [(re.compile(rf"\b{_SEASON}{_GAP}{_YEAR}(?!\d)", re.I), 1, 2),
                          (re.compile(rf"(?<![\w']){_YEAR}{_GAP}{_SEASON}\b", re.I), 2, 1)]
+# E (P5.1): a year with no season word, as in the real "2028 Audit or Tax Intern". The range covers
+# the classes Lucas could apply for; a year outside it is more likely part of a program name.
+_LONE_YEAR = re.compile(r"(?<![\w'])(20(?:2[6-9]|30))(?!\d)")
+_SEASON_WORD = re.compile(rf"\b{_SEASON}\b", re.I)
+LOCATION_CONFLICT = "location_conflict"
 _DEADLINE = re.compile(
     r"(?:application\s+deadline|apply\s+by|applications?\s+(?:are\s+)?due(?:\s+by)?)\W+"
     r"((?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s+20\d\d)", re.I)
@@ -43,6 +48,17 @@ def _search_season(text: str, patterns: list) -> Optional[str]:
 
 def title_season(title: str) -> Optional[str]:
     return _search_season(title, _IN_TITLE)
+
+
+def title_year_only(title: str) -> Optional[int]:
+    """The year a title states with no season word anywhere, or None. The season is never guessed.
+
+    "2028 PMCF Investment Banking Summer Analyst" names a season too far from its year for
+    title_season to pair them, so it is not year-only either; it stays plain "Not stated"."""
+    if title_season(title) or _SEASON_WORD.search(title or ""):
+        return None
+    m = _LONE_YEAR.search(title or "")
+    return int(m.group(1)) if m else None
 
 
 def detect_season(title: str, description: str, cfg: dict) -> tuple:
@@ -79,13 +95,16 @@ def role_match(title: str, cfg: dict) -> dict:
                     early.append(keyword)
                 else:
                     found.append((category, keyword))
+    # Every category the title matched, in config order. The email's role-category exclusion
+    # (D-034) needs all of them: "Credit Risk Intern" is banking as well as insurance_risk.
+    categories = list(dict.fromkeys(category for category, _ in found))
     if found:
         category, keyword = found[0]
     elif early:
         category, keyword = "early_career", early[0]
     else:
         category, keyword = None, None
-    return {"category": category, "keyword": keyword, "early_signals": early}
+    return {"category": category, "keyword": keyword, "early_signals": early, "categories": categories}
 
 
 def description_role_keyword(description: str, cfg: dict) -> Optional[str]:
@@ -146,7 +165,7 @@ def new_listing(company: dict, source_name: str, source_job_id, title: str, loca
         "deadline": iso_date(deadline) or find_deadline(description),
         "first_seen": None, "last_seen": None,
         "status": "open",
-        "season": None, "role_category": None,
+        "season": None, "season_year": None, "role_category": None,
         "eligibility": {"status": "unclear", "reason": "not evaluated"},
         "relevance_score": 0, "match_reasons": [],
         "description_snippet": make_snippet(description),
@@ -165,6 +184,18 @@ def _location_label(place: dict) -> str:
     return ", ".join(x for x in (place["city"], place["state"]) if x)
 
 
+def _location_conflict(listing: dict) -> bool:
+    """D (P5.1): the title names a "City, ST" other than the place we kept.
+
+    Mariner's "Intern, Tax- Cincinnati, OH" lists Cincinnati and Overland Park, and the resolver keeps
+    the city that qualifies (Overland Park). The source's location stands; this only flags the
+    difference. The title's place is compared as text and never looked up (D-022)."""
+    named = title_place(listing["title"])
+    if not named or listing["is_remote"] or not (listing["city"] and listing["state"]):
+        return False
+    return named[1] != listing["state"].upper() or not title_names_city(named[0], listing["city"])
+
+
 def enrich(listing: dict, cfg: dict, resolver, allow_lookup: bool = True) -> dict:
     """Add the fields that depend on config. Returns the location details for filtering and scoring."""
     place = resolver.resolve(listing["location_raw"], listing["is_remote"], allow_lookup)
@@ -173,7 +204,10 @@ def enrich(listing: dict, cfg: dict, resolver, allow_lookup: bool = True) -> dic
     if place["is_remote"] and place.get("remote_state") and cfg["remote"] == "separate":
         listing["tags"] = [remote_tag(place["remote_state"])]  # D-029: its own section in the email and UI
     listing["title"] = scrub_contact_data(listing["title"])
+    if _location_conflict(listing):
+        listing["tags"] = listing["tags"] + [LOCATION_CONFLICT]
     season, _where = detect_season(listing["title"], listing["_description"], cfg)
     listing["season"] = season
+    listing["season_year"] = None if season else title_year_only(listing["title"])
     listing["role_category"] = role_match(listing["title"], cfg)["category"]
     return place

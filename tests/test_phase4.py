@@ -747,7 +747,9 @@ def test_workflow_order_and_failure_handling(workflow):
     # failed test or scan can never reach the commit. The failure email runs only on failure.
     conditions = {s["name"]: s["if"] for s in steps if "if" in s}
     assert conditions == {"Commit data if listings changed": "${{ !cancelled() && steps.scan.outcome == 'success' }}",
-                          "Write run summary": "always()", "Send failure email": "failure()"}
+                          "Write run summary": "always()", "Send failure email": "failure()",
+                          # P5.1: runs only when ticked on a manual run (tests/test_p5_1.py).
+                          "Simulate a failure": "${{ inputs.simulate_failure }}"}
     assert not any("continue-on-error" in s for s in steps)
 
 

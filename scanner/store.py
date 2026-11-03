@@ -51,6 +51,7 @@ def load_listings(data_dir: Path) -> list:
         record.setdefault("filtered_reason", None)
         record.setdefault("tags", [])
         record.setdefault("location_label", "Location unknown")
+        record.setdefault("season_year", None)  # added in P5.1
     return records
 
 
