@@ -101,3 +101,16 @@ contacts:
   priority: ["isu_alumni", "campus_recruiter", "hiring_team"]
   school_name_for_alumni: "Iowa State University"
 ```
+
+## The `email:` block (Phase 5)
+No values changed in P5. This is what each setting means, as `scanner/email_report.py` reads it:
+- Only listings with `status: open` are considered, before anything else (D-024).
+- `min_score`: a listing needs at least this score, the value included.
+- `max_new`: the most listings shown under "New since last email". The subject still counts every new one, and the email says how many more there were.
+- `max_top_open`: the most listings under "Top open matches". Listings already shown under "New" aren't repeated there.
+- `deadline_window_days`: "Deadlines" shows stated deadlines from today through today plus this many days, both included, by the Central-time date.
+- `areas`: `"all"`, or a list of `target_areas` names and/or two-letter state codes, e.g. `["Des Moines metro", "IA"]`. A listing without coordinates matches a target area when its posted location names the area's center city. Remote listings tied to Iowa (D-029) have their own section and skip this filter.
+- `seasons`: `"all"`, or a list of names from `seasons`. Add `"Not stated"` to keep listings that give no season, which is most of them.
+- "New" means first seen since the last successful send. Before the first send, it means first seen within `new_badge_days`.
+
+A bad value stops the email with a message saying what to fix.

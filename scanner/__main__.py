@@ -33,13 +33,41 @@ def _print_summary(meta: dict) -> None:
         print(f"Problem: {problem['company']}: {problem['error']}")
 
 
+def _email(args) -> int:
+    # Imported here so `python -m scanner run` doesn't depend on the email code.
+    from . import email_report
+    if args.failure:
+        outcomes = dict(item.split("=", 1) for item in args.outcome if "=" in item)
+        return email_report.run_failure_email(args.run_url, outcomes,
+                                              out_dir=args.out_dir if args.dry_run else None)
+    try:
+        return email_report.run_email(args.config_dir, args.data_dir, args.out_dir, args.dry_run)
+    except (ConfigError, StoreError) as err:
+        print(f"::error title=Email not built::{err}", file=sys.stderr)
+        return 2
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(prog="python -m scanner", description="Internship Scanner pipeline")
     sub = parser.add_subparsers(dest="command", required=True)
     run_cmd = sub.add_parser("run", help="fetch, filter, score, and store listings")
     run_cmd.add_argument("--config-dir", type=Path, default=ROOT / "config")
     run_cmd.add_argument("--data-dir", type=Path, default=ROOT / "data")
+
+    email_cmd = sub.add_parser("email", help="build and send the morning email (or a failure email)")
+    email_cmd.add_argument("--dry-run", action="store_true",
+                           help="write outputs/email_preview.html instead of sending; needs no secrets")
+    email_cmd.add_argument("--failure", action="store_true", help="send the short 'Scan failed' email instead")
+    email_cmd.add_argument("--run-url", default=None, help="with --failure: the link to the failed run")
+    email_cmd.add_argument("--outcome", action="append", default=[], metavar="STEP=RESULT",
+                           help="with --failure: a step's result, e.g. scan=failure (repeatable)")
+    email_cmd.add_argument("--config-dir", type=Path, default=ROOT / "config")
+    email_cmd.add_argument("--data-dir", type=Path, default=ROOT / "data")
+    email_cmd.add_argument("--out-dir", type=Path, default=ROOT / "outputs")
     args = parser.parse_args(argv)
+
+    if args.command == "email":
+        return _email(args)
 
     try:
         meta = run(args.config_dir, args.data_dir)

@@ -743,8 +743,11 @@ def test_workflow_order_and_failure_handling(workflow):
     steps = workflow["jobs"]["scan"]["steps"]
     ids = [s.get("id") for s in steps]
     assert ids.index("tests") < ids.index("scan") < ids.index("commit")
-    # Only the summary runs after a failure, so a failed test or scan can never reach the commit.
-    assert [s["name"] for s in steps if "if" in s] == ["Write run summary"]
+    # P5: the commit also runs after an email failure, but still only after a successful scan, so a
+    # failed test or scan can never reach the commit. The failure email runs only on failure.
+    conditions = {s["name"]: s["if"] for s in steps if "if" in s}
+    assert conditions == {"Commit data if listings changed": "${{ !cancelled() && steps.scan.outcome == 'success' }}",
+                          "Write run summary": "always()", "Send failure email": "failure()"}
     assert not any("continue-on-error" in s for s in steps)
 
 
@@ -755,9 +758,11 @@ def test_workflow_uses_python_312_with_pip_cache_and_pinned_actions(workflow):
     assert all(len(s["uses"].split("@")[1]) == 40 for s in steps if "uses" in s)
 
 
-def test_workflow_uses_no_secrets():
-    text = (ROOT / ".github" / "workflows" / "scan.yml").read_text(encoding="utf-8")
-    assert "secrets." not in text
+def test_workflow_uses_secrets_only_for_email(workflow):
+    # P5 added the email secrets; tests/test_phase5.py checks they reach only the two email steps.
+    for step in workflow["jobs"]["scan"]["steps"]:
+        if "scanner email" not in step.get("run", ""):
+            assert "secrets." not in str(step), step.get("name")
 
 
 def test_requirements_are_pinned():
