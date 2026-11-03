@@ -5,7 +5,7 @@ tests/test_location_and_scoring.py checks that.
 """
 from __future__ import annotations
 
-from .normalize import description_role_keyword, role_match
+from .normalize import description_role_keyword, role_match, title_season_conflict
 from .text import has_phrase
 
 
@@ -52,7 +52,9 @@ def score(listing: dict, place: dict, cfg: dict) -> tuple:
     elif season:
         add(0, f"season: {season} is not in config")
     else:
-        add(points["season_not_stated"], "season: not stated")
+        # F (P5.2): say why when the title named two seasons or years, so the choice is visible in the data.
+        conflict = title_season_conflict(listing["title"])
+        add(points["season_not_stated"], f"season: not stated ({conflict})" if conflict else "season: not stated")
 
     status = listing["eligibility"]["status"]
     if status == "eligible":
