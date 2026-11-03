@@ -28,8 +28,11 @@ SCORING_KEYS = {
 # The two P5.1 scoring settings that aren't single numbers.
 SCORING_LIST_KEYS = {"title_penalty_keywords", "title_penalty_exempt_categories"}
 EMAIL_KEYS = {"min_score", "max_new", "max_top_open", "deadline_window_days", "areas", "seasons",
-              "max_manual", "exclude_role_categories"}
-COMPANY_KEYS ={"name", "ats", "board", "cities", "priority", "notes"}
+              "max_manual", "exclude_role_categories", "manual_first_tags"}
+COMPANY_KEYS = {"name", "ats", "board", "cities", "priority", "notes"}
+# P5.2 (D-035): optional labels such as ["ib"]. email.manual_first_tags lists manual companies with
+# one of these first, so the firms Lucas cares most about aren't cut by email.max_manual.
+OPTIONAL_COMPANY_KEYS = {"tags"}
 
 
 class ConfigError(Exception):
@@ -217,6 +220,10 @@ def load_config(path: Path, cities: list) -> dict:
         for name in hidden:
             if name not in category_names:
                 errors.append(f"email.exclude_role_categories: '{name}' is not in role_categories")
+    # May be empty, which gives the P5.1 order. Tag names aren't checked against companies.yaml,
+    # because that file is loaded separately; an unused tag simply matches nothing.
+    if not _is_string_list(email.get("manual_first_tags")):
+        errors.append("email.manual_first_tags must be a list of company tags, such as [\"ib\"] (it may be empty)")
 
     scoring = cfg.get("scoring")
     expected = SCORING_KEYS | SCORING_LIST_KEYS
@@ -272,8 +279,9 @@ def load_companies(path: Path) -> list:
             errors.append(f"companies[{i}]: must be a set of fields")
             continue
         label = c.get("name", f"companies[{i}]")
-        if set(c) != COMPANY_KEYS:
-            problems = sorted(COMPANY_KEYS - set(c)) + [f"unknown:{k}" for k in sorted(set(c) - COMPANY_KEYS)]
+        if not COMPANY_KEYS <= set(c) <= COMPANY_KEYS | OPTIONAL_COMPANY_KEYS:
+            allowed = COMPANY_KEYS | OPTIONAL_COMPANY_KEYS
+            problems = sorted(COMPANY_KEYS - set(c)) + [f"unknown:{k}" for k in sorted(set(c) - allowed)]
             errors.append(f"{label}: wrong fields {problems}")
             continue
         ats, board = c["ats"], c["board"]
@@ -293,11 +301,15 @@ def load_companies(path: Path) -> list:
             errors.append(f"{label}: priority must be 1, 2, or 3")
         if not (isinstance(c["notes"], str) and c["notes"].strip()):
             errors.append(f"{label}: notes must not be empty")
+        tags = c.get("tags", [])
+        if not _is_string_list(tags):
+            errors.append(f"{label}: tags must be a list of words, such as [\"ib\"]")
         cid = company_id(str(c["name"]))
         if cid in ids:
             errors.append(f"{label}: duplicate company")
         ids.add(cid)
-        out.append({**c, "company_id": cid})
+        # Every loaded company has tags, so later code needn't check for the key.
+        out.append({**c, "tags": c.get("tags", []), "company_id": cid})
 
     _fail_if_any(path, errors)
     return out

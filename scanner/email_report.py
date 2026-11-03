@@ -192,14 +192,14 @@ def build_sections(listings: list, meta: dict, cfg: dict, companies: list, resol
     top_open = [x for x in on_site if x["id"] not in shown_ids][:email_cfg["max_top_open"]]
 
     priority = {c["name"]: c["priority"] for c in companies}
+    first_tags = set(email_cfg["manual_first_tags"])
+    tagged = {c["name"] for c in companies if first_tags & set(c.get("tags") or [])}
     manual = []
     for row in (meta or {}).get("check_manually", []):
         manual.append({"company": row["company"], "url": row.get("url"), "reason": row.get("reason"),
-                       "priority": priority.get(row["company"], 9)})
-    # D-033: companies that failed today come first, because they are news; then the always-manual
-    # ones by priority 1, 2, 3; alphabetical within each group. Then email.max_manual cuts the list.
-    manual.sort(key=lambda r: (r["reason"] == "manual", r["priority"] if r["reason"] == "manual" else 0,
-                               r["company"].lower()))
+                       "priority": priority.get(row["company"], 9),
+                       "first": row.get("reason") == "manual" and row["company"] in tagged})
+    manual.sort(key=_manual_order)
     manual_shown = manual[:email_cfg["max_manual"]]
 
     remote_new = [x for x in remote if is_new(x)]
@@ -214,9 +214,19 @@ def build_sections(listings: list, meta: dict, cfg: dict, companies: list, resol
         "new_ids": {x["id"] for x in new_all + remote_new},
         "manual": manual_shown,
         "manual_more": len(manual) - len(manual_shown),
+        "manual_first_tags": email_cfg["manual_first_tags"],
         "health": health_line(meta or {}, role_hidden, email_cfg["exclude_role_categories"]),
         "window_days": email_cfg["deadline_window_days"],
     }
+
+
+def _manual_order(row: dict) -> tuple:
+    """D-033 and P5.2 (D-035): failed today first, because that is news; then always-manual companies
+    with a tag in email.manual_first_tags (the IB firms); then the rest. Priority 1, 2, 3 and then
+    alphabetical within each group. email.max_manual cuts the list after this."""
+    if row["reason"] != "manual":
+        return (0, 0, row["company"].lower())
+    return (1 if row["first"] else 2, row["priority"], row["company"].lower())
 
 
 def _hidden_note(hidden: int, categories: list) -> str:
@@ -381,15 +391,20 @@ def render_html(sections: dict, subject: str) -> str:
     manual_total = len(sections["manual"]) + sections.get("manual_more", 0)
     body.append(f'<h2 style="{S_H2}">{SECTION_TITLES["manual"]} ({manual_total})</h2>')
     failed = [m for m in sections["manual"] if m["reason"] != "manual"]
-    always = [m for m in sections["manual"] if m["reason"] == "manual"]
+    first = [m for m in sections["manual"] if m["reason"] == "manual" and m.get("first")]
+    always = [m for m in sections["manual"] if m["reason"] == "manual" and not m.get("first")]
 
     def links(rows):
         return ", ".join(f'<a href="{e(u)}" style="{S_LINK}">{e(r["company"])}</a>' if (u := _safe_url(r["url"]))
                          else e(r["company"]) for r in rows)
     if failed:
         body.append(f'<div style="font-size:13px;margin-bottom:6px;"><b>Couldn\'t be fetched today:</b> {links(failed)}</div>')
+    if first:
+        # The label comes from config, so a tag other than "ib" needs no code change (D-020).
+        label = ", ".join(t.upper() for t in sections["manual_first_tags"])
+        body.append(f'<div style="font-size:13px;line-height:1.6;margin-bottom:6px;"><b>{e(label)} firms, no feed:</b> {links(first)}</div>')
     if always:
-        body.append(f'<div style="font-size:13px;line-height:1.6;"><b>No feed, check by hand:</b> {links(always)}</div>')
+        body.append(f'<div style="font-size:13px;line-height:1.6;"><b>{"Other, no feed" if first else "No feed"}, check by hand:</b> {links(always)}</div>')
     if sections.get("manual_more"):
         body.append(f'<div style="{S_MUTED};margin-top:6px;">{e(_manual_more_note(sections))}</div>')
     if not sections["manual"] and not sections.get("manual_more"):
@@ -415,8 +430,12 @@ def render_text(sections: dict, subject: str) -> str:
         out.append("")
     manual_total = len(sections["manual"]) + sections.get("manual_more", 0)
     out += [f"{SECTION_TITLES['manual']} ({manual_total})", "-" * 24]
+    first_label = ", ".join(t.upper() for t in sections.get("manual_first_tags", []))
     for row in sections["manual"]:
-        flag = "" if row["reason"] == "manual" else f" (couldn't be fetched today: {row['reason']})"
+        if row["reason"] != "manual":
+            flag = f" (couldn't be fetched today: {row['reason']})"
+        else:
+            flag = f" ({first_label})" if row.get("first") else ""
         out.append(f"- {row['company']}{flag}: {_safe_url(row['url']) or '(no link)'}")
     if sections.get("manual_more"):
         out.append(_manual_more_note(sections))

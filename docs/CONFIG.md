@@ -107,6 +107,9 @@ email:
   max_manual: 10                 # P5.1 (D-033): manual links shown; the rest become "...and N more"
   # D-034: hide a listing whose title matches only these role categories. It stays in the data.
   exclude_role_categories: ["insurance_risk"]
+  # P5.2 (D-035): manual companies with one of these tags in companies.yaml come right after the ones
+  # that failed today, so the IB firms aren't cut by max_manual. [] gives the P5.1 order.
+  manual_first_tags: ["ib"]
 
 contacts:
   daily_candidates: 15
@@ -126,10 +129,19 @@ No values changed in P5. This is what each setting means, as `scanner/email_repo
 - `areas`: `"all"`, or a list of `target_areas` names and/or two-letter state codes, e.g. `["Des Moines metro", "IA"]`. A listing without coordinates matches a target area when its posted location names the area's center city. Remote listings tied to Iowa (D-029) have their own section and skip this filter.
 - `seasons`: `"all"`, or a list of names from `seasons`. Add `"Not stated"` to keep listings that give no season, which is most of them. A title with a year but no season word, such as "2028 Audit or Tax Intern", is "Not stated" too; the email shows it as "2028 · season not stated".
 - "New" means first seen since the last successful send. Before the first send, it means first seen within `new_badge_days`.
-- `max_manual` (P5.1, D-033): the most companies listed under "Check these manually". Companies whose fetch failed today come first, then priority 1, 2 and 3, alphabetical within each group. The rest are summed up as "…and N more manual companies." `0` shows only that line.
+- `max_manual` (P5.1, D-033): the most companies listed under "Check these manually". The order is:
+  1. companies whose fetch failed today;
+  2. always-manual companies with a tag in `manual_first_tags` (P5.2);
+  3. every other always-manual company.
+
+  Within each group: priority 1, 2, 3, then alphabetical. The rest are summed up as "…and N more manual companies." `0` shows only that line.
+- `manual_first_tags` (P5.2, D-035): tags from `config/companies.yaml` (see below). The email shows these companies on their own line, labeled with the tag in capitals ("IB firms, no feed:"). `[]` gives exactly the P5.1 order. A tag no company uses matches nothing.
 - `exclude_role_categories` (P5.1, D-034): names from `role_categories`. A listing whose **title** matches only these categories is left out of the email; one more match outside the list keeps it in. `early_career` doesn't count as a match here, because it marks a program's level, not a role. A title with no category match isn't affected (`min_score` and `no_role_cap` handle those). Hidden listings stay in `data/internships.json` with their scores, and the source-health line says how many were hidden. `[]` turns this off.
 
 A bad value stops the email with a message saying what to fix.
+
+## Company tags (P5.2)
+An entry in `config/companies.yaml` may have an optional `tags` list of words, such as `tags: ["ib"]`. Today the only use is `email.manual_first_tags`. Every other field is still required: `name`, `ats`, `board`, `cities`, `priority`, `notes`. A tag that isn't a non-empty string stops the run with a message.
 
 ## Other settings added in P5.1
 - `role_categories.banking` gains `"credit risk"` and `"market risk"`. Because `banking` comes before `insurance_risk`, "Credit Risk Intern" gets `role_category: banking` and isn't hidden by `exclude_role_categories`.
