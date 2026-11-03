@@ -27,7 +27,13 @@ def _meta_is_fresh(repo: Path) -> bool:
     return bool(done.stdout.strip())
 
 
-def build(meta, tests: str, scan: str, commit_action: str) -> str:
+EMAIL_MEANINGS = {
+    "success": "Email step: done. The log says whether it was sent or skipped for a missing secret.",
+    "failure": "**Email step failed.** The log shows Gmail's reply. The data was still saved.",
+}
+
+
+def build(meta, tests: str, scan: str, commit_action: str, email: str = "") -> str:
     """meta is None when this run produced none, because the tests failed or the scan crashed."""
     lines = ["## Daily scan", ""]
     if tests != "success":
@@ -53,6 +59,8 @@ def build(meta, tests: str, scan: str, commit_action: str) -> str:
         lines += ["**Too many companies failed, so this run counts as failed and no data was committed.**", ""]
     else:
         lines += [COMMIT_MEANINGS.get(commit_action, "The commit step did not finish."), ""]
+        if email in EMAIL_MEANINGS:
+            lines += [EMAIL_MEANINGS[email], ""]
     for title, group in (("Failures", failures), ("Manual fallbacks", fallbacks)):
         if group:
             lines += [f"**{title}**", ""] + [f"- {_clean(c['company'])}: {_clean(c['error'])}" for c in group] + [""]
@@ -69,6 +77,7 @@ def main(argv=None) -> int:
     parser.add_argument("--tests", default="")
     parser.add_argument("--scan", default="")
     parser.add_argument("--commit-action", default="")
+    parser.add_argument("--email", default="")
     parser.add_argument("--repo", type=Path, default=Path("."))
     args = parser.parse_args(argv)
 
@@ -78,7 +87,7 @@ def main(argv=None) -> int:
         path = args.repo / META
         if path.exists():
             meta = json.loads(path.read_text(encoding="utf-8"))
-    text = build(meta, args.tests, args.scan, args.commit_action)
+    text = build(meta, args.tests, args.scan, args.commit_action, args.email)
     print(text)
     for line in warnings(meta):
         print(line)

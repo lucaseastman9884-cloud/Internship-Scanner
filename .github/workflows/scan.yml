@@ -46,8 +46,21 @@ jobs:
         id: scan
         run: python -m scanner run
 
+      # Before the commit step, so the "last sent" time it adds to data/meta.json is saved with the data.
+      # Secrets go only to the two email steps, as environment variables, and are never printed.
+      # A missing secret is a yellow warning, not a failure: the scan's results are still saved.
+      - name: Send morning email
+        id: email
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python -m scanner email
+
+      # Runs after a successful scan even if the email failed, so an email problem never loses data.
       - name: Commit data if listings changed
         id: commit
+        if: ${{ !cancelled() && steps.scan.outcome == 'success' }}
         run: python scripts/commit_data.py
 
       - name: Write run summary
@@ -55,5 +68,23 @@ jobs:
         env:
           TESTS: ${{ steps.tests.outcome }}
           SCAN: ${{ steps.scan.outcome }}
+          EMAIL: ${{ steps.email.outcome }}
           COMMIT_ACTION: ${{ steps.commit.outputs.action }}
-        run: python scripts/run_summary.py --tests "$TESTS" --scan "$SCAN" --commit-action "$COMMIT_ACTION"
+        run: python scripts/run_summary.py --tests "$TESTS" --scan "$SCAN" --email "$EMAIL" --commit-action "$COMMIT_ACTION"
+
+      # Any earlier failure (tests, scan, email or commit) sends a short "Scan failed" email with a link here.
+      - name: Send failure email
+        id: failure_email
+        if: failure()
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TESTS: ${{ steps.tests.outcome }}
+          SCAN: ${{ steps.scan.outcome }}
+          EMAIL: ${{ steps.email.outcome }}
+          COMMIT: ${{ steps.commit.outcome }}
+        run: >-
+          python -m scanner email --failure --run-url "$RUN_URL"
+          --outcome "tests=$TESTS" --outcome "scan=$SCAN" --outcome "email=$EMAIL" --outcome "commit=$COMMIT"
