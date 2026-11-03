@@ -137,6 +137,11 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
     status_path = data_dir / "companies_status.json"
     existing = store.load_listings(data_dir)
     statuses = store.read_json(status_path, {})
+    # meta.json is rewritten every run, but the morning email's "last sent" record must survive it.
+    try:
+        email_state = store.read_json(data_dir / "meta.json", {}).get("email")
+    except (store.StoreError, AttributeError):
+        email_state = None  # a damaged meta.json only costs the email its record; it falls back to new_badge_days
 
     rows, all_kept, excluded_report = [], [], []
     results = {}  # only companies fetched successfully; history must not touch the others
@@ -225,6 +230,8 @@ def run(config_dir: Path, data_dir: Path, client=None, adapters=None, now=None) 
         "geocoding": {"enabled": geocoder.enabled, **geocoder.stats},
         "unresolved_locations": dict(unresolved.most_common(MAX_UNRESOLVED_LOGGED)),
     }
+    if email_state:
+        meta["email"] = email_state
 
     store.save_listings(data_dir, merged)
     store.write_json(geocache_path, geocache)

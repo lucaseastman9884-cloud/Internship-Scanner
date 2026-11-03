@@ -24,7 +24,8 @@ SCORING_KEYS = {
     "location_unknown", "season_max", "season_not_stated", "eligible", "eligibility_unclear", "ineligible",
     "early_career", "no_role_cap", "max_score",
 }
-COMPANY_KEYS = {"name", "ats", "board", "cities", "priority", "notes"}
+EMAIL_KEYS = {"min_score", "max_new", "max_top_open", "deadline_window_days", "areas", "seasons"}
+COMPANY_KEYS ={"name", "ats", "board", "cities", "priority", "notes"}
 
 
 class ConfigError(Exception):
@@ -170,8 +171,36 @@ def load_config(path: Path, cities: list) -> dict:
         errors.append("new_badge_days must be a whole number, 0 or more")
 
     email = cfg.get("email") or {}
+    if not isinstance(email, dict):
+        email = {}
+    for key in sorted(set(email) - EMAIL_KEYS):
+        errors.append(f"unknown setting 'email.{key}'")
     if not (_is_number(email.get("min_score")) and 0 <= email["min_score"] <= 100):
         errors.append("email.min_score must be a number from 0 to 100")
+    for key in ("max_new", "max_top_open", "deadline_window_days"):
+        value = email.get(key)
+        if not (isinstance(value, int) and not isinstance(value, bool) and value >= 0):
+            errors.append(f"email.{key} must be a whole number, 0 or more")
+    # "all", or a list of target_areas names and/or two-letter state codes, e.g. ["Des Moines metro", "IA"].
+    area_names = {a.get("name") for a in areas if isinstance(a, dict)}
+    wanted_areas = email.get("areas")
+    if wanted_areas != "all":
+        if not (_is_string_list(wanted_areas) and wanted_areas):
+            errors.append("email.areas must be \"all\" or a list of target_areas names or state codes")
+        else:
+            for name in wanted_areas:
+                if name not in area_names and name.upper() not in STATE_NAMES:
+                    errors.append(f"email.areas: '{name}' is not a target_areas name or a two-letter state code")
+    # "all", or a list of names from `seasons`, plus "Not stated" for listings that give no season.
+    season_names = {s.get("name") for s in seasons if isinstance(s, dict)} | {"Not stated"}
+    wanted_seasons = email.get("seasons")
+    if wanted_seasons != "all":
+        if not (_is_string_list(wanted_seasons) and wanted_seasons):
+            errors.append("email.seasons must be \"all\" or a list of season names")
+        else:
+            for name in wanted_seasons:
+                if name not in season_names:
+                    errors.append(f"email.seasons: '{name}' is not in seasons (or \"Not stated\")")
 
     scoring = cfg.get("scoring")
     if not isinstance(scoring, dict) or set(scoring) != SCORING_KEYS:
