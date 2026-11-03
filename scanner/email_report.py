@@ -22,7 +22,8 @@ from typing import Optional
 
 from . import store
 from .config import load_cities, load_companies, load_config
-from .location import LocationResolver, _miles
+from .location import LocationResolver, _miles, title_place
+from .normalize import LOCATION_CONFLICT, role_match
 from .text import has_phrase
 
 # Google's settings for personal Gmail accounts, checked 2026-11-03 at
@@ -113,10 +114,22 @@ def season_ok(listing: dict, cfg: dict) -> bool:
     return (listing.get("season") or NOT_STATED) in wanted
 
 
-def eligible_pool(listings: list, cfg: dict, areas: AreaMatcher) -> list:
+def hidden_by_role(listing: dict, cfg: dict) -> bool:
+    """D-034: hide a listing whose title matches only categories in email.exclude_role_categories.
+
+    One match outside the list keeps it ("Credit Risk Intern" is banking too). A title with no
+    category match isn't hidden here; min_score and the no-role cap (D-021) already deal with it.
+    The listing stays in data/internships.json either way."""
+    excluded = set(cfg["email"]["exclude_role_categories"])
+    matched = set(role_match(listing["title"], cfg)["categories"])
+    return bool(matched) and matched <= excluded
+
+
+def eligible_pool(listings: list, cfg: dict, areas: AreaMatcher) -> tuple:
     """Status first (D-024): a filtered or closing listing keeps a stale score, so it must never
-    reach the score check. Then min_score, seasons and areas from config."""
-    out = []
+    reach the score check. Then min_score, seasons, areas and role categories from config.
+    Returns (pool, how many the role-category rule hid from listings that passed everything else)."""
+    out, hidden = [], 0
     for listing in listings:
         if listing.get("status") != "open":
             continue
@@ -127,8 +140,11 @@ def eligible_pool(listings: list, cfg: dict, areas: AreaMatcher) -> list:
         # Remote listings tied to Iowa have no place on a map, so the areas filter can't apply (D-029).
         if not is_remote_iowa(listing) and not areas.matches(listing):
             continue
+        if hidden_by_role(listing, cfg):
+            hidden += 1
+            continue
         out.append(listing)
-    return out
+    return out, hidden
 
 
 def new_checker(state: Optional[dict], cfg: dict, now: dt.datetime):
@@ -159,7 +175,7 @@ def build_sections(listings: list, meta: dict, cfg: dict, companies: list, resol
                    now: dt.datetime) -> dict:
     """Pick what goes in each section. Pure: no files, no network."""
     email_cfg = cfg["email"]
-    pool = eligible_pool(listings, cfg, AreaMatcher(cfg, resolver))
+    pool, role_hidden = eligible_pool(listings, cfg, AreaMatcher(cfg, resolver))
     is_new = new_checker((meta or {}).get("email"), cfg, now)
     today = local_date(now)
     last_day = today + dt.timedelta(days=email_cfg["deadline_window_days"])
@@ -180,8 +196,11 @@ def build_sections(listings: list, meta: dict, cfg: dict, companies: list, resol
     for row in (meta or {}).get("check_manually", []):
         manual.append({"company": row["company"], "url": row.get("url"), "reason": row.get("reason"),
                        "priority": priority.get(row["company"], 9)})
-    # Companies that failed today come first, then the always-manual ones by priority.
-    manual.sort(key=lambda r: (r["reason"] == "manual", r["priority"], r["company"].lower()))
+    # D-033: companies that failed today come first, because they are news; then the always-manual
+    # ones by priority 1, 2, 3; alphabetical within each group. Then email.max_manual cuts the list.
+    manual.sort(key=lambda r: (r["reason"] == "manual", r["priority"] if r["reason"] == "manual" else 0,
+                               r["company"].lower()))
+    manual_shown = manual[:email_cfg["max_manual"]]
 
     remote_new = [x for x in remote if is_new(x)]
     return {
@@ -193,17 +212,27 @@ def build_sections(listings: list, meta: dict, cfg: dict, companies: list, resol
         "top_open": top_open,
         "remote_iowa": remote,
         "new_ids": {x["id"] for x in new_all + remote_new},
-        "manual": manual,
-        "health": health_line(meta or {}),
+        "manual": manual_shown,
+        "manual_more": len(manual) - len(manual_shown),
+        "health": health_line(meta or {}, role_hidden, email_cfg["exclude_role_categories"]),
         "window_days": email_cfg["deadline_window_days"],
     }
 
 
-def health_line(meta: dict) -> str:
-    """One line on how the sources did, from meta.json."""
+def _hidden_note(hidden: int, categories: list) -> str:
+    """'3 insurance-only listings hidden.' for ["insurance_risk"]: the category's first word names it."""
+    if not categories:
+        return ""
+    names = "/".join(c.split("_")[0] for c in categories)
+    return f" {hidden} {names}-only listing{'' if hidden == 1 else 's'} hidden."
+
+
+def health_line(meta: dict, role_hidden: int = 0, hidden_categories: Optional[list] = None) -> str:
+    """One line on how the sources did, from meta.json, plus what D-034's rule hid."""
     t = meta.get("totals")
+    hidden = _hidden_note(role_hidden, hidden_categories or [])
     if not t:
-        return "Source health: no run summary was found."
+        return "Source health: no run summary was found." + hidden
     by_ats = {}
     for ats, counts in (meta.get("source_health") or {}).items():
         if ats != "manual":
@@ -218,7 +247,7 @@ def health_line(meta: dict) -> str:
         except ValueError:
             when = ""
     return (f"Source health: {t.get('companies_fetched_ok', 0)} of {t.get('companies_live', 0)} live companies fetched"
-            f"{f' ({parts})' if parts else ''}, {t.get('companies_failed', 0)} failed, {manual} manual.{when}")
+            f"{f' ({parts})' if parts else ''}, {t.get('companies_failed', 0)} failed, {manual} manual.{when}{hidden}")
 
 
 # ---------------------------------------------------------------- rendering
@@ -241,15 +270,19 @@ def _place(listing: dict) -> str:
     if is_remote_iowa(listing):
         return "Remote (Iowa)"
     label = listing.get("location_label")
-    if label and label != "Location unknown":
-        return label
-    if listing.get("city") and listing.get("state"):
-        return f"{listing['city']}, {listing['state']}"
-    return "Location unknown"
+    if not (label and label != "Location unknown"):
+        label = f"{listing['city']}, {listing['state']}" if listing.get("city") and listing.get("state") else "Location unknown"
+    # D (P5.1): the posting's location stands, but say when the title names somewhere else.
+    named = title_place(listing.get("title") or "") if LOCATION_CONFLICT in (listing.get("tags") or []) else None
+    return f"{label} (title says {named[0]}, {named[1]})" if named else label
 
 
 def _season(listing: dict) -> str:
-    return listing.get("season") or "Season not stated"
+    if listing.get("season"):
+        return listing["season"]
+    # E (P5.1): "2028 Audit or Tax Intern" states a year but no season, and none is guessed.
+    year = listing.get("season_year")
+    return f"{year} · season not stated" if year else "Season not stated"
 
 
 SECTION_TITLES = {
@@ -322,6 +355,11 @@ def _more_note(sections: dict) -> Optional[str]:
     return f"{hidden} more new listing(s) passed the filters but are past email.max_new." if hidden > 0 else None
 
 
+def _manual_more_note(sections: dict) -> str:
+    n = sections["manual_more"]
+    return f"…and {n} more manual {'company' if n == 1 else 'companies'}."
+
+
 def render_html(sections: dict, subject: str) -> str:
     e = html.escape
     body = [f'<h1 style="{S_H1}">{e(subject)}</h1>',
@@ -340,7 +378,8 @@ def render_html(sections: dict, subject: str) -> str:
         if key == "new" and _more_note(sections):
             body.append(f'<div style="{S_MUTED};margin-top:6px;">{e(_more_note(sections))}</div>')
 
-    body.append(f'<h2 style="{S_H2}">{SECTION_TITLES["manual"]} ({len(sections["manual"])})</h2>')
+    manual_total = len(sections["manual"]) + sections.get("manual_more", 0)
+    body.append(f'<h2 style="{S_H2}">{SECTION_TITLES["manual"]} ({manual_total})</h2>')
     failed = [m for m in sections["manual"] if m["reason"] != "manual"]
     always = [m for m in sections["manual"] if m["reason"] == "manual"]
 
@@ -351,7 +390,9 @@ def render_html(sections: dict, subject: str) -> str:
         body.append(f'<div style="font-size:13px;margin-bottom:6px;"><b>Couldn\'t be fetched today:</b> {links(failed)}</div>')
     if always:
         body.append(f'<div style="font-size:13px;line-height:1.6;"><b>No feed, check by hand:</b> {links(always)}</div>')
-    if not sections["manual"]:
+    if sections.get("manual_more"):
+        body.append(f'<div style="{S_MUTED};margin-top:6px;">{e(_manual_more_note(sections))}</div>')
+    if not sections["manual"] and not sections.get("manual_more"):
         body.append(f'<div style="{S_MUTED}">None today.</div>')
 
     body.append(f'<p style="{S_MUTED};margin-top:24px;">{e(sections["health"])}</p>')
@@ -372,11 +413,14 @@ def render_text(sections: dict, subject: str) -> str:
         if key == "new" and _more_note(sections):
             out.append(_more_note(sections))
         out.append("")
-    out += [f"{SECTION_TITLES['manual']} ({len(sections['manual'])})", "-" * 24]
+    manual_total = len(sections["manual"]) + sections.get("manual_more", 0)
+    out += [f"{SECTION_TITLES['manual']} ({manual_total})", "-" * 24]
     for row in sections["manual"]:
         flag = "" if row["reason"] == "manual" else f" (couldn't be fetched today: {row['reason']})"
         out.append(f"- {row['company']}{flag}: {_safe_url(row['url']) or '(no link)'}")
-    if not sections["manual"]:
+    if sections.get("manual_more"):
+        out.append(_manual_more_note(sections))
+    if not sections["manual"] and not sections.get("manual_more"):
         out.append("None today.")
     out += ["", sections["health"], ""]
     return "\n".join(out)
@@ -393,7 +437,8 @@ def build_email(listings, meta, cfg, companies, resolver, now) -> dict:
 def counts(report: dict) -> dict:
     s = report["sections"]
     return {"new": len(s["new"]), "new_total": s["new_total"], "deadlines": len(s["deadlines"]),
-            "top_open": len(s["top_open"]), "remote_iowa": len(s["remote_iowa"]), "manual": len(s["manual"])}
+            "top_open": len(s["top_open"]), "remote_iowa": len(s["remote_iowa"]), "manual": len(s["manual"]),
+            "manual_more": s["manual_more"]}
 
 
 # ---------------------------------------------------------------- failure email
