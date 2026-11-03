@@ -6,6 +6,7 @@ tests/test_location_and_scoring.py checks that.
 from __future__ import annotations
 
 from .normalize import description_role_keyword, role_match
+from .text import has_phrase
 
 
 def _signed(points) -> str:
@@ -63,6 +64,13 @@ def score(listing: dict, place: dict, cfg: dict) -> tuple:
 
     if role["early_signals"]:
         add(points["early_career"], f"early-career signal: '{role['early_signals'][0]}'")
+
+    # C (P5.1): off-target titles such as "Technology Risk Consulting Intern". A title in an exempt
+    # category keeps its points: "Technology Investment Banking Summer Analyst" is still IB.
+    if not set(role["categories"]) & set(points["title_penalty_exempt_categories"]):
+        for keyword, value in points["title_penalty_keywords"].items():
+            if has_phrase(listing["title"], keyword):
+                add(value, f"title: '{keyword}' is off-target")
 
     final = max(0, min(points["max_score"], total))
     if final != total:
