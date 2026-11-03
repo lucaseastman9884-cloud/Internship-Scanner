@@ -124,7 +124,15 @@ No values changed in P5. This is what each setting means, as `scanner/email_repo
 - `max_top_open`: the most listings under "Top open matches". Listings already shown under "New" aren't repeated there.
 - `deadline_window_days`: "Deadlines" shows stated deadlines from today through today plus this many days, both included, by the Central-time date.
 - `areas`: `"all"`, or a list of `target_areas` names and/or two-letter state codes, e.g. `["Des Moines metro", "IA"]`. A listing without coordinates matches a target area when its posted location names the area's center city. Remote listings tied to Iowa (D-029) have their own section and skip this filter.
-- `seasons`: `"all"`, or a list of names from `seasons`. Add `"Not stated"` to keep listings that give no season, which is most of them.
+- `seasons`: `"all"`, or a list of names from `seasons`. Add `"Not stated"` to keep listings that give no season, which is most of them. A title with a year but no season word, such as "2028 Audit or Tax Intern", is "Not stated" too; the email shows it as "2028 · season not stated".
 - "New" means first seen since the last successful send. Before the first send, it means first seen within `new_badge_days`.
+- `max_manual` (P5.1, D-033): the most companies listed under "Check these manually". Companies whose fetch failed today come first, then priority 1, 2 and 3, alphabetical within each group. The rest are summed up as "…and N more manual companies." `0` shows only that line.
+- `exclude_role_categories` (P5.1, D-034): names from `role_categories`. A listing whose **title** matches only these categories is left out of the email; one more match outside the list keeps it in. `early_career` doesn't count as a match here, because it marks a program's level, not a role. A title with no category match isn't affected (`min_score` and `no_role_cap` handle those). Hidden listings stay in `data/internships.json` with their scores, and the source-health line says how many were hidden. `[]` turns this off.
 
 A bad value stops the email with a message saying what to fix.
+
+## Other settings added in P5.1
+- `role_categories.banking` gains `"credit risk"` and `"market risk"`. Because `banking` comes before `insurance_risk`, "Credit Risk Intern" gets `role_category: banking` and isn't hidden by `exclude_role_categories`.
+- `exclude_keywords_outside_home`: title words for jobs that only make sense near campus. A listing whose title has one, as a whole word, with a hyphen or a space ("part-time", "Part Time"), is kept only within `radius_miles` of home. A multi-city posting counts by its closest city; an unknown distance doesn't pass; a remote job is exempt, since there's no commute. Elsewhere, a listing already stored becomes `filtered` with the reason, and a new one isn't stored. `[]` turns this off.
+- `scoring.title_penalty_keywords`: title words, matched as whole words, and the points each adds (negative to lower a score). Each one adds a match reason such as "-30 title: 'marketing' is off-target". The 0 to `max_score` bounds and `no_role_cap` still apply afterwards.
+- `scoring.title_penalty_exempt_categories`: `role_categories` names whose titles never get those penalties, so "2027 Technology Investment Banking Summer Analyst" keeps its score.

@@ -47,10 +47,12 @@ web/                        (later, P7) Static site
 | `role_categories` | map of category to keyword list | Role matching and scoring |
 | `must_be_one_of` | list of strings | At least one must match |
 | `exclude_keywords` | list of strings | Disqualifying terms |
+| `exclude_keywords_outside_home` | list of strings | Kept only within `radius_miles` of home (P5.1) |
+| `scoring` | point values, plus `title_penalty_keywords` and `title_penalty_exempt_categories` (P5.1) | Relevance score (D-020) |
 | `eligibility.exclude_if_restricted_to_grad_years` | list of years | D-006 |
 | `status` | `possibly_closed_after_missed_runs`, `closed_after_missed_runs` | Closing logic (N, M) |
 | `new_badge_days` | integer | "New" window (X) |
-| `email` | `min_score`, `max_new`, `max_top_open`, `deadline_window_days`, `areas`, `seasons` | Email filters |
+| `email` | `min_score`, `max_new`, `max_top_open`, `deadline_window_days`, `areas`, `seasons`, `max_manual`, `exclude_role_categories` (P5.1) | Email filters |
 | `contacts` | budget and priority settings | Engine B only |
 
 `config/companies.yaml` holds a top-level `companies:` list. Each entry has `name`, `ats`, `board`, `cities`, `priority`, and `notes`.
