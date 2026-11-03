@@ -89,6 +89,12 @@ def test_manual_first_tags_is_in_config(cfg):
     assert cfg["email"]["manual_first_tags"] == ["ib"]
 
 
+def test_max_manual_leaves_room_for_every_ib_manual_firm_and_two_failures(cfg):
+    # D-041: the reason for the cap, checked against the registry rather than a fixed number.
+    ib_manual = [c for c in load_companies(REGISTRY) if c["ats"] == "manual" and "ib" in c["tags"]]
+    assert cfg["email"]["max_manual"] >= len(ib_manual) + 2
+
+
 @pytest.mark.parametrize("value", ["ib", [""], [3], None])
 def test_bad_manual_first_tags_are_rejected(tmp_path, cities, value):
     path = write_config(tmp_path, lambda d: d["email"].update(manual_first_tags=value))
@@ -135,15 +141,16 @@ def test_an_ib_firm_that_failed_today_is_listed_with_the_failures(cfg, resolver)
     assert not s["manual"][1]["first"]  # shown under "Couldn't be fetched today", not the IB line
 
 
-def test_cap_of_10_keeps_the_ib_firms_and_summarizes_the_rest(cfg, resolver):
+def test_the_cap_keeps_the_ib_firms_and_summarizes_the_rest(cfg, resolver):
+    cap = cfg["email"]["max_manual"]
     meta, companies = ib_meta_and_companies(failed=2, ib=3, other=45)
     report = er.build_email([], meta, cfg, companies, resolver, NOW)
     s = report["sections"]
     names = [m["company"] for m in s["manual"]]
-    assert len(names) == 10 and names[2:5] == ["IB A", "IB B", "IB C"]
-    assert s["manual_more"] == 40
+    assert len(names) == cap and names[2:5] == ["IB A", "IB B", "IB C"]
+    assert s["manual_more"] == 50 - cap
     for body in (report["html"], report["text"]):
-        assert "…and 40 more manual companies." in body
+        assert f"…and {50 - cap} more manual companies." in body
         assert "Check these manually (50)" in body
     assert "<b>IB firms, no feed:</b>" in report["html"]
     assert "<b>Other, no feed, check by hand:</b>" in report["html"]
@@ -158,7 +165,7 @@ def p5_1_order(meta, companies):
     return [r["company"] for r in rows]
 
 
-@pytest.mark.parametrize("max_manual", [10, 100])
+@pytest.mark.parametrize("max_manual", [10, 12, 100])
 def test_empty_manual_first_tags_gives_the_p5_1_order(cfg, resolver, max_manual):
     meta, companies = ib_meta_and_companies(failed=3, ib=3, other=20)
     off = with_cfg(cfg, "email", manual_first_tags=[], max_manual=max_manual)

@@ -8,7 +8,7 @@ P3 — Full pipeline: DONE and merged to main.
 P4 — Automation: DONE and merged to main (PR #4). The first GitHub run, started by hand, succeeded on 2026-11-03.
 P5 — Morning email: merged to main (PR #5). Whether a real email has arrived is **not confirmed** in the repo.
 P5.1 — Email polish: merged to main (PR #6).
-P5.2 — IB coverage (D-035): built on branch `p5-2-ib-coverage`, **not pushed, awaiting Lucas's approval**. Tested offline, plus one full run and email dry run on a copy of real data (nothing sent). Report: docs/reports/P5_2_REPORT.md.
+P5.2 — IB coverage (D-035): built on branch `p5-2-ib-coverage`, **not pushed**. Lucas has accepted D-036 to D-041 (2026-11-03). Tested offline, plus one full run and email dry run on a copy of real data (nothing sent). Report: docs/reports/P5_2_REPORT.md.
 P6 — Contacts (Engine B): next.
 
 ## Environment
@@ -26,8 +26,8 @@ P6 — Contacts (Engine B): next.
 - P4: decisions D-022 to D-030 and the empty-response guard; Census Gazetteer coordinates; remote_iowa tag; Workday cap of 500 with a per-listing check before a miss; daily workflow; commit-on-change and summary scripts; docs/AUTOMATION.md.
 - First GitHub run (manual, 2026-11-03, about 27 minutes): green, all 58 live companies answered.
 - P5: `scanner/email_report.py` (morning email, failure email, dry run, Gmail SMTP on port 587 with STARTTLS); `python -m scanner email`; workflow email steps.
-- P5.1: manual links capped at `email.max_manual` (10); insurance-only listings hidden from the email (D-034); part-time/term-time titles kept only near home; technology/marketing titles −30 unless IB; `location_conflict` tag; `season_year`; `simulate_failure` checkbox.
-- P5.2 (on branch, PROPOSED D-037 to D-040):
+- P5.1 (D-036, ACCEPTED): manual links capped at `email.max_manual` (10 then, 12 since D-041); insurance-only listings hidden from the email (D-034); part-time/term-time titles kept only near home; technology/marketing titles −30 unless IB; `location_conflict` tag; `season_year`; `simulate_failure` checkbox.
+- P5.2 (on branch; D-037 to D-041 ACCEPTED 2026-11-03):
   - Registry: 114 companies, 61 live (44 Workday, 16 Greenhouse, 1 Ashby) and 53 manual.
   - New live boards: Piper Sandler and Stout (Workday), Lincoln International (Greenhouse).
   - New manual links: Houlihan Lokey, Moelis & Company, D.A. Davidson, Fireclay Partners, Jefferies, Kroll.
@@ -35,6 +35,8 @@ P6 — Contacts (Engine B): next.
   - Every firm was verified from its own careers page, with one request per endpoint.
   - Optional `tags` on companies. 16 IB and advisory firms are tagged `ib` and set to priority 1.
   - `email.manual_first_tags: ["ib"]`: the manual list shows failed today, then IB firms, then the rest.
+  - `email.max_manual` raised from 10 to 12, leaving room for two failures ahead of the 10 IB manual firms (D-041).
+  - Baird stays manual, and no further requests go to its careers host (D-039, D-028).
   - Seasons: a season word and a 2026–2030 year anywhere in a title now pair. Two different seasons or years give "Not stated", with the reason in `match_reasons`.
 
 ## How to run
@@ -55,12 +57,11 @@ From the project folder, after the one-time setup in README.md:
 - The goal of "hundreds of qualifying listings" is **still not met**. Most remaining IB firms use an ATS with no adapter (TalentLink, Oracle, iCIMS, UKG, Breezy) or block us.
 
 ## Next
-1. Lucas reviews P5.2 (docs/reports/P5_2_REPORT.md): decide D-037 to D-040, including whether to allow one fresh request to Baird's careers page. Then push `p5-2-ib-coverage`, and open and merge the PR.
-2. If not done yet: run **Daily scan** by hand with `simulate_failure` ticked and check the "Scan failed" email arrives. Then do a normal run and check the morning email.
+1. Push `p5-2-ib-coverage` with GitHub Desktop, then open and merge the PR.
+2. After the merge, do a normal **Daily scan** run and check the morning email. The failure email is already tested (D-036 item 7).
 3. Per D-032: compress, `/clear`, and start **P6 — Contacts (Engine B)**.
 
 ## Open questions
-- Raise `email.max_manual` above 10? There are exactly 10 IB-tagged manual firms, so any failure pushes one into "…and N more".
 - Raise `email.max_top_open`, or show IB listings separately? Plante Moran's IB listing qualifies but ranks 14th.
 - Which adapter, if any, comes next? TalentLink would unlock Jefferies and Moelis (D-040).
 - Does a commit by github-actions[bot] count as "repository activity" for GitHub's 60-day rule? GitHub's docs don't say. The weekly keepalive assumes yes.

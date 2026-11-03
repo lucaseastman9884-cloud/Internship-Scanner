@@ -104,7 +104,7 @@ email:
   deadline_window_days: 14
   areas: "all"
   seasons: "all"
-  max_manual: 10                 # P5.1 (D-033): manual links shown; the rest become "...and N more"
+  max_manual: 12                 # D-041 (was 10, D-033): manual links shown; the rest become "...and N more"
   # D-034: hide a listing whose title matches only these role categories. It stays in the data.
   exclude_role_categories: ["insurance_risk"]
   # P5.2 (D-035): manual companies with one of these tags in companies.yaml come right after the ones
@@ -129,7 +129,7 @@ No values changed in P5. This is what each setting means, as `scanner/email_repo
 - `areas`: `"all"`, or a list of `target_areas` names and/or two-letter state codes, e.g. `["Des Moines metro", "IA"]`. A listing without coordinates matches a target area when its posted location names the area's center city. Remote listings tied to Iowa (D-029) have their own section and skip this filter.
 - `seasons`: `"all"`, or a list of names from `seasons`. Add `"Not stated"` to keep listings that give no season, which is most of them. A title with a year but no season word, such as "2028 Audit or Tax Intern", is "Not stated" too; the email shows it as "2028 · season not stated".
 - "New" means first seen since the last successful send. Before the first send, it means first seen within `new_badge_days`.
-- `max_manual` (P5.1, D-033): the most companies listed under "Check these manually". The order is:
+- `max_manual` (P5.1, D-033; raised to 12 by D-041): the most companies listed under "Check these manually". The order is:
   1. companies whose fetch failed today;
   2. always-manual companies with a tag in `manual_first_tags` (P5.2);
   3. every other always-manual company.

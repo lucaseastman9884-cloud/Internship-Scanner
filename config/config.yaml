@@ -99,7 +99,7 @@ email:
   deadline_window_days: 14
   areas: "all"
   seasons: "all"
-  max_manual: 10                 # P5.1 (D-033): manual links shown; the rest become "...and N more"
+  max_manual: 12                 # D-041 (was 10, D-033): manual links shown; the rest become "...and N more"
   # D-034: hide a listing whose title matches only these role categories. It stays in the data.
   exclude_role_categories: ["insurance_risk"]
   # P5.2 (D-035): manual companies with one of these tags in companies.yaml come right after the ones
