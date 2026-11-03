@@ -8,6 +8,13 @@ on:
     - cron: '33 5 * * *'
       timezone: 'America/Chicago'
   workflow_dispatch:
+    inputs:
+      # Tick this on "Run workflow" to check that the failure email arrives (docs/AUTOMATION.md).
+      # A scheduled run has no inputs, so it reads as false there.
+      simulate_failure:
+        description: 'Fail on purpose after the tests, to test the failure email (no scan, no email, no commit)'
+        type: boolean
+        default: false
 
 # All other permissions become "none" when one is listed.
 permissions:
@@ -40,6 +47,15 @@ jobs:
       - name: Run tests
         id: tests
         run: pytest
+
+      # Fails right here, so the scan, morning email and commit are skipped as after any real
+      # failure, and "Send failure email" below names this step.
+      - name: Simulate a failure
+        id: simulate_failure
+        if: ${{ inputs.simulate_failure }}
+        run: |
+          echo "::error title=Simulated failure::simulate_failure was ticked, so this run stops here on purpose."
+          exit 1
 
       # Exits non-zero on a crash, or when more than half of live companies fail.
       - name: Run scanner
@@ -82,9 +98,11 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           TESTS: ${{ steps.tests.outcome }}
+          SIMULATED: ${{ steps.simulate_failure.outcome }}
           SCAN: ${{ steps.scan.outcome }}
           EMAIL: ${{ steps.email.outcome }}
           COMMIT: ${{ steps.commit.outcome }}
         run: >-
           python -m scanner email --failure --run-url "$RUN_URL"
-          --outcome "tests=$TESTS" --outcome "scan=$SCAN" --outcome "email=$EMAIL" --outcome "commit=$COMMIT"
+          --outcome "tests=$TESTS" --outcome "simulated failure=$SIMULATED" --outcome "scan=$SCAN"
+          --outcome "email=$EMAIL" --outcome "commit=$COMMIT"
