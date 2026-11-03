@@ -445,7 +445,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -458,7 +458,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "PMO Data Engineering Intern"
   },
@@ -1791,7 +1791,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -1804,7 +1804,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Human Resources Intern"
   },
@@ -6517,7 +6517,7 @@
     "first_seen": "2026-11-02",
     "id": "aeb4c2d9dc65d8fa",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-02",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -6528,7 +6528,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6541,7 +6541,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -8097,7 +8097,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -9068,7 +9068,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
