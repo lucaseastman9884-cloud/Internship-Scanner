@@ -31,13 +31,15 @@ def score(listing: dict, place: dict, cfg: dict) -> tuple:
         else:
             add(points["no_role_signal"], "role: no target role keyword found")
 
-    if place["tier"] == "target_area":
+    if place["is_remote"] and place.get("remote_state"):
+        add(points["whole_state_or_home_radius"], f"location: remote, tied to {place['remote_state']}")
+    elif place["tier"] == "target_area":
         add(points["target_area"], f"location: {place['detail']}")
     elif place["tier"] == "whole_state":
         add(points["whole_state_or_home_radius"], f"location: in {place['detail']}")
     elif place["tier"] == "home_radius":
         add(points["whole_state_or_home_radius"], f"location: {place['detail']}")
-    elif place["tier"] == "unknown":
+    elif place["tier"] in ("unknown", "placeholder"):
         add(points["location_unknown"], "location: unknown")
     else:
         add(0, "location: outside target locations")

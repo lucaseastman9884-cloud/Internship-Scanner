@@ -13,7 +13,8 @@ target_areas:                    # always included regardless of distance
   - { name: "Chicago metro",     center: "Chicago, IL",     radius_miles: 30 }
 include_whole_states: ["IA"]
 
-remote: "exclude"                # include | exclude | separate
+remote: "separate"               # include | exclude | separate (D-029)
+remote_allowed_states: ["IA"]    # "separate" keeps remote jobs tied to these states, tagged remote_iowa
 
 seasons:
   - { name: "Summer 2027",          weight: 1.0 }
@@ -50,6 +51,7 @@ eligibility:
 status:
   possibly_closed_after_missed_runs: 2
   closed_after_missed_runs: 5
+  empty_response_min_open: 3     # 0 jobs from a company that had this many open = a failed fetch
 new_badge_days: 3
 
 scoring:                         # D-020: every point value lives here
@@ -71,10 +73,10 @@ scoring:                         # D-020: every point value lives here
 workday:                         # D-002
   search_terms: ["intern", "internship", "summer analyst", "summer program"]
   page_size: 20
-  max_results_per_term: 200      # stop here per company and search term
+  max_results_per_term: 500      # D-025: stop here per company and search term
 
 geocoding:
-  # Off: Nominatim's robots.txt disallows /search for all crawlers (see D-022).
+  # Off (D-022): coordinates come from the Census Gazetteer in data/reference/.
   enabled: false
   min_seconds_between_requests: 15   # the usage policy caps scheduled scripts at 4 per minute
   max_lookups_per_run: 50

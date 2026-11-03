@@ -1,4 +1,4 @@
-# PLAN — Internship Scanner (written in Phase 1, updated in Phase 3, 2026-11-02)
+# PLAN — Internship Scanner (written in Phase 1, updated in Phase 4, 2026-11-02)
 Approved by Lucas. SPEC.md and DECISIONS.md remain the source of truth; if this plan disagrees with them, they win.
 
 "Tested" below means we ran it on 2026-11-02. "Documented" means an official page says so. They are reported separately on purpose (SPEC constraint 5).
@@ -9,7 +9,7 @@ Items marked *(later)* do not exist yet.
 ```
 config/config.yaml          Lucas's settings
 config/companies.yaml       Company registry
-config/cities.yaml          Local city table for distance checks; coordinates await D-022
+config/cities.yaml          City and state names for postings with no state; coordinates come from the Gazetteer (D-022)
 docs/                       SPEC, STATUS, CONFIG, DECISIONS, SOURCES, PLAN
 scanner/                    Python package; run with: python -m scanner run
   __main__.py                 Command line
@@ -21,12 +21,15 @@ scanner/                    Python package; run with: python -m scanner run
   adapters/smartrecruiters.py Kept but not registered, so it makes no requests (D-015)
   normalize.py, location.py, eligibility.py, filtering.py, scoring.py, store.py, text.py
   history.py                  Status transitions and recurring programs
-  geocode.py                  Nominatim with a cache; off until D-022
+  gazetteer.py                Offline coordinates from the Census Gazetteer (D-022)
+  geocode.py                  Nominatim with a cache; off (D-022)
   email/                      (later, P5) HTML email and sending
 tests/fixtures/             Saved sample responses, so tests make no network calls
 data/                       internships.json, last_seen.json, meta.json, companies_status.json, geocache.json
                             excluded_last_run.json is a local debug report and is not committed
-.github/workflows/          (later, P4) Daily and manual runs
+data/reference/             Census Gazetteer file, with its source in a README
+scripts/                    commit_data.py and run_summary.py, used by the workflow
+.github/workflows/scan.yml  Daily and manual runs (see docs/AUTOMATION.md)
 web/                        (later, P7) Static site
 ```
 
@@ -173,6 +176,6 @@ Sources:
 | R11 | SPEC says Engine B "sends or drafts" email, while constraint 7 says outreach is drafts only | Low | Reading it as: the email goes only to Lucas, and outreach stays drafts. To confirm in P6 |
 | R12 | Registry goes stale as companies change ATS | Low | Failures show in `fetch_health`; discovery list per SPEC |
 | R13 | SmartRecruiters robots.txt blocks 2 companies | Medium | D-015; they appear as blocked with a "check manually" link |
-| R14 | `config/cities.yaml` is incomplete and its coordinates are approximate, written from memory. A listing in a missing city outside Iowa is excluded | Medium | Logged under `unresolved_locations` in `meta.json`. A listing in a nearby state is now kept as "Location unknown." The real fix waits on D-022 |
+| R14 | `config/cities.yaml` is incomplete and its coordinates are approximate, written from memory. A listing in a missing city outside Iowa is excluded | Medium | Fixed by D-022: coordinates come from the Census Gazetteer. A listing with an unknown distance stays only if it is in Iowa or names a target metro |
 | R15 | Job descriptions could contain a person's name or contact details | Medium | Only a scrubbed snippet is stored: emails, phones, and profile links are removed, and sentences inviting contact are dropped. A bare name in other text would not be caught, so the QA PII scan matters |
 | R16 | P3's closing logic must tell "gone from the board" apart from "filtered out after a config change" and from a failed fetch | Medium | Handled in `scanner/history.py` and tested. A real outage on 2026-11-02 left internships.json byte-identical |

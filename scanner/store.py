@@ -49,6 +49,7 @@ def load_listings(data_dir: Path) -> list:
         # setdefault also carries files written before P3, which kept last_seen inside the listing.
         record["last_seen"] = last_seen.get(record["id"], record.get("last_seen"))
         record.setdefault("filtered_reason", None)
+        record.setdefault("tags", [])
         record.setdefault("location_label", "Location unknown")
     return records
 

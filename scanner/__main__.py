@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from .config import ConfigError
-from .pipeline import run
+from .pipeline import run, too_many_failures
 from .store import StoreError
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,6 +26,7 @@ def _print_summary(meta: dict) -> None:
     print(f"Status changes: {t['status_changes']}")
     print(f"Database: {t['database_total']} total, {t['database_open']} open, "
           f"{t['open_at_or_above_min_score']} open at or above email.min_score")
+    print(f"Location unknown (open): {t['location_unknown_open']}. Remote, tied to Iowa (open): {t['remote_iowa_open']}")
     print(f"Source health: {meta['source_health']}")
     print(f"Requests per host: {meta['requests_by_host']}")
     for problem in meta["errors"]:
@@ -46,10 +47,10 @@ def main(argv=None) -> int:
         print(f"Stopped before fetching anything.\n{err}", file=sys.stderr)
         return 2
     _print_summary(meta)
-    # If adapters exist but every one of them failed, a scheduler should see a failed run.
-    attempted = [r for r in meta["companies"] if r["status"] in ("ok", "error", "manual_fallback")]
-    if attempted and not any(r["status"] == "ok" for r in attempted):
-        print("Every source failed.", file=sys.stderr)
+    # A single company's failure is only a warning. This many means the automation should go red.
+    if too_many_failures(meta):
+        t = meta["totals"]
+        print(f"Too many sources failed: {t['companies_failed']} of {t['companies_live']} live companies.", file=sys.stderr)
         return 1
     return 0
 

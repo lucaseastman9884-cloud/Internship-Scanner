@@ -1,0 +1,59 @@
+# The daily scan. docs/AUTOMATION.md explains how to run it, read it, and what a red X means.
+name: Daily scan
+
+on:
+  schedule:
+    # 5:33 AM Central all year: the timezone line handles the CST/CDT change.
+    # Not :00 or :30, because GitHub says runs can be delayed at busy times such as the start of each hour.
+    - cron: '33 5 * * *'
+      timezone: 'America/Chicago'
+  workflow_dispatch:
+
+# All other permissions become "none" when one is listed.
+permissions:
+  contents: write
+
+# A second run waits instead of overlapping, and never cancels a scan already under way.
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    # Scans can take about 60 minutes because of the polite delays. This leaves room for the rest.
+    timeout-minutes: 90
+    steps:
+      # Pinned to exact commits, so a changed tag cannot change what runs here.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      # If the tests fail, the job stops here and no data is committed.
+      - name: Run tests
+        id: tests
+        run: pytest
+
+      # Exits non-zero on a crash, or when more than half of live companies fail.
+      - name: Run scanner
+        id: scan
+        run: python -m scanner run
+
+      - name: Commit data if listings changed
+        id: commit
+        run: python scripts/commit_data.py
+
+      - name: Write run summary
+        if: always()
+        env:
+          TESTS: ${{ steps.tests.outcome }}
+          SCAN: ${{ steps.scan.outcome }}
+          COMMIT_ACTION: ${{ steps.commit.outputs.action }}
+        run: python scripts/run_summary.py --tests "$TESTS" --scan "$SCAN" --commit-action "$COMMIT_ACTION"

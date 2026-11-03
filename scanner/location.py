@@ -1,8 +1,11 @@
-"""Parse location text and place it against the config's areas, using the local city table."""
+"""Parse location text and place it against the config's areas, using Census Gazetteer coordinates."""
 from __future__ import annotations
 
 import math
 import re
+
+from . import gazetteer
+from .text import has_phrase
 
 STATES = {
     "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA", "colorado": "CO",
@@ -17,6 +20,7 @@ STATES = {
     "wisconsin": "WI", "wyoming": "WY",
 }
 STATE_CODES = set(STATES.values())
+STATE_NAMES = {code: name for name, code in STATES.items()}
 US_NAMES = {"us", "usa", "u.s.", "u.s.a.", "united states", "united states of america"}
 BOTH_CITY_AND_STATE = {"new york", "washington"}  # alone, these usually mean the city
 _REMOTE = re.compile(r"\b(remote|work from home|wfh|telecommute|virtual)\b", re.I)
@@ -106,8 +110,10 @@ def _parse_place(text: str) -> dict:
 
 
 class LocationResolver:
-    def __init__(self, cfg: dict, cities: list, geocoder=None):
+    def __init__(self, cfg: dict, cities: list, geocoder=None, gaz=None):
         self.geocoder = geocoder
+        self.gazetteer = gaz or gazetteer.default()
+        self.remote_states = [s.upper() for s in cfg["remote_allowed_states"]]
         self.by_key = {(c["city"].lower(), c["state"].upper()): c for c in cities}
         self.by_city: dict = {}
         for c in cities:
@@ -120,24 +126,17 @@ class LocationResolver:
             city, state = [p.strip() for p in area["center"].split(",")]
             self.areas.append({"name": area["name"], "radius": area["radius_miles"],
                                "center": self.by_key[(city.lower(), state.upper())]})
-        # While geocoding is unavailable, distance to an unlisted city cannot be measured. Keeping
-        # every such listing would flood the results with Dallas, Montreal, and "Europe", so only
-        # states with a table city inside a target area or the home radius stay in play.
-        self.nearby_states = {c["state"].upper() for c in cities if self._near_a_target(c)}
-
-    def _near_a_target(self, point: dict) -> bool:
-        return (_miles(point, self.home) <= self.radius
-                or any(_miles(point, area["center"]) <= area["radius"] for area in self.areas))
 
     def _lookup(self, place: dict):
         name = (place["city"] or "").lower()
         if place["state"]:
-            return self.by_key.get((name, place["state"]))
+            found = self.by_key.get((name, place["state"]))
+            return found or (self.gazetteer.lookup(place["city"], place["state"]) if place["city"] else None)
         # A bare city is accepted only when no country says it is somewhere else.
         return None if place["country"] not in (None, "United States") else self.by_city.get(name)
 
     def _coordinates(self, place: dict, allow_lookup: bool):
-        """City table first, then the geocoder's cache or service. Returns a point or None."""
+        """Gazetteer first. The geocoder stays off (D-022) unless config turns it on. Returns a point or None."""
         known = self._lookup(place)
         if known:
             return known
@@ -147,10 +146,10 @@ class LocationResolver:
                 return {**found, "state": place["state"]}
         return None
 
-    def _geocoder_available(self) -> bool:
-        return bool(self.geocoder and self.geocoder.available)
+    def _names_a_target_metro(self, text: str) -> bool:
+        return any(has_phrase(text, area["center"]["city"]) for area in self.areas)
 
-    def _classify(self, place: dict, allow_lookup: bool = True) -> dict:
+    def _classify(self, place: dict, text: str, allow_lookup: bool = True) -> dict:
         point = self._coordinates(place, allow_lookup)
         if point:
             miles = _miles(point, self.home)
@@ -164,16 +163,16 @@ class LocationResolver:
             detail = f"{miles:.0f} miles from {self.home['city']}"
             return {**place, "tier": "home_radius" if miles <= self.radius else None, "detail": detail}
 
+        # D-022: an unknown distance never passes a distance check. Such a listing stays only if
+        # it is in a whole-state area such as Iowa, or names a target metro.
         place = {**place, "lat": None, "lng": None, "miles_from_home": None, "resolved": False}
         if place["state"] in self.whole_states:
             return {**place, "tier": "whole_state", "detail": place["state"]}
         if place["country"] not in (None, "United States"):
             return {**place, "tier": None, "detail": f"outside the United States ({place['country']})"}
-        # Part D: a lookup that really failed keeps the listing as "Location unknown".
-        if self._geocoder_available() or place["state"] in self.nearby_states:
+        if self._names_a_target_metro(text):
             return {**place, "tier": "unknown", "detail": "location unknown"}
-        where = f"{place['state']} has no target area" if place["state"] else "no state was given"
-        return {**place, "tier": None, "detail": f"city not in config/cities.yaml, and {where}"}
+        return {**place, "tier": None, "distance_unknown": True, "detail": "location unknown"}
 
     def _split_city_lists(self, pieces: list) -> list:
         """'Chicago, New York City' lists two cities, but would parse as Chicago in New York State."""
@@ -191,20 +190,41 @@ class LocationResolver:
         pieces = [p.strip() for p in re.split(r";|\s\|\s|\n", location_raw or "") if p.strip()]
         physical = [p for p in pieces if not _REMOTE.search(p)]
         mentions_remote = len(physical) < len(pieces)
-        rank = {"target_area": 0, "whole_state": 1, "home_radius": 2, "unknown": 3, None: 4}
+        rank = {"target_area": 0, "whole_state": 1, "home_radius": 2, "unknown": 3, "placeholder": 4, None: 5}
         places = []
         for piece in self._split_city_lists(physical):
             if _PLACEHOLDER.match(piece):
-                places.append({"city": None, "state": None, "country": None, "tier": "unknown", "detail": "location unknown",
-                               "resolved": True, "lat": None, "lng": None, "miles_from_home": None})
+                # Tier "placeholder" earns a look at the detail page, which names the real cities.
+                # If it never does, filtering excludes the listing as location unknown.
+                places.append({"city": None, "state": None, "country": None, "tier": "placeholder", "distance_unknown": True,
+                               "detail": "location unknown", "resolved": True, "lat": None, "lng": None, "miles_from_home": None})
             else:
-                places.append(self._classify(_parse_place(piece), allow_lookup))
+                places.append(self._classify(_parse_place(piece), piece, allow_lookup))
         places.sort(key=lambda p: rank[p["tier"]])  # stable, so posting order breaks ties
-        best = places[0] if places else {"city": None, "state": None, "country": None, "tier": None, "detail": "no location given",
-                                         "resolved": False, "lat": None, "lng": None, "miles_from_home": None}
+        best = places[0] if places else {"city": None, "state": None, "country": None, "tier": None, "distance_unknown": True,
+                                         "detail": "no location given", "resolved": False, "lat": None, "lng": None,
+                                         "miles_from_home": None}
         # A multi-city posting is as close to home as its closest city (D-016).
         distances = [p["miles_from_home"] for p in places if p["miles_from_home"] is not None]
         nearest = min(distances) if distances else None
         # The source's remote flag wins: a remote job tagged with a home city is still remote.
         is_remote = remote_hint or (mentions_remote and best["tier"] is None)
-        return {**best, "miles_from_home": nearest, "is_remote": is_remote}
+        remote_state = self._remote_state(pieces, best) if is_remote else None
+        return {**best, "state": best["state"] or remote_state, "miles_from_home": nearest,
+                "is_remote": is_remote, "remote_state": remote_state}
+
+    def _remote_state(self, pieces: list, best: dict):
+        """D-029: the allowed state a remote job is tied to, as in 'Iowa - Work From Home', or None."""
+        for code in self.remote_states:
+            if best["state"] == code:
+                return code
+            for piece in pieces:
+                # The code must be capitals, or the 'ia' in 'Remote - ia' style noise would match.
+                if re.search(rf"\b{code}\b", piece) or has_phrase(piece, STATE_NAMES[code]):
+                    return code
+        return None
+
+
+def remote_tag(state_code: str) -> str:
+    """'IA' becomes 'remote_iowa'."""
+    return "remote_" + STATE_NAMES[state_code].replace(" ", "_")

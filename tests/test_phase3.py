@@ -349,26 +349,26 @@ def test_shipped_config_keeps_geocoding_off_and_within_the_policy(cfg):
 
 
 def test_geocoded_city_gets_coordinates_and_its_real_distance(cfg, cities):
-    geocoder = Geocoder(FakeClient({}), {cache_key("Lombard", "IL"): {"lat": 41.88, "lng": -88.01}}, SETTINGS)
-    place = LocationResolver(cfg, cities, geocoder).resolve("Lombard, IL")
+    geocoder = Geocoder(FakeClient({}), {cache_key("Nowhereville", "IL"): {"lat": 41.88, "lng": -88.01}}, SETTINGS)
+    place = LocationResolver(cfg, cities, geocoder).resolve("Nowhereville, IL")
     assert place["tier"] == "target_area" and place["lat"] == 41.88 and place["detail"] == "Chicago metro"
 
 
-def test_a_lookup_that_fails_keeps_the_listing_as_location_unknown(cfg, cities):
+def test_a_lookup_that_fails_never_passes_a_distance_check(cfg, cities):
     geocoder = Geocoder(FakeClient({NOMINATIM: []}), {}, SETTINGS)
     place = LocationResolver(cfg, cities, geocoder).resolve("Faraway, TX")
-    assert place["tier"] == "unknown" and place["lat"] is None
+    assert place["tier"] is None and place["distance_unknown"] and place["lat"] is None
 
 
-@pytest.mark.parametrize("raw, tier", [("Lombard, IL", "unknown"), ("Peculiar, MO", "unknown"), ("Olathe, KS", "target_area"),
-                                       ("Dallas, TX", None), ("Greenwood, SC", None), ("Toronto, Canada", None), ("3 Locations", "unknown")])
-def test_with_geocoding_off_only_nearby_states_stay_as_unknown(cfg, cities, raw, tier):
+@pytest.mark.parametrize("raw, tier", [("Lombard, IL", "target_area"), ("Peculiar, MO", "target_area"), ("Olathe, KS", "target_area"),
+                                       ("Dallas, TX", None), ("Greenwood, SC", None), ("Toronto, Canada", None), ("3 Locations", "placeholder")])
+def test_with_geocoding_off_the_gazetteer_places_us_cities(cfg, cities, raw, tier):
     geocoder = Geocoder(FakeClient({}), {}, {**SETTINGS, "enabled": False})
     assert LocationResolver(cfg, cities, geocoder).resolve(raw)["tier"] == tier
 
 
 def test_location_unknown_listing_is_stored_with_null_coordinates(space):
-    go(space, 0, jobs=[gh_job(location="Lombard, IL")])
+    go(space, 0, jobs=[gh_job(location="Greater Chicago Area")])
     record = one(space)
     assert record["lat"] is None and record["lng"] is None and record["location_label"] == "Location unknown"
     assert record["status"] == "open"
@@ -377,11 +377,11 @@ def test_location_unknown_listing_is_stored_with_null_coordinates(space):
 def test_only_possible_internships_may_use_the_geocoder(space):
     path = space / "config" / "config.yaml"
     path.write_text(path.read_text(encoding="utf-8").replace("enabled: false", "enabled: true"), encoding="utf-8")
-    fake = FakeClient({"boards/good/": {"jobs": [gh_job(1, "Staff Accountant", "Peoria, IL"), gh_job(2, "Tax Intern", "Lombard, IL")]},
+    fake = FakeClient({"boards/good/": {"jobs": [gh_job(1, "Staff Accountant", "Othertown, IL"), gh_job(2, "Tax Intern", "Nowhereville, IL")]},
                        "myworkdayjobs.com": {"total": 0, "jobPostings": []}, NOMINATIM: []})
     run(space / "config", space / "data", client=fake, now=DAY[0])
     lookups = [u for u in fake.requested if NOMINATIM in u]
-    assert len(lookups) == 1 and "Lombard" in lookups[0]
+    assert len(lookups) == 1 and "Nowhereville" in lookups[0]
 
 
 @pytest.mark.parametrize("raw", ["Montreal", "Europe", "Southfield", "Dublin Ireland Office"])
@@ -462,7 +462,7 @@ def test_season_location_limit(cfg, resolver, season, raw, kept):
 
 
 def test_limited_season_with_unknown_distance_is_not_kept(cfg, resolver):
-    problem = filtering.season_limit_problem(season_listing("Spring 2027"), resolver.resolve("Lombard, IL"), cfg)
+    problem = filtering.season_limit_problem(season_listing("Spring 2027"), resolver.resolve("Greater Chicago Area"), cfg)
     assert "unknown" in problem
 
 

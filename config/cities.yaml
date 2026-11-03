@@ -1,67 +1,67 @@
-# Local city table used to measure distance until geocoding arrives in P3.
-# Coordinates are approximate city centers, accurate enough for radius checks.
-# A city missing from this table cannot be placed. Its listing is excluded unless its
-# state is in include_whole_states, and it is logged in data/meta.json so it can be added.
+# Cities that count even when a posting gives no state, such as a bare "Waukee" or "Chicago".
+# Coordinates are not stored here. They come from the Census Gazetteer (D-022), and a city that
+# the Gazetteer does not have stops the run with a message saying so.
+# A city and state missing from this list is still found if the Gazetteer has it.
 cities:
   # Iowa
-  - { city: "Ames", state: "IA", lat: 42.0308, lng: -93.6319 }
-  - { city: "Des Moines", state: "IA", lat: 41.5868, lng: -93.6250 }
-  - { city: "West Des Moines", state: "IA", lat: 41.5772, lng: -93.7113 }
-  - { city: "Waukee", state: "IA", lat: 41.6117, lng: -93.8852 }
-  - { city: "Urbandale", state: "IA", lat: 41.6267, lng: -93.7122 }
-  - { city: "Ankeny", state: "IA", lat: 41.7318, lng: -93.6001 }
-  - { city: "Johnston", state: "IA", lat: 41.6730, lng: -93.6977 }
-  - { city: "Clive", state: "IA", lat: 41.6030, lng: -93.7241 }
-  - { city: "Altoona", state: "IA", lat: 41.6441, lng: -93.4647 }
-  - { city: "Grimes", state: "IA", lat: 41.6883, lng: -93.7911 }
-  - { city: "Norwalk", state: "IA", lat: 41.4755, lng: -93.6788 }
-  - { city: "Pella", state: "IA", lat: 41.4080, lng: -92.9163 }
-  - { city: "Dubuque", state: "IA", lat: 42.5006, lng: -90.6646 }
-  - { city: "Cedar Rapids", state: "IA", lat: 41.9779, lng: -91.6656 }
-  - { city: "Iowa City", state: "IA", lat: 41.6611, lng: -91.5302 }
-  - { city: "Davenport", state: "IA", lat: 41.5236, lng: -90.5776 }
-  - { city: "Bettendorf", state: "IA", lat: 41.5245, lng: -90.5157 }
-  - { city: "Waterloo", state: "IA", lat: 42.4928, lng: -92.3426 }
-  - { city: "Cedar Falls", state: "IA", lat: 42.5349, lng: -92.4453 }
-  - { city: "Sioux City", state: "IA", lat: 42.4963, lng: -96.4049 }
-  - { city: "Council Bluffs", state: "IA", lat: 41.2619, lng: -95.8608 }
-  - { city: "Mason City", state: "IA", lat: 43.1536, lng: -93.2010 }
+  - { city: "Ames", state: "IA" }
+  - { city: "Des Moines", state: "IA" }
+  - { city: "West Des Moines", state: "IA" }
+  - { city: "Waukee", state: "IA" }
+  - { city: "Urbandale", state: "IA" }
+  - { city: "Ankeny", state: "IA" }
+  - { city: "Johnston", state: "IA" }
+  - { city: "Clive", state: "IA" }
+  - { city: "Altoona", state: "IA" }
+  - { city: "Grimes", state: "IA" }
+  - { city: "Norwalk", state: "IA" }
+  - { city: "Pella", state: "IA" }
+  - { city: "Dubuque", state: "IA" }
+  - { city: "Cedar Rapids", state: "IA" }
+  - { city: "Iowa City", state: "IA" }
+  - { city: "Davenport", state: "IA" }
+  - { city: "Bettendorf", state: "IA" }
+  - { city: "Waterloo", state: "IA" }
+  - { city: "Cedar Falls", state: "IA" }
+  - { city: "Sioux City", state: "IA" }
+  - { city: "Council Bluffs", state: "IA" }
+  - { city: "Mason City", state: "IA" }
   # Near Iowa
-  - { city: "East Dubuque", state: "IL", lat: 42.4922, lng: -90.6429 }
-  - { city: "Moline", state: "IL", lat: 41.5067, lng: -90.5151 }
-  - { city: "Rock Island", state: "IL", lat: 41.5095, lng: -90.5787 }
-  - { city: "Omaha", state: "NE", lat: 41.2565, lng: -95.9345 }
-  - { city: "Lincoln", state: "NE", lat: 40.8136, lng: -96.7026 }
-  - { city: "Albert Lea", state: "MN", lat: 43.6480, lng: -93.3683 }
-  - { city: "Rochester", state: "MN", lat: 44.0121, lng: -92.4802 }
-  - { city: "Minneapolis", state: "MN", lat: 44.9778, lng: -93.2650 }
+  - { city: "East Dubuque", state: "IL" }
+  - { city: "Moline", state: "IL" }
+  - { city: "Rock Island", state: "IL" }
+  - { city: "Omaha", state: "NE" }
+  - { city: "Lincoln", state: "NE" }
+  - { city: "Albert Lea", state: "MN" }
+  - { city: "Rochester", state: "MN" }
+  - { city: "Minneapolis", state: "MN" }
   # Kansas City metro
-  - { city: "Kansas City", state: "MO", lat: 39.0997, lng: -94.5786 }
-  - { city: "Kansas City", state: "KS", lat: 39.1142, lng: -94.6275 }
-  - { city: "North Kansas City", state: "MO", lat: 39.1300, lng: -94.5622 }
-  - { city: "Independence", state: "MO", lat: 39.0911, lng: -94.4155 }
-  - { city: "Lee's Summit", state: "MO", lat: 38.9108, lng: -94.3822 }
-  - { city: "Overland Park", state: "KS", lat: 38.9822, lng: -94.6708 }
-  - { city: "Leawood", state: "KS", lat: 38.9667, lng: -94.6169 }
-  - { city: "Olathe", state: "KS", lat: 38.8814, lng: -94.8191 }
-  - { city: "Lenexa", state: "KS", lat: 38.9536, lng: -94.7336 }
-  - { city: "Shawnee", state: "KS", lat: 39.0228, lng: -94.7152 }
+  - { city: "Kansas City", state: "MO" }
+  - { city: "Kansas City", state: "KS" }
+  - { city: "North Kansas City", state: "MO" }
+  - { city: "Independence", state: "MO" }
+  - { city: "Lee's Summit", state: "MO" }
+  - { city: "Overland Park", state: "KS" }
+  - { city: "Leawood", state: "KS" }
+  - { city: "Olathe", state: "KS" }
+  - { city: "Lenexa", state: "KS" }
+  - { city: "Shawnee", state: "KS" }
   # Chicago metro
-  - { city: "Chicago", state: "IL", lat: 41.8781, lng: -87.6298 }
-  - { city: "Evanston", state: "IL", lat: 42.0451, lng: -87.6877 }
-  - { city: "Skokie", state: "IL", lat: 42.0324, lng: -87.7416 }
-  - { city: "Oak Park", state: "IL", lat: 41.8850, lng: -87.7845 }
-  - { city: "Glenview", state: "IL", lat: 42.0698, lng: -87.7878 }
-  - { city: "Northbrook", state: "IL", lat: 42.1275, lng: -87.8290 }
-  - { city: "Deerfield", state: "IL", lat: 42.1711, lng: -87.8445 }
-  - { city: "Lake Forest", state: "IL", lat: 42.2586, lng: -87.8406 }
-  - { city: "Rosemont", state: "IL", lat: 41.9953, lng: -87.8845 }
-  - { city: "Arlington Heights", state: "IL", lat: 42.0884, lng: -87.9806 }
-  - { city: "Schaumburg", state: "IL", lat: 42.0334, lng: -88.0834 }
-  - { city: "Itasca", state: "IL", lat: 41.9750, lng: -88.0073 }
-  - { city: "Elmhurst", state: "IL", lat: 41.8995, lng: -87.9403 }
-  - { city: "Oak Brook", state: "IL", lat: 41.8328, lng: -87.9290 }
-  - { city: "Downers Grove", state: "IL", lat: 41.8089, lng: -88.0112 }
-  - { city: "Lisle", state: "IL", lat: 41.8011, lng: -88.0748 }
-  - { city: "Warrenville", state: "IL", lat: 41.8178, lng: -88.1734 }
-  - { city: "Naperville", state: "IL", lat: 41.7508, lng: -88.1535 }
+  - { city: "Chicago", state: "IL" }
+  - { city: "Evanston", state: "IL" }
+  - { city: "Skokie", state: "IL" }
+  - { city: "Oak Park", state: "IL" }
+  - { city: "Glenview", state: "IL" }
+  - { city: "Northbrook", state: "IL" }
+  - { city: "Deerfield", state: "IL" }
+  - { city: "Lake Forest", state: "IL" }
+  - { city: "Rosemont", state: "IL" }
+  - { city: "Arlington Heights", state: "IL" }
+  - { city: "Schaumburg", state: "IL" }
+  - { city: "Itasca", state: "IL" }
+  - { city: "Elmhurst", state: "IL" }
+  - { city: "Oak Brook", state: "IL" }
+  - { city: "Downers Grove", state: "IL" }
+  - { city: "Lisle", state: "IL" }
+  - { city: "Warrenville", state: "IL" }
+  - { city: "Naperville", state: "IL" }

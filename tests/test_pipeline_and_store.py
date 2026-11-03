@@ -186,7 +186,9 @@ def test_listing_missing_later_is_never_deleted(workspace):
     run_pipeline(workspace, NOW)
     before = {x["id"] for x in data(workspace, "internships.json")}
     fake = client()
-    fake.routes["boards/good/"] = {"jobs": []}
+    # One unrelated job, so the board is not empty (an empty one is a failed fetch; see test_phase4).
+    fake.routes["boards/good/"] = {"jobs": [{"id": 999, "title": "Staff Accountant", "absolute_url": "https://example.org/999",
+                                             "location": {"name": "Chicago, IL"}, "content": ""}]}
     run(workspace / "config", workspace / "data", client=fake, now=LATER)
     after = data(workspace, "internships.json")
     assert {x["id"] for x in after} == before
@@ -345,7 +347,7 @@ def test_contact_data_in_a_posting_never_reaches_the_data_files(workspace):
 
 def test_bad_config_stops_with_a_clear_message(workspace, capsys):
     path = workspace / "config" / "config.yaml"
-    path.write_text(path.read_text(encoding="utf-8").replace('remote: "exclude"', 'remote: "maybe"'), encoding="utf-8")
+    path.write_text(path.read_text(encoding="utf-8").replace('remote: "separate"', 'remote: "maybe"'), encoding="utf-8")
     code = main(["run", "--config-dir", str(workspace / "config"), "--data-dir", str(workspace / "data")])
     assert code == 2
     assert "remote must be one of" in capsys.readouterr().err
