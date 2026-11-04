@@ -29,9 +29,18 @@ data/                       internships.json, last_seen.json, meta.json, compani
                             excluded_last_run.json is a local debug report and is not committed
 data/reference/             Census Gazetteer file, with its source in a README
 scripts/                    commit_data.py and run_summary.py, used by the workflow
+                            build_site_config.py, stage_site.py, make_icons.py: the web app (P7)
 .github/workflows/scan.yml  Daily and manual runs (see docs/AUTOMATION.md)
-web/                        (later, P7) Static site
+.github/workflows/pages.yml Publishes the web app to GitHub Pages (P7, D-044)
+site/                       The web app (P7): index.html, styles.css, js/, service worker, manifest, icons
+tests/js/                   The web app's unit tests: node --test "tests/js/*.test.mjs"
 ```
+
+## 1a. Web app (P7, D-044)
+- **Static, no build step.** `site/` is plain HTML, CSS and ES modules, with no libraries and no third-party requests. A Content-Security-Policy allows only the site's own files.
+- **Published folder.** `scripts/stage_site.py` copies `site/` and the three public data files (`internships.json`, `meta.json`, `companies_status.json`), writes `site_config.json` from `config/config.yaml`, and stamps the service worker's cache name. The app fetches everything by relative path, so it works under `/Internship-Scanner/`.
+- **Files.** `js/lib.js` holds filters, sort and labels; `js/tracker.js` the localStorage tracker; and `js/app.js` the page. The first two have no DOM code, so `node --test` covers them.
+- **Untrusted text.** Listing fields come from job boards, so they're inserted only as text and never as HTML. Only `http:` and `https:` links are made clickable, and they open with `rel="noopener noreferrer"`.
 
 ## 2. Config schema
 `config/config.yaml` is an exact copy of the block in docs/CONFIG.md, so that file defines the values.
