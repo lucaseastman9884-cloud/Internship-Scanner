@@ -21,3 +21,6 @@ data/excluded_last_run.json
 
 # Local previews from `python -m scanner email --dry-run`
 outputs/
+
+# Local copy of the GitHub Pages folder (`python scripts/stage_site.py _site`)
+_site/
