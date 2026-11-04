@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Self only: no inline scripts, no third-party hosts. Listing text is untrusted. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Internship Scanner</title>
+  <meta name="description" content="Finance internships near Ames, Iowa, from public company job boards.">
+  <meta name="theme-color" content="#1f3a5f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="top" id="top">
+    <div class="top-row">
+      <h1>Internship Scanner</h1>
+      <nav class="views" aria-label="Views">
+        <button type="button" id="view-listings" class="view-btn" aria-pressed="true">Listings</button>
+        <button type="button" id="view-mylist" class="view-btn" aria-pressed="false">My List <span id="mylist-count">(0)</span></button>
+      </nav>
+    </div>
+    <p id="freshness" class="meta-line">Loading scan details…</p>
+    <p id="health" class="meta-line"></p>
+  </header>
+
+  <div class="banners">
+    <p id="offline-banner" class="banner banner-warn" role="status" hidden></p>
+    <p id="update-banner" class="banner" role="status" hidden>New version available. <button type="button" id="update-reload">Reload</button></p>
+    <p id="storage-banner" class="banner banner-warn" role="status" hidden>This browser won't let the site save data, so tracker changes last only until you close this tab.</p>
+  </div>
+
+  <main id="main">
+    <section id="listings-view" class="layout" aria-label="Listings">
+      <details id="filters" class="filters">
+        <summary>Filters <span id="filter-count" class="muted"></span></summary>
+        <form id="filter-form" class="filter-form" novalidate>
+          <div class="field">
+            <label for="f-query">Search title or company</label>
+            <input id="f-query" type="search" autocomplete="off" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="f-sort">Sort by</label>
+            <select id="f-sort"></select>
+          </div>
+          <fieldset class="field" id="f-status"><legend>Status</legend></fieldset>
+          <div class="field">
+            <div class="check"><input id="f-distance-on" type="checkbox"><label for="f-distance-on">Limit distance from <span id="home-name">home</span></label></div>
+            <label for="f-distance" class="sr-only">Maximum miles from home</label>
+            <input id="f-distance" type="range" min="10" max="1500" step="10" disabled aria-describedby="f-distance-out">
+            <output id="f-distance-out" for="f-distance" class="muted"></output>
+          </div>
+          <div class="field">
+            <label for="f-city">City</label>
+            <select id="f-city"><option value="">Any city</option></select>
+          </div>
+          <fieldset class="field" id="f-role"><legend>Role category</legend></fieldset>
+          <fieldset class="field" id="f-season"><legend>Season</legend></fieldset>
+          <fieldset class="field">
+            <legend>First seen</legend>
+            <div class="row">
+              <label for="f-from">From</label><input id="f-from" type="date">
+              <label for="f-to">To</label><input id="f-to" type="date">
+            </div>
+          </fieldset>
+          <fieldset class="field" id="f-source"><legend>Source</legend></fieldset>
+          <fieldset class="field" id="f-elig"><legend>Eligibility</legend></fieldset>
+          <div class="field">
+            <label for="f-score">Minimum score</label>
+            <input id="f-score" type="range" step="5" aria-describedby="f-score-out">
+            <output id="f-score-out" for="f-score" class="muted"></output>
+          </div>
+          <div class="field check"><input id="f-remote" type="checkbox" checked><label for="f-remote">Show the <span id="remote-name">remote</span> section</label></div>
+          <button type="button" id="clear-filters" class="secondary">Clear filters</button>
+        </form>
+      </details>
+
+      <div class="results" id="results" tabindex="-1">
+        <p id="result-count" class="count" aria-live="polite"></p>
+        <p id="status-note" class="note" hidden>Filtered by config — score may be outdated. These listings were last scored before a config change, and their score and location weren't refreshed.</p>
+        <div id="state-msg" class="state" role="status">Loading listings…</div>
+        <ul id="list" class="cards"></ul>
+        <button type="button" id="more" class="secondary more" hidden>Show more</button>
+        <section id="remote-section" class="remote" aria-labelledby="remote-heading" hidden>
+          <h2 id="remote-heading">Remote</h2>
+          <p class="muted">Remote jobs tied to the state. They're kept apart from the in-person list; the city and distance filters don't apply here.</p>
+          <ul id="remote-list" class="cards"></ul>
+          <p id="remote-empty" class="muted" hidden>No remote listings match.</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="mylist-view" class="mylist" aria-labelledby="mylist-heading" hidden>
+      <h2 id="mylist-heading">My List</h2>
+      <p class="muted">Saved only in this browser. Export a file to keep a copy or move it to another device.</p>
+      <div class="toolbar">
+        <button type="button" id="export-btn" class="secondary">Export</button>
+        <button type="button" id="import-btn" class="secondary">Import</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </div>
+      <p id="import-msg" class="note" role="status" hidden></p>
+      <p id="mylist-empty" class="state" hidden>Nothing saved yet. Open a listing and tick "Save to My List".</p>
+      <ul id="mylist" class="cards"></ul>
+    </section>
+  </main>
+
+  <div id="scrim" class="scrim" hidden></div>
+  <div id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+    <div class="drawer-head">
+      <button type="button" id="drawer-close" class="secondary">Close</button>
+    </div>
+    <div id="drawer-body" class="drawer-body"></div>
+  </div>
+</body>
+</html>
