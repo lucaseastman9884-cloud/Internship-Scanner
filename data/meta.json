@@ -202,19 +202,13 @@
       "company": "Stifel",
       "detail": null,
       "reason": "manual",
-      "url": "https://www.stifel.com/careers"
-    },
-    {
-      "company": "Piper Sandler",
-      "detail": null,
-      "reason": "manual",
-      "url": "https://www.pipersandler.com/careers"
+      "url": "https://careers-stifel.icims.com/jobs/search?mode=job&iis=Company+Website"
     },
     {
       "company": "Mesirow",
       "detail": null,
       "reason": "manual",
-      "url": "https://www.mesirow.com/careers"
+      "url": "https://recruiting2.ultipro.com/MES1003MFAC/JobBoard/69451223-cdce-4faf-9407-23a2cd5ac83b/?q=&o=postedDateDesc"
     },
     {
       "company": "Aon",
@@ -287,6 +281,42 @@
       "detail": null,
       "reason": "manual",
       "url": "https://www.caseys.com/careers"
+    },
+    {
+      "company": "Houlihan Lokey",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://hl.com/careers/"
+    },
+    {
+      "company": "Moelis & Company",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.moelis.com/careers/"
+    },
+    {
+      "company": "D.A. Davidson",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.dadavidson.com/careers"
+    },
+    {
+      "company": "Fireclay Partners",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://fireclaypartners.com/careers/"
+    },
+    {
+      "company": "Jefferies",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://www.jefferies.com/careers/"
+    },
+    {
+      "company": "Kroll",
+      "detail": null,
+      "reason": "manual",
+      "url": "https://careers.kroll.com/en"
     }
   ],
   "companies": [
@@ -308,13 +338,13 @@
       "company": "Wintrust Financial",
       "company_id": "wintrust-financial",
       "error": null,
-      "excluded": 72,
+      "excluded": 71,
       "exclusion_reasons": {
         "location": 3,
-        "not_internship": 69
+        "not_internship": 68
       },
       "fallback_link": null,
-      "fetched": 80,
+      "fetched": 79,
       "kept": 8,
       "status": "ok",
       "warnings": []
@@ -324,14 +354,14 @@
       "company": "Federal Reserve System",
       "company_id": "federal-reserve-system",
       "error": null,
-      "excluded": 134,
+      "excluded": 130,
       "exclusion_reasons": {
         "excluded_keyword": 2,
-        "location": 37,
-        "not_internship": 95
+        "location": 36,
+        "not_internship": 92
       },
       "fallback_link": null,
-      "fetched": 146,
+      "fetched": 142,
       "kept": 12,
       "status": "ok",
       "warnings": []
@@ -341,15 +371,15 @@
       "company": "CIBC",
       "company_id": "cibc",
       "error": null,
-      "excluded": 238,
+      "excluded": 241,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "ineligible": 4,
-        "location": 19,
+        "location": 22,
         "not_internship": 214
       },
       "fallback_link": null,
-      "fetched": 239,
+      "fetched": 242,
       "kept": 1,
       "status": "ok",
       "warnings": []
@@ -359,16 +389,16 @@
       "company": "Corient",
       "company_id": "corient",
       "error": null,
-      "excluded": 61,
+      "excluded": 62,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "ineligible": 2,
         "location": 15,
         "location_unknown": 2,
-        "not_internship": 41
+        "not_internship": 42
       },
       "fallback_link": null,
-      "fetched": 62,
+      "fetched": 63,
       "kept": 1,
       "status": "ok",
       "warnings": []
@@ -378,14 +408,14 @@
       "company": "Commerce Bank",
       "company_id": "commerce-bank",
       "error": null,
-      "excluded": 93,
+      "excluded": 96,
       "exclusion_reasons": {
         "location": 5,
         "location_unknown": 1,
-        "not_internship": 87
+        "not_internship": 90
       },
       "fallback_link": null,
-      "fetched": 100,
+      "fetched": 103,
       "kept": 7,
       "status": "ok",
       "warnings": []
@@ -395,16 +425,16 @@
       "company": "UHY",
       "company_id": "uhy",
       "error": null,
-      "excluded": 103,
+      "excluded": 102,
       "exclusion_reasons": {
         "location": 5,
         "location_unknown": 3,
-        "not_internship": 94,
+        "not_internship": 93,
         "season_distance": 1
       },
       "fallback_link": null,
-      "fetched": 108,
-      "kept": 5,
+      "fetched": 106,
+      "kept": 4,
       "status": "ok",
       "warnings": []
     },
@@ -462,7 +492,7 @@
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 510 results (config cap)"
+        "search 'intern' stopped at 500 of 566 results (config cap)"
       ]
     },
     {
@@ -470,13 +500,13 @@
       "company": "Fifth Third",
       "company_id": "fifth-third",
       "error": null,
-      "excluded": 315,
+      "excluded": 329,
       "exclusion_reasons": {
         "location": 2,
-        "not_internship": 313
+        "not_internship": 327
       },
       "fallback_link": null,
-      "fetched": 315,
+      "fetched": 329,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -499,15 +529,15 @@
       "company": "CliftonLarsonAllen",
       "company_id": "cliftonlarsonallen",
       "error": null,
-      "excluded": 194,
+      "excluded": 198,
       "exclusion_reasons": {
-        "location": 32,
+        "location": 31,
         "location_unknown": 1,
-        "not_internship": 160,
+        "not_internship": 165,
         "season_distance": 1
       },
       "fallback_link": null,
-      "fetched": 194,
+      "fetched": 198,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -535,8 +565,8 @@
         "not_internship": 20
       },
       "fallback_link": null,
-      "fetched": 28,
-      "kept": 8,
+      "fetched": 27,
+      "kept": 7,
       "status": "ok",
       "warnings": []
     },
@@ -584,15 +614,15 @@
       "company": "EMC Insurance",
       "company_id": "emc-insurance",
       "error": null,
-      "excluded": 29,
+      "excluded": 26,
       "exclusion_reasons": {
-        "location_unknown": 6,
+        "location_unknown": 3,
         "not_internship": 22,
         "remote": 1
       },
       "fallback_link": null,
-      "fetched": 40,
-      "kept": 11,
+      "fetched": 32,
+      "kept": 6,
       "status": "ok",
       "warnings": []
     },
@@ -601,14 +631,14 @@
       "company": "Athene",
       "company_id": "athene",
       "error": null,
-      "excluded": 12,
+      "excluded": 10,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "location": 1,
-        "not_internship": 10
+        "not_internship": 8
       },
       "fallback_link": null,
-      "fetched": 18,
+      "fetched": 16,
       "kept": 6,
       "status": "ok",
       "warnings": []
@@ -700,13 +730,13 @@
       "company": "Cottingham & Butler",
       "company_id": "cottingham-butler",
       "error": null,
-      "excluded": 93,
+      "excluded": 91,
       "exclusion_reasons": {
         "location": 1,
-        "not_internship": 92
+        "not_internship": 90
       },
       "fallback_link": null,
-      "fetched": 96,
+      "fetched": 94,
       "kept": 3,
       "status": "ok",
       "warnings": []
@@ -716,18 +746,18 @@
       "company": "RSM US",
       "company_id": "rsm-us",
       "error": null,
-      "excluded": 538,
+      "excluded": 540,
       "exclusion_reasons": {
         "location": 1,
-        "location_unknown": 19,
-        "not_internship": 518
+        "location_unknown": 17,
+        "not_internship": 522
       },
       "fallback_link": null,
-      "fetched": 539,
+      "fetched": 541,
       "kept": 1,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 547 results (config cap)"
+        "search 'intern' stopped at 500 of 551 results (config cap)"
       ]
     },
     {
@@ -737,9 +767,9 @@
       "error": null,
       "excluded": 65,
       "exclusion_reasons": {
-        "location": 4,
+        "location": 3,
         "location_unknown": 2,
-        "not_internship": 59
+        "not_internship": 60
       },
       "fallback_link": null,
       "fetched": 70,
@@ -794,14 +824,14 @@
       "company": "Northern Trust",
       "company_id": "northern-trust",
       "error": null,
-      "excluded": 352,
+      "excluded": 358,
       "exclusion_reasons": {
         "ineligible": 1,
         "location": 1,
-        "not_internship": 350
+        "not_internship": 356
       },
       "fallback_link": null,
-      "fetched": 352,
+      "fetched": 358,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -811,12 +841,12 @@
       "company": "William Blair",
       "company_id": "william-blair",
       "error": null,
-      "excluded": 50,
+      "excluded": 48,
       "exclusion_reasons": {
-        "not_internship": 50
+        "not_internship": 48
       },
       "fallback_link": null,
-      "fetched": 50,
+      "fetched": 48,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -841,12 +871,12 @@
       "company": "Allstate",
       "company_id": "allstate",
       "error": null,
-      "excluded": 338,
+      "excluded": 337,
       "exclusion_reasons": {
-        "not_internship": 338
+        "not_internship": 337
       },
       "fallback_link": null,
-      "fetched": 338,
+      "fetched": 337,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -893,7 +923,7 @@
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 527 results (config cap)"
+        "search 'intern' stopped at 500 of 533 results (config cap)"
       ]
     },
     {
@@ -940,15 +970,15 @@
       "company": "BlackRock",
       "company_id": "blackrock",
       "error": null,
-      "excluded": 126,
+      "excluded": 139,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "ineligible": 1,
         "location": 10,
-        "not_internship": 114
+        "not_internship": 127
       },
       "fallback_link": null,
-      "fetched": 126,
+      "fetched": 139,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -958,22 +988,20 @@
       "company": "Marsh McLennan",
       "company_id": "marsh-mclennan",
       "error": null,
-      "excluded": 553,
+      "excluded": 555,
       "exclusion_reasons": {
-        "excluded_keyword": 2,
-        "ineligible": 4,
+        "excluded_keyword": 4,
+        "ineligible": 5,
         "location": 5,
-        "location_unknown": 85,
+        "location_unknown": 84,
         "not_internship": 457
       },
       "fallback_link": null,
-      "fetched": 559,
+      "fetched": 561,
       "kept": 6,
       "status": "ok",
       "warnings": [
-        "search 'intern' returned 1 posting(s) without a title or path",
-        "search 'intern' stopped at 500 of 1191 results (config cap)",
-        "search 'internship' returned 1 posting(s) without a title or path"
+        "search 'intern' stopped at 500 of 1176 results (config cap)"
       ]
     },
     {
@@ -981,18 +1009,17 @@
       "company": "PwC",
       "company_id": "pwc",
       "error": null,
-      "excluded": 554,
+      "excluded": 557,
       "exclusion_reasons": {
         "location_unknown": 15,
-        "not_internship": 539
+        "not_internship": 542
       },
       "fallback_link": null,
-      "fetched": 554,
+      "fetched": 557,
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' returned 1 posting(s) without a title or path",
-        "search 'intern' stopped at 500 of 2118 results (config cap)"
+        "search 'intern' stopped at 500 of 2113 results (config cap)"
       ]
     },
     {
@@ -1000,14 +1027,14 @@
       "company": "Nuveen / TIAA",
       "company_id": "nuveen-tiaa",
       "error": null,
-      "excluded": 112,
+      "excluded": 116,
       "exclusion_reasons": {
         "excluded_keyword": 1,
-        "location": 5,
-        "not_internship": 106
+        "location": 4,
+        "not_internship": 111
       },
       "fallback_link": null,
-      "fetched": 112,
+      "fetched": 116,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1017,12 +1044,12 @@
       "company": "Raymond James",
       "company_id": "raymond-james",
       "error": null,
-      "excluded": 196,
+      "excluded": 197,
       "exclusion_reasons": {
-        "not_internship": 196
+        "not_internship": 197
       },
       "fallback_link": null,
-      "fetched": 196,
+      "fetched": 197,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1032,17 +1059,17 @@
       "company": "U.S. Bank",
       "company_id": "u-s-bank",
       "error": null,
-      "excluded": 503,
+      "excluded": 504,
       "exclusion_reasons": {
         "location": 2,
-        "not_internship": 501
+        "not_internship": 502
       },
       "fallback_link": null,
-      "fetched": 504,
+      "fetched": 505,
       "kept": 1,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1129 results (config cap)"
+        "search 'intern' stopped at 500 of 1160 results (config cap)"
       ]
     },
     {
@@ -1056,11 +1083,11 @@
         "not_internship": 502
       },
       "fallback_link": null,
-      "fetched": 504,
-      "kept": 0,
+      "fetched": 505,
+      "kept": 1,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1320 results (config cap)"
+        "search 'intern' stopped at 500 of 1328 results (config cap)"
       ]
     },
     {
@@ -1083,13 +1110,13 @@
       "company": "Ameriprise Financial",
       "company_id": "ameriprise-financial",
       "error": null,
-      "excluded": 85,
+      "excluded": 87,
       "exclusion_reasons": {
         "location": 1,
-        "not_internship": 84
+        "not_internship": 86
       },
       "fallback_link": null,
-      "fetched": 85,
+      "fetched": 87,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1099,14 +1126,14 @@
       "company": "Sun Life",
       "company_id": "sun-life",
       "error": null,
-      "excluded": 118,
+      "excluded": 120,
       "exclusion_reasons": {
         "location": 4,
         "location_unknown": 2,
-        "not_internship": 112
+        "not_internship": 114
       },
       "fallback_link": null,
-      "fetched": 118,
+      "fetched": 120,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1116,13 +1143,13 @@
       "company": "Cboe Global Markets",
       "company_id": "cboe-global-markets",
       "error": null,
-      "excluded": 99,
+      "excluded": 96,
       "exclusion_reasons": {
         "location_unknown": 1,
-        "not_internship": 98
+        "not_internship": 95
       },
       "fallback_link": null,
-      "fetched": 110,
+      "fetched": 107,
       "kept": 11,
       "status": "ok",
       "warnings": []
@@ -1132,18 +1159,19 @@
       "company": "Citigroup",
       "company_id": "citigroup",
       "error": null,
-      "excluded": 547,
+      "excluded": 548,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "location": 14,
-        "location_unknown": 76,
-        "not_internship": 456
+        "location_unknown": 78,
+        "not_internship": 455
       },
       "fallback_link": null,
-      "fetched": 547,
+      "fetched": 548,
       "kept": 0,
       "status": "ok",
       "warnings": [
+        "search 'intern' returned 1 posting(s) without a title or path",
         "search 'intern' stopped at 500 of 2000 results (config cap)"
       ]
     },
@@ -1152,18 +1180,18 @@
       "company": "Capital One",
       "company_id": "capital-one",
       "error": null,
-      "excluded": 784,
+      "excluded": 787,
       "exclusion_reasons": {
         "excluded_keyword": 5,
-        "location": 4,
-        "not_internship": 775
+        "location": 3,
+        "not_internship": 779
       },
       "fallback_link": null,
-      "fetched": 784,
+      "fetched": 787,
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1229 results (config cap)"
+        "search 'intern' stopped at 500 of 1225 results (config cap)"
       ]
     },
     {
@@ -1171,12 +1199,12 @@
       "company": "Kemper",
       "company_id": "kemper",
       "error": null,
-      "excluded": 27,
+      "excluded": 26,
       "exclusion_reasons": {
-        "not_internship": 27
+        "not_internship": 26
       },
       "fallback_link": null,
-      "fetched": 27,
+      "fetched": 26,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1202,15 +1230,15 @@
       "company": "HCSC",
       "company_id": "hcsc",
       "error": null,
-      "excluded": 89,
+      "excluded": 92,
       "exclusion_reasons": {
         "excluded_keyword": 5,
         "ineligible": 19,
         "location": 1,
-        "not_internship": 64
+        "not_internship": 67
       },
       "fallback_link": null,
-      "fetched": 90,
+      "fetched": 93,
       "kept": 1,
       "status": "ok",
       "warnings": []
@@ -1220,14 +1248,14 @@
       "company": "Plante Moran",
       "company_id": "plante-moran",
       "error": null,
-      "excluded": 96,
+      "excluded": 94,
       "exclusion_reasons": {
         "excluded_keyword": 1,
-        "location_unknown": 13,
-        "not_internship": 82
+        "location_unknown": 12,
+        "not_internship": 81
       },
       "fallback_link": null,
-      "fetched": 122,
+      "fetched": 120,
       "kept": 26,
       "status": "ok",
       "warnings": []
@@ -1237,16 +1265,16 @@
       "company": "Travelers",
       "company_id": "travelers",
       "error": null,
-      "excluded": 291,
+      "excluded": 297,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "location": 65,
         "location_unknown": 4,
-        "not_internship": 221
+        "not_internship": 227
       },
       "fallback_link": null,
-      "fetched": 299,
-      "kept": 8,
+      "fetched": 304,
+      "kept": 7,
       "status": "ok",
       "warnings": []
     },
@@ -1255,17 +1283,18 @@
       "company": "State Street",
       "company_id": "state-street",
       "error": null,
-      "excluded": 530,
+      "excluded": 533,
       "exclusion_reasons": {
-        "location": 7,
-        "not_internship": 523
+        "location": 4,
+        "location_unknown": 1,
+        "not_internship": 528
       },
       "fallback_link": null,
-      "fetched": 530,
+      "fetched": 533,
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 665 results (config cap)"
+        "search 'intern' stopped at 500 of 694 results (config cap)"
       ]
     },
     {
@@ -1288,12 +1317,12 @@
       "company": "Alliant Energy",
       "company_id": "alliant-energy",
       "error": null,
-      "excluded": 23,
+      "excluded": 22,
       "exclusion_reasons": {
-        "not_internship": 23
+        "not_internship": 22
       },
       "fallback_link": null,
-      "fetched": 23,
+      "fetched": 22,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1303,13 +1332,13 @@
       "company": "Vermeer",
       "company_id": "vermeer",
       "error": null,
-      "excluded": 26,
+      "excluded": 27,
       "exclusion_reasons": {
         "location": 2,
-        "not_internship": 24
+        "not_internship": 25
       },
       "fallback_link": null,
-      "fetched": 36,
+      "fetched": 37,
       "kept": 10,
       "status": "ok",
       "warnings": []
@@ -1319,14 +1348,14 @@
       "company": "Hy-Vee",
       "company_id": "hy-vee",
       "error": null,
-      "excluded": 85,
+      "excluded": 86,
       "exclusion_reasons": {
         "location": 2,
-        "not_internship": 83
+        "not_internship": 84
       },
       "fallback_link": null,
-      "fetched": 98,
-      "kept": 13,
+      "fetched": 100,
+      "kept": 14,
       "status": "ok",
       "warnings": []
     },
@@ -1367,14 +1396,14 @@
       "company": "Jump Trading",
       "company_id": "jump-trading",
       "error": null,
-      "excluded": 87,
+      "excluded": 84,
       "exclusion_reasons": {
         "excluded_keyword": 2,
-        "location_unknown": 18,
-        "not_internship": 67
+        "location_unknown": 17,
+        "not_internship": 65
       },
       "fallback_link": null,
-      "fetched": 96,
+      "fetched": 93,
       "kept": 9,
       "status": "ok",
       "warnings": []
@@ -1384,16 +1413,16 @@
       "company": "Optiver",
       "company_id": "optiver",
       "error": null,
-      "excluded": 158,
+      "excluded": 156,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "ineligible": 1,
         "location": 13,
         "location_unknown": 2,
-        "not_internship": 141
+        "not_internship": 139
       },
       "fallback_link": null,
-      "fetched": 159,
+      "fetched": 157,
       "kept": 1,
       "status": "ok",
       "warnings": []
@@ -1403,16 +1432,16 @@
       "company": "IMC Trading",
       "company_id": "imc-trading",
       "error": null,
-      "excluded": 158,
+      "excluded": 157,
       "exclusion_reasons": {
         "excluded_keyword": 2,
         "ineligible": 4,
         "location": 9,
         "location_unknown": 2,
-        "not_internship": 141
+        "not_internship": 140
       },
       "fallback_link": null,
-      "fetched": 158,
+      "fetched": 157,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1422,14 +1451,15 @@
       "company": "Akuna Capital",
       "company_id": "akuna-capital",
       "error": null,
-      "excluded": 30,
+      "excluded": 31,
       "exclusion_reasons": {
         "ineligible": 2,
-        "not_internship": 28
+        "not_internship": 28,
+        "outside_home_keyword": 1
       },
       "fallback_link": null,
       "fetched": 32,
-      "kept": 2,
+      "kept": 1,
       "status": "ok",
       "warnings": []
     },
@@ -1438,12 +1468,12 @@
       "company": "Chicago Trading Company",
       "company_id": "chicago-trading-company",
       "error": null,
-      "excluded": 18,
+      "excluded": 17,
       "exclusion_reasons": {
-        "not_internship": 18
+        "not_internship": 17
       },
       "fallback_link": null,
-      "fetched": 18,
+      "fetched": 17,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1458,8 +1488,8 @@
         "not_internship": 7
       },
       "fallback_link": null,
-      "fetched": 10,
-      "kept": 3,
+      "fetched": 11,
+      "kept": 4,
       "status": "ok",
       "warnings": []
     },
@@ -1484,12 +1514,12 @@
       "company": "Tastytrade",
       "company_id": "tastytrade",
       "error": null,
-      "excluded": 14,
+      "excluded": 15,
       "exclusion_reasons": {
-        "not_internship": 14
+        "not_internship": 15
       },
       "fallback_link": null,
-      "fetched": 14,
+      "fetched": 15,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1529,14 +1559,14 @@
       "company": "GCM Grosvenor",
       "company_id": "gcm-grosvenor",
       "error": null,
-      "excluded": 8,
+      "excluded": 9,
       "exclusion_reasons": {
         "ineligible": 1,
-        "not_internship": 7
+        "not_internship": 8
       },
       "fallback_link": null,
-      "fetched": 12,
-      "kept": 4,
+      "fetched": 15,
+      "kept": 6,
       "status": "ok",
       "warnings": []
     },
@@ -1703,23 +1733,26 @@
       "error": null,
       "excluded": 0,
       "exclusion_reasons": {},
-      "fallback_link": "https://www.stifel.com/careers",
+      "fallback_link": "https://careers-stifel.icims.com/jobs/search?mode=job&iis=Company+Website",
       "fetched": 0,
       "kept": 0,
       "status": "manual",
       "warnings": []
     },
     {
-      "ats": "manual",
+      "ats": "workday",
       "company": "Piper Sandler",
       "company_id": "piper-sandler",
       "error": null,
-      "excluded": 0,
-      "exclusion_reasons": {},
-      "fallback_link": "https://www.pipersandler.com/careers",
-      "fetched": 0,
-      "kept": 0,
-      "status": "manual",
+      "excluded": 36,
+      "exclusion_reasons": {
+        "location": 2,
+        "not_internship": 34
+      },
+      "fallback_link": null,
+      "fetched": 38,
+      "kept": 2,
+      "status": "ok",
       "warnings": []
     },
     {
@@ -1729,7 +1762,7 @@
       "error": null,
       "excluded": 0,
       "exclusion_reasons": {},
-      "fallback_link": "https://www.mesirow.com/careers",
+      "fallback_link": "https://recruiting2.ultipro.com/MES1003MFAC/JobBoard/69451223-cdce-4faf-9407-23a2cd5ac83b/?q=&o=postedDateDesc",
       "fetched": 0,
       "kept": 0,
       "status": "manual",
@@ -1890,12 +1923,134 @@
       "kept": 0,
       "status": "manual",
       "warnings": []
+    },
+    {
+      "ats": "greenhouse",
+      "company": "Lincoln International",
+      "company_id": "lincoln-international",
+      "error": null,
+      "excluded": 35,
+      "exclusion_reasons": {
+        "excluded_keyword": 1,
+        "location": 4,
+        "not_internship": 30
+      },
+      "fallback_link": null,
+      "fetched": 37,
+      "kept": 2,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "workday",
+      "company": "Stout",
+      "company_id": "stout",
+      "error": null,
+      "excluded": 5,
+      "exclusion_reasons": {
+        "location_unknown": 3,
+        "not_internship": 2
+      },
+      "fallback_link": null,
+      "fetched": 5,
+      "kept": 0,
+      "status": "ok",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Houlihan Lokey",
+      "company_id": "houlihan-lokey",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://hl.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Moelis & Company",
+      "company_id": "moelis-company",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.moelis.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "D.A. Davidson",
+      "company_id": "d-a-davidson",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.dadavidson.com/careers",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Fireclay Partners",
+      "company_id": "fireclay-partners",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://fireclaypartners.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Jefferies",
+      "company_id": "jefferies",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://www.jefferies.com/careers/",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
+    },
+    {
+      "ats": "manual",
+      "company": "Kroll",
+      "company_id": "kroll",
+      "error": null,
+      "excluded": 0,
+      "exclusion_reasons": {},
+      "fallback_link": "https://careers.kroll.com/en",
+      "fetched": 0,
+      "kept": 0,
+      "status": "manual",
+      "warnings": []
     }
   ],
   "email": {
-    "ids_first_seen_on_sent_date": [],
-    "last_sent_at": "2026-11-03T12:45:14+00:00",
-    "sent_date": "2026-11-03"
+    "ids_first_seen_on_sent_date": [
+      "2202ac91ca86e48b",
+      "3364ad2a6d09b335",
+      "4239be029cc738ea",
+      "61cf05953daaf3ae",
+      "7c27ef09a59caf20",
+      "8c8663c41fb743c9",
+      "961425ae2715e607",
+      "9a40664bea328cb2",
+      "a0274f8ad141b1e4",
+      "f3d315e1eb0475df"
+    ],
+    "last_sent_at": "2026-11-04T12:42:29+00:00",
+    "sent_date": "2026-11-04"
   },
   "errors": [],
   "geocoding": {
@@ -1908,7 +2063,7 @@
   },
   "requests_by_host": {
     "alliantenergy.wd1.myworkdayjobs.com": 6,
-    "allstate.wd5.myworkdayjobs.com": 39,
+    "allstate.wd5.myworkdayjobs.com": 38,
     "americancentury.wd5.myworkdayjobs.com": 6,
     "ameriprise.wd5.myworkdayjobs.com": 9,
     "api.ashbyhq.com": 2,
@@ -1916,101 +2071,104 @@
     "bakertilly.wd5.myworkdayjobs.com": 30,
     "blackrock.wd1.myworkdayjobs.com": 12,
     "bmo.wd3.myworkdayjobs.com": 29,
-    "boards-api.greenhouse.io": 16,
+    "boards-api.greenhouse.io": 17,
     "capitalone.wd12.myworkdayjobs.com": 51,
     "cboe.wd1.myworkdayjobs.com": 21,
     "ci.wd3.myworkdayjobs.com": 11,
-    "cibc.wd3.myworkdayjobs.com": 21,
-    "citi.wd5.myworkdayjobs.com": 42,
+    "cibc.wd3.myworkdayjobs.com": 22,
+    "citi.wd5.myworkdayjobs.com": 43,
     "cliftonlarsonallen.wd115.myworkdayjobs.com": 24,
     "cna.wd1.myworkdayjobs.com": 17,
-    "commercebank.wd1.myworkdayjobs.com": 17,
-    "emcins.wd5.myworkdayjobs.com": 18,
-    "fifththird.wd5.myworkdayjobs.com": 20,
+    "commercebank.wd1.myworkdayjobs.com": 18,
+    "emcins.wd5.myworkdayjobs.com": 19,
+    "fifththird.wd5.myworkdayjobs.com": 21,
     "guggenheim.wd1.myworkdayjobs.com": 5,
     "hcsc.wd1.myworkdayjobs.com": 30,
     "holmesmurphy.wd1.myworkdayjobs.com": 27,
     "hq.wd12.myworkdayjobs.com": 6,
-    "hyvee.wd1.myworkdayjobs.com": 23,
+    "hyvee.wd1.myworkdayjobs.com": 24,
     "kemper.wd5.myworkdayjobs.com": 6,
-    "mmc.wd1.myworkdayjobs.com": 65,
+    "mmc.wd1.myworkdayjobs.com": 67,
     "morningstar.wd5.myworkdayjobs.com": 5,
     "ntrs.wd1.myworkdayjobs.com": 23,
-    "plantemoran.wd1.myworkdayjobs.com": 46,
-    "pnc.wd5.myworkdayjobs.com": 31,
-    "pwc.wd3.myworkdayjobs.com": 31,
+    "pipersandler.wd501.myworkdayjobs.com": 8,
+    "plantemoran.wd1.myworkdayjobs.com": 45,
+    "pnc.wd5.myworkdayjobs.com": 32,
+    "pwc.wd3.myworkdayjobs.com": 32,
     "raymondjames.wd1.myworkdayjobs.com": 14,
     "rb.wd5.myworkdayjobs.com": 29,
     "rsm.wd1.myworkdayjobs.com": 47,
     "statestreet.wd1.myworkdayjobs.com": 31,
+    "stout.wd5.myworkdayjobs.com": 5,
     "sunlife.wd3.myworkdayjobs.com": 10,
     "tiaa.wd1.myworkdayjobs.com": 12,
     "travelers.wd5.myworkdayjobs.com": 40,
-    "uhyus.wd12.myworkdayjobs.com": 17,
+    "uhyus.wd12.myworkdayjobs.com": 18,
     "umb.wd1.myworkdayjobs.com": 13,
     "usbank.wd1.myworkdayjobs.com": 30,
-    "vermeer.wd5.myworkdayjobs.com": 17,
+    "vermeer.wd5.myworkdayjobs.com": 16,
     "wintrust.wd1.myworkdayjobs.com": 16
   },
-  "run_finished": "2026-11-03T12:45:13+00:00",
-  "run_started": "2026-11-03T12:17:38+00:00",
+  "run_finished": "2026-11-04T12:42:29+00:00",
+  "run_started": "2026-11-04T12:14:34+00:00",
   "source_health": {
     "ashby": {
       "ok": 1
     },
     "greenhouse": {
-      "ok": 15
+      "ok": 16
     },
     "manual": {
-      "manual": 48
+      "manual": 53
     },
     "workday": {
-      "ok": 42
+      "ok": 44
     }
   },
   "totals": {
-    "companies": 106,
+    "companies": 114,
     "companies_failed": 0,
-    "companies_fetched_ok": 58,
-    "companies_live": 58,
-    "database_open": 188,
-    "database_total": 209,
-    "excluded": 9937,
-    "fetched": 10128,
+    "companies_fetched_ok": 61,
+    "companies_live": 61,
+    "database_open": 197,
+    "database_total": 219,
+    "excluded": 10065,
+    "fetched": 10256,
     "kept": 191,
-    "listings_after": 209,
+    "listings_after": 219,
     "listings_before": 209,
-    "listings_new": 0,
-    "listings_updated": 188,
+    "listings_new": 10,
+    "listings_updated": 179,
     "location_unknown_open": 23,
-    "open_at_or_above_min_score": 53,
+    "open_at_or_above_min_score": 57,
     "remote_iowa_open": 1,
     "status_changes": {
       "check_failed": 0,
-      "closed": 2,
+      "closed": 1,
       "filtered": 16,
-      "missed": 5,
-      "possibly_closed": 3,
+      "missed": 12,
+      "possibly_closed": 2,
       "verified_open": 0
     }
   },
   "unresolved_locations": {
-    "Amsterdam, Netherlands": 5,
+    "Amsterdam Netherlands": 2,
+    "Amsterdam, Netherlands": 6,
     "Amsterdam, North Holland, Netherlands": 3,
     "Atlanta - Lenox": 2,
     "Bogota Colombia": 4,
     "Boise - Broadway": 3,
     "Boston - High St": 2,
+    "Budapest Hungary": 2,
     "Cairo - ETIC": 9,
     "Chiyoda-ku Tokyo Japan": 3,
     "Dallas": 2,
-    "Denver Downtown": 2,
-    "Golden Valley - Golden": 6,
+    "Golden Valley - Golden": 7,
     "Hong Kong - FWD Tower": 2,
     "Hong Kong, Hong Kong": 3,
     "Hong Kong; Shanghai": 5,
     "Hunghom, Kowloon, Hong Kong": 4,
-    "Iowa": 10,
+    "Iowa": 6,
     "London": 8,
     "London - Tower Place East": 2,
     "London United Kingdom": 9,
@@ -2018,7 +2176,6 @@
     "Madrid - Castellana": 4,
     "McMinnville - Adams": 2,
     "Milan - Broletto": 2,
-    "Milan - Viale Bodio": 2,
     "Mississauga Ontario Canada": 3,
     "New York - 1166": 4,
     "Paris - Euler": 2,
@@ -2028,21 +2185,21 @@
     "Shanghai Shanghai China": 3,
     "Shanghai, China": 8,
     "Singapore": 8,
-    "Singapore - Marina View": 2,
-    "Singapore Singapore": 3,
+    "Singapore Singapore": 4,
     "Sioux Falls": 3,
-    "Southfield": 4,
+    "Southfield": 3,
     "Southfield; Chicago Riverside Plaza": 3,
     "Southfield; Denver Tech Center; Chicago Riverside Plaza": 4,
     "Spokane - Riverpoint": 4,
     "TAURUS": 3,
     "Taguig Philippines": 3,
     "Taipei Taipei City Taiwan": 3,
-    "Toronto": 2,
+    "Toronto": 3,
     "Toronto, ON": 14,
     "Toronto, ON, CAN": 3,
     "USA MA Tewksbury": 2,
     "UT - Ogden - 2225 Washington Blvd": 2,
+    "Vilnius": 2,
     "Warsaw Poland": 4,
     "Yakima - 16th Avenue": 2
   }
