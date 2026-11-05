@@ -10,6 +10,17 @@ from scanner.location import LocationResolver
 
 ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
+SITE_TESTS = Path(__file__).resolve().parent / "site"
+
+
+# P8: every test in tests/site/ is a web app test and gets the `site` marker. pytest.ini's
+# `-m "not site"` leaves them out of a plain `pytest`, which is what the Daily scan runs, so a
+# broken site script can never stop a scan. Deploy site runs them with `pytest -m site`.
+@pytest.hookimpl(tryfirst=True)  # before pytest's own -m deselection reads the markers
+def pytest_collection_modifyitems(items):
+    for item in items:
+        if SITE_TESTS in Path(str(item.fspath)).resolve().parents:
+            item.add_marker(pytest.mark.site)
 
 
 @pytest.fixture(autouse=True)

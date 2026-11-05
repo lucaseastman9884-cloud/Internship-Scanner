@@ -10,7 +10,12 @@ on:
       - '.github/workflows/pages.yml'
       - 'scripts/build_site_config.py'
       - 'scripts/stage_site.py'
+      - 'scripts/site_settings.py'
+      - 'scripts/build_companies.py'
       - 'config/config.yaml'
+      - 'config/companies.yaml'
+      - 'tests/js/**'
+      - 'tests/site/**'
   workflow_dispatch:
   # The daily scan commits data with GITHUB_TOKEN, and GitHub doesn't start other workflows' push
   # runs from such commits. workflow_run is the documented way to run after another workflow.
@@ -25,6 +30,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # Read-only, to look up when the latest successful Daily scan finished ("Last scan ran").
+  actions: read
 
 # One deploy at a time. A newer one waits; a deploy already under way is never cancelled.
 concurrency:
@@ -57,13 +64,38 @@ jobs:
         run: pip install -r requirements.txt
 
       # The site's own tests. A failure stops the deploy, so the live site stays as it was.
+      # The Daily scan's plain `pytest` leaves the `site` tests out (pytest.ini), so only this runs them.
       - name: Test the site
         run: |
           node --test "tests/js/*.test.mjs"
-          pytest tests/test_site_config.py
+          pytest -m site
+
+      # "Last scan ran" on the site. data/meta.json is only committed on days the data changed (D-023),
+      # so it can be older than the latest scan. A run started by a finished Daily scan uses that run's
+      # updated_at (its finish time; runs have no completed_at field). Other deploys ask the API for the
+      # latest successful Daily scan on main. If anything fails, the value is empty and the site shows
+      # only "Data updated": never a made-up time.
+      - name: Find when the last Daily scan finished
+        id: last_scan
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          TRIGGER_TIME: ${{ github.event.workflow_run.updated_at }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_run" ]; then
+            when="$TRIGGER_TIME"
+          else
+            when="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow scan.yml --branch main --status success \
+              --limit 1 --json updatedAt --jq '.[0].updatedAt // ""')"
+          fi
+          echo "time=$when" >> "$GITHUB_OUTPUT"
+          echo "Last successful Daily scan: ${when:-unknown}"
 
       - name: Stage the site
-        run: python scripts/stage_site.py _site
+        env:
+          LAST_SCAN_RAN: ${{ steps.last_scan.outputs.time }}
+        run: python scripts/stage_site.py _site --last-scan-ran "$LAST_SCAN_RAN"
 
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 

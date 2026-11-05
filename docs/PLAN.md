@@ -30,16 +30,19 @@ data/                       internships.json, last_seen.json, meta.json, compani
 data/reference/             Census Gazetteer file, with its source in a README
 scripts/                    commit_data.py and run_summary.py, used by the workflow
                             build_site_config.py, stage_site.py, make_icons.py: the web app (P7)
+                            site_settings.py, build_companies.py: the site: block and companies.json (P8)
 .github/workflows/scan.yml  Daily and manual runs (see docs/AUTOMATION.md)
 .github/workflows/pages.yml Publishes the web app to GitHub Pages (P7, D-044)
-site/                       The web app (P7): index.html, styles.css, js/, service worker, manifest, icons
+site/                       The web app (P7, P8): index.html, styles.css, js/, fonts/, service worker, manifest, icons
 tests/js/                   The web app's unit tests: node --test "tests/js/*.test.mjs"
+tests/site/                 The web app's Python tests: pytest -m site (left out of a plain pytest, so the Daily scan skips them)
 ```
 
 ## 1a. Web app (P7, D-044)
 - **Static, no build step.** `site/` is plain HTML, CSS and ES modules, with no libraries and no third-party requests. A Content-Security-Policy allows only the site's own files.
 - **Published folder.** `scripts/stage_site.py` copies `site/` and the three public data files (`internships.json`, `meta.json`, `companies_status.json`), writes `site_config.json` from `config/config.yaml`, and stamps the service worker's cache name. The app fetches everything by relative path, so it works under `/Internship-Scanner/`.
-- **Files.** `js/lib.js` holds filters, sort and labels; `js/tracker.js` the localStorage tracker; and `js/app.js` the page. The first two have no DOM code, so `node --test` covers them.
+- **Files.** `js/lib.js` holds filters, sort, dates and labels; `js/hub.js` holds routes, the Today numbers, companies and LinkedIn links (P8); `js/tracker.js` holds the localStorage tracker; and `js/theme.js` the stored theme. None of these four touches the DOM. `js/dom.js` and `js/views.js` build pages with text nodes only, and `js/app.js` runs the page. `node --test` covers all but `app.js`, with views drawn into a small fake DOM.
+- **P8 (D-045).** Hash routes: `#/today` (default), `#/listings`, `#/companies`, `#/company/<id>`, `#/my-list` and `#/contacts`. `companies.json` is generated at deploy from `config/companies.yaml` (public fields only) and joined with `companies_status.json`. Fonts are self-hosted (SIL OFL, `site/fonts/README.md`). Theme colours are CSS tokens, checked for WCAG AA contrast by `tests/js/contrast.test.mjs`.
 - **Untrusted text.** Listing fields come from job boards, so they're inserted only as text and never as HTML. Only `http:` and `https:` links are made clickable, and they open with `rel="noopener noreferrer"`.
 
 ## 2. Config schema
@@ -62,9 +65,10 @@ tests/js/                   The web app's unit tests: node --test "tests/js/*.te
 | `status` | `possibly_closed_after_missed_runs`, `closed_after_missed_runs` | Closing logic (N, M) |
 | `new_badge_days` | integer | "New" window (X) |
 | `email` | `min_score`, `max_new`, `max_top_open`, `deadline_window_days`, `areas`, `seasons`, `max_manual`, `exclude_role_categories` (P5.1), `manual_first_tags` (P5.2) | Email filters |
+| `site` (P8, optional) | `posted_within_days`, `default_sort`, `default_theme`, `linkedin_school_id`, `linkedin_school_name`, `manual_first_tags`, `deadline_window_days` | Web app display only; checked at deploy, never by the scanner |
 | `contacts` | budget and priority settings | Engine B only |
 
-`config/companies.yaml` holds a top-level `companies:` list. Each entry has `name`, `ats`, `board`, `cities`, `priority`, and `notes`, plus an optional `tags` list (P5.2), such as `["ib"]`.
+`config/companies.yaml` holds a top-level `companies:` list. Each entry has `name`, `ats`, `board`, `cities`, `priority`, and `notes`, plus an optional `tags` list (P5.2), such as `["ib"]`, and an optional `linkedin_name` (P8).
 - `ats`: `greenhouse`, `lever`, `ashby`, `smartrecruiters`, `workday`, or `manual`
 - `board`: a slug, a Workday career-site URL, or a careers URL when `manual`
 - `priority`: 1 to 3

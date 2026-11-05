@@ -26,7 +26,7 @@ python -m scanner run
 pytest
 ```
 
-`python -m scanner run` fetches jobs and updates the `data/` folder. It takes about 35 to 60 minutes, because it waits between requests on purpose. `pytest` runs the tests and never uses the network.
+`python -m scanner run` fetches jobs and updates the `data/` folder. It takes about 35 to 60 minutes, because it waits between requests on purpose. `pytest` runs the tests and never uses the network. The web app's own tests are separate: `pytest -m site` for the Python ones, and `node --test "tests/js/*.test.mjs"` for the JavaScript ones (they need Node, which GitHub has).
 
 ## The morning email
 After each daily scan on GitHub, the scanner emails a summary: new listings, upcoming deadlines, top open matches, remote Iowa listings, companies to check by hand, and source health. It uses Gmail with an app password, set as three GitHub secrets: `SMTP_USERNAME`, `SMTP_APP_PASSWORD` and `EMAIL_TO`. [docs/AUTOMATION.md](docs/AUTOMATION.md) section 10 shows how to add them.

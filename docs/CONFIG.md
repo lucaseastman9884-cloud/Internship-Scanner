@@ -117,6 +117,17 @@ contacts:
   daily_reveal_cap: 5
   priority: ["isu_alumni", "campus_recruiter", "hiring_team"]
   school_name_for_alumni: "Iowa State University"
+
+# P8 (D-045): the web app's display settings only; the scanner and the email never read them.
+# A bad value here never stops a scan: the site falls back to that setting's default, with a warning.
+site:
+  posted_within_days: [1, 3, 7, 30]  # the "Posted" filter's buttons, in days (1 = "24 h")
+  default_sort: "score"              # score | newest_posted | first_seen | deadline | company
+  default_theme: "dark"              # dark | light (the toggle remembers a visitor's own choice)
+  linkedin_school_id: "164452"       # LinkedIn's school filter number in Engine B's alumni link (D-043)
+  linkedin_school_name: "Iowa State University"  # the words in Engine B's broad LinkedIn link
+  manual_first_tags: ["ib"]          # companies with these tags lead the Companies page
+  deadline_window_days: 14           # Today's "Deadlines soon": today through today + this many days
 ```
 
 ## The `email:` block (Phase 5)
@@ -148,3 +159,16 @@ An entry in `config/companies.yaml` may have an optional `tags` list of words, s
 - `exclude_keywords_outside_home`: title words for jobs that only make sense near campus. A listing whose title has one, as a whole word, with a hyphen or a space ("part-time", "Part Time"), is kept only within `radius_miles` of home. A multi-city posting counts by its closest city; an unknown distance doesn't pass; a remote job is exempt, since there's no commute. Elsewhere, a listing already stored becomes `filtered` with the reason, and a new one isn't stored. `[]` turns this off.
 - `scoring.title_penalty_keywords`: title words, matched as whole words, and the points each adds (negative to lower a score). Each one adds a match reason such as "-30 title: 'marketing' is off-target". The 0 to `max_score` bounds and `no_role_cap` still apply afterwards.
 - `scoring.title_penalty_exempt_categories`: `role_categories` names whose titles never get those penalties, so "2027 Technology Investment Banking Summer Analyst" keeps its score.
+
+## The `site:` block (P8, D-045)
+Display settings for the web app only. `scripts/build_site_config.py` copies them into `site_config.json` at deploy (that file is never committed). The scanner and the email never read them. The scanner's loader accepts the block without checking it, so a bad value can never stop the Daily scan. The deploy checks each value on its own: a missing or bad one falls back to the default shown here, with a yellow warning in the Deploy site run, and the site still deploys.
+- `posted_within_days`: one "Posted" button per value, in days, from 1 to 365. `1` shows as "24 h". A listing's date is its `date_posted` when the source states one and it can be read, or else its `first_seen` date. The site always says which ("Posted Nov 3" or "First seen Nov 3"). A date in the future counts as today. The windows are whole local days: "24 h" means today or yesterday, and "7 days" means today back to 7 days ago.
+- `default_sort`: the sort Listings opens with. `newest_posted` uses that same date, newest first, with ties broken by score.
+- `default_theme`: the theme used until a visitor picks one with the toggle. Their pick is remembered in that browser only.
+- `linkedin_school_id` and `linkedin_school_name`: they fill the two LinkedIn search links on each company page, in exactly Engine B's formats (D-043). The alumni link uses the school's LinkedIn ID and the broad link uses its name. Both links are public searches with no personal data in them.
+- `manual_first_tags`: companies with one of these tags (from `config/companies.yaml`) come first on the Companies page. Then come the rest, by open listings, then by name. This is separate from `email.manual_first_tags`, so the email and the site can differ.
+- `deadline_window_days`: Today's "Deadlines soon" lists stated deadlines from today through today plus this many days. Listings with no stated deadline are left out.
+
+## Company `linkedin_name` (P8)
+An optional field in `config/companies.yaml`. It's the short name the company page puts in its LinkedIn search links. Without it, the site uses the company name with trailing corporate words removed: Financial, System, Group, Inc, Inc., LLC, Corp, Corp., Corporation, Co, Co., Company, Holdings, and a trailing "&". So "Wintrust Financial" becomes "Wintrust", "Federal Reserve System" becomes "Federal Reserve" and "Moelis & Company" becomes "Moelis". A name that would be stripped to nothing is used in full. Set `linkedin_name` only where that result is wrong. Three companies have it today: CME Group, Chicago Trading Company, and Nuveen / TIAA (as "Nuveen").
+

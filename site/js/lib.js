@@ -101,6 +101,74 @@ export function humanize(key) {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+// ---------- dates (P8) ----------
+// Listing dates are calendar dates ("YYYY-MM-DD"). Day arithmetic goes through UTC so a
+// daylight-saving change can't make a day 23 or 25 hours long.
+const YMD = /^(\d{4})-(\d{2})-(\d{2})/;
+
+// "2026-11-03", or the date part of "2026-11-03T08:00:00Z" → "2026-11-03". Anything else → null.
+export function parseYmd(value) {
+  if (typeof value !== "string") return null;
+  const m = YMD.exec(value.trim());
+  if (!m) return null;
+  const [y, mo, d] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  const t = new Date(Date.UTC(y, mo - 1, d));
+  if (t.getUTCFullYear() !== y || t.getUTCMonth() !== mo - 1 || t.getUTCDate() !== d) return null; // 2026-02-30
+  return `${m[1]}-${m[2]}-${m[3]}`;
+}
+
+const dayNumber = (ymd) => Date.UTC(Number(ymd.slice(0, 4)), Number(ymd.slice(5, 7)) - 1, Number(ymd.slice(8, 10))) / 86400000;
+
+// Whole days from `ymd` to `today` (positive = in the past).
+export function daysBetween(ymd, today) {
+  return dayNumber(today) - dayNumber(ymd);
+}
+
+export function addDays(ymd, n) {
+  const t = new Date((dayNumber(ymd) + n) * 86400000);
+  return t.toISOString().slice(0, 10);
+}
+
+// The date "Posted" filters and sorts use: date_posted when the source states a readable one,
+// else first_seen. `kind` says which, so a first_seen date is never shown as a posting date.
+export function effectiveDate(listing) {
+  const posted = parseYmd(listing.date_posted);
+  if (posted) return { ymd: posted, kind: "posted" };
+  const seen = parseYmd(listing.first_seen);
+  return seen ? { ymd: seen, kind: "first_seen" } : null;
+}
+
+// Days since the effective date, measured from the viewer's local "today". A future date counts as today.
+export function postedAgeDays(listing, today) {
+  const eff = effectiveDate(listing);
+  return eff ? Math.max(0, daysBetween(eff.ymd, today)) : null;
+}
+
+// "Posted within N days" covers whole local days: 1 ("24 h") is today or yesterday, since a date with
+// no time could be any moment of that day. So the window is N days back from today, both ends included.
+export function postedWithin(listing, days, today) {
+  const age = postedAgeDays(listing, today);
+  return age !== null && age <= days;
+}
+
+// A stated deadline from today through today + days, both included.
+export function deadlineWithin(listing, days, today) {
+  const d = parseYmd(listing.deadline);
+  if (!d) return false;
+  const ahead = daysBetween(today, d);
+  return ahead >= 0 && ahead <= days;
+}
+
+export function postedLabel(listing, formatter = (ymd) => ymd) {
+  const eff = effectiveDate(listing);
+  if (!eff) return null;
+  return `${eff.kind === "posted" ? "Posted" : "First seen"} ${formatter(eff.ymd)}`;
+}
+
+export function postedButtonLabel(days) {
+  return days === 1 ? "24 h" : `${days} days`;
+}
+
 export function defaultFilters(config) {
   return {
     query: "",
@@ -116,6 +184,9 @@ export function defaultFilters(config) {
     eligibility: [],
     minScore: null,   // null = no minimum
     showRemote: true,
+    postedDays: null, // P8: null = any; else posted (or first seen) within this many days
+    newOnly: false,   // P8: first_seen within new_badge_days (the NEW badge)
+    deadlineDays: null, // P8: null = any; else a stated deadline within this many days
   };
 }
 
@@ -130,11 +201,16 @@ export function activeFilterCount(filters, config) {
   if ([...filters.statuses].sort().join() !== d.statuses.join()) n++;
   if (filters.minScore !== null) n++;
   if (!filters.showRemote) n++;
+  if (filters.postedDays != null) n++;
+  if (filters.newOnly) n++;
+  if (filters.deadlineDays != null) n++;
   return n;
 }
 
 // Builds one predicate per active filter, so a list of 2,000 is checked without per-item setup.
-export function makePredicate(filters, config) {
+// `now` is the viewer's clock, passed in so tests can fix it.
+export function makePredicate(filters, config, now = new Date()) {
+  const today = localDate(now);
   const checks = [];
   const statuses = new Set(filters.statuses);
   checks.push((l) => statuses.has(l.status));
@@ -169,13 +245,16 @@ export function makePredicate(filters, config) {
   if (filters.minScore !== null) {
     checks.push((l) => Number.isFinite(l.relevance_score) && l.relevance_score >= filters.minScore);
   }
+  if (filters.postedDays != null) checks.push((l) => postedWithin(l, filters.postedDays, today));
+  if (filters.newOnly) checks.push((l) => isNew(l, config, today));
+  if (filters.deadlineDays != null) checks.push((l) => deadlineWithin(l, filters.deadlineDays, today));
   return (l) => checks.every((c) => c(l));
 }
 
 // Place filters (city, distance) describe where you'd work in person, so they skip the remote
 // section, as the email's areas filter does (D-033). Every other filter applies to both.
-export function applyFilters(listings, filters, config) {
-  const base = makePredicate({ ...filters, city: "" }, config);
+export function applyFilters(listings, filters, config, now = new Date()) {
+  const base = makePredicate({ ...filters, city: "" }, config, now);
   const home = config.home;
   const inPerson = [];
   const remote = [];
@@ -202,23 +281,34 @@ const missingLast = (va, vb, cmp) => (va == null ? (vb == null ? 0 : 1) : vb == 
 const desc = (x, y) => (x < y ? 1 : x > y ? -1 : 0);
 const asc = (x, y) => (x < y ? -1 : x > y ? 1 : 0);
 
+const byScore = (a, b) => missingLast(a.relevance_score, b.relevance_score, desc);
+const effYmd = (l) => { const e = effectiveDate(l); return e ? e.ymd : null; };
+
+// `hidden` sorts still work (old links, tests) but aren't offered in the menu.
 export const SORTS = {
-  score: { label: "Score (high first)", cmp: (a, b) => missingLast(a.relevance_score, b.relevance_score, desc) || tie(a, b) },
+  score: { label: "Score (high first)", cmp: (a, b) => byScore(a, b) || tie(a, b) },
+  // P8: the "Posted" date (date_posted, else first_seen), newest first; ties by score.
+  newest_posted: { label: "Newest posted", cmp: (a, b) => missingLast(effYmd(a), effYmd(b), desc) || byScore(a, b) || tie(a, b) },
   first_seen: { label: "First seen (newest)", cmp: (a, b) => missingLast(a.first_seen, b.first_seen, desc) || tie(a, b) },
-  date_posted: { label: "Date posted (newest)", cmp: (a, b) => missingLast(a.date_posted, b.date_posted, desc) || tie(a, b) },
+  date_posted: { label: "Date posted (newest)", hidden: true, cmp: (a, b) => missingLast(a.date_posted, b.date_posted, desc) || tie(a, b) },
   deadline: { label: "Deadline (soonest)", cmp: (a, b) => missingLast(a.deadline, b.deadline, asc) || tie(a, b) },
   company: { label: "Company A–Z", cmp: (a, b) => tie(a, b) },
 };
 
 export function sortListings(listings, key) {
   const sort = SORTS[key] || SORTS.score;
-  return [...listings].sort(sort.cmp);
+  if (key !== "newest_posted") return [...listings].sort(sort.cmp);
+  // Work out each effective date once, not once per comparison.
+  const keyed = listings.map((l) => [effYmd(l), l]);
+  keyed.sort((x, y) => missingLast(x[0], y[0], desc) || byScore(x[1], y[1]) || tie(x[1], y[1]));
+  return keyed.map((k) => k[1]);
 }
 
 // "New" is first_seen within new_badge_days of today (SPEC). today is "YYYY-MM-DD".
 export function isNew(listing, config, today) {
-  if (!listing.first_seen || !today) return false;
-  const days = (Date.parse(today) - Date.parse(listing.first_seen)) / 86400000;
+  const seen = parseYmd(listing.first_seen);
+  if (!seen || !today) return false;
+  const days = daysBetween(seen, today);
   return days >= 0 && days < config.new_badge_days;
 }
 

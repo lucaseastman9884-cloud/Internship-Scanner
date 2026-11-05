@@ -6,25 +6,52 @@
   <!-- Self only: no inline scripts, no third-party hosts. Listing text is untrusted. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Internship Scanner</title>
+  <title>Today · Internship Scanner</title>
   <meta name="description" content="Finance internships near Ames, Iowa, from public company job boards.">
-  <meta name="theme-color" content="#1f3a5f" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#070912" id="theme-color">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <!-- Loaded early, so text is drawn in the real fonts sooner (font-display: swap still applies). -->
+  <link rel="preload" href="fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="js/app.js"></script>
+  <!-- app.js imports these; fetching them now saves a round trip each on slow connections. -->
+  <link rel="modulepreload" href="js/lib.js">
+  <link rel="modulepreload" href="js/hub.js">
+  <link rel="modulepreload" href="js/dom.js">
+  <link rel="modulepreload" href="js/views.js">
+  <link rel="modulepreload" href="js/theme.js">
+  <link rel="modulepreload" href="js/tracker.js">
 </head>
 <body>
-  <a class="skip" href="#results">Skip to results</a>
-  <header class="top" id="top">
+  <!-- Decorative moving light behind the glass panels. CSS only; it stops under reduced motion
+       and pauses while the tab is hidden. -->
+  <div class="backdrop" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <!-- One shared gradient for every score gauge. -->
+  <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <linearGradient id="accent-gradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" class="stop-1"/><stop offset="0.5" class="stop-2"/><stop offset="1" class="stop-3"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top glass" id="top">
     <div class="top-row">
-      <h1>Internship Scanner</h1>
-      <nav class="views" aria-label="Views">
-        <button type="button" id="view-listings" class="view-btn" aria-pressed="true">Listings</button>
-        <button type="button" id="view-mylist" class="view-btn" aria-pressed="false">My List <span id="mylist-count">(0)</span></button>
+      <a class="brand" href="#/today"><span class="brand-mark" aria-hidden="true"></span>Internship Scanner</a>
+      <nav class="nav" aria-label="Pages">
+        <a href="#/today" data-nav="today">Today</a>
+        <a href="#/listings" data-nav="listings">Listings</a>
+        <a href="#/companies" data-nav="companies">Companies</a>
+        <a href="#/my-list" data-nav="my-list">My List <span id="mylist-count" class="nav-count">(0)</span></a>
+        <a href="#/contacts" data-nav="contacts">Contacts</a>
       </nav>
+      <button type="button" id="theme-toggle" class="icon-btn" aria-pressed="false">Light theme</button>
     </div>
     <p id="freshness" class="meta-line">Loading scan details…</p>
     <p id="health" class="meta-line"></p>
@@ -33,85 +60,111 @@
   <div class="banners">
     <p id="offline-banner" class="banner banner-warn" role="status" hidden></p>
     <p id="update-banner" class="banner" role="status" hidden>New version available. <button type="button" id="update-reload">Reload</button></p>
-    <p id="storage-banner" class="banner banner-warn" role="status" hidden>This browser won't let the site save data, so tracker changes last only until you close this tab.</p>
+    <p id="storage-banner" class="banner banner-warn" role="status" hidden>This browser won't let the site save data, so tracker changes and your theme last only until you close this tab.</p>
   </div>
 
-  <main id="main">
-    <section id="listings-view" class="layout" aria-label="Listings">
-      <details id="filters" class="filters">
-        <summary>Filters <span id="filter-count" class="muted"></span></summary>
-        <form id="filter-form" class="filter-form" novalidate>
-          <div class="field">
-            <label for="f-query">Search title or company</label>
-            <input id="f-query" type="search" autocomplete="off" spellcheck="false">
-          </div>
-          <div class="field">
-            <label for="f-sort">Sort by</label>
-            <select id="f-sort"></select>
-          </div>
-          <fieldset class="field" id="f-status"><legend>Status</legend></fieldset>
-          <div class="field">
-            <div class="check"><input id="f-distance-on" type="checkbox"><label for="f-distance-on">Limit distance from <span id="home-name">home</span></label></div>
-            <label for="f-distance" class="sr-only">Maximum miles from home</label>
-            <input id="f-distance" type="range" min="10" max="1500" step="10" disabled aria-describedby="f-distance-out">
-            <output id="f-distance-out" for="f-distance" class="muted"></output>
-          </div>
-          <div class="field">
-            <label for="f-city">City</label>
-            <select id="f-city"><option value="">Any city</option></select>
-          </div>
-          <fieldset class="field" id="f-role"><legend>Role category</legend></fieldset>
-          <fieldset class="field" id="f-season"><legend>Season</legend></fieldset>
-          <fieldset class="field">
-            <legend>First seen</legend>
-            <div class="row">
-              <label for="f-from">From</label><input id="f-from" type="date">
-              <label for="f-to">To</label><input id="f-to" type="date">
-            </div>
-          </fieldset>
-          <fieldset class="field" id="f-source"><legend>Source</legend></fieldset>
-          <fieldset class="field" id="f-elig"><legend>Eligibility</legend></fieldset>
-          <div class="field">
-            <label for="f-score">Minimum score</label>
-            <input id="f-score" type="range" step="5" aria-describedby="f-score-out">
-            <output id="f-score-out" for="f-score" class="muted"></output>
-          </div>
-          <div class="field check"><input id="f-remote" type="checkbox" checked><label for="f-remote">Show the <span id="remote-name">remote</span> section</label></div>
-          <button type="button" id="clear-filters" class="secondary">Clear filters</button>
-        </form>
-      </details>
+  <main id="main" tabindex="-1">
+    <div id="load-state" class="state glass" role="status">Loading…</div>
 
-      <div class="results" id="results" tabindex="-1">
-        <p id="result-count" class="count" aria-live="polite"></p>
-        <p id="status-note" class="note" hidden>Filtered by config — score may be outdated. These listings were last scored before a config change, and their score and location weren't refreshed.</p>
-        <div id="state-msg" class="state" role="status">Loading listings…</div>
-        <ul id="list" class="cards"></ul>
-        <button type="button" id="more" class="secondary more" hidden>Show more</button>
-        <section id="remote-section" class="remote" aria-labelledby="remote-heading" hidden>
-          <h2 id="remote-heading">Remote</h2>
-          <p class="muted">Remote jobs tied to the state. They're kept apart from the in-person list; the city and distance filters don't apply here.</p>
-          <ul id="remote-list" class="cards"></ul>
-          <p id="remote-empty" class="muted" hidden>No remote listings match.</p>
-        </section>
+    <section id="view-today" class="view" aria-label="Today" hidden></section>
+
+    <section id="listings-view" class="view" aria-labelledby="listings-heading" hidden>
+      <header class="page-head">
+        <h1 id="listings-heading" class="page-title" tabindex="-1">Listings</h1>
+      </header>
+      <div class="layout">
+        <details id="filters" class="filters glass">
+          <summary>Filters <span id="filter-count" class="muted"></span></summary>
+          <form id="filter-form" class="filter-form" novalidate>
+            <div class="field">
+              <label for="f-query">Search title or company</label>
+              <input id="f-query" type="search" autocomplete="off" spellcheck="false">
+            </div>
+            <div class="field">
+              <label for="f-sort">Sort by</label>
+              <select id="f-sort"></select>
+            </div>
+            <fieldset class="field" id="f-posted">
+              <legend>Posted</legend>
+              <div class="seg" id="f-posted-options"></div>
+              <p class="hint muted">Uses the posting date when the source gives one, else the day it was first seen.</p>
+            </fieldset>
+            <div class="field check"><input id="f-new" type="checkbox"><label for="f-new">New only (<span id="f-new-days">recent</span>)</label></div>
+            <div class="field check"><input id="f-deadline" type="checkbox"><label for="f-deadline">Deadline in the next <span id="f-deadline-days">few</span> days</label></div>
+            <fieldset class="field" id="f-status"><legend>Status</legend></fieldset>
+            <div class="field">
+              <div class="check"><input id="f-distance-on" type="checkbox"><label for="f-distance-on">Limit distance from <span id="home-name">home</span></label></div>
+              <label for="f-distance" class="sr-only">Maximum miles from home</label>
+              <input id="f-distance" type="range" min="10" max="1500" step="10" disabled aria-describedby="f-distance-out">
+              <output id="f-distance-out" for="f-distance" class="muted"></output>
+            </div>
+            <div class="field">
+              <label for="f-city">City</label>
+              <select id="f-city"><option value="">Any city</option></select>
+            </div>
+            <fieldset class="field" id="f-role"><legend>Role category</legend></fieldset>
+            <fieldset class="field" id="f-season"><legend>Season</legend></fieldset>
+            <fieldset class="field">
+              <legend>First seen</legend>
+              <div class="row">
+                <label for="f-from">From</label><input id="f-from" type="date">
+                <label for="f-to">To</label><input id="f-to" type="date">
+              </div>
+            </fieldset>
+            <fieldset class="field" id="f-source"><legend>Source</legend></fieldset>
+            <fieldset class="field" id="f-elig"><legend>Eligibility</legend></fieldset>
+            <div class="field">
+              <label for="f-score">Minimum score</label>
+              <input id="f-score" type="range" step="5" aria-describedby="f-score-out">
+              <output id="f-score-out" for="f-score" class="muted"></output>
+            </div>
+            <div class="field check"><input id="f-remote" type="checkbox" checked><label for="f-remote">Show the <span id="remote-name">remote</span> section</label></div>
+            <button type="button" id="clear-filters" class="secondary">Clear filters</button>
+          </form>
+        </details>
+
+        <div class="results" id="results" tabindex="-1">
+          <p id="result-count" class="count" aria-live="polite"></p>
+          <p id="status-note" class="note" hidden>Filtered by config — score may be outdated. These listings were last scored before a config change, and their score and location weren't refreshed.</p>
+          <div id="state-msg" class="state glass" role="status" hidden></div>
+          <h2 class="sr-only">Matching listings</h2>
+          <ul id="list" class="cards"></ul>
+          <button type="button" id="more" class="secondary more" hidden>Show more</button>
+          <section id="remote-section" class="remote" aria-labelledby="remote-heading" tabindex="-1" hidden>
+            <h2 id="remote-heading">Remote</h2>
+            <p class="muted">Remote jobs tied to the state. They're kept apart from the in-person list; the city and distance filters don't apply here.</p>
+            <ul id="remote-list" class="cards"></ul>
+            <p id="remote-empty" class="muted" hidden>No remote listings match.</p>
+          </section>
+        </div>
       </div>
     </section>
 
-    <section id="mylist-view" class="mylist" aria-labelledby="mylist-heading" hidden>
-      <h2 id="mylist-heading">My List</h2>
-      <p class="muted">Saved only in this browser. Export a file to keep a copy or move it to another device.</p>
+    <section id="view-companies" class="view" aria-label="Companies" hidden></section>
+    <section id="view-company" class="view" aria-label="Company" hidden></section>
+
+    <section id="mylist-view" class="view mylist" aria-labelledby="mylist-heading" hidden>
+      <header class="page-head">
+        <h1 id="mylist-heading" class="page-title" tabindex="-1">My List</h1>
+        <p class="muted">Saved only in this browser. Export a file to keep a copy or move it to another device.</p>
+      </header>
       <div class="toolbar">
         <button type="button" id="export-btn" class="secondary">Export</button>
         <button type="button" id="import-btn" class="secondary">Import</button>
         <input id="import-file" type="file" accept="application/json,.json" hidden>
       </div>
       <p id="import-msg" class="note" role="status" hidden></p>
-      <p id="mylist-empty" class="state" hidden>Nothing saved yet. Open a listing and tick "Save to My List".</p>
+      <p id="mylist-empty" class="state glass" hidden>Nothing saved yet. Open a listing and tick "Save to My List".</p>
+      <h2 class="sr-only">Saved listings</h2>
       <ul id="mylist" class="cards"></ul>
     </section>
+
+    <section id="view-contacts" class="view" aria-label="Contacts" hidden></section>
+    <section id="view-not-found" class="view" aria-label="Not found" hidden></section>
   </main>
 
   <div id="scrim" class="scrim" hidden></div>
-  <div id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div id="drawer" class="drawer glass" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
     <div class="drawer-head">
       <button type="button" id="drawer-close" class="secondary">Close</button>
     </div>

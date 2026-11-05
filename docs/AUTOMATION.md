@@ -155,7 +155,7 @@ This makes one run fail on purpose, so you can see the "Scan failed" email arriv
 Scheduled runs are unaffected. GitHub fills `inputs` only for manual (and reusable) runs, and a missing value counts as empty, which is false, so the step is skipped at 5:33 AM.
 
 ## 11. The web app on GitHub Pages (Phase 7)
-`.github/workflows/pages.yml` ("Deploy site") publishes `site/` plus `data/internships.json`, `data/meta.json`, `data/companies_status.json` and a generated `site_config.json`.
+`.github/workflows/pages.yml` ("Deploy site") publishes `site/` plus `data/internships.json`, `data/meta.json` and `data/companies_status.json`. It also publishes two files it generates at deploy: `site_config.json` and, since P8, `companies.json` (public company fields only).
 
 **One-time setup** (after the P7 pull request is merged):
 1. On GitHub, open the repo, click **Settings**, then **Pages** in the left sidebar.
@@ -165,10 +165,17 @@ Scheduled runs are unaffected. GitHub fills `inputs` only for manual (and reusab
 
 **When it runs:**
 - After every successful **Daily scan** on `main`, so the site has the newest data. The scan's own commit can't start it, because GitHub doesn't start workflows from commits made with `GITHUB_TOKEN`; `workflow_run` is GitHub's documented way to run one workflow after another. A failed scan doesn't deploy.
-- On a push to `main` that changes `site/`, this workflow, `scripts/build_site_config.py`, `scripts/stage_site.py` or `config/config.yaml`.
+- On a push to `main` that changes `site/`, this workflow, the site scripts (`scripts/build_site_config.py`, `scripts/site_settings.py`, `scripts/build_companies.py`, `scripts/stage_site.py`), `config/config.yaml`, `config/companies.yaml`, or the site's tests.
 - By hand, with **Run workflow**.
 
-It runs the site's tests first (`node --test` and `pytest tests/test_site_config.py`). If they fail, nothing is published and the old site stays up.
+It runs the site's tests first (`node --test "tests/js/*.test.mjs"` and `pytest -m site`). If they fail, nothing is published and the old site stays up.
+
+**The site's tests never run in the Daily scan (P8).** The Python ones live in `tests/site/` and are marked `site`. `pytest.ini` adds `-m "not site"`, so a plain `pytest` leaves them out, and a plain `pytest` is what the Daily scan runs. A broken site script can't stop a scan. To run them on your Mac: `pytest -m site`.
+
+**"Last scan ran" (P8).** `data/meta.json` is committed only on days when the listings changed (D-023), so its time ("Data updated") can be older than the latest scan. Before staging, the deploy looks up when the latest successful Daily scan finished, and the site shows it as "Last scan ran":
+- When a finished Daily scan started the deploy, it uses that run's `updated_at`. A run has no `completed_at` field, and a completed run's `updated_at` is when it finished.
+- Otherwise it asks GitHub: `gh run list --workflow scan.yml --branch main --status success --limit 1 --json updatedAt`, using the workflow's own `GITHUB_TOKEN` with the read-only `actions: read` permission.
+- If the lookup fails, the step is allowed to fail, the time is left out, and the site shows only "Data updated". It never shows a made-up time.
 
 **Try it on your Mac first** (optional): `python scripts/stage_site.py _site`, then `python -m http.server 8000 --directory _site`, and open http://localhost:8000 in Chrome. `_site/` is ignored by git.
 
@@ -189,3 +196,7 @@ It runs the site's tests first (`node --test` and `pytest tests/test_site_config
 - App passwords: https://support.google.com/mail/answer/185833
 - `inputs` context ("only available in a reusable workflow or in a workflow triggered by the workflow_dispatch event") and a nonexistent property evaluating to an empty string (read 2026-11-03): https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
 - Repository secrets, and forks not receiving them: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets
+- P8 (read 2026-11-05). `gh run list` flags (`--workflow`, `--branch`, `--status success`, `--limit`, `--json`, `--jq`, `--repo`) and its JSON fields, including `updatedAt`: https://cli.github.com/manual/gh_run_list
+- Using `GITHUB_TOKEN` with the GitHub CLI through the `GH_TOKEN` environment variable: https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
+- Workflow run fields (`updated_at`, `run_started_at`, `conclusion`, `status`; there is no `completed_at`): https://docs.github.com/en/rest/actions/workflow-runs
+- The `actions` permission, and "all of those that are not specified are set to `none`": https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax

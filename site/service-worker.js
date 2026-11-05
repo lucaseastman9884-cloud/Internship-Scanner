@@ -3,7 +3,8 @@
 // scripts/stage_site.py replaces the stamp below with a hash of site/, so any app change gets a
 // new cache name and the old one is deleted on activate.
 const VERSION = "__BUILD_STAMP__";
-const SHELL_CACHE = `shell-${VERSION}`;
+// P8: the "p8-" prefix is a new cache name on top of the stamp, so no P7 shell survives the update.
+const SHELL_CACHE = `p8-shell-${VERSION}`;
 const DATA_CACHE = "data-v1"; // kept across app versions: it's the offline copy of the listings
 
 const SHELL = [
@@ -12,13 +13,19 @@ const SHELL = [
   "./styles.css",
   "./js/app.js",
   "./js/lib.js",
+  "./js/hub.js",
+  "./js/dom.js",
+  "./js/views.js",
+  "./js/theme.js",
   "./js/tracker.js",
+  "./fonts/inter-latin-wght.woff2",
+  "./fonts/space-grotesk-latin-wght.woff2",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/maskable-512.png",
 ];
-const DATA = ["site_config.json", "data/internships.json", "data/meta.json", "data/companies_status.json"];
+const DATA = ["site_config.json", "companies.json", "data/internships.json", "data/meta.json", "data/companies_status.json"];
 const scopeUrl = (path) => new URL(path, self.registration.scope).href;
 
 self.addEventListener("install", (event) => {
