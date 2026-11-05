@@ -10,9 +10,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Accounting Intern (Term-Time, Part-Time)"
     },
     "open_intern_count": 4
@@ -28,7 +28,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -43,7 +43,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -58,12 +58,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Corporate Communications Intern"
+      "seen_on": "2026-11-05",
+      "title": "Systematic Credit Intern"
     },
-    "open_intern_count": 3
+    "open_intern_count": 2
   },
   "american-equity": {
     "ats": "greenhouse",
@@ -76,9 +76,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Strategic Analyst Intern"
     },
     "open_intern_count": 7
@@ -94,9 +94,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Actuarial Intern"
     },
     "open_intern_count": 1
@@ -142,7 +142,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -172,12 +172,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Derivates Operations Co-op (2027)"
+      "seen_on": "2026-11-05",
+      "title": "Derivatives Operations Co-op (2027)"
     },
-    "open_intern_count": 7
+    "open_intern_count": 6
   },
   "baird": {
     "ats": "manual",
@@ -205,10 +205,10 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Tax or Audit Internship - BPB & Anchin Conversions"
+      "seen_on": "2026-11-05",
+      "title": "Summer 2027 Public Sector Finance Intern (Capital & Infrastructure - Debt Issuance)"
     },
     "open_intern_count": 6
   },
@@ -253,9 +253,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Quantitative Masters Internship Program - Sales & Relationship Management - Institutional Wealth - Chicago"
     },
     "open_intern_count": 11
@@ -271,12 +271,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "UX/UI Designer, Winter 2027 (Co-op/Internship)- 4 months"
+      "seen_on": "2026-11-05",
+      "title": "US COO Summer Internship Program - Summer 2027"
     },
-    "open_intern_count": 5
+    "open_intern_count": 8
   },
   "capital-one": {
     "ats": "workday",
@@ -289,12 +289,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Technology Internship Program - Mexico - 2027"
     },
-    "open_intern_count": 3
+    "open_intern_count": 2
   },
   "casey-s": {
     "ats": "manual",
@@ -322,12 +322,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Technical Business Analyst Intern"
+      "seen_on": "2026-11-05",
+      "title": "Enterprise Strategy & Corporate Development Intern"
     },
-    "open_intern_count": 12
+    "open_intern_count": 13
   },
   "chicago-trading-company": {
     "ats": "greenhouse",
@@ -340,7 +340,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -355,9 +355,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Summer Intern - People, Culture & Talent"
     },
     "open_intern_count": 27
@@ -373,12 +373,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Technology, Production Support, Summer Analyst, New York - USA, 2027"
     },
-    "open_intern_count": 92
+    "open_intern_count": 94
   },
   "citizens": {
     "ats": "manual",
@@ -406,12 +406,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Tax and Audit Intern - Winter 2027 - Central FL"
+      "seen_on": "2026-11-05",
+      "title": "Tax and Audit Intern - Winter 2027 - Naples/Ft. Myers, FL"
     },
-    "open_intern_count": 33
+    "open_intern_count": 34
   },
   "cme-group": {
     "ats": "manual",
@@ -439,12 +439,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Technology Internship Program (Software Engineering)"
     },
-    "open_intern_count": 7
+    "open_intern_count": 6
   },
   "commerce-bank": {
     "ats": "workday",
@@ -457,10 +457,10 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Intern - IT (Summer 2027)"
+      "seen_on": "2026-11-05",
+      "title": "Intern - Audit (Summer 2027)"
     },
     "open_intern_count": 13
   },
@@ -475,9 +475,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Portfolio Implementation Intern (Summer 2027)"
     },
     "open_intern_count": 20
@@ -508,9 +508,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Summer Sales Internship"
     },
     "open_intern_count": 4
@@ -586,9 +586,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "FPGA Intern"
     },
     "open_intern_count": 13
@@ -634,12 +634,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Learning, Culture & Inclusion Intern"
     },
-    "open_intern_count": 10
+    "open_intern_count": 7
   },
   "enova": {
     "ats": "greenhouse",
@@ -652,9 +652,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Software Engineer Internship Summer 2027 (Hybrid)"
     },
     "open_intern_count": 3
@@ -700,12 +700,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Summer 2027 Intern - Information and Library Science"
     },
-    "open_intern_count": 48
+    "open_intern_count": 47
   },
   "fifth-third": {
     "ats": "workday",
@@ -718,9 +718,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Wealth and Asset Management Co-Op - FULL TIME May 2027-August 2027"
     },
     "open_intern_count": 2
@@ -781,12 +781,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "2027 Valuation Summer Intern"
+      "seen_on": "2026-11-05",
+      "title": "2027 Treasury Summer Intern"
     },
-    "open_intern_count": 7
+    "open_intern_count": 8
   },
   "geneva-trading": {
     "ats": "greenhouse",
@@ -799,9 +799,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Trade Support Engineer Intern"
     },
     "open_intern_count": 4
@@ -847,7 +847,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -907,7 +907,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -922,9 +922,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Early Careers - IT QA Intern"
     },
     "open_intern_count": 21
@@ -940,9 +940,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Population Health Intern - Summer 2027"
     },
     "open_intern_count": 26
@@ -988,9 +988,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Retail Pharmacy Intern"
     },
     "open_intern_count": 16
@@ -1006,10 +1006,10 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Machine Learning Engineer Intern - Summer 2027"
+      "seen_on": "2026-11-05",
+      "title": "Research Analyst Intern - Summer 2027"
     },
     "open_intern_count": 15
   },
@@ -1039,9 +1039,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Campus Python Software Engineer (Intern)"
     },
     "open_intern_count": 26
@@ -1057,7 +1057,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -1132,9 +1132,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2028 Summer Analyst Intern | PFA"
     },
     "open_intern_count": 7
@@ -1165,9 +1165,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Intern, Tax- Cincinnati, OH"
     },
     "open_intern_count": 1
@@ -1183,12 +1183,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Workforce and Rewards Summer Intern - Chicago - College Program 2027"
+      "seen_on": "2026-11-05",
+      "title": "Marsh Risk Early Career Program, Summer Intern 2027 – Claims Advocacy, Chicago"
     },
-    "open_intern_count": 100
+    "open_intern_count": 102
   },
   "mesirow": {
     "ats": "manual",
@@ -1261,7 +1261,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -1306,12 +1306,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Wealth Management Legal Intern"
     },
-    "open_intern_count": 2
+    "open_intern_count": 1
   },
   "northwestern-medicine": {
     "ats": "manual",
@@ -1339,12 +1339,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Early Talent Internship: Risk & Compliance"
     },
-    "open_intern_count": 4
+    "open_intern_count": 3
   },
   "optiver": {
     "ats": "greenhouse",
@@ -1357,12 +1357,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Compliance Intern – Regulatory Advisory"
+      "seen_on": "2026-11-05",
+      "title": "Expressions of Interest - Quantitative Research Internship, Bachelor or Master (Summer 2028 - Shanghai)"
     },
-    "open_intern_count": 17
+    "open_intern_count": 16
   },
   "pella": {
     "ats": "manual",
@@ -1390,12 +1390,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Summer Internship Program – Public Finance"
     },
-    "open_intern_count": 4
+    "open_intern_count": 3
   },
   "plante-moran": {
     "ats": "workday",
@@ -1408,9 +1408,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Marketing Technology Intern"
     },
     "open_intern_count": 38
@@ -1426,12 +1426,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Corporate & Institutional Banking Undergraduate Intern – Commercial & Corporate Banking – Financials and Diversified Track"
+      "seen_on": "2026-11-05",
+      "title": "Technology Undergraduate Intern"
     },
-    "open_intern_count": 3
+    "open_intern_count": 1
   },
   "principal-financial-group": {
     "ats": "manual",
@@ -1459,9 +1459,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Technology EPM Junior Consultant - Internship - Rubano (Padova)"
     },
     "open_intern_count": 15
@@ -1477,7 +1477,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -1507,9 +1507,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Technology Risk Consulting Intern - Summer 2027"
     },
     "open_intern_count": 19
@@ -1540,9 +1540,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Engineering Internship - Summer 2027"
     },
     "open_intern_count": 1
@@ -1573,12 +1573,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "State Street Investment Management -Americas Strategy and Insights Analyst - 2027 Summer Internship"
     },
-    "open_intern_count": 5
+    "open_intern_count": 8
   },
   "stifel": {
     "ats": "manual",
@@ -1606,9 +1606,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Summer 2027 Intern - Disputes, Claims & Investigations: Washington, DC"
     },
     "open_intern_count": 3
@@ -1624,9 +1624,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Risk Management Intern (Jul - Dec 2027 Placement)"
     },
     "open_intern_count": 6
@@ -1642,7 +1642,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -1672,9 +1672,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Risk Control Intern"
     },
     "open_intern_count": 76
@@ -1690,12 +1690,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Payment Sales Intern"
     },
-    "open_intern_count": 3
+    "open_intern_count": 2
   },
   "uhy": {
     "ats": "workday",
@@ -1708,12 +1708,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "2027 Governmental Audit Summer Internship - Maryland"
     },
-    "open_intern_count": 13
+    "open_intern_count": 12
   },
   "umb-financial": {
     "ats": "workday",
@@ -1726,12 +1726,12 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
-      "title": "Public Finance Intern"
+      "seen_on": "2026-11-05",
+      "title": "Corporate Tax Intern"
     },
-    "open_intern_count": 10
+    "open_intern_count": 11
   },
   "vermeer": {
     "ats": "workday",
@@ -1744,9 +1744,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Design Engineer Intern - Summer 2027"
     },
     "open_intern_count": 12
@@ -1807,7 +1807,7 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": null,
     "open_intern_count": 0
   },
@@ -1822,9 +1822,9 @@
       "last_error": null,
       "status": "ok"
     },
-    "last_checked": "2026-11-04T12:14:34+00:00",
+    "last_checked": "2026-11-05T12:24:43+00:00",
     "last_intern_posting_seen": {
-      "seen_on": "2026-11-04",
+      "seen_on": "2026-11-05",
       "title": "Wintrust 2027 Summer Internship: Human Resources"
     },
     "open_intern_count": 11

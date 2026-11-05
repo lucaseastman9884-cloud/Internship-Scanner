@@ -114,7 +114,7 @@
     "first_seen": "2026-11-02",
     "id": "048f20d1c49b2e36",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": 38.889042,
     "lng": -94.690584,
     "location_label": "Overland Park, KS",
@@ -125,7 +125,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -139,7 +139,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Legal Intern"
   },
@@ -1213,7 +1213,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -2591,7 +2591,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3396,7 +3396,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -4081,6 +4081,53 @@
     "title": "Product Marketing Intern"
   },
   {
+    "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Corporate-Tax-Intern_R-9689",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "country": "United States",
+    "date_posted": "2026-11-04",
+    "deadline": null,
+    "description_snippet": "The Corporate Tax team is essential to the success of UMB. This team works to increase shareholder value by minimizing the corporate tax burden and maintaining compliance with the tax laws. We are an “in-house” tax department that will utilize outside specialists when needed. We...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-05",
+    "id": "6692e27f7f9844bb",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "Kansas City MO",
+    "match_reasons": [
+      "+40 role: 'tax intern' in title (accounting)",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 68,
+    "role_category": "accounting",
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "umb:R-9689",
+        "source_name": "workday",
+        "url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Corporate-Tax-Intern_R-9689"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Corporate Tax Intern"
+  },
+  {
     "apply_url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8035967003",
     "ats": "greenhouse",
     "city": "Chicago",
@@ -4271,6 +4318,53 @@
     "title": "2027 Realpoint Project Analyst Intern"
   },
   {
+    "apply_url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE/job/Chicago-IL/Enterprise-Strategy---Corporate-Development-Intern_R-4805",
+    "ats": "workday",
+    "city": "Chicago",
+    "company": "Cboe Global Markets",
+    "company_id": "cboe-global-markets",
+    "country": "United States",
+    "date_posted": "2026-11-04",
+    "deadline": null,
+    "description_snippet": "Job Description:. Building trusted markets — powered by our people. At Cboe Global Markets, we inspire our people to solve complex challenges together because what we do matters. We provide the financial infrastructure that powers the global economy. As a leading provider of...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-05",
+    "id": "6f0ac870f1f2ba54",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL; New York, NY",
+    "match_reasons": [
+      "-10 role: 'investment banking' only in description, which may be company boilerplate",
+      "+20 location: Chicago metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "cboe:R-4805",
+        "source_name": "workday",
+        "url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE/job/Chicago-IL/Enterprise-Strategy---Corporate-Development-Intern_R-4805"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "Enterprise Strategy & Corporate Development Intern"
+  },
+  {
     "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/MN---St-Paul/Bond-and-Specialty-Insurance-Intern--Underwriting-Professional-Development-Program--UPDP-_R-53091",
     "ats": "workday",
     "city": "St. Paul",
@@ -4346,7 +4440,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -4545,7 +4639,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4676,7 +4770,7 @@
     "first_seen": "2026-11-02",
     "id": "7a65076961e756f6",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -4687,7 +4781,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -4701,7 +4795,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "IT Intern, Digital Platforms"
   },
@@ -4734,7 +4828,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -4856,7 +4950,7 @@
     "company": "Athene",
     "company_id": "athene",
     "country": "United States",
-    "date_posted": "2026-10-28",
+    "date_posted": "2026-11-04",
     "deadline": null,
     "description_snippet": "We are driven to do more. More for our customers and the financial professionals who offer our products. If you are driven to do more and love the challenge of pursuing more, Athene is your kind of company. You will find we offer more than the basics to create an inclusive and...",
     "eligibility": {
@@ -4894,7 +4988,7 @@
     "state": "IA",
     "status": "open",
     "tags": [],
-    "title": "Derivates Operations Co-op (2027)"
+    "title": "Derivatives Operations Co-op (2027)"
   },
   {
     "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Summer-Healthcare-Value-Based-Care-Intern_JR-03406",
@@ -5008,7 +5102,7 @@
     "first_seen": "2026-11-02",
     "id": "7f50d7e9e09facff",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -5020,7 +5114,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5034,7 +5128,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer CAS Internship - West Des Moines"
   },
@@ -5246,7 +5340,7 @@
     "first_seen": "2026-11-02",
     "id": "86bd04194452212c",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -5257,7 +5351,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -5271,7 +5365,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern-Claims"
   },
@@ -5828,7 +5922,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6343,7 +6437,7 @@
     "first_seen": "2026-11-02",
     "id": "9f3e99206fd263cd",
     "is_remote": true,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": null,
     "lng": null,
     "location_label": "Remote",
@@ -6354,7 +6448,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -6368,7 +6462,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [
       "remote_iowa"
     ],
@@ -7110,7 +7204,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -7193,7 +7287,7 @@
     "first_seen": "2026-11-02",
     "id": "b35487a4c3fb0187",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -7204,7 +7298,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -7218,7 +7312,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Community Involvement Intern"
   },
@@ -7632,7 +7726,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -8094,7 +8188,7 @@
     "first_seen": "2026-11-02",
     "id": "c07454026b0e23ff",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8105,7 +8199,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -8119,7 +8213,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Claims Intern - Medical Management"
   },
@@ -8282,7 +8376,7 @@
     "first_seen": "2026-11-02",
     "id": "c7878f554e63736a",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-03",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -8293,7 +8387,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -8307,7 +8401,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern- Claims (Property)"
   },
@@ -8595,6 +8689,53 @@
     "title": "Client Service Intern - Summer 2027"
   },
   {
+    "apply_url": "https://bmo.wd3.myworkdayjobs.com/External/job/Chicago-IL-USA/US-Banking-Ignite-Internship-Program---Summer-2027_R260030865-1",
+    "ats": "workday",
+    "city": "Chicago",
+    "company": "BMO",
+    "company_id": "bmo",
+    "country": "United States",
+    "date_posted": "2026-11-04",
+    "deadline": null,
+    "description_snippet": "Application Deadline:. 12/03/2026. Address:. 320 S Canal Street. Job Family Group:. Commercial Sales & Service. Not sure which area of banking is right for you yet? Ignite gives you the opportunity to explore several career paths before choosing where you may want to specialize....",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-05",
+    "id": "cc67b712b738cec0",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL, USA",
+    "match_reasons": [
+      "+40 role: 'banking intern' in title (banking)",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 95,
+    "role_category": "banking",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "bmo:R260030865-1",
+        "source_name": "workday",
+        "url": "https://bmo.wd3.myworkdayjobs.com/External/job/Chicago-IL-USA/US-Banking-Ignite-Internship-Program---Summer-2027_R260030865-1"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "U.S. Banking Ignite Internship Program - Summer 2027"
+  },
+  {
     "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Corporate-Legal-Intern_R-9457",
     "ats": "workday",
     "city": "Kansas City",
@@ -8718,7 +8859,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -8732,7 +8873,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Finance / Accounting Internship Program (Summer 2027)"
   },
@@ -8906,7 +9047,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -9873,6 +10014,53 @@
     "title": "2027 Public Sector & Infrastructure Consulting Intern"
   },
   {
+    "apply_url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-Trust-Building-922-Walnut-64106/Intern-Audit-Summer-2027_38456",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "Commerce Bank",
+    "company_id": "commerce-bank",
+    "country": "United States",
+    "date_posted": "2026-11-04",
+    "deadline": null,
+    "description_snippet": "About Working at Commerce. Building a career here is more than just steps on a ladder. It’s about helping people find financial safety and success, helping businesses thrive, and making sure people and their money are taken care of. And our commitment doesn’t stop there. Our...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-05",
+    "id": "f0c5ba8263288b5b",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Trust Building (922 Walnut) (64106)",
+    "match_reasons": [
+      "+40 role: 'audit intern' in title (accounting)",
+      "+20 location: Kansas City metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 95,
+    "role_category": "accounting",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "commercebank:38456",
+        "source_name": "workday",
+        "url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-Trust-Building-922-Walnut-64106/Intern-Audit-Summer-2027_38456"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Intern - Audit (Summer 2027)"
+  },
+  {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Missouri/Underwriting-Intern---South-Central-Region_R6529-1",
     "ats": "workday",
     "city": null,
@@ -9901,7 +10089,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -9915,7 +10103,7 @@
       }
     ],
     "state": "MO",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Underwriting Intern - South Central Region"
   },
@@ -10183,7 +10371,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -10343,6 +10531,53 @@
     "status": "open",
     "tags": [],
     "title": "Creative Risk Solutions Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8004540003",
+    "ats": "greenhouse",
+    "city": "Chicago",
+    "company": "GCM Grosvenor",
+    "company_id": "gcm-grosvenor",
+    "country": "United States",
+    "date_posted": "2026-11-04",
+    "deadline": null,
+    "description_snippet": "SUMMARY . As a member of the Treasury team within Grosvenor’s Finance Department, the Intern will have exposure to conducting investment operations-related responsibilities pertaining to cash and liquidity management, portfolio hedging and counterparty risk management, as well...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-05",
+    "id": "fd07d35a8c1b47c4",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, Illinois, United States",
+    "match_reasons": [
+      "+40 role: 'treasury' in title (corporate_finance)",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 95,
+    "role_category": "corporate_finance",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "8004540003",
+        "source_name": "greenhouse",
+        "url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8004540003"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "2027 Treasury Summer Intern"
   },
   {
     "apply_url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE/job/Chicago-IL/Legal-Intern_R-4788",
