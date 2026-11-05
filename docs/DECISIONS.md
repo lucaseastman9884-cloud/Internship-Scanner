@@ -186,7 +186,7 @@ There are 10 IB manual firms. With a cap of 10, any failed company pushes an IB 
 - Private Sheet with Today (rewritten) and Log (append-only) tabs.
 - Up to 10 companies a day (IB first), at most 15 drafts.
 
-## D-044 — P7 build choices (PROPOSED 2026-11-04)
+## D-044 — P7 build choices (ACCEPTED 2026-11-05)
 1. **Hosting:** the app lives in `site/` (PLAN's `web/` placeholder renamed) and deploys with GitHub's official Pages actions from `.github/workflows/pages.yml`, with Pages' source set to "GitHub Actions". Nothing built is committed. Actions are pinned to commits: configure-pages v6.0.0, upload-pages-artifact v5.0.0 and deploy-pages v5.0.1, plus checkout and setup-python as in scan.yml, and setup-node v7.1.0.
 2. **Triggers:** a push to `main` (site, workflow, the two site scripts, `config/config.yaml`), manual runs, and `workflow_run` after a successful "Daily scan" on `main`. The scan's data commit can't trigger a push run (the GITHUB_TOKEN rule), and scan.yml is unchanged. The site's tests run before each deploy; a failure keeps the old site.
 3. **Instant filtering is in P7** (pulled forward from SPEC's interactive layer): results update as you type, drag or click, with no Apply button. Search waits 150 ms. 100 cards are drawn at a time, with "Show more".
@@ -199,3 +199,17 @@ There are 10 IB manual firms. With a cap of 10, any failed company pushes an IB 
 10. **JavaScript tests use `node --test`.** Node isn't installed on Lucas's Mac. The tests ran here with a temporary Node 24 download, and they run on GitHub before every deploy.
 
 Spec impact: SPEC's P7 line gains "instant filtering"; P8 keeps the rest of the interactive layer. PLAN's `web/` becomes `site/`.
+
+## D-045 — P8 is the look, "recently posted" and the company hub (ACCEPTED 2026-11-05)
+Summary. P8 builds, on the static site, with no new services, libraries or third-party requests:
+- A "neon glass" design for the whole site: dark first with a light theme by toggle, self-hosted open-license fonts, score gauges, and motion that stops under reduced-motion.
+- Hash routes: Today (default), Listings, Companies, one page per company, My List, and a Contacts placeholder.
+- A Today dashboard: new, posted in the last 24 hours, deadlines soon, scan health, Remote — Iowa, and the Contacts placeholder. Each tile opens Listings with that filter.
+- A "Posted" filter and a "Newest posted" sort. They use `date_posted` when the source states one, and `first_seen` otherwise, labelled as such.
+- Companies and company pages. Each company page has two public LinkedIn search links in Engine B's formats (D-043). Its contacts slot stays empty until P9.
+- A `site:` block in config.yaml for the display settings, and an optional `linkedin_name` per company.
+Also part of P8: the P7 follow-ups (the site tests leave the Daily scan, and "Last scan ran" sits next to "Data updated").
+
+## D-046 — Phases after P8 (ACCEPTED 2026-11-05)
+Summary. P9 is private contacts on the site after Google sign-in, read from Lucas's private Sheet in his own browser. It's the only phase that may add Google hosts to the CSP. Contact data never enters the repo, the public site files or URLs (D-004). P10 holds the rest of the interactive layer: the map, URL-encoded filters, "new since last visit", the tracker board, the deadline timeline, charts and more shortcuts.
+

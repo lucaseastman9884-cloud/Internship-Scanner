@@ -92,7 +92,10 @@ async function load() {
 function renderHeader(offline) {
   const h = healthSummary(state.meta);
   const when = h && h.scanTime ? formatTime(h.scanTime) : null;
-  $("freshness").textContent = when ? `Last scan: ${when}` : "Last scan time unknown";
+  // meta.json is only committed when the data changed (D-023), so the scan itself may be newer.
+  const ran = state.config && state.config.last_scan_ran ? formatTime(state.config.last_scan_ran) : null;
+  $("freshness").textContent = [when ? `Data updated: ${when}` : "Data update time unknown",
+    ran ? `Last scan ran: ${ran}` : null].filter(Boolean).join(" · ");
   if (h && h.ok !== null) {
     const parts = [`Sources: ${h.ok} OK`, `${h.failed} failed`];
     if (h.manual) parts.push(`${h.manual} checked by hand`);

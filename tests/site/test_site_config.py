@@ -1,4 +1,7 @@
-"""P7: site_config.json holds display values only, and the staged site has what the app fetches."""
+"""P7/P8: site_config.json holds display values only, and the staged site has what the app fetches.
+
+Site tests: the Daily scan doesn't run these (see tests/site/conftest.py); Deploy site does.
+"""
 import json
 import re
 import sys
@@ -7,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import build_site_config  # noqa: E402
@@ -22,7 +25,7 @@ def site_cfg(cfg, cities):
 
 
 def test_values_come_from_config(site_cfg, cfg):
-    assert site_cfg["schema_version"] == 1
+    assert site_cfg["schema_version"] == build_site_config.SCHEMA_VERSION
     assert site_cfg["generated_at"] == "2026-11-04T12:00:00+00:00"
     assert site_cfg["home"]["name"] == f"{cfg['home']['city']}, {cfg['home']['state']}"
     assert site_cfg["home"]["lat"] == pytest.approx(42.0257, abs=0.01)  # Ames, from the Gazetteer
@@ -55,10 +58,55 @@ def test_no_remote_section_unless_separate(cfg, cities):
     assert out["remote_sections"] == []
 
 
+def test_unknown_target_area_city_is_skipped_with_a_warning(cfg, cities, tmp_path, capsys):
+    """P8 follow-up: a place missing from the Gazetteer never stops the build."""
+    bad = {**cfg, "target_areas": cfg["target_areas"] + [
+        {"name": "Nowhere metro", "center": "Notacity, ZZ", "radius_miles": 10}]}
+    warnings = []
+    out = build_site_config.build(bad, cities, NOW, warnings=warnings)
+    assert [a["name"] for a in out["target_areas"]] == [a["name"] for a in cfg["target_areas"]]
+    assert len(warnings) == 1 and "Nowhere metro" in warnings[0]
+    assert "::warning" in capsys.readouterr().err
+    # The result is still a complete, valid file.
+    path = tmp_path / "site_config.json"
+    path.write_text(json.dumps(out))
+    assert json.loads(path.read_text())["schema_version"] == build_site_config.SCHEMA_VERSION
+
+
+def test_unknown_home_city_is_skipped_with_a_warning(cfg, cities):
+    warnings = []
+    out = build_site_config.build({**cfg, "home": {"city": "Notacity", "state": "ZZ"}}, cities, NOW, warnings=warnings)
+    assert out["home"] == {"name": "Notacity, ZZ", "lat": None, "lng": None}
+    assert len(warnings) == 1 and "home" in warnings[0]
+
+
+def test_unknown_city_through_main_still_writes_the_file(tmp_path, monkeypatch, cfg):
+    """The real command, with a config whose new target area isn't in the Gazetteer: exit 0, file written."""
+    bad = {**cfg, "target_areas": cfg["target_areas"] + [
+        {"name": "Nowhere metro", "center": "Notacity, ZZ", "radius_miles": 10}]}
+    monkeypatch.setattr(build_site_config, "load_config", lambda path, cities: bad)
+    out = tmp_path / "site_config.json"
+    assert build_site_config.main([str(out)]) == 0
+    assert "Nowhere metro" not in out.read_text()
+    assert json.loads(out.read_text())["home"]["name"] == "Ames, IA"
+
+
+def test_last_scan_ran_is_written_only_when_it_is_a_real_time(cfg, cities):
+    out = build_site_config.build(cfg, cities, NOW, last_scan_ran="2026-11-05T12:53:40Z")
+    assert out["last_scan_ran"] == "2026-11-05T12:53:40+00:00"
+    for bad in (None, "", "   ", "yesterday", "2026-11-05", "2026-11-05T12:53:40"):  # no zone = can't be trusted
+        warnings = []
+        assert "last_scan_ran" not in build_site_config.build(cfg, cities, NOW, last_scan_ran=bad, warnings=warnings)
+
+
 def test_main_writes_file(tmp_path):
     out = tmp_path / "nested" / "site_config.json"
     assert build_site_config.main([str(out)]) == 0
-    assert json.loads(out.read_text())["schema_version"] == 1
+    data = json.loads(out.read_text())
+    assert data["schema_version"] == build_site_config.SCHEMA_VERSION
+    assert "last_scan_ran" not in data
+    assert build_site_config.main([str(out), "--last-scan-ran", "2026-11-05T12:53:40Z"]) == 0
+    assert json.loads(out.read_text())["last_scan_ran"] == "2026-11-05T12:53:40+00:00"
 
 
 def test_stage_builds_the_pages_folder(tmp_path):
@@ -77,6 +125,13 @@ def test_stage_builds_the_pages_folder(tmp_path):
         assert (out / rel).is_file(), rel
     # Same app files give the same stamp, so data-only deploys don't force an app update.
     assert stage_site.stage(tmp_path / "_site2") == stamp
+
+
+def test_stage_passes_the_scan_time_through(tmp_path):
+    stage_site.stage(tmp_path / "a", "2026-11-05T12:53:40Z")
+    assert json.loads((tmp_path / "a" / "site_config.json").read_text())["last_scan_ran"] == "2026-11-05T12:53:40+00:00"
+    assert stage_site.main([str(tmp_path / "b"), "--last-scan-ran", ""]) == 0  # the lookup failed: left out
+    assert "last_scan_ran" not in json.loads((tmp_path / "b" / "site_config.json").read_text())
 
 
 def test_stage_refuses_repo_folders():
