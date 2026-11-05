@@ -20,6 +20,10 @@ TOP_LEVEL_KEYS = {
     "status", "new_badge_days", "email", "contacts", "program_title_terms", "scoring", "workday", "geocoding",
     "exclude_keywords_outside_home",
 }
+# P8: the web app's display settings. Optional, and deliberately not checked here: the scanner
+# never reads them, and a bad value must not stop a scan. scripts/site_settings.py checks each one
+# at deploy and falls back to its default with a warning.
+OPTIONAL_TOP_LEVEL_KEYS = {"site"}
 SCORING_KEYS = {
     "role_in_title", "role_only_in_description", "no_role_signal", "target_area", "whole_state_or_home_radius",
     "location_unknown", "season_max", "season_not_stated", "eligible", "eligibility_unclear", "ineligible",
@@ -32,7 +36,9 @@ EMAIL_KEYS = {"min_score", "max_new", "max_top_open", "deadline_window_days", "a
 COMPANY_KEYS = {"name", "ats", "board", "cities", "priority", "notes"}
 # P5.2 (D-035): optional labels such as ["ib"]. email.manual_first_tags lists manual companies with
 # one of these first, so the firms Lucas cares most about aren't cut by email.max_manual.
-OPTIONAL_COMPANY_KEYS = {"tags"}
+# P8: `linkedin_name` is the short name the site puts in LinkedIn search links, for the few companies
+# whose automatic short name is wrong. Only the site uses it, and it checks the value itself.
+OPTIONAL_COMPANY_KEYS = {"tags", "linkedin_name"}
 
 
 class ConfigError(Exception):
@@ -98,7 +104,7 @@ def load_config(path: Path, cities: list) -> dict:
         raise ConfigError(f"{path}: the top level must be a set of settings")
 
     errors = []
-    for key in sorted(set(cfg) - TOP_LEVEL_KEYS):
+    for key in sorted(set(cfg) - TOP_LEVEL_KEYS - OPTIONAL_TOP_LEVEL_KEYS):
         errors.append(f"unknown setting '{key}'")
     for key in sorted(TOP_LEVEL_KEYS - set(cfg)):
         errors.append(f"missing setting '{key}'")

@@ -2,7 +2,7 @@
 
     python scripts/stage_site.py _site [--last-scan-ran ISO_TIME]
 
-It copies site/ and the three public data files, writes site_config.json, and stamps the service
+It copies site/ and the three public data files, writes site_config.json and companies.json, and stamps the service
 worker with a hash of the app's files. The stamp changes the cache name whenever the app changes,
 so visitors get the new version and old caches are deleted. Data changes don't change the stamp:
 data is fetched network-first and never needs a new app version.
@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import build_companies  # noqa: E402
 import build_site_config  # noqa: E402
 
 DATA_FILES = ["internships.json", "meta.json", "companies_status.json"]
@@ -48,6 +49,9 @@ def stage(out: Path, last_scan_ran=None) -> str:
     extra = ["--last-scan-ran", last_scan_ran] if last_scan_ran else []
     if build_site_config.main([str(out / "site_config.json"), *extra]) != 0:
         raise SystemExit("site_config.json could not be written")
+    # P8: public company fields (tags, priority, cities, manual link) that companies_status.json lacks.
+    if build_companies.main([str(out / "companies.json")]) != 0:
+        raise SystemExit("companies.json could not be written")
     return stamp
 
 

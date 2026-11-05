@@ -112,3 +112,14 @@ contacts:
   daily_reveal_cap: 5
   priority: ["isu_alumni", "campus_recruiter", "hiring_team"]
   school_name_for_alumni: "Iowa State University"
+
+# P8 (D-045): the web app's display settings only; the scanner and the email never read them.
+# A bad value here never stops a scan: the site falls back to that setting's default, with a warning.
+site:
+  posted_within_days: [1, 3, 7, 30]  # the "Posted" filter's buttons, in days (1 = "24 h")
+  default_sort: "score"              # score | newest_posted | first_seen | deadline | company
+  default_theme: "dark"              # dark | light (the toggle remembers a visitor's own choice)
+  linkedin_school_id: "164452"       # LinkedIn's school filter number in Engine B's alumni link (D-043)
+  linkedin_school_name: "Iowa State University"  # the words in Engine B's broad LinkedIn link
+  manual_first_tags: ["ib"]          # companies with these tags lead the Companies page
+  deadline_window_days: 14           # Today's "Deadlines soon": today through today + this many days

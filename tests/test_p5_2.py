@@ -30,7 +30,7 @@ def raw_registry():
 def test_every_registry_entry_has_the_required_fields_and_valid_values():
     for entry in raw_registry():
         label = entry.get("name")
-        assert REQUIRED <= set(entry) <= REQUIRED | {"tags"}, label
+        assert REQUIRED <= set(entry) <= REQUIRED | {"tags", "linkedin_name"}, label  # linkedin_name: P8
         assert entry["ats"] in ATS_VALUES, label
         assert entry["priority"] in (1, 2, 3), label
         assert isinstance(entry["cities"], list) and all(isinstance(c, str) for c in entry["cities"]), label

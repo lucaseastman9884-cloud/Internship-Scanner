@@ -5,7 +5,8 @@ config/config.yaml (D-020 spirit). Only display values go in: no keyword lists, 
 points, no profile, and no contacts settings, because the site is public.
 
 This script must never be able to stop the Daily scan or break a deploy over a display value:
-a place that can't be found is skipped, with a warning, and the file is still written (P8).
+a place that can't be found is skipped, and a bad `site:` value falls back to its default,
+with a warning, and the file is still written (P8).
 
 Usage: python scripts/build_site_config.py OUT_PATH [--last-scan-ran ISO_TIME]
 """
@@ -22,14 +23,12 @@ sys.path.insert(0, str(ROOT))
 from scanner.config import load_cities, load_config  # noqa: E402  (needs the path above)
 from scanner.location import STATE_CODES, STATE_NAMES, remote_tag  # noqa: E402
 
+sys.path.insert(0, str(ROOT / "scripts"))
+import site_settings  # noqa: E402
+from site_settings import warn  # noqa: E402
+
 SCHEMA_VERSION = 2
 NOT_STATED = "Not stated"  # the email's season filter uses the same words (D-033)
-
-
-def warn(warnings: list, message: str) -> None:
-    """Collect a warning and print it; on GitHub Actions it also shows as a yellow annotation."""
-    warnings.append(message)
-    print(f"::warning title=site_config::{message}", file=sys.stderr)
 
 
 def _place(cities: list, text: str):
@@ -93,6 +92,8 @@ def build(cfg: dict, cities: list, now: datetime = None, last_scan_ran=None, war
                             for s in remote_states if s in STATE_NAMES],
         # For "(title says City, ST)" on location_conflict listings, matching scanner/location.py.
         "state_codes": sorted(STATE_CODES),
+        # P8: the `site:` block, checked value by value (a bad one falls back to its default).
+        "site": site_settings.read(cfg.get("site"), warnings),
     }
     # P8: when the latest successful Daily scan finished. Left out, never faked, when unknown.
     ran = parse_time(last_scan_ran)

@@ -11,6 +11,9 @@
 #           Priorities are a first proposal; change them freely.
 # tags: optional list of words (P5.2). "ib" marks investment-banking and advisory firms; manual companies
 #       with a tag in email.manual_first_tags are listed first in the email (D-035).
+# linkedin_name: optional (P8). The name the web app puts in its LinkedIn search links. Without it, the
+#       company name is used with trailing words such as Financial, Group, Inc or Company removed. Set it
+#       only where that short name is wrong.
 
 companies:
   # --- Seed list (docs/STATUS.md) ---
@@ -277,6 +280,7 @@ companies:
     notes: "Link on allstate.jobs. Board confirmed, but no intern titles in the first 20 search results. Chicago-area location expected."
 
   - name: "CME Group"
+    linkedin_name: "CME Group"   # P8: the automatic short name would be wrong
     ats: manual
     board: "https://www.cmegroup.com/careers.html"
     cities: ["Chicago"]
@@ -341,6 +345,7 @@ companies:
     notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. This is PwC's experienced-hire site and a separate campus site may exist, so few US interns are expected here."
 
   - name: "Nuveen / TIAA"
+    linkedin_name: "Nuveen"   # P8: the automatic short name would be wrong
     ats: workday
     board: "https://tiaa.wd1.myworkdayjobs.com/Search"
     cities: ["Chicago"]
@@ -525,6 +530,7 @@ companies:
     notes: "Verified 2026-11-02 by a live request that returned jobs. Board name came from memory, not a company page; confirmed only by the response looking like this company. Observed Accounting Intern in Chicago."
 
   - name: "Chicago Trading Company"
+    linkedin_name: "Chicago Trading Company"   # P8: the automatic short name would be wrong
     ats: greenhouse
     board: "chicagotrading"
     cities: ["Chicago"]

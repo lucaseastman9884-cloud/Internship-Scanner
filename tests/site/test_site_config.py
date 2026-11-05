@@ -13,8 +13,11 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import build_companies  # noqa: E402
 import build_site_config  # noqa: E402
+import site_settings  # noqa: E402
 import stage_site  # noqa: E402
+from scanner.config import load_companies  # noqa: E402
 
 NOW = datetime(2026, 11, 4, 12, 0, tzinfo=timezone.utc)
 
@@ -43,13 +46,16 @@ def test_values_come_from_config(site_cfg, cfg):
 
 def test_nothing_private_or_internal(site_cfg, cfg):
     assert set(site_cfg) == {"schema_version", "generated_at", "home", "radius_miles", "target_areas", "seasons",
-                             "role_categories", "new_badge_days", "remote_sections", "state_codes"}
+                             "role_categories", "new_badge_days", "remote_sections", "state_codes", "site"}
     text = json.dumps(site_cfg)
     # No keyword lists, scoring points, profile or contacts settings.
     for keyword in cfg["role_categories"]["investment_banking"] + cfg["exclude_keywords"]:
         assert keyword not in text
-    for leaked in ("scoring", "profile", "contacts", "grad_date", "Iowa State", "email", "min_score"):
+    for leaked in ("scoring", "profile", "contacts", "grad_date", cfg["profile"]["grad_date"], cfg["profile"]["degree"],
+                   "email", "min_score", "daily_reveal_cap", "monthly_reveal_budget"):
         assert leaked not in text
+    # The school's name is there only as the words of Engine B's public LinkedIn search (site.linkedin_school_name).
+    assert text.count(cfg["profile"]["school"]) == 1 and site_cfg["site"]["linkedin_school_name"] == cfg["profile"]["school"]
     assert not re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", text)
 
 
@@ -99,6 +105,98 @@ def test_last_scan_ran_is_written_only_when_it_is_a_real_time(cfg, cities):
         assert "last_scan_ran" not in build_site_config.build(cfg, cities, NOW, last_scan_ran=bad, warnings=warnings)
 
 
+def test_every_site_key_is_copied(site_cfg, cfg):
+    assert set(cfg["site"]) == set(site_settings.DEFAULTS)
+    assert site_cfg["site"] == cfg["site"]
+
+
+def test_real_config_gives_no_warnings(cfg, cities):
+    warnings = []
+    build_site_config.build(cfg, cities, NOW, warnings=warnings)
+    assert warnings == []
+
+
+@pytest.mark.parametrize("key, bad", [
+    ("posted_within_days", []), ("posted_within_days", [0, 3]), ("posted_within_days", "7"), ("posted_within_days", [1.5]),
+    ("posted_within_days", [True]), ("posted_within_days", [400]),
+    ("default_sort", "random"), ("default_sort", None),
+    ("default_theme", "blue"), ("default_theme", 1),
+    ("linkedin_school_id", "16a452"), ("linkedin_school_id", ""), ("linkedin_school_id", ["164452"]),
+    ("linkedin_school_name", ""), ("linkedin_school_name", 3),
+    ("manual_first_tags", "ib"), ("manual_first_tags", [""]), ("manual_first_tags", [1]),
+    ("deadline_window_days", -1), ("deadline_window_days", "14"), ("deadline_window_days", 3.5), ("deadline_window_days", True),
+])
+def test_bad_site_values_fall_back_with_a_warning(cfg, cities, key, bad):
+    warnings = []
+    out = build_site_config.build({**cfg, "site": {**cfg["site"], key: bad}}, cities, NOW, warnings=warnings)
+    assert out["site"][key] == site_settings.DEFAULTS[key]
+    assert len(warnings) == 1 and f"site.{key}" in warnings[0]
+
+
+def test_missing_or_odd_site_block(cfg, cities):
+    no_block = {k: v for k, v in cfg.items() if k != "site"}
+    warnings = []
+    assert build_site_config.build(no_block, cities, NOW, warnings=warnings)["site"] == site_settings.DEFAULTS
+    assert len(warnings) == 1
+    warnings = []
+    assert build_site_config.build({**cfg, "site": "yes"}, cities, NOW, warnings=warnings)["site"] == site_settings.DEFAULTS
+    assert len(warnings) == 1
+    warnings = []
+    partial = {"default_theme": "light", "colour": "red"}
+    out = build_site_config.build({**cfg, "site": partial}, cities, NOW, warnings=warnings)["site"]
+    assert out["default_theme"] == "light" and out["posted_within_days"] == site_settings.DEFAULTS["posted_within_days"]
+    assert any("site.colour" in w for w in warnings) and any("site.posted_within_days is missing" in w for w in warnings)
+
+
+def test_good_site_values_are_kept_and_cleaned(cfg, cities):
+    site = {**cfg["site"], "posted_within_days": [7, 1, 7], "linkedin_school_id": 164452, "default_sort": "newest_posted"}
+    out = build_site_config.build({**cfg, "site": site}, cities, NOW)["site"]
+    assert out["posted_within_days"] == [1, 7]
+    assert out["linkedin_school_id"] == "164452"
+    assert out["default_sort"] == "newest_posted"
+
+
+def test_loader_accepts_the_site_block_without_checking_it(tmp_path, cities):
+    """A bad site: value must never stop the scanner's own config load (and so the Daily scan)."""
+    import yaml
+    from scanner.config import load_config
+    data = yaml.safe_load((ROOT / "config" / "config.yaml").read_text(encoding="utf-8"))
+    data["site"] = {"default_theme": 42, "nonsense": True}
+    path = tmp_path / "config.yaml"
+    path.write_text(yaml.safe_dump(data), encoding="utf-8")
+    assert load_config(path, cities)["site"]["default_theme"] == 42
+    del data["site"]
+    path.write_text(yaml.safe_dump(data), encoding="utf-8")
+    assert "site" not in load_config(path, cities)
+
+
+def test_companies_file_has_public_fields_only():
+    companies = load_companies(ROOT / "config" / "companies.yaml")
+    warnings = []
+    out = build_companies.build(companies, warnings)
+    assert warnings == []
+    assert len(out["companies"]) == len(companies)
+    for entry in out["companies"]:
+        assert tuple(entry) == build_companies.FIELDS
+        assert entry["careers_url"] is None or entry["careers_url"].startswith("https://")
+    text = json.dumps(out)
+    for c in companies:
+        assert c["notes"] not in text  # free-text notes stay in the repo only
+    assert not re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", text)
+    by_name = {e["name"]: e for e in out["companies"]}
+    assert by_name["CME Group"]["linkedin_name"] == "CME Group"
+    assert by_name["Wintrust Financial"]["linkedin_name"] is None
+    assert "ib" in by_name["Piper Sandler"]["tags"]
+    assert by_name["Bankers Trust"]["ats"] == "manual" and by_name["Bankers Trust"]["careers_url"].startswith("https://")
+
+
+def test_bad_linkedin_name_is_dropped_with_a_warning():
+    warnings = []
+    entry = build_companies.public_entry({"company_id": "x", "name": "X Corp", "ats": "manual", "board": None,
+                                          "cities": [], "priority": 2, "tags": [], "linkedin_name": ""}, warnings)
+    assert entry["linkedin_name"] is None and len(warnings) == 1
+
+
 def test_main_writes_file(tmp_path):
     out = tmp_path / "nested" / "site_config.json"
     assert build_site_config.main([str(out)]) == 0
@@ -114,7 +212,7 @@ def test_stage_builds_the_pages_folder(tmp_path):
     stamp = stage_site.stage(out)
     for path in ("index.html", "manifest.webmanifest", "service-worker.js", "styles.css", "js/app.js",
                  "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "site_config.json",
-                 "data/internships.json", "data/meta.json", "data/companies_status.json"):
+                 "data/internships.json", "data/meta.json", "data/companies_status.json", "companies.json"):
         assert (out / path).is_file(), path
     worker = (out / "service-worker.js").read_text()
     assert stage_site.STAMP not in worker and stamp in worker
