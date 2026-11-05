@@ -154,7 +154,29 @@ This makes one run fail on purpose, so you can see the "Scan failed" email arriv
 
 Scheduled runs are unaffected. GitHub fills `inputs` only for manual (and reusable) runs, and a missing value counts as empty, which is false, so the step is skipped at 5:33 AM.
 
-## Sources (read 2026-11-02, email sources 2026-11-03)
+## 11. The web app on GitHub Pages (Phase 7)
+`.github/workflows/pages.yml` ("Deploy site") publishes `site/` plus `data/internships.json`, `data/meta.json`, `data/companies_status.json` and a generated `site_config.json`.
+
+**One-time setup** (after the P7 pull request is merged):
+1. On GitHub, open the repo, click **Settings**, then **Pages** in the left sidebar.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**. There is nothing else to fill in.
+3. Click **Actions**, then **Deploy site** in the left sidebar, then **Run workflow** (branch `main`) → green **Run workflow**.
+4. When it's green (about 1–2 minutes), open the run. The **deploy** box shows the site's address, which should be https://lucaseastman9884-cloud.github.io/Internship-Scanner/
+
+**When it runs:**
+- After every successful **Daily scan** on `main`, so the site has the newest data. The scan's own commit can't start it, because GitHub doesn't start workflows from commits made with `GITHUB_TOKEN`; `workflow_run` is GitHub's documented way to run one workflow after another. A failed scan doesn't deploy.
+- On a push to `main` that changes `site/`, this workflow, `scripts/build_site_config.py`, `scripts/stage_site.py` or `config/config.yaml`.
+- By hand, with **Run workflow**.
+
+It runs the site's tests first (`node --test` and `pytest tests/test_site_config.py`). If they fail, nothing is published and the old site stays up.
+
+**Try it on your Mac first** (optional): `python scripts/stage_site.py _site`, then `python -m http.server 8000 --directory _site`, and open http://localhost:8000 in Chrome. `_site/` is ignored by git.
+
+## Sources (read 2026-11-02, email sources 2026-11-03, Pages sources 2026-11-04)
+- Pages with a custom workflow (`configure-pages`, `upload-pages-artifact`, `deploy-pages`; `pages: write` and `id-token: write`; the `github-pages` environment): https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+- Action versions (that page shows v5/v4/v4; the actions' release pages list newer majors, used here): https://github.com/actions/configure-pages/releases (v6.0.0), https://github.com/actions/upload-pages-artifact (README, v5.0.0), https://github.com/actions/deploy-pages/releases (v5.0.1)
+- "Events triggered by the `GITHUB_TOKEN` will not create a new workflow run" (exceptions: `workflow_dispatch`, `repository_dispatch`): https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow
+- `workflow_run` (`types: [completed]`, `branches`, checking `conclusion`, default-branch rule, three-level chaining limit): https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
 - Schedule syntax, delays, timezone, 60-day rule, and default-branch rule: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows and https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 - Disabling and enabling workflows: https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows
 - `GITHUB_TOKEN`, including that its commits don't start other workflows: https://docs.github.com/en/actions/concepts/security/github_token

@@ -1,4 +1,4 @@
-# STATUS — Current state (updated 2026-11-03)
+# STATUS — Current state (updated 2026-11-04)
 
 ## Phase
 P0 — Setup: DONE.
@@ -8,8 +8,45 @@ P3 — Full pipeline: DONE and merged to main.
 P4 — Automation: DONE and merged to main (PR #4). The first GitHub run, started by hand, succeeded on 2026-11-03.
 P5 — Morning email: merged to main (PR #5). Whether a real email has arrived is **not confirmed** in the repo.
 P5.1 — Email polish: merged to main (PR #6).
-P5.2 — IB coverage (D-035): built on branch `p5-2-ib-coverage`, **not pushed**. Lucas has accepted D-036 to D-041 (2026-11-03). Tested offline, plus one full run and email dry run on a copy of real data (nothing sent). Report: docs/reports/P5_2_REPORT.md.
-P6 — Contacts (Engine B): next.
+P5.2 — IB coverage (D-035): merged to main (PR #7). D-036 to D-041 ACCEPTED. Report: docs/reports/P5_2_REPORT.md.
+P6 — Contacts (Engine B): decided in D-042 and D-043 (ACCEPTED 2026-11-03). Engine B runs outside this repo, so its state isn't tracked here.
+P7 — PWA core: built on branch `p7-pwa-core`, **not pushed**. D-044 is PROPOSED. Tested locally (below). The real Pages deploy, Install and offline on the live site are **NOT TESTED** until Lucas merges and turns on Pages.
+
+## P7 — PWA core (2026-11-04)
+Built:
+- `site/`: list, instant filters (search, distance, city, role, season, first-seen dates, status, source, eligibility, minimum score, remote toggle), five sorts, a detail drawer, and the localStorage tracker with My List, export and import.
+- Also: manifest, icons, service worker and offline mode.
+- `.github/workflows/pages.yml` deploys it.
+- `scripts/build_site_config.py` writes `site_config.json` at deploy.
+- `scripts/stage_site.py` assembles the published folder.
+- There are no libraries.
+
+TESTED (2026-11-04, on this Mac, with Chrome 137 run headless and driven through the DevTools protocol, plus a temporary Node 24):
+- `node --test "tests/js/*.test.mjs"`: 34 pass. They cover every filter, sorts with missing values, unknown coordinates under a distance filter, "Not stated" and year-only seasons, remote_iowa separation, the open-only default, tracker merge and import validation (malformed and hostile files), and the escape and URL helpers.
+- `pytest`: 615 pass (the 609 existing tests, unchanged, plus 6 new in `tests/test_site_config.py`).
+- Local serve (`python -m http.server` on the staged folder):
+  - The list loads all 188 open listings, and every filter updates the count instantly.
+  - Sorts, the drawer by click and by Enter, Esc returning focus to the card, and the focus trap (40 Tab presses, focus never left) all work.
+  - The tracker survives a reload, and export → clear storage → import restores it.
+  - A malformed or hostile import file changes nothing.
+- PWA: Chrome reports no installability errors and no manifest errors. The service worker is active and controlling the page.
+- Offline: with the local server stopped, a reload opens the app from cache with "Offline — data from Nov 3, 2026, 6:45 AM". A changed app shows "New version available" and replaces the old cache.
+- With no data and no cache, the error state shows.
+- Lighthouse 13.6.0 (mobile and desktop): Accessibility 100 and Best Practices 100. Lighthouse 12 removed the PWA category, so the installability check above replaces it. Dark-mode contrast was computed separately: all text pairs are 6.7:1 or better.
+- At 375 px, the list, filters, drawer and My List have no horizontal scroll, and the drawer is full width.
+- XSS fixture:
+  - `<img src=x onerror=alert(1)>` as a title, plus script-tag company and HTML in other fields, renders as plain text, with no dialogs.
+  - `javascript:` apply and source URLs aren't linked, and `data:` URLs are rejected.
+  - There were no CSP violations.
+- 2,000 listings: a filter change takes a median of 15 ms (33 ms at most) in the page, including drawing.
+- Secret and PII scans of `site/`, the new scripts and the workflow find nothing. The staged data has no email addresses or phone numbers.
+- In the Network panel equivalent, every request went to the app's own origin.
+- actionlint 1.7.12 passes on `pages.yml` and `scan.yml`.
+
+NOT TESTED:
+- The real deploy, the `workflow_run` trigger, and the live URL. They need the merge and Settings → Pages → Source: GitHub Actions.
+- Chrome's Install button, and offline use of the installed app on the live site. Headless Chrome reports installability but can't show the Install prompt.
+- Safari and Firefox were not tried.
 
 ## Environment
 - Repo: github.com/lucaseastman9884-cloud/Internship-Scanner (public)
@@ -57,9 +94,10 @@ From the project folder, after the one-time setup in README.md:
 - The goal of "hundreds of qualifying listings" is **still not met**. Most remaining IB firms use an ATS with no adapter (TalentLink, Oracle, iCIMS, UKG, Breezy) or block us.
 
 ## Next
-1. Push `p5-2-ib-coverage` with GitHub Desktop, then open and merge the PR.
-2. After the merge, do a normal **Daily scan** run and check the morning email. The failure email is already tested (D-036 item 7).
-3. Per D-032: compress, `/clear`, and start **P6 — Contacts (Engine B)**.
+1. Push `p7-pwa-core` with GitHub Desktop, then open and merge the PR.
+2. Settings → Pages → Source: **GitHub Actions**. Then Actions → **Deploy site** → Run workflow (docs/AUTOMATION.md section 11).
+3. On the live site (https://lucaseastman9884-cloud.github.io/Internship-Scanner/), check Install and offline in Chrome. Then accept or change D-044.
+4. Per D-032: compress, `/clear`, and start **P8 — Map and interactive layer**.
 
 ## Open questions
 - Raise `email.max_top_open`, or show IB listings separately? Plante Moran's IB listing qualifies but ranks 14th.
@@ -81,4 +119,10 @@ From the project folder, after the one-time setup in README.md:
 - `location_conflict` reads "City, ST" text only.
 - Many board names in the registry were guessed, then verified with a live request. Each entry's notes say GUESS or LINKED; P5.2 entries were all found from the firm's own page.
 - If Gmail itself refuses to send, the failure email can't get through either.
+- Web app (P7):
+  - `meta.json` is saved only on days with a commit (D-023), so "Last scan" can be older than the latest run.
+  - Tracker data lives in one browser. Clearing site data deletes it unless it was exported.
+  - Node isn't installed on this Mac, so `node --test` runs on GitHub (or with a temporary download).
+  - `tests/test_site_config.py` runs in the Daily scan's `pytest` too. A broken site script would fail the scan before it starts.
+  - The current data has no `season_year` or `location_conflict` listings, so those labels are tested with fixtures only.
 - UNVERIFIED items are listed in PLAN sections 5 and 7.

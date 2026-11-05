@@ -171,3 +171,31 @@ Verified from each firm's own careers page, one endpoint request each:
 
 ## D-041 — email.max_manual raised to 12 (ACCEPTED 2026-11-03)
 There are 10 IB manual firms. With a cap of 10, any failed company pushes an IB firm into "…and N more" (Stifel on 2026-11-03). A cap of 12 leaves room for two failures.
+
+## D-042 — Engine B: Lucas curates contacts; Apollo stays on the Free plan (ACCEPTED 2026-11-03)
+- Apollo Free plan blocks people search and the AI prospect agent; saved-contact search works.
+- Engine B builds LinkedIn search links, Lucas saves contacts in Apollo himself, and Engine B drafts coffee-chat requests for newly saved contacts into a private Google Sheet.
+- It never sends, never reveals credits, and never browses LinkedIn.
+- Paid plans rejected ($0).
+
+## D-043 — Engine B setup details (ACCEPTED 2026-11-03)
+- Daily 7:41 AM America/Chicago cloud scheduled task.
+- Reads listings via a read-only sparse git clone.
+- Drafts use one fact only (ISU Finance and Accounting, AI minor, Class of 2029).
+- Two LinkedIn links per company: ISU school-filter people search and a broad keyword search.
+- Private Sheet with Today (rewritten) and Log (append-only) tabs.
+- Up to 10 companies a day (IB first), at most 15 drafts.
+
+## D-044 — P7 build choices (PROPOSED 2026-11-04)
+1. **Hosting:** the app lives in `site/` (PLAN's `web/` placeholder renamed) and deploys with GitHub's official Pages actions from `.github/workflows/pages.yml`, with Pages' source set to "GitHub Actions". Nothing built is committed. Actions are pinned to commits: configure-pages v6.0.0, upload-pages-artifact v5.0.0 and deploy-pages v5.0.1, plus checkout and setup-python as in scan.yml, and setup-node v7.1.0.
+2. **Triggers:** a push to `main` (site, workflow, the two site scripts, `config/config.yaml`), manual runs, and `workflow_run` after a successful "Daily scan" on `main`. The scan's data commit can't trigger a push run (the GITHUB_TOKEN rule), and scan.yml is unchanged. The site's tests run before each deploy; a failure keeps the old site.
+3. **Instant filtering is in P7** (pulled forward from SPEC's interactive layer): results update as you type, drag or click, with no Apply button. Search waits 150 ms. 100 cards are drawn at a time, with "Show more".
+4. **site_config.json is generated at deploy** by `scripts/build_site_config.py`, through the scanner's own config loader and the stored Census Gazetteer. It holds display values only: home and its coordinates, radius, target areas, season names plus "Not stated", role-category names, new_badge_days, the remote section's tag and label, and state codes. There are no keyword lists, no scoring points, no profile and no contacts settings.
+5. **Place filters skip the Remote — Iowa section.** City and distance describe in-person work, so they don't apply there (as with the email's areas filter, D-033). Every other filter does. A toggle hides the section.
+6. **Lighthouse has no PWA category any more** (removed in Lighthouse 12; 13.6.0 was used here). Installability is checked with Chrome's own installability errors and manifest parsing instead, which is what DevTools → Application shows.
+7. **No libraries.** Vanilla HTML, CSS and ES modules; system fonts; icons drawn by `scripts/make_icons.py` with the standard library. Nothing is vendored.
+8. **Service worker:** app files are cached under a name stamped with a hash of `site/`, so an app change replaces the cache, while a data-only deploy doesn't. Data is network-first, with the last copy as fallback, and the page then says "Offline — data from {scan time}". An update shows "New version available. Reload" and waits for the click.
+9. **Tracker:** one key, `internship-scanner:tracker:v1`. Import checks the whole file first (version, ids, status names, sizes, dates, no unknown fields) and changes nothing if any part is wrong. The newer `updated_at` wins, and a tie keeps the current entry.
+10. **JavaScript tests use `node --test`.** Node isn't installed on Lucas's Mac. The tests ran here with a temporary Node 24 download, and they run on GitHub before every deploy.
+
+Spec impact: SPEC's P7 line gains "instant filtering"; P8 keeps the rest of the interactive layer. PLAN's `web/` becomes `site/`.
