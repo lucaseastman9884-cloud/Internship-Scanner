@@ -125,7 +125,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -189,6 +189,54 @@
     "status": "open",
     "tags": [],
     "title": "Platform Engineer Intern, Summer 2027"
+  },
+  {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Retail-Store-Leadership-Intern---Summer-2027_R252493",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-05",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-06",
+    "id": "065f1ae031941943",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA; Cedar Rapids-Marion Area, IA 52404; Cedar Falls-Waterloo Area, IA 50702; Wisconsin Area, WI 53704; Mankato Area, MN 56001; Ames Area, IA 50010; Des Moines Area, IA 50312; Algona-Humboldt Area, IA 50511; Madison/Fitchburg Area, WI 53713; Springfield, MO Area, 65809; Sioux Falls Area, SD 57105; Albert Lea-Austin Area, MN 55912; Kansas City Area, KS/MO, 64105; Peoria Area, IL 61615; Dubuque Area, IA 52003; Sioux City Area, IA 51105; Rochester Area, MN 55904; Quad Cities Iowa Area, IA 52803; Mason City Area, IA 50401; Forest City-Garner Area, IA 50436; Faribault-Owatonna-New Prague Area, MN 55021; Council Bluffs Area, IA 51503; Twin Cities Area, MN 55151; Rural Illinois Area, IL 61520; Quad Cities Area, 52722; Omaha Area, NE 68134; Columbia Area, MO 65202; Charles City-Waverly Area, IA 50616; Quad Cities Illinois Area, IL 61240; Lincoln Area, NE 68502; Iowa City-Coralville Area, IA 52240",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 40)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R252493",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Retail-Store-Leadership-Intern---Summer-2027_R252493"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Retail Store Leadership Intern - Summer 2027"
   },
   {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/Waukee/Sales-Intern---Summer-2027_R0000956",
@@ -1069,7 +1117,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1202,7 +1250,7 @@
     "first_seen": "2026-11-04",
     "id": "2202ac91ca86e48b",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -1213,7 +1261,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -1227,7 +1275,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Corporate & Institutional Banking Undergraduate Intern – Commercial & Corporate Banking – Financials and Diversified Track"
   },
@@ -1480,7 +1528,7 @@
     "company": "Travelers",
     "company_id": "travelers",
     "country": "United States",
-    "date_posted": "2026-10-30",
+    "date_posted": "2026-11-05",
     "deadline": null,
     "description_snippet": "Who Are We? . Taking care of our customers, our communities and each other. That’s the Travelers Promise. By honoring this commitment, we have maintained our reputation as one of the best property casualty insurers in the industry for over 170 years. Join us to discover a...",
     "eligibility": {
@@ -2070,7 +2118,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -2165,7 +2213,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -2580,7 +2628,7 @@
     "first_seen": "2026-11-02",
     "id": "427c285c3d05de60",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -2591,7 +2639,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -2605,7 +2653,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Sales Intern"
   },
@@ -3385,7 +3433,7 @@
     "first_seen": "2026-11-02",
     "id": "5181a577f817d940",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -3396,7 +3444,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3410,7 +3458,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Corporate Communications Intern"
   },
@@ -3682,7 +3730,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4062,7 +4110,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -4182,7 +4230,7 @@
     "company": "Travelers",
     "company_id": "travelers",
     "country": "United States",
-    "date_posted": "2026-10-30",
+    "date_posted": "2026-11-05",
     "deadline": null,
     "description_snippet": "Who Are We? . Taking care of our customers, our communities and each other. That’s the Travelers Promise. By honoring this commitment, we have maintained our reputation as one of the best property casualty insurers in the industry for over 170 years. Join us to discover a...",
     "eligibility": {
@@ -4429,7 +4477,7 @@
     "first_seen": "2026-11-02",
     "id": "71ac3c8392cf0758",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -4440,7 +4488,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -4459,7 +4507,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Underwriting Intern"
   },
@@ -4627,7 +4675,7 @@
     "first_seen": "2026-11-02",
     "id": "77a7060c4cc102bc",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -4639,7 +4687,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4653,7 +4701,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Human Resources (Summer 2027)"
   },
@@ -4781,7 +4829,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -4817,7 +4865,7 @@
     "first_seen": "2026-11-02",
     "id": "7bd055e58619815b",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -4828,7 +4876,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -4842,7 +4890,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Compliance Intern – Regulatory Advisory"
   },
@@ -5114,7 +5162,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5351,7 +5399,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -5399,7 +5447,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5852,9 +5900,9 @@
     "company": "Marsh McLennan",
     "company_id": "marsh-mclennan",
     "country": "United States",
-    "date_posted": "2026-10-19",
+    "date_posted": "2026-11-05",
     "deadline": null,
-    "description_snippet": "Company:. Marsh McLennan Agency. Description:. About Marsh McLennan Agency Midwest . Marsh McLennan Agency’s Midwest Region is a full-service brokerage providing business insurance, employee benefits, private client insurance, and retirement services to businesses and...",
+    "description_snippet": "Company:. Marsh McLennan Agency. Description:. About Marsh Agency Midwest . Marsh Agency’s Midwest Region is a full-service brokerage providing business insurance, employee benefits, private client insurance, and retirement services to businesses and individuals across the...",
     "eligibility": {
       "reason": "No season or graduation year stated",
       "status": "unclear"
@@ -5893,6 +5941,54 @@
     "title": "Insurance Summer Intern"
   },
   {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Retail-Human-Resources-Intern---Summer-2027_R252490",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-05",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-06",
+    "id": "92fd5df0446ced31",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA; Cedar Rapids-Marion Area, IA 52404; Cedar Falls-Waterloo Area, IA 50702; Wisconsin Area, WI 53704; Mankato Area, MN 56001; Ames Area, IA 50010; Des Moines Area, IA 50312; Algona-Humboldt Area, IA 50511; Madison/Fitchburg Area, WI 53713; Springfield, MO Area, 65809; Sioux Falls Area, SD 57105; Albert Lea-Austin Area, MN 55912; Kansas City Area, KS/MO, 64105; Peoria Area, IL 61615; Dubuque Area, IA 52003; Sioux City Area, IA 51105; Rochester Area, MN 55904; Quad Cities Iowa Area, IA 52803; Mason City Area, IA 50401; Forest City-Garner Area, IA 50436; Faribault-Owatonna-New Prague Area, MN 55021; Council Bluffs Area, IA 51503; Twin Cities Area, MN 55151; Rural Illinois Area, IL 61520; Quad Cities Area, 52722; Omaha Area, NE 68134; Columbia Area, MO 65202; Charles City-Waverly Area, IA 50616; Quad Cities Illinois Area, IL 61240; Lincoln Area, NE 68502; Iowa City-Coralville Area, IA 52240",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 40)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R252490",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Retail-Human-Resources-Intern---Summer-2027_R252490"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Retail Human Resources Intern - Summer 2027"
+  },
+  {
     "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Network---Systems-Intern---Summer-2027_R250141",
     "ats": "workday",
     "city": "West Des Moines",
@@ -5910,7 +6006,7 @@
     "first_seen": "2026-11-04",
     "id": "961425ae2715e607",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -5922,7 +6018,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5936,7 +6032,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Network & Systems Intern - Summer 2027"
   },
@@ -5969,7 +6065,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6111,7 +6207,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'technology' is off-target"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 65,
     "role_category": "insurance_risk",
@@ -6253,7 +6349,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6448,7 +6544,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -7204,7 +7300,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -7218,7 +7314,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -7298,7 +7394,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -7677,7 +7773,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7713,7 +7809,7 @@
     "first_seen": "2026-11-02",
     "id": "b888fd4cd7115672",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -7726,7 +7822,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -7740,7 +7836,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Internship Program (Data Engineering)"
   },
@@ -8199,7 +8295,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -8387,7 +8483,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -8953,7 +9049,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "corporate_finance",
@@ -9036,7 +9132,7 @@
     "first_seen": "2026-11-02",
     "id": "d467a3939298d270",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -9047,7 +9143,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -9061,7 +9157,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Fast Track Claims"
   },
@@ -9426,7 +9522,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -10020,7 +10116,7 @@
     "company": "Commerce Bank",
     "company_id": "commerce-bank",
     "country": "United States",
-    "date_posted": "2026-11-04",
+    "date_posted": "2026-11-05",
     "deadline": null,
     "description_snippet": "About Working at Commerce. Building a career here is more than just steps on a ladder. It’s about helping people find financial safety and success, helping businesses thrive, and making sure people and their money are taken care of. And our commitment doesn’t stop there. Our...",
     "eligibility": {
@@ -10058,7 +10154,7 @@
     "state": "MO",
     "status": "open",
     "tags": [],
-    "title": "Intern - Audit (Summer 2027)"
+    "title": "Intern - IT Audit (Summer 2027)"
   },
   {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Missouri/Underwriting-Intern---South-Central-Region_R6529-1",
@@ -10089,7 +10185,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -10360,7 +10456,7 @@
     "first_seen": "2026-11-02",
     "id": "fa2a3a9d3d7c9fb3",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-04",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -10371,7 +10467,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -10385,7 +10481,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern- Claims (Data)"
   },
