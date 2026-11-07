@@ -125,7 +125,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1106,7 +1106,7 @@
     "first_seen": "2026-11-02",
     "id": "201dcbdf69f6d33f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -1117,7 +1117,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1131,7 +1131,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Sales Intern, Eagle Life"
   },
@@ -1261,7 +1261,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -1881,7 +1881,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2107,7 +2107,7 @@
     "first_seen": "2026-11-04",
     "id": "3364ad2a6d09b335",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 38.907263,
     "lng": -94.62524,
     "location_label": "Leawood, KS",
@@ -2118,7 +2118,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -2132,7 +2132,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Internship Program – Public Finance"
   },
@@ -2202,7 +2202,7 @@
     "first_seen": "2026-11-02",
     "id": "3510dd2edce0d25d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -2213,7 +2213,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -2227,7 +2227,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Graphic Design Intern"
   },
@@ -2639,7 +2639,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3444,7 +3444,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3718,7 +3718,7 @@
     "first_seen": "2026-11-02",
     "id": "5a3a8e0f3572db4d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -3730,7 +3730,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3744,7 +3744,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Commercial Loan Servicing (Summer 2027)"
   },
@@ -4097,7 +4097,7 @@
     "first_seen": "2026-11-02",
     "id": "661d8848af77cdb8",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -4110,7 +4110,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -4124,7 +4124,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Product Marketing Intern"
   },
@@ -4488,7 +4488,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -4687,7 +4687,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4829,7 +4829,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -4876,7 +4876,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -5162,7 +5162,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5399,7 +5399,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -5435,7 +5435,7 @@
     "first_seen": "2026-11-02",
     "id": "86dfe29b303aa124",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -5447,7 +5447,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5461,7 +5461,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Bank Operations (Summer 2027)"
   },
@@ -5900,7 +5900,7 @@
     "company": "Marsh McLennan",
     "company_id": "marsh-mclennan",
     "country": "United States",
-    "date_posted": "2026-11-05",
+    "date_posted": "2026-11-06",
     "deadline": null,
     "description_snippet": "Company:. Marsh McLennan Agency. Description:. About Marsh Agency Midwest . Marsh Agency’s Midwest Region is a full-service brokerage providing business insurance, employee benefits, private client insurance, and retirement services to businesses and individuals across the...",
     "eligibility": {
@@ -6018,7 +6018,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6054,7 +6054,7 @@
     "first_seen": "2026-11-02",
     "id": "96f4ef1f1584e43f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.653452,
     "lng": -93.482793,
     "location_label": "Altoona, IA",
@@ -6065,7 +6065,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6079,7 +6079,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -6129,6 +6129,53 @@
     "status": "open",
     "tags": [],
     "title": "Wintrust 2027 Summer Internship: Commercial Banking"
+  },
+  {
+    "apply_url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/7989281003",
+    "ats": "greenhouse",
+    "city": "Chicago",
+    "company": "GCM Grosvenor",
+    "company_id": "gcm-grosvenor",
+    "country": "United States",
+    "date_posted": "2026-11-06",
+    "deadline": null,
+    "description_snippet": "SUMMARY . The summer intern will be responsible for performing certain fund accounting functions for partnerships and accounts managed by the Firm. RESPONSIBILITIES . The summer intern will be involved in the following critical activities:. Maintain the accounting ledgers for...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-07",
+    "id": "98ab9f9d2d97edba",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, Illinois, United States",
+    "match_reasons": [
+      "+40 role: 'accounting intern' in title (accounting)",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 95,
+    "role_category": "accounting",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "7989281003",
+        "source_name": "greenhouse",
+        "url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/7989281003"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "2027 Fund Accounting Summer Intern"
   },
   {
     "apply_url": "https://www.jumptrading.com/hr/job?gh_jid=8052351",
@@ -6195,7 +6242,7 @@
     "first_seen": "2026-11-02",
     "id": "9a022579dc0bcdf9",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -6207,7 +6254,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'technology' is off-target"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 65,
     "role_category": "insurance_risk",
@@ -6221,7 +6268,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Risk Consulting Intern - Summer 2027"
   },
@@ -6338,7 +6385,7 @@
     "first_seen": "2026-11-02",
     "id": "9b3c27ea414d3711",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -6349,7 +6396,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6368,7 +6415,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -6544,7 +6591,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -7366,6 +7413,55 @@
     "title": "2027 Audit or Tax Intern"
   },
   {
+    "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Events---Sponsorships-Marketing-Intern_R-9550",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "country": "United States",
+    "date_posted": "2026-11-06",
+    "deadline": null,
+    "description_snippet": "The UMB Events & Sponsorships team is responsible for managing the bank’s large sponsorships (e.g. Denver Nuggets, Kansas City Royals) and client event experiences. This includes strategic planning, communications with internal leadership and lines-of-business stakeholders, and...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-07",
+    "id": "b22249d70f06523c",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "Kansas City MO",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear",
+      "-30 title: 'marketing' is off-target",
+      "score limited to 0 (raw total -17)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 0,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "umb:R-9550",
+        "source_name": "workday",
+        "url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Events---Sponsorships-Marketing-Intern_R-9550"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Events & Sponsorships Marketing Intern"
+  },
+  {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa/Community-Involvement-Intern_R6513-1",
     "ats": "workday",
     "city": null,
@@ -7394,7 +7490,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -7762,7 +7858,7 @@
     "first_seen": "2026-11-02",
     "id": "b82d6b6973c31b50",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -7773,7 +7869,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7787,7 +7883,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Transfer Pricing Intern"
   },
@@ -7822,7 +7918,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -8013,7 +8109,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": true,
     "relevance_score": 85,
     "role_category": "accounting",
@@ -8295,7 +8391,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -8483,7 +8579,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -9049,7 +9145,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "corporate_finance",
@@ -9063,7 +9159,7 @@
       }
     ],
     "state": "MN",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Finance and Accounting Leadership Development Program (FALDP) Intern"
   },
@@ -9143,7 +9239,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -9511,7 +9607,7 @@
     "first_seen": "2026-11-02",
     "id": "ddce09af7db3913e",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-05",
     "lat": 38.889042,
     "lng": -94.690584,
     "location_label": "Overland Park, KS",
@@ -9522,7 +9618,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -9536,7 +9632,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [
       "location_conflict"
     ],
@@ -9968,6 +10064,54 @@
     "title": "Corporate Communications Intern"
   },
   {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Compensation-Intern---Summer-2027_R260884",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-06",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-07",
+    "id": "ed0991ccb5797adc",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 40)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R260884",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Compensation-Intern---Summer-2027_R260884"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Compensation Intern - Summer 2027"
+  },
+  {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/West-Des-Moines/Finance-Intern---Summer-2027_R0001017",
     "ats": "workday",
     "city": "West Des Moines",
@@ -10138,7 +10282,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10185,7 +10329,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -10467,7 +10611,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
