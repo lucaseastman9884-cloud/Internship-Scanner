@@ -125,7 +125,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -139,7 +139,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Legal Intern"
   },
@@ -1117,7 +1117,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1261,7 +1261,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -1869,7 +1869,7 @@
     "first_seen": "2026-11-02",
     "id": "2cf48506d1f09966",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-06",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -1881,7 +1881,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1895,7 +1895,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - IT (Summer 2027)"
   },
@@ -2118,7 +2118,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -2213,7 +2213,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -2639,7 +2639,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -2940,6 +2940,53 @@
     "status": "open",
     "tags": [],
     "title": "Equipment Purchasing Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Ankeny-1-410-N-Ankeny-Blvd-Ankeny-IA/Retail-Pharmacy-Intern_R260975",
+    "ats": "workday",
+    "city": "Ankeny",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-07",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . Professional License/Certification Required - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-08",
+    "id": "4767069b2437dc16",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.733637,
+    "lng": -93.599424,
+    "location_label": "Ankeny, IA",
+    "location_raw": "Ankeny #1, 410 N Ankeny Blvd., Ankeny, IA",
+    "match_reasons": [
+      "-10 role: 'assurance' only in description, which may be company boilerplate",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R260975",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Ankeny-1-410-N-Ankeny-Blvd-Ankeny-IA/Retail-Pharmacy-Intern_R260975"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Retail Pharmacy Intern"
   },
   {
     "apply_url": "https://www.jumptrading.com/hr/job?gh_jid=7982648",
@@ -3444,7 +3491,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3730,7 +3777,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4110,7 +4157,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -4488,7 +4535,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -4587,7 +4634,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -4687,7 +4734,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4829,7 +4876,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -4843,7 +4890,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "IT Intern, Digital Platforms"
   },
@@ -4876,7 +4923,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -5162,7 +5209,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5176,7 +5223,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer CAS Internship - West Des Moines"
   },
@@ -5399,7 +5446,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -5413,7 +5460,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern-Claims"
   },
@@ -5447,7 +5494,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6018,7 +6065,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6065,7 +6112,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6254,7 +6301,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'technology' is off-target"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 65,
     "role_category": "insurance_risk",
@@ -6396,7 +6443,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6591,7 +6638,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -6605,7 +6652,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [
       "remote_iowa"
     ],
@@ -7490,7 +7537,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -7504,7 +7551,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Community Involvement Intern"
   },
@@ -7869,7 +7916,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7918,7 +7965,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -8098,7 +8145,7 @@
     "first_seen": "2026-11-02",
     "id": "bbb98f2e1e7e4aa6",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-06",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -8109,7 +8156,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": true,
     "relevance_score": 85,
     "role_category": "accounting",
@@ -8123,7 +8170,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Winter Tax Internship - West Des Moines"
   },
@@ -8391,7 +8438,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 58,
     "role_category": "insurance_risk",
@@ -8405,7 +8452,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Claims Intern - Medical Management"
   },
@@ -8579,7 +8626,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -8593,7 +8640,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern- Claims (Property)"
   },
@@ -9145,7 +9192,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "corporate_finance",
@@ -9239,7 +9286,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
@@ -9618,7 +9665,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -9656,7 +9703,7 @@
     "first_seen": "2026-11-02",
     "id": "dfbb0dae86f67453",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-06",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -10271,7 +10318,7 @@
     "first_seen": "2026-11-05",
     "id": "f0c5ba8263288b5b",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-06",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -10282,7 +10329,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10296,7 +10343,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - IT Audit (Summer 2027)"
   },
@@ -10329,7 +10376,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -10343,7 +10390,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Underwriting Intern - South Central Region"
   },
@@ -10611,7 +10658,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "insurance_risk",
