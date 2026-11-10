@@ -268,7 +268,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -457,7 +457,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -617,6 +617,53 @@
     "title": "Oliver Wyman Actuarial - Internship - Summer 2027"
   },
   {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Lees-Summit-1-Rice-Road-Lees-Summit-MO/Retail-Pharmacy-Intern_R261154",
+    "ats": "workday",
+    "city": "Lees Summit",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-09",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-10",
+    "id": "0cc3f4553902a91f",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 38.921601,
+    "lng": -94.384763,
+    "location_label": "Lees Summit, MO",
+    "location_raw": "Lees Summit #1, Rice Road, Lees Summit, MO",
+    "match_reasons": [
+      "-10 role: 'assurance' only in description, which may be company boilerplate",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R261154",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Lees-Summit-1-Rice-Road-Lees-Summit-MO/Retail-Pharmacy-Intern_R261154"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Retail Pharmacy Intern"
+  },
+  {
     "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-State-and-Local-Tax--SALT--Intern_JR-00436",
     "ats": "workday",
     "city": "Schaumburg",
@@ -692,7 +739,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -1117,7 +1164,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -1131,7 +1178,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Sales Intern, Eagle Life"
   },
@@ -1881,7 +1928,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2118,7 +2165,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -2132,7 +2179,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer Internship Program – Public Finance"
   },
@@ -2213,7 +2260,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -2227,7 +2274,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Graphic Design Intern"
   },
@@ -3113,7 +3160,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -3395,7 +3442,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -3681,7 +3728,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3777,7 +3824,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3791,7 +3838,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - Commercial Loan Servicing (Summer 2027)"
   },
@@ -3872,7 +3919,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 10,
     "role_category": null,
@@ -3966,7 +4013,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -4157,7 +4204,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -4171,7 +4218,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Product Marketing Intern"
   },
@@ -4335,7 +4382,7 @@
     "first_seen": "2026-11-02",
     "id": "6be7f2821191aab0",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-08",
     "lat": 38.986835,
     "lng": -94.636195,
     "location_label": "Prairie Village, KS",
@@ -4346,7 +4393,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -4360,7 +4407,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -4634,7 +4681,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -5494,7 +5541,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5508,7 +5555,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - Bank Operations (Summer 2027)"
   },
@@ -6112,7 +6159,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6126,7 +6173,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -6301,7 +6348,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'technology' is off-target"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 65,
     "role_category": "insurance_risk",
@@ -6315,7 +6362,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Technology Risk Consulting Intern - Summer 2027"
   },
@@ -6443,7 +6490,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6462,7 +6509,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -6829,7 +6876,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7366,13 +7413,13 @@
     "title": "Tax Intern"
   },
   {
-    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-5-Army-Post-Rd-Des-Moines-IA/Retail-Pharmacy-Intern_R257028",
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-5-Army-Post-Rd-Des-Moines-IA/Retail-Pharmacy-Intern_R261278",
     "ats": "workday",
     "city": "Des Moines",
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-10-13",
+    "date_posted": "2026-11-09",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
     "eligibility": {
@@ -7383,7 +7430,7 @@
     "first_seen": "2026-11-02",
     "id": "aeb4c2d9dc65d8fa",
     "is_remote": false,
-    "last_known_open": "2026-11-02",
+    "last_known_open": null,
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -7394,7 +7441,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -7405,10 +7452,15 @@
         "source_job_id": "hyvee:R257028",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-5-Army-Post-Rd-Des-Moines-IA/Retail-Pharmacy-Intern_R257028"
+      },
+      {
+        "source_job_id": "hyvee:R261278",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-5-Army-Post-Rd-Des-Moines-IA/Retail-Pharmacy-Intern_R261278"
       }
     ],
     "state": "IA",
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -7916,7 +7968,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7930,7 +7982,7 @@
       }
     ],
     "state": null,
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer Transfer Pricing Intern"
   },
@@ -8156,7 +8208,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": true,
     "relevance_score": 85,
     "role_category": "accounting",
@@ -8485,7 +8537,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -8579,7 +8631,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -9192,7 +9244,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "corporate_finance",
@@ -9206,7 +9258,7 @@
       }
     ],
     "state": "MN",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Finance and Accounting Leadership Development Program (FALDP) Intern"
   },
@@ -9239,7 +9291,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9665,7 +9717,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -9679,7 +9731,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [
       "location_conflict"
     ],
@@ -9714,7 +9766,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": true,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10064,6 +10116,53 @@
     "title": "Campus UI Software Engineer (Intern)"
   },
   {
+    "apply_url": "https://athene.wd5.myworkdayjobs.com/athene_careers/job/West-Des-Moines-Iowa/Finance-Summer-2027-Internship--Sales---Expense-_R255321",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Athene",
+    "company_id": "athene",
+    "country": "United States",
+    "date_posted": "2026-11-09",
+    "deadline": null,
+    "description_snippet": "We are driven to do more. More for our customers and the financial professionals who offer our products. If you are driven to do more and love the challenge of pursuing more, Athene is your kind of company. You will find we offer more than the basics to create an inclusive and...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-10",
+    "id": "ec79dd0aa1c06425",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "West Des Moines, Iowa",
+    "match_reasons": [
+      "+40 role: 'finance intern' in title (corporate_finance)",
+      "+20 location: Des Moines metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 95,
+    "role_category": "corporate_finance",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "athene:R255321",
+        "source_name": "workday",
+        "url": "https://athene.wd5.myworkdayjobs.com/athene_careers/job/West-Des-Moines-Iowa/Finance-Summer-2027-Internship--Sales---Expense-_R255321"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Finance Summer 2027 Internship (Sales & Expense)"
+  },
+  {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa/Corporate-Communications-Intern_R6514",
     "ats": "workday",
     "city": null,
@@ -10234,7 +10333,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -10329,7 +10428,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10581,6 +10680,53 @@
     "status": "open",
     "tags": [],
     "title": "C++ Developer (Intern)"
+  },
+  {
+    "apply_url": "https://job-boards.greenhouse.io/enova/jobs/8366036",
+    "ats": "greenhouse",
+    "city": "Chicago",
+    "company": "Enova",
+    "company_id": "enova",
+    "country": "United States",
+    "date_posted": "2026-11-09",
+    "deadline": null,
+    "description_snippet": "We are interested in every qualified candidate who is eligible to work in the United States. However, we are not able to sponsor visas or take over sponsorship at this time. About the role: . As an Analytics Intern, you’ll immerse yourself in the Analytics department and get a...",
+    "eligibility": {
+      "reason": "Mentions an earlier graduation year without saying it is required: \"Acceptable Graduation Dates: December 2027 - June 2028 .\"",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-10",
+    "id": "f4e222dce3141f53",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL",
+    "match_reasons": [
+      "-10 role: 'risk management' only in description, which may be company boilerplate",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "8366036",
+        "source_name": "greenhouse",
+        "url": "https://job-boards.greenhouse.io/enova/jobs/8366036"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "Analytics Internship Summer 2027 (Hybrid)"
   },
   {
     "apply_url": "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers/job/Minneapolis-MN/XMLNAME-2027-Payment-Sales-Intern_2026-0033867",
