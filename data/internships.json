@@ -256,7 +256,7 @@
     "first_seen": "2026-11-02",
     "id": "06a23e7c84be1d2e",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.59048,
     "lng": -93.882818,
     "location_label": "Waukee, IA",
@@ -268,7 +268,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -282,7 +282,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Sales Intern - Summer 2027"
   },
@@ -446,7 +446,7 @@
     "first_seen": "2026-11-02",
     "id": "08e7109957e227b6",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -457,7 +457,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -471,7 +471,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 TRC Winter Internship - West Des Moines"
   },
@@ -728,7 +728,7 @@
     "first_seen": "2026-11-02",
     "id": "0f53a4c2093edad9",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -739,7 +739,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -753,7 +753,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Undergraduate Internal Audit Majors"
   },
@@ -1616,6 +1616,53 @@
     "title": "Risk Control Intern"
   },
   {
+    "apply_url": "https://bmo.wd3.myworkdayjobs.com/External/job/Chicago-IL-USA/Treasury---Payment-Solutions-Strategy-Intern--Summer-2027--10-weeks-_R260031397",
+    "ats": "workday",
+    "city": "Chicago",
+    "company": "BMO",
+    "company_id": "bmo",
+    "country": "United States",
+    "date_posted": "2026-11-10",
+    "deadline": null,
+    "description_snippet": "Application Deadline:. 12/10/2026. Address:. 320 S Canal Street. Job Family Group:. Strategy & Change. Additional Job Description . As a co-op/intern student at BMO, you will have the opportunity to be heard, keep growing and make a difference. You will be part of our BMO campus...",
+    "eligibility": {
+      "reason": "Mentions an earlier graduation year without saying it is required: \"We are actively seeking students enrolled in an undergraduate degree program, graduating Spring 2027.\"",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-11",
+    "id": "280eaeeebd36f634",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL, USA",
+    "match_reasons": [
+      "+40 role: 'treasury' in title (corporate_finance)",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 85,
+    "role_category": "corporate_finance",
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "bmo:R260031397",
+        "source_name": "workday",
+        "url": "https://bmo.wd3.myworkdayjobs.com/External/job/Chicago-IL-USA/Treasury---Payment-Solutions-Strategy-Intern--Summer-2027--10-weeks-_R260031397"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "Treasury & Payment Solutions Strategy Intern, Summer 2027 (10 weeks)"
+  },
+  {
     "apply_url": "https://wintrust.wd1.myworkdayjobs.com/Search/job/Rosemont-IL/Wintrust-2027-Summer-Internship--Customer-Contact-Center_261947",
     "ats": "workday",
     "city": "Rosemont",
@@ -1756,6 +1803,54 @@
     "status": "open",
     "tags": [],
     "title": "Institutional Custody Administrator Intern"
+  },
+  {
+    "apply_url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-Bank-Building-1000-Walnut-64106/Intern---Commerce-Trust--Summer-2027-_38368",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "Commerce Bank",
+    "company_id": "commerce-bank",
+    "country": "United States",
+    "date_posted": "2026-11-10",
+    "deadline": null,
+    "description_snippet": "About Working at Commerce. Building a career here is more than just steps on a ladder. It’s about helping people find financial safety and success, helping businesses thrive, and making sure people and their money are taken care of. And our commitment doesn’t stop there. Our...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-11",
+    "id": "2aea83b9288c8aba",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "MO - Kansas City Downtown/Plaza - Kansas City - KC Downtown Bank Building (1000 Walnut) (64106)",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Kansas City metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 40)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "commercebank:38368",
+        "source_name": "workday",
+        "url": "https://commercebank.wd1.myworkdayjobs.com/CommerceJobs/job/MO---Kansas-City-DowntownPlaza---Kansas-City---KC-Downtown-Bank-Building-1000-Walnut-64106/Intern---Commerce-Trust--Summer-2027-_38368"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Intern - Commerce Trust (Summer 2027)"
   },
   {
     "apply_url": "https://emcins.wd5.myworkdayjobs.com/EMC_Careers/job/Iowa/Cybersecurity-Intern_R6590",
@@ -1928,7 +2023,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1942,7 +2037,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - IT (Summer 2027)"
   },
@@ -2071,7 +2166,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3149,7 +3244,7 @@
     "first_seen": "2026-11-02",
     "id": "4b9ceb6d5318974d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.404715,
     "lng": -92.917412,
     "location_label": "Pella, IA",
@@ -3160,7 +3255,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -3174,7 +3269,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Corporate Research Intern"
   },
@@ -3431,7 +3526,7 @@
     "first_seen": "2026-11-02",
     "id": "50e31bf0e5cde555",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -3442,7 +3537,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -3456,7 +3551,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Business Majors - ex. Business Administration , Finance"
   },
@@ -3716,7 +3811,7 @@
     "first_seen": "2026-11-02",
     "id": "565bc0a702f63dd3",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.59048,
     "lng": -93.882818,
     "location_label": "Waukee, IA",
@@ -3728,7 +3823,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3742,7 +3837,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
@@ -3907,7 +4002,7 @@
     "first_seen": "2026-11-02",
     "id": "5d04d8fc5b9a0a2d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -3919,7 +4014,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 10,
     "role_category": null,
@@ -3933,7 +4028,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Marketing, Communications, Journalism Majors"
   },
@@ -4002,7 +4097,7 @@
     "first_seen": "2026-11-02",
     "id": "5f3225882c96282e",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.404715,
     "lng": -92.917412,
     "location_label": "Pella, IA",
@@ -4013,7 +4108,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -4027,7 +4122,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Quality Engineer Intern - Summer 2027"
   },
@@ -4393,7 +4488,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -4681,7 +4776,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -5114,7 +5209,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6864,7 +6959,7 @@
     "first_seen": "2026-11-02",
     "id": "a24b13aabef62171",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -6876,7 +6971,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6890,7 +6985,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Non-Business Majors - ex. Criminal Justice, International Affairs, Liberal Arts"
   },
@@ -6970,7 +7065,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -8208,7 +8303,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": true,
     "relevance_score": 85,
     "role_category": "accounting",
@@ -8222,7 +8317,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Winter Tax Internship - West Des Moines"
   },
@@ -8526,7 +8621,7 @@
     "first_seen": "2026-11-02",
     "id": "c2f9afc63a9e07bd",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.264013,
     "lng": -96.056496,
     "location_label": "Omaha, NE",
@@ -8537,7 +8632,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -8551,7 +8646,7 @@
       }
     ],
     "state": "NE",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Insurance Intern"
   },
@@ -8620,7 +8715,7 @@
     "first_seen": "2026-11-02",
     "id": "c76c0a80e4a83cbb",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -8631,7 +8726,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -8645,7 +8740,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Operations Reporting & Analytics Intern"
   },
@@ -9074,6 +9169,53 @@
     "title": "Corporate Legal Intern"
   },
   {
+    "apply_url": "https://pnc.wd5.myworkdayjobs.com/External/job/PA---Pittsburgh-15222/Asset-Management-Group-Undergraduate-Intern_R230880-1",
+    "ats": "workday",
+    "city": "Franklin Building",
+    "company": "PNC",
+    "company_id": "pnc",
+    "country": null,
+    "date_posted": "2026-11-10",
+    "deadline": null,
+    "description_snippet": ". Position Overview. At PNC, our people are our greatest differentiator and competitive advantage in the markets we serve. We are all united in delivering the best experience for our customers. We work together each day to foster an inclusive workplace culture where all of our...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-11",
+    "id": "ce4663d5bf2ad8b1",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": null,
+    "lng": null,
+    "location_label": "Location unknown",
+    "location_raw": "PA - Pittsburgh (15222); PNC Center - Cincinnati (OHA45); 12th and Midtown Atlanta (GA114); Phoenix - East Camelback Exec Suite (AZ014); PNC Tower - Louisville (KY012); PNC Place (DC037); PNC Center - Cleveland (OH001); PNC Center - Troy (MIJ40); PNC Harborside (MD124); Downtown Orlando Orange Avenue (FL361); Los Angeles - Constellation Blvd (CA314); San Francisco - Mission (CA295); Downtown Fort Lauderdale (FL145); The Plaza at Coral Gables (FL422); The Tower at PNC Plaza (PAA86); Houston Plaza (TX334); Charlotte Piedmont Center (NC037); Denver - 1144 15th Street (CO034); PNC Bank N.A. (PA375); Columbus Plaza Main Office (OH124); Tampa City Center (FL404); PNC Dallas (TX135); Franklin Building - Chicago (IL016); PNC Plaza - Raleigh (NC207); Two Tower Center (NJ260)",
+    "match_reasons": [
+      "+40 role: 'asset management' in title (investments)",
+      "+0 location: unknown",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 48,
+    "role_category": "investments",
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "pnc:R230880-1",
+        "source_name": "workday",
+        "url": "https://pnc.wd5.myworkdayjobs.com/External/job/PA---Pittsburgh-15222/Asset-Management-Group-Undergraduate-Intern_R230880-1"
+      }
+    ],
+    "state": null,
+    "status": "open",
+    "tags": [],
+    "title": "Asset Management Group Undergraduate Intern"
+  },
+  {
     "apply_url": "https://wintrust.wd1.myworkdayjobs.com/Search/job/Rosemont-IL/Wintrust-2027-Summer-Internship--Human-Resources_261944",
     "ats": "workday",
     "city": "Rosemont",
@@ -9280,7 +9422,7 @@
     "first_seen": "2026-11-02",
     "id": "d351a061af811b70",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-09",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -9291,7 +9433,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9305,7 +9447,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Accounting Majors"
   },
@@ -9738,6 +9880,53 @@
     "title": "Intern, Tax- Cincinnati, OH"
   },
   {
+    "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Commercial-Banking-Intern_R-9752",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "country": "United States",
+    "date_posted": "2026-11-10",
+    "deadline": null,
+    "description_snippet": "Our Commercial Banking Internship is designed to launch your banking career by giving you an immersive, hands-on look at how UMB powers businesses of every size, and you may be considered for the 2028 UMB Banker Development Program. You’ll step into the world of commercial...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-11",
+    "id": "df0baa25c8fedcc7",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "Kansas City MO; Madison WI; Wichita KS; Minneapolis MN; Milwaukee WI; Denver CO; Oklahoma City OK; Dallas TX",
+    "match_reasons": [
+      "+40 role: 'commercial banking' in title (banking)",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 68,
+    "role_category": "banking",
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "umb:R-9752",
+        "source_name": "workday",
+        "url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Commercial-Banking-Intern_R-9752"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "Commercial Banking Intern"
+  },
+  {
     "apply_url": "https://uhyus.wd12.myworkdayjobs.com/uhy/job/West-Des-Moines-IA/XMLNAME-2027-Summer-Tax-Internship---West-Des-Moines_JR102036-1",
     "ats": "workday",
     "city": "West Des Moines",
@@ -9755,7 +9944,7 @@
     "first_seen": "2026-11-02",
     "id": "dfbb0dae86f67453",
     "is_remote": false,
-    "last_known_open": "2026-11-06",
+    "last_known_open": "2026-11-09",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -9766,7 +9955,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": true,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9780,7 +9969,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Tax Internship - West Des Moines"
   },
@@ -10122,7 +10311,7 @@
     "company": "Athene",
     "company_id": "athene",
     "country": "United States",
-    "date_posted": "2026-11-09",
+    "date_posted": "2026-11-10",
     "deadline": null,
     "description_snippet": "We are driven to do more. More for our customers and the financial professionals who offer our products. If you are driven to do more and love the challenge of pursuing more, Athene is your kind of company. You will find we offer more than the basics to create an inclusive and...",
     "eligibility": {
@@ -10333,7 +10522,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -10347,7 +10536,7 @@
       }
     ],
     "state": "IL",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Accounting Intern (Term-Time, Part-Time)"
   },
@@ -10428,7 +10617,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10442,7 +10631,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - IT Audit (Summer 2027)"
   },
