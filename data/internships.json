@@ -268,7 +268,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -457,7 +457,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -739,7 +739,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -1917,7 +1917,7 @@
     "first_seen": "2026-11-02",
     "id": "2cb901ac228fe60a",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-11",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -1928,7 +1928,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -1942,7 +1942,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Software Engineer Internship Summer 2027 (Hybrid)"
   },
@@ -2166,7 +2166,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2497,7 +2497,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "investments",
@@ -3255,7 +3255,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -3302,7 +3302,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3537,7 +3537,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -3823,7 +3823,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4014,7 +4014,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 10,
     "role_category": null,
@@ -4108,7 +4108,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -4488,7 +4488,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -4502,7 +4502,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -4839,6 +4839,11 @@
         "source_job_id": "hyvee:R259256",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cedar-Rapids-Drugstore-5-Blairs-Ferry-Rd-Cedar-Rapids-IA/Retail-Pharmacy-Intern_R259256"
+      },
+      {
+        "source_job_id": "hyvee:R261719",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cedar-Rapids-Drugstore-5-Blairs-Ferry-Rd-Cedar-Rapids-IA/Retail-Pharmacy-Intern_R261719"
       }
     ],
     "state": "IA",
@@ -5209,7 +5214,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -5541,7 +5546,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 15,
     "role_category": null,
@@ -6606,6 +6611,11 @@
         "source_job_id": "hyvee:R261553",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/West-Des-Moines-4-Mills-Civic-West-Des-Moines-IA/Retail-Pharmacy-Intern_R261553"
+      },
+      {
+        "source_job_id": "hyvee:R261737",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/West-Des-Moines-3-Jordan-Creek-Pkwy-West-Des-Moines-IA/Retail-Pharmacy-Intern_R261737"
       }
     ],
     "state": "IA",
@@ -6976,7 +6986,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7070,7 +7080,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -7494,7 +7504,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -7866,7 +7876,7 @@
     "first_seen": "2026-11-02",
     "id": "b6e8c6fe2d4f6e2e",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-11",
     "lat": 38.889042,
     "lng": -94.690584,
     "location_label": "Overland Park, KS",
@@ -7878,7 +7888,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7892,7 +7902,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Insurance"
   },
@@ -8637,7 +8647,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -8731,7 +8741,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -9202,7 +9212,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "investments",
@@ -9438,7 +9448,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9960,7 +9970,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": true,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -10327,7 +10337,7 @@
     "first_seen": "2026-11-10",
     "id": "ec79dd0aa1c06425",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-11",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -10338,7 +10348,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -10352,7 +10362,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Finance Summer 2027 Internship (Sales & Expense)"
   },
@@ -10527,7 +10537,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -10940,7 +10950,7 @@
     "first_seen": "2026-11-02",
     "id": "f60ba45fc13adbbf",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-11",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -10951,7 +10961,7 @@
       "+20 season: Spring 2028 (weight 0.8)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -10965,7 +10975,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Payment Sales Intern"
   },
