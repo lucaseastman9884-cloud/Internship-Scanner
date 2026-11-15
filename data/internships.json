@@ -78,7 +78,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -62)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -268,7 +268,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -282,7 +282,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Sales Intern - Summer 2027"
   },
@@ -457,7 +457,7 @@
       "+15 season: Winter 2027 (weight 0.6)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -471,7 +471,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 TRC Winter Internship - West Des Moines"
   },
@@ -739,7 +739,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -753,7 +753,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Summer 2027 Intern - Undergraduate Internal Audit Majors"
   },
@@ -1928,7 +1928,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -2048,7 +2048,7 @@
     "company": "Vermeer",
     "company_id": "vermeer",
     "country": "United States",
-    "date_posted": "2026-09-08",
+    "date_posted": "2026-11-13",
     "deadline": null,
     "description_snippet": "Who We Are . Vermeer equips customers doing important work around the world. We are global, driven by innovation and growing. The equipment we make manages natural resources, connects people and feeds and fuels communities. We live out a caring culture, we demonstrate agility,...",
     "eligibility": {
@@ -2059,9 +2059,9 @@
     "first_seen": "2026-11-02",
     "id": "2f981d489d6548a2",
     "is_remote": false,
-    "last_known_open": "2026-11-02",
-    "lat": 41.408,
-    "lng": -92.9163,
+    "last_known_open": null,
+    "lat": 41.404715,
+    "lng": -92.917412,
     "location_label": "Pella, IA",
     "location_raw": "Pella, Iowa, USA - The Center",
     "match_reasons": [
@@ -2070,7 +2070,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 3,
     "role_category": null,
@@ -2084,7 +2084,7 @@
       }
     ],
     "state": "IA",
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Human Resources Intern"
   },
@@ -2166,7 +2166,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2486,7 +2486,7 @@
     "first_seen": "2026-11-02",
     "id": "3bc56e5e9b4a1bb0",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-12",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -2497,7 +2497,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "investments",
@@ -2511,7 +2511,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Intern Equity Research (Buy Side) Chicago"
   },
@@ -2847,7 +2847,7 @@
     "title": "Wintrust 2027 Summer Internship: Wealth Management"
   },
   {
-    "apply_url": "https://uhyus.wd12.myworkdayjobs.com/uhy/job/St-Louis-Maplewood-MO/XMLNAME-2027-TRC-Fall-Internship---St-Louis_JR102117-1",
+    "apply_url": "https://uhyus.wd12.myworkdayjobs.com/uhy/job/St-Louis-MO/XMLNAME-2027-TRC-Fall-Internship---St-Louis_JR102117-1",
     "ats": "workday",
     "city": "Kansas City",
     "company": "UHY",
@@ -2868,7 +2868,7 @@
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
-    "location_raw": "St. Louis Maplewood, MO; Kansas City, MO; Nashville, TN",
+    "location_raw": "St. Louis, MO; Kansas City, MO; Nashville, TN",
     "match_reasons": [
       "-15 role: no target role keyword found",
       "+20 location: Kansas City metro",
@@ -3255,7 +3255,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -3269,7 +3269,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Corporate Research Intern"
   },
@@ -3291,7 +3291,7 @@
     "first_seen": "2026-11-02",
     "id": "4bddc50408f4e1e6",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-12",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -3302,7 +3302,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3316,7 +3316,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Early Careers – Product Engineering Developer Associate Intern"
   },
@@ -3537,7 +3537,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -3551,7 +3551,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Summer 2027 Intern - Business Majors - ex. Business Administration , Finance"
   },
@@ -3794,6 +3794,53 @@
     "title": "IT Intern, SAP Security"
   },
   {
+    "apply_url": "https://pnc.wd5.myworkdayjobs.com/External/job/IL---Chicago/Corporate---Institutional-Banking-Undergraduate-Intern---Business-Credit_R230898-1",
+    "ats": "workday",
+    "city": "Chicago",
+    "company": "PNC",
+    "company_id": "pnc",
+    "country": "United States",
+    "date_posted": "2026-11-13",
+    "deadline": null,
+    "description_snippet": ". Position Overview. At PNC, our people are our greatest differentiator and competitive advantage in the markets we serve. We are all united in delivering the best experience for our customers. We work together each day to foster an inclusive workplace culture where all of our...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-15",
+    "id": "54a4c80a0d509080",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "IL - Chicago; CA - Pasadena; NY - New York",
+    "match_reasons": [
+      "+40 role: 'banking intern' in title (banking)",
+      "+20 location: Chicago metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 68,
+    "role_category": "banking",
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "pnc:R230898-1",
+        "source_name": "workday",
+        "url": "https://pnc.wd5.myworkdayjobs.com/External/job/IL---Chicago/Corporate---Institutional-Banking-Undergraduate-Intern---Business-Credit_R230898-1"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "Corporate & Institutional Banking Undergraduate Intern – Business Credit"
+  },
+  {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/Waukee/Client-Service-Intern---Summer-2027_R0000957",
     "ats": "workday",
     "city": "Waukee",
@@ -3823,7 +3870,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3837,7 +3884,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
@@ -4014,7 +4061,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 10,
     "role_category": null,
@@ -4028,7 +4075,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Summer 2027 Intern - Marketing, Communications, Journalism Majors"
   },
@@ -4108,7 +4155,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -4122,7 +4169,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Quality Engineer Intern - Summer 2027"
   },
@@ -4795,13 +4842,13 @@
     "title": "Certified Pharmacy Intern"
   },
   {
-    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cedar-Rapids-Drugstore-5-Blairs-Ferry-Rd-Cedar-Rapids-IA/Retail-Pharmacy-Intern_R259256",
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Cedar-Rapids-Drugstore-5-Blairs-Ferry-Rd-Cedar-Rapids-IA/Retail-Pharmacy-Intern_R261719",
     "ats": "workday",
     "city": "Cedar Rapids",
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-10-27",
+    "date_posted": "2026-11-12",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
     "eligibility": {
@@ -5214,7 +5261,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -5534,7 +5581,7 @@
     "first_seen": "2026-11-02",
     "id": "850be41b0dee1cf2",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-12",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -5546,7 +5593,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 15,
     "role_category": null,
@@ -5560,7 +5607,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Commercial Marketing (Summer 2027)"
   },
@@ -5831,7 +5878,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -5880,7 +5927,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -6986,7 +7033,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7000,7 +7047,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Summer 2027 Intern - Non-Business Majors - ex. Criminal Justice, International Affairs, Liberal Arts"
   },
@@ -7080,7 +7127,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -7269,7 +7316,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -7493,7 +7540,7 @@
     "first_seen": "2026-11-02",
     "id": "adfe45aeca4dd244",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-12",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -7504,7 +7551,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -7518,7 +7565,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Tax Intern"
   },
@@ -7865,9 +7912,9 @@
     "company": "Marsh McLennan",
     "company_id": "marsh-mclennan",
     "country": "United States",
-    "date_posted": "2026-07-20",
+    "date_posted": "2026-11-13",
     "deadline": null,
-    "description_snippet": "Company:. Marsh McLennan Agency. Description:. Summer 2027 Intern - Insurance. Our not-so-secret sauce. Award-winning, inclusive, Top Workplace culture doesn’t happen overnight. It’s a result of hard work by extraordinary people. The industry’s brightest talent drive our efforts...",
+    "description_snippet": "Company:. Marsh McLennan Agency. Description:. Summer 2027 Intern - Insurance. Summer 2027 Intern- Insurance. Our not-so-secret sauce. Award-winning, inclusive, Top Workplace culture doesn’t happen overnight. It’s a result of hard work by extraordinary people. The industry’s...",
     "eligibility": {
       "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
       "status": "eligible"
@@ -7876,19 +7923,19 @@
     "first_seen": "2026-11-02",
     "id": "b6e8c6fe2d4f6e2e",
     "is_remote": false,
-    "last_known_open": "2026-11-11",
+    "last_known_open": null,
     "lat": 38.889042,
     "lng": -94.690584,
     "location_label": "Overland Park, KS",
     "location_raw": "Chesterfield - Maryville; Overland Park - College",
     "match_reasons": [
-      "-10 role: 'risk management' only in description, which may be company boilerplate",
+      "-10 role: 'wealth management' only in description, which may be company boilerplate",
       "+20 location: Kansas City metro",
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7902,7 +7949,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "open",
     "tags": [],
     "title": "Summer 2027 Intern - Insurance"
   },
@@ -8647,7 +8694,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -8661,7 +8708,7 @@
       }
     ],
     "state": "NE",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Insurance Intern"
   },
@@ -8741,7 +8788,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -8755,7 +8802,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Operations Reporting & Analytics Intern"
   },
@@ -9201,7 +9248,7 @@
     "first_seen": "2026-11-11",
     "id": "ce4663d5bf2ad8b1",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-12",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -9212,7 +9259,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "investments",
@@ -9226,7 +9273,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Asset Management Group Undergraduate Intern"
   },
@@ -9448,7 +9495,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9462,7 +9509,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Summer 2027 Intern - Accounting Majors"
   },
@@ -9590,7 +9637,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -2)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -9701,6 +9748,54 @@
     "status": "open",
     "tags": [],
     "title": "Advanced Manufacturing Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://cibc.wd3.myworkdayjobs.com/search/job/Chicago-IL/XMLNAME-2027-Summer-Intern---Commercial-Real-Estate_2620117-1",
+    "ats": "workday",
+    "city": "Chicago",
+    "company": "CIBC",
+    "company_id": "cibc",
+    "country": "United States",
+    "date_posted": "2026-11-13",
+    "deadline": null,
+    "description_snippet": "We’re building a relationship-oriented bank for the modern world. We need talented, passionate professionals who are dedicated to doing what’s right for our clients. At CIBC, we embrace your strengths and your ambitions, so you are empowered at work. Our team members have what...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-15",
+    "id": "d7f44abe35eb8e78",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL",
+    "match_reasons": [
+      "-10 role: 'commercial banking' only in description, which may be company boilerplate",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 45)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "cibc:2620117-1",
+        "source_name": "workday",
+        "url": "https://cibc.wd3.myworkdayjobs.com/search/job/Chicago-IL/XMLNAME-2027-Summer-Intern---Commercial-Real-Estate_2620117-1"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "2027 Summer Intern - Commercial Real Estate"
   },
   {
     "apply_url": "https://holmesmurphy.wd1.myworkdayjobs.com/HolmesMurphyCareers/job/West-Des-Moines/Marketing-Intern---Summer-2027_R0001023",
@@ -9970,7 +10065,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": true,
     "relevance_score": 95,
     "role_category": "accounting",
@@ -9984,7 +10079,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer Tax Internship - West Des Moines"
   },
@@ -10348,7 +10443,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -10537,7 +10632,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -10551,7 +10646,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Accounting Intern (Term-Time, Part-Time)"
   },
@@ -10961,7 +11056,7 @@
       "+20 season: Spring 2028 (weight 0.8)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
