@@ -64,7 +64,7 @@
     "first_seen": "2026-11-02",
     "id": "03e7ff029bfea4a3",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-13",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -78,7 +78,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -62)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -92,7 +92,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Marketing Technology Intern"
   },
@@ -645,7 +645,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -1928,7 +1928,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -2166,7 +2166,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 45)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2180,7 +2180,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Talent & Culture (HR) Intern - Summer 2027"
   },
@@ -2497,7 +2497,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "investments",
@@ -3302,7 +3302,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3822,7 +3822,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -5261,7 +5261,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -5275,7 +5275,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Derivatives Operations Co-op (2027)"
   },
@@ -5593,7 +5593,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 15,
     "role_category": null,
@@ -5867,7 +5867,7 @@
     "first_seen": "2026-11-02",
     "id": "8b31a974e387be5f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-13",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -5878,7 +5878,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -5892,7 +5892,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "IT Intern, Solutions Architecture - AI"
   },
@@ -5914,7 +5914,7 @@
     "first_seen": "2026-11-02",
     "id": "8be8c74a6e1d0a9a",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-13",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -5927,7 +5927,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -5941,7 +5941,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Internship Program (Agile Product Design)"
   },
@@ -6278,13 +6278,13 @@
     "title": "Network & Systems Intern - Summer 2027"
   },
   {
-    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Altoona--8th-St-SW-Altoona-IA/Retail-Pharmacy-Intern_R255628",
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Altoona--8th-St-SW-Altoona-IA/Retail-Pharmacy-Intern_R261998",
     "ats": "workday",
     "city": "Altoona",
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-10-06",
+    "date_posted": "2026-11-16",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
     "eligibility": {
@@ -6295,7 +6295,7 @@
     "first_seen": "2026-11-02",
     "id": "96f4ef1f1584e43f",
     "is_remote": false,
-    "last_known_open": "2026-11-05",
+    "last_known_open": null,
     "lat": 41.653452,
     "lng": -93.482793,
     "location_label": "Altoona, IA",
@@ -6306,7 +6306,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -6317,10 +6317,15 @@
         "source_job_id": "hyvee:R255628",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Altoona--8th-St-SW-Altoona-IA/Retail-Pharmacy-Intern_R255628"
+      },
+      {
+        "source_job_id": "hyvee:R261998",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Altoona--8th-St-SW-Altoona-IA/Retail-Pharmacy-Intern_R261998"
       }
     ],
     "state": "IA",
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -7127,7 +7132,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -7141,7 +7146,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Trade Support Engineer Intern"
   },
@@ -7288,13 +7293,13 @@
     "title": "Campus Systems Engineer (Intern)"
   },
   {
-    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Kansas-City-3-NW-64th-Kansas-City-MO/Retail-Pharmacy-Intern_R260083",
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Kansas-City-3-NW-64th-Kansas-City-MO/Retail-Pharmacy-Intern_R262093",
     "ats": "workday",
     "city": "Kansas City",
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-11-02",
+    "date_posted": "2026-11-16",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . Professional License/Certification Required - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our...",
     "eligibility": {
@@ -7316,7 +7321,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -7327,6 +7332,11 @@
         "source_job_id": "hyvee:R260083",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Kansas-City-3-NW-64th-Kansas-City-MO/Retail-Pharmacy-Intern_R260083"
+      },
+      {
+        "source_job_id": "hyvee:R262093",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Kansas-City-3-NW-64th-Kansas-City-MO/Retail-Pharmacy-Intern_R262093"
       }
     ],
     "state": "MO",
@@ -7551,7 +7561,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -9259,7 +9269,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "investments",
@@ -9625,7 +9635,7 @@
     "first_seen": "2026-11-02",
     "id": "d5f7b4ef07f32c92",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-13",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -9637,7 +9647,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -2)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -9651,7 +9661,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Regulatory Compliance Consultant Intern"
   },
@@ -10443,7 +10453,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -11056,7 +11066,7 @@
       "+20 season: Spring 2028 (weight 0.8)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
