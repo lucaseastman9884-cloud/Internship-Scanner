@@ -78,7 +78,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -62)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -144,6 +144,53 @@
     "title": "Legal Intern"
   },
   {
+    "apply_url": "https://vermeer.wd5.myworkdayjobs.com/externalcareersite/job/Pella-Iowa-USA---Corporate-Office/Data-Analytics-Internship-Summer-2027_REQ-22164",
+    "ats": "workday",
+    "city": "Pella",
+    "company": "Vermeer",
+    "company_id": "vermeer",
+    "country": "United States",
+    "date_posted": "2026-11-17",
+    "deadline": null,
+    "description_snippet": "Who We Are . Vermeer equips customers doing important work around the world. We are global, driven by innovation and growing. The equipment we make manages natural resources, connects people and feeds and fuels communities. We live out a caring culture, we demonstrate agility,...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-18",
+    "id": "054180d4c155c47b",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.404715,
+    "lng": -92.917412,
+    "location_label": "Pella, IA",
+    "location_raw": "Pella, Iowa, USA - Corporate Office",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+10 location: in IA",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 30,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "vermeer:REQ-22164",
+        "source_name": "workday",
+        "url": "https://vermeer.wd5.myworkdayjobs.com/externalcareersite/job/Pella-Iowa-USA---Corporate-Office/Data-Analytics-Internship-Summer-2027_REQ-22164"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Data Analytics Internship Summer 2027"
+  },
+  {
     "apply_url": "https://www.akunacapital.com/careers/job/8018856/?gh_jid=8018856",
     "ats": "greenhouse",
     "city": "Chicago",
@@ -172,7 +219,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -645,7 +692,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -1403,7 +1450,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -1514,12 +1561,65 @@
         "source_job_id": "hyvee:R258207",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Omaha-11-178th-St-Omaha-NE/Retail-Pharmacy-Intern_R258207"
+      },
+      {
+        "source_job_id": "hyvee:R262422",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Omaha-1-5150-Center-Street-Omaha-NE/Retail-Pharmacy-Intern_R262422"
       }
     ],
     "state": "NE",
     "status": "open",
     "tags": [],
     "title": "Retail Pharmacy Intern"
+  },
+  {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Data-Integration-Intern---Summer-2027_R250148",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-17",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "Summer 2027 fits a 2029 graduate, with no restriction found",
+      "status": "eligible"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-18",
+    "id": "25fae8f431ed114a",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Des Moines metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+10 eligibility: eligible",
+      "score capped at 35: no role category matched (raw total 40)"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 35,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R250148",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Data-Integration-Intern---Summer-2027_R250148"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Data Integration Intern - Summer 2027"
   },
   {
     "apply_url": "https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE/job/Chicago-IL/Software-Engineer-Intern_R-4654",
@@ -1758,6 +1858,53 @@
     "title": "Infrastructure Intern"
   },
   {
+    "apply_url": "https://www.akunacapital.com/careers/job/8018853/?gh_jid=8018853",
+    "ats": "greenhouse",
+    "city": "Chicago",
+    "company": "Akuna Capital",
+    "company_id": "akuna-capital",
+    "country": "United States",
+    "date_posted": "2026-07-13",
+    "deadline": null,
+    "description_snippet": "About Akuna: . Akuna Capital is an innovative trading firm with a strong focus on collaboration, cutting-edge technology, data driven solutions, and automation. We specialize in providing liquidity as an options market maker, meaning we are committed to providing competitive...",
+    "eligibility": {
+      "reason": "Mentions an earlier graduation year without saying it is required: \"Graduating by August 2028 .\"",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-18",
+    "id": "2993e66ae4e2a929",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.837045,
+    "lng": -87.684939,
+    "location_label": "Chicago, IL",
+    "location_raw": "Chicago, IL",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Chicago metro",
+      "+25 season: Summer 2027 (weight 1.0)",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 30,
+    "role_category": null,
+    "season": "Summer 2027",
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "8018853",
+        "source_name": "greenhouse",
+        "url": "https://www.akunacapital.com/careers/job/8018853/?gh_jid=8018853"
+      }
+    ],
+    "state": "IL",
+    "status": "open",
+    "tags": [],
+    "title": "Software Engineer Intern - Python, Summer 2027"
+  },
+  {
     "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/Institutional-Custody-Administrator-Intern_R-9495",
     "ats": "workday",
     "city": "Kansas City",
@@ -1822,7 +1969,7 @@
     "first_seen": "2026-11-11",
     "id": "2aea83b9288c8aba",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-16",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -1834,7 +1981,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1848,7 +1995,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Commerce Trust (Summer 2027)"
   },
@@ -2296,7 +2443,7 @@
     "first_seen": "2026-11-02",
     "id": "3486f2b0bdddbe3f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-16",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -2308,7 +2455,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2322,7 +2469,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Sales Enablement (Summer 2027)"
   },
@@ -2497,7 +2644,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "investments",
@@ -2511,7 +2658,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer Intern Equity Research (Buy Side) Chicago"
   },
@@ -2922,7 +3069,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -3302,7 +3449,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -3316,7 +3463,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Early Careers – Product Engineering Developer Associate Intern"
   },
@@ -3822,7 +3969,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -4776,7 +4923,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -4905,7 +5052,7 @@
     "company": "Commerce Bank",
     "company_id": "commerce-bank",
     "country": "United States",
-    "date_posted": "2026-09-21",
+    "date_posted": "2026-11-17",
     "deadline": null,
     "description_snippet": "About Working at Commerce. Building a career here is more than just steps on a ladder. It’s about helping people find financial safety and success, helping businesses thrive, and making sure people and their money are taken care of. And our commitment doesn’t stop there. Our...",
     "eligibility": {
@@ -4916,7 +5063,7 @@
     "first_seen": "2026-11-02",
     "id": "77a7060c4cc102bc",
     "is_remote": false,
-    "last_known_open": "2026-11-04",
+    "last_known_open": null,
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -4928,7 +5075,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -4942,7 +5089,7 @@
       }
     ],
     "state": "MO",
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Intern - Human Resources (Summer 2027)"
   },
@@ -5593,7 +5740,7 @@
       "+10 eligibility: eligible",
       "-30 title: 'marketing' is off-target"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 15,
     "role_category": null,
@@ -5607,7 +5754,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - Commercial Marketing (Summer 2027)"
   },
@@ -5878,7 +6025,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -5927,7 +6074,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -7561,7 +7708,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "accounting",
@@ -7575,7 +7722,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Tax Intern"
   },
@@ -9269,7 +9416,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "investments",
@@ -9283,7 +9430,7 @@
       }
     ],
     "state": null,
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Asset Management Group Undergraduate Intern"
   },
@@ -9647,7 +9794,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -2)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -9683,7 +9830,7 @@
     "first_seen": "2026-11-02",
     "id": "d73e80152f0b63d8",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-16",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -9694,7 +9841,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -9708,7 +9855,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Campus Software Engineer (Intern)"
   },
@@ -10595,7 +10742,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -10878,7 +11025,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
