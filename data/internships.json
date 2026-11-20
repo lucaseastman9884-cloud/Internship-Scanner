@@ -161,7 +161,7 @@
     "first_seen": "2026-11-18",
     "id": "054180d4c155c47b",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-18",
     "lat": 41.404715,
     "lng": -92.917412,
     "location_label": "Pella, IA",
@@ -172,7 +172,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -186,7 +186,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Data Analytics Internship Summer 2027"
   },
@@ -219,7 +219,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -692,7 +692,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -706,7 +706,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -1450,7 +1450,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -1603,7 +1603,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1981,7 +1981,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2455,7 +2455,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2881,7 +2881,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -3069,7 +3069,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -3355,7 +3355,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -32)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -3969,7 +3969,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "banking",
@@ -3983,7 +3983,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Corporate & Institutional Banking Undergraduate Intern – Business Credit"
   },
@@ -4319,6 +4319,53 @@
     "status": "closed",
     "tags": [],
     "title": "Quality Engineer Intern - Summer 2027"
+  },
+  {
+    "apply_url": "https://athene.wd5.myworkdayjobs.com/athene_careers/job/West-Des-Moines-Iowa/Annuity-Product-Support-Intern_R255158",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Athene",
+    "company_id": "athene",
+    "country": "United States",
+    "date_posted": "2026-11-19",
+    "deadline": null,
+    "description_snippet": "We are driven to do more. More for our customers and the financial professionals who offer our products. If you are driven to do more and love the challenge of pursuing more, Athene is your kind of company. You will find we offer more than the basics to create an inclusive and...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-20",
+    "id": "604f22256de5b401",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "West Des Moines, Iowa",
+    "match_reasons": [
+      "-10 role: 'assurance' only in description, which may be company boilerplate",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "athene:R255158",
+        "source_name": "workday",
+        "url": "https://athene.wd5.myworkdayjobs.com/athene_careers/job/West-Des-Moines-Iowa/Annuity-Product-Support-Intern_R255158"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Annuity Product Support Intern"
   },
   {
     "apply_url": "https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8015835003",
@@ -4923,7 +4970,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -6110,7 +6157,7 @@
     "first_seen": "2026-11-04",
     "id": "8c8663c41fb743c9",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-18",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -6121,7 +6168,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -6135,7 +6182,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Internship Program – Public Finance"
   },
@@ -6168,7 +6215,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6683,7 +6730,7 @@
     "first_seen": "2026-11-02",
     "id": "9a1c4426d377a76d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-18",
     "lat": 41.57259,
     "lng": -93.610243,
     "location_label": "Des Moines, IA",
@@ -6694,7 +6741,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -6708,7 +6755,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "IT Intern, Information Security"
   },
@@ -9841,7 +9888,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -10068,7 +10115,7 @@
     "first_seen": "2026-11-02",
     "id": "ddb5d09fc92f5651",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-18",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -10079,7 +10126,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "accounting",
@@ -10093,7 +10140,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Risk and Accounting Advisory Services Consulting Internship"
   },
@@ -10742,7 +10789,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -11025,7 +11072,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
