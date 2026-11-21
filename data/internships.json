@@ -172,7 +172,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -219,7 +219,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -1260,7 +1260,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -1450,7 +1450,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -1591,7 +1591,7 @@
     "first_seen": "2026-11-18",
     "id": "25fae8f431ed114a",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-19",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -1603,7 +1603,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1617,7 +1617,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Data Integration Intern - Summer 2027"
   },
@@ -1981,7 +1981,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1995,7 +1995,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - Commerce Trust (Summer 2027)"
   },
@@ -2455,7 +2455,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2469,7 +2469,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Intern - Sales Enablement (Summer 2027)"
   },
@@ -2834,7 +2834,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -2870,7 +2870,7 @@
     "first_seen": "2026-11-02",
     "id": "4274a2adec47eb90",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-19",
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -2881,7 +2881,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -2895,7 +2895,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Risk Co-op"
   },
@@ -3069,7 +3069,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -3342,7 +3342,7 @@
     "first_seen": "2026-11-02",
     "id": "4ad22115751a02ea",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-19",
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
@@ -3355,7 +3355,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -32)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -3369,7 +3369,7 @@
       }
     ],
     "state": null,
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Marketing Intern - Client Experience"
   },
@@ -3733,7 +3733,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -4843,6 +4843,53 @@
     "title": "Enterprise Strategy & Corporate Development Intern"
   },
   {
+    "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/AI-Intern_R-9796",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "country": "United States",
+    "date_posted": "2026-11-20",
+    "deadline": null,
+    "description_snippet": "UMB’s Artificial Intelligence (AI) team is responsible for driving automation, data-driven decision making and software modernization using AI centric tools. Currently, we leverage machine learning, natural language processing, predictive analytics, and generative AI to enhance...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-21",
+    "id": "701e6c6f0688839d",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "Kansas City MO",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "umb:R-9796",
+        "source_name": "workday",
+        "url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/AI-Intern_R-9796"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "AI Intern"
+  },
+  {
     "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/MN---St-Paul/Bond-and-Specialty-Insurance-Intern--Underwriting-Professional-Development-Program--UPDP-_R-53091",
     "ats": "workday",
     "city": "St. Paul",
@@ -4970,7 +5017,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -5408,7 +5455,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -12)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -6168,7 +6215,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -6204,7 +6251,7 @@
     "first_seen": "2026-11-02",
     "id": "8dc0a8702e3fadef",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-19",
     "lat": 38.889042,
     "lng": -94.690584,
     "location_label": "Overland Park, KS",
@@ -6215,7 +6262,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6229,7 +6276,7 @@
       }
     ],
     "state": "KS",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)"
   },
@@ -6741,7 +6788,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -7279,7 +7326,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -9888,7 +9935,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -9902,7 +9949,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Campus Software Engineer (Intern)"
   },
@@ -10126,7 +10173,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "accounting",
@@ -10789,7 +10836,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -11072,7 +11119,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
