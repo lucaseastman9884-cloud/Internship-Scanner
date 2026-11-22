@@ -372,14 +372,14 @@
       "company": "CIBC",
       "company_id": "cibc",
       "error": null,
-      "excluded": 231,
+      "excluded": 229,
       "exclusion_reasons": {
         "ineligible": 2,
         "location": 1,
-        "not_internship": 228
+        "not_internship": 226
       },
       "fallback_link": null,
-      "fetched": 232,
+      "fetched": 230,
       "kept": 1,
       "status": "ok",
       "warnings": []
@@ -480,18 +480,18 @@
       "company": "BMO",
       "company_id": "bmo",
       "error": null,
-      "excluded": 500,
+      "excluded": 498,
       "exclusion_reasons": {
         "ineligible": 1,
         "location": 8,
-        "not_internship": 491
+        "not_internship": 489
       },
       "fallback_link": null,
-      "fetched": 502,
+      "fetched": 500,
       "kept": 2,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 596 results (config cap)"
+        "search 'intern' stopped at 500 of 586 results (config cap)"
       ]
     },
     {
@@ -499,12 +499,12 @@
       "company": "Fifth Third",
       "company_id": "fifth-third",
       "error": null,
-      "excluded": 370,
+      "excluded": 369,
       "exclusion_reasons": {
-        "not_internship": 370
+        "not_internship": 369
       },
       "fallback_link": null,
-      "fetched": 370,
+      "fetched": 369,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -527,15 +527,15 @@
       "company": "CliftonLarsonAllen",
       "company_id": "cliftonlarsonallen",
       "error": null,
-      "excluded": 164,
+      "excluded": 160,
       "exclusion_reasons": {
-        "location": 17,
+        "location": 15,
         "location_unknown": 1,
-        "not_internship": 145,
+        "not_internship": 143,
         "season_distance": 1
       },
       "fallback_link": null,
-      "fetched": 164,
+      "fetched": 160,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -818,12 +818,12 @@
       "company": "Northern Trust",
       "company_id": "northern-trust",
       "error": null,
-      "excluded": 352,
+      "excluded": 350,
       "exclusion_reasons": {
-        "not_internship": 352
+        "not_internship": 350
       },
       "fallback_link": null,
-      "fetched": 352,
+      "fetched": 350,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -959,14 +959,14 @@
       "company": "BlackRock",
       "company_id": "blackrock",
       "error": null,
-      "excluded": 147,
+      "excluded": 146,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "location": 5,
-        "not_internship": 141
+        "not_internship": 140
       },
       "fallback_link": null,
-      "fetched": 147,
+      "fetched": 146,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -988,7 +988,7 @@
       "kept": 4,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1133 results (config cap)"
+        "search 'intern' stopped at 500 of 1129 results (config cap)"
       ]
     },
     {
@@ -996,18 +996,18 @@
       "company": "PwC",
       "company_id": "pwc",
       "error": null,
-      "excluded": 552,
+      "excluded": 553,
       "exclusion_reasons": {
         "excluded_keyword": 1,
         "location_unknown": 18,
-        "not_internship": 533
+        "not_internship": 534
       },
       "fallback_link": null,
-      "fetched": 552,
+      "fetched": 553,
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 2034 results (config cap)"
+        "search 'intern' stopped at 500 of 2037 results (config cap)"
       ]
     },
     {
@@ -1055,7 +1055,7 @@
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1210 results (config cap)"
+        "search 'intern' stopped at 500 of 1202 results (config cap)"
       ]
     },
     {
@@ -1110,13 +1110,13 @@
       "company": "Sun Life",
       "company_id": "sun-life",
       "error": null,
-      "excluded": 118,
+      "excluded": 116,
       "exclusion_reasons": {
         "location": 5,
-        "not_internship": 113
+        "not_internship": 111
       },
       "fallback_link": null,
-      "fetched": 118,
+      "fetched": 116,
       "kept": 0,
       "status": "ok",
       "warnings": []
@@ -1142,15 +1142,15 @@
       "company": "Citigroup",
       "company_id": "citigroup",
       "error": null,
-      "excluded": 551,
+      "excluded": 550,
       "exclusion_reasons": {
         "excluded_keyword": 2,
         "location": 14,
         "location_unknown": 71,
-        "not_internship": 464
+        "not_internship": 463
       },
       "fallback_link": null,
-      "fetched": 551,
+      "fetched": 550,
       "kept": 0,
       "status": "ok",
       "warnings": [
@@ -1162,18 +1162,18 @@
       "company": "Capital One",
       "company_id": "capital-one",
       "error": null,
-      "excluded": 768,
+      "excluded": 767,
       "exclusion_reasons": {
         "excluded_keyword": 3,
         "location": 2,
-        "not_internship": 763
+        "not_internship": 762
       },
       "fallback_link": null,
-      "fetched": 768,
+      "fetched": 767,
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 1208 results (config cap)"
+        "search 'intern' stopped at 500 of 1207 results (config cap)"
       ]
     },
     {
@@ -1275,7 +1275,7 @@
       "kept": 0,
       "status": "ok",
       "warnings": [
-        "search 'intern' stopped at 500 of 721 results (config cap)"
+        "search 'intern' stopped at 500 of 714 results (config cap)"
       ]
     },
     {
@@ -1329,13 +1329,13 @@
       "company": "Hy-Vee",
       "company_id": "hy-vee",
       "error": null,
-      "excluded": 77,
+      "excluded": 78,
       "exclusion_reasons": {
-        "location": 2,
-        "not_internship": 75
+        "location": 1,
+        "not_internship": 77
       },
       "fallback_link": null,
-      "fetched": 93,
+      "fetched": 94,
       "kept": 16,
       "status": "ok",
       "warnings": []
@@ -2017,11 +2017,9 @@
     }
   ],
   "email": {
-    "ids_first_seen_on_sent_date": [
-      "701e6c6f0688839d"
-    ],
-    "last_sent_at": "2026-11-21T12:37:46+00:00",
-    "sent_date": "2026-11-21"
+    "ids_first_seen_on_sent_date": [],
+    "last_sent_at": "2026-11-22T12:37:40+00:00",
+    "sent_date": "2026-11-22"
   },
   "errors": [],
   "geocoding": {
@@ -2048,9 +2046,9 @@
     "ci.wd3.myworkdayjobs.com": 13,
     "cibc.wd3.myworkdayjobs.com": 20,
     "citi.wd5.myworkdayjobs.com": 45,
-    "cliftonlarsonallen.wd115.myworkdayjobs.com": 17,
+    "cliftonlarsonallen.wd115.myworkdayjobs.com": 16,
     "cna.wd1.myworkdayjobs.com": 14,
-    "commercebank.wd1.myworkdayjobs.com": 14,
+    "commercebank.wd1.myworkdayjobs.com": 12,
     "emcins.wd5.myworkdayjobs.com": 10,
     "fifththird.wd5.myworkdayjobs.com": 23,
     "guggenheim.wd1.myworkdayjobs.com": 5,
@@ -2059,7 +2057,7 @@
     "hq.wd12.myworkdayjobs.com": 7,
     "hyvee.wd1.myworkdayjobs.com": 27,
     "kemper.wd5.myworkdayjobs.com": 5,
-    "mmc.wd1.myworkdayjobs.com": 58,
+    "mmc.wd1.myworkdayjobs.com": 59,
     "morningstar.wd5.myworkdayjobs.com": 5,
     "ntrs.wd1.myworkdayjobs.com": 22,
     "pipersandler.wd501.myworkdayjobs.com": 7,
@@ -2080,8 +2078,8 @@
     "vermeer.wd5.myworkdayjobs.com": 16,
     "wintrust.wd1.myworkdayjobs.com": 16
   },
-  "run_finished": "2026-11-21T12:37:46+00:00",
-  "run_started": "2026-11-21T12:12:42+00:00",
+  "run_finished": "2026-11-22T12:37:40+00:00",
+  "run_started": "2026-11-22T12:12:32+00:00",
   "source_health": {
     "ashby": {
       "ok": 1
@@ -2101,24 +2099,24 @@
     "companies_failed": 0,
     "companies_fetched_ok": 61,
     "companies_live": 61,
-    "database_open": 148,
+    "database_open": 144,
     "database_total": 244,
-    "excluded": 9917,
-    "fetched": 10064,
+    "excluded": 9903,
+    "fetched": 10050,
     "kept": 147,
     "listings_after": 244,
-    "listings_before": 243,
-    "listings_new": 1,
-    "listings_updated": 143,
+    "listings_before": 244,
+    "listings_new": 0,
+    "listings_updated": 144,
     "location_unknown_open": 11,
     "open_at_or_above_min_score": 39,
     "remote_iowa_open": 0,
     "status_changes": {
       "check_failed": 0,
-      "closed": 3,
+      "closed": 6,
       "filtered": 11,
-      "missed": 22,
-      "possibly_closed": 14,
+      "missed": 19,
+      "possibly_closed": 13,
       "verified_open": 0
     }
   },

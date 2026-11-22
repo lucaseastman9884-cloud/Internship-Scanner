@@ -172,7 +172,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -219,7 +219,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -233,7 +233,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Platform Engineer Intern, Summer 2027"
   },
@@ -1247,7 +1247,7 @@
     "first_seen": "2026-11-02",
     "id": "20c5a999968ea46b",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-20",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -1260,7 +1260,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -1274,7 +1274,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Internship Program (Cybersecurity)"
   },
@@ -1450,7 +1450,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -1464,7 +1464,7 @@
       }
     ],
     "state": "KS",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Underwriting Intern - South Central Region (Wichita)"
   },
@@ -1603,7 +1603,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -2823,7 +2823,7 @@
     "first_seen": "2026-11-04",
     "id": "4239be029cc738ea",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-20",
     "lat": 41.698795,
     "lng": -91.5968,
     "location_label": "Coralville, IA",
@@ -2834,7 +2834,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -2848,7 +2848,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -2881,7 +2881,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -3069,7 +3069,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -3083,7 +3083,7 @@
       }
     ],
     "state": "MN",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Engineering Internship - Summer 2027"
   },
@@ -3355,7 +3355,7 @@
       "-30 title: 'marketing' is off-target",
       "score limited to 0 (raw total -32)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -3720,7 +3720,7 @@
     "first_seen": "2026-11-02",
     "id": "514bf856cf4d3e4f",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-20",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -3733,7 +3733,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -3747,7 +3747,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Internship Program (AI Engineering)"
   },
@@ -5017,7 +5017,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -5031,7 +5031,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Oliver Wyman Actuarial - Life Internship - Summer 2027"
   },
@@ -5442,7 +5442,7 @@
     "first_seen": "2026-11-02",
     "id": "7c39352ac74a0989",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-20",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -5455,7 +5455,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -12)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -5469,7 +5469,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Technology Internship Program (Data Analytics)"
   },
@@ -6215,7 +6215,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 85,
     "role_category": "corporate_finance",
@@ -6262,7 +6262,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6788,7 +6788,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 13,
     "role_category": null,
@@ -7326,7 +7326,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7340,7 +7340,7 @@
       }
     ],
     "state": "MO",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "2027 Summer Intern - Commercial Real Estate"
   },
@@ -10173,7 +10173,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "accounting",
@@ -10836,7 +10836,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "corporate_finance",
@@ -10850,7 +10850,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Finance Intern - Summer 2027"
   },
@@ -11119,7 +11119,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -11133,7 +11133,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)"
   },
