@@ -6,7 +6,7 @@
     "company": "Cboe Global Markets",
     "company_id": "cboe-global-markets",
     "country": "United States",
-    "date_posted": "2026-10-12",
+    "date_posted": "2026-11-24",
     "deadline": null,
     "description_snippet": "Job Description:. Building trusted markets — powered by our people. At Cboe Global Markets, we inspire our people to solve complex challenges together because what we do matters. We provide the financial infrastructure that powers the global economy. As a leading provider of...",
     "eligibility": {
@@ -363,7 +363,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -7)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -377,7 +377,7 @@
       }
     ],
     "state": "MO",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Legal Intern"
   },
@@ -634,7 +634,7 @@
     "first_seen": "2026-11-02",
     "id": "0c8474e020e82cc3",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-23",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -645,7 +645,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -659,7 +659,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Oliver Wyman Actuarial - Internship - Summer 2027"
   },
@@ -1260,7 +1260,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -1274,7 +1274,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Technology Internship Program (Cybersecurity)"
   },
@@ -1450,7 +1450,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "insurance_risk",
@@ -1464,7 +1464,7 @@
       }
     ],
     "state": "KS",
-    "status": "closed",
+    "status": "filtered",
     "tags": [],
     "title": "Underwriting Intern - South Central Region (Wichita)"
   },
@@ -2834,7 +2834,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -2848,7 +2848,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Retail Pharmacy Intern"
   },
@@ -3117,7 +3117,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3733,7 +3733,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -17)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -3747,7 +3747,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Technology Internship Program (AI Engineering)"
   },
@@ -5455,7 +5455,7 @@
       "-30 title: 'technology' is off-target",
       "score limited to 0 (raw total -12)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -5469,7 +5469,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Technology Internship Program (Data Analytics)"
   },
@@ -5596,7 +5596,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6072,7 +6072,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -7326,7 +7326,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 25,
     "role_category": null,
@@ -7340,7 +7340,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "2027 Summer Intern - Commercial Real Estate"
   },
@@ -7584,6 +7584,53 @@
     "status": "open",
     "tags": [],
     "title": "Retail Pharmacy Intern"
+  },
+  {
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Instructional-Design-Intern---Spring-Summer-2027_R251139-1",
+    "ats": "workday",
+    "city": "West Des Moines",
+    "company": "Hy-Vee",
+    "company_id": "hy-vee",
+    "country": "United States",
+    "date_posted": "2026-11-24",
+    "deadline": null,
+    "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-25",
+    "id": "a773f2b66d9a480d",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 41.549937,
+    "lng": -93.781351,
+    "location_label": "West Des Moines, IA",
+    "location_raw": "Corporate Office, Westown Pkwy., West Des Moines, IA",
+    "match_reasons": [
+      "-10 role: 'assurance' only in description, which may be company boilerplate",
+      "+20 location: Des Moines metro",
+      "+8 season: not stated (title names more than one season (Spring, Summer), so none was picked)",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 18,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "hyvee:R251139-1",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Instructional-Design-Intern---Spring-Summer-2027_R251139-1"
+      }
+    ],
+    "state": "IA",
+    "status": "open",
+    "tags": [],
+    "title": "Instructional Design Intern - Spring/Summer 2027"
   },
   {
     "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Southfield/XMLNAME-2027-Finance-and-Accounting-Advisory-Services-Consulting-Internship_JR-03095",
@@ -7871,6 +7918,53 @@
     "status": "open",
     "tags": [],
     "title": "Retail Pharmacy Intern"
+  },
+  {
+    "apply_url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/IT-Quantum-Intern_R-9840",
+    "ats": "workday",
+    "city": "Kansas City",
+    "company": "UMB Financial",
+    "company_id": "umb-financial",
+    "country": "United States",
+    "date_posted": "2026-11-24",
+    "deadline": null,
+    "description_snippet": "UMB’s Information Security and Technology teams are responsible for assessing and advancing the bank’s readiness for quantum-related cybersecurity risks. This work includes inventorying digital certificates and cryptographic dependencies, prioritizing applications and data by...",
+    "eligibility": {
+      "reason": "No season or graduation year stated",
+      "status": "unclear"
+    },
+    "filtered_reason": null,
+    "first_seen": "2026-11-25",
+    "id": "b09804d3ba6a2f88",
+    "is_remote": false,
+    "last_known_open": null,
+    "lat": 39.125155,
+    "lng": -94.550313,
+    "location_label": "Kansas City, MO",
+    "location_raw": "Kansas City MO",
+    "match_reasons": [
+      "-15 role: no target role keyword found",
+      "+20 location: Kansas City metro",
+      "+8 season: not stated",
+      "+0 eligibility: unclear"
+    ],
+    "missed_runs": 0,
+    "recurring": false,
+    "relevance_score": 13,
+    "role_category": null,
+    "season": null,
+    "season_year": null,
+    "sources": [
+      {
+        "source_job_id": "umb:R-9840",
+        "source_name": "workday",
+        "url": "https://umb.wd1.myworkdayjobs.com/UMBExternal/job/Kansas-City-MO/IT-Quantum-Intern_R-9840"
+      }
+    ],
+    "state": "MO",
+    "status": "open",
+    "tags": [],
+    "title": "IT Quantum Intern"
   },
   {
     "apply_url": "https://plantemoran.wd1.myworkdayjobs.com/pmexternalcareers/job/Chicago-Riverside-Plaza/XMLNAME-2027-Audit-or-Tax-Intern_JR-00430",
@@ -9181,7 +9275,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -9358,7 +9452,7 @@
     "first_seen": "2026-11-02",
     "id": "cb07da7ad2494676",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-23",
     "lat": 41.964226,
     "lng": -91.679164,
     "location_label": "Cedar Rapids, IA",
@@ -9369,7 +9463,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9383,7 +9477,7 @@
       }
     ],
     "state": "IA",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
@@ -9840,7 +9934,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -9854,7 +9948,7 @@
       }
     ],
     "state": "MN",
-    "status": "filtered",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Human Resources Leadership Development Program Internship - Summer 2027"
   },
@@ -10789,7 +10883,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
