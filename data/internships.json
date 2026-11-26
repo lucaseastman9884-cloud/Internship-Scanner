@@ -363,7 +363,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -7)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -598,7 +598,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -645,7 +645,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -1580,7 +1580,7 @@
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-11-17",
+    "date_posted": "2026-11-25",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
     "eligibility": {
@@ -1591,7 +1591,7 @@
     "first_seen": "2026-11-18",
     "id": "25fae8f431ed114a",
     "is_remote": false,
-    "last_known_open": "2026-11-19",
+    "last_known_open": null,
     "lat": 41.549937,
     "lng": -93.781351,
     "location_label": "West Des Moines, IA",
@@ -1603,7 +1603,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -1617,7 +1617,7 @@
       }
     ],
     "state": "IA",
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Data Integration Intern - Summer 2027"
   },
@@ -3105,7 +3105,7 @@
     "first_seen": "2026-11-02",
     "id": "44c6c7bf8ec85f08",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-24",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -3117,7 +3117,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -3131,7 +3131,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Summer 2027 Intern - Economic Research - Chicago"
   },
@@ -5585,7 +5585,7 @@
     "first_seen": "2026-11-02",
     "id": "7db8349e0b4eed2d",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-24",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -5596,7 +5596,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -5610,7 +5610,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Bond and Specialty Insurance Intern: Underwriting Professional Development Program"
   },
@@ -6060,7 +6060,7 @@
     "first_seen": "2026-11-02",
     "id": "89ffdd3c6f48a5b7",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-24",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -6072,7 +6072,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -6086,7 +6086,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Intern - Commercial Payments (Summer 2027)"
   },
@@ -9264,7 +9264,7 @@
     "first_seen": "2026-11-02",
     "id": "c87a7c18eba1e9ec",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-24",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -9275,7 +9275,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -9289,7 +9289,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Strategy & Operations Internship Summer 2027 (Hybrid)"
   },
@@ -9463,7 +9463,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9557,7 +9557,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -9576,15 +9576,15 @@
     "title": "Corporate Legal Intern"
   },
   {
-    "apply_url": "https://pnc.wd5.myworkdayjobs.com/External/job/PA---Pittsburgh-15222/Asset-Management-Group-Undergraduate-Intern_R230880-1",
+    "apply_url": "https://pnc.wd5.myworkdayjobs.com/External/job/Phoenix---East-Camelback-Exec-Suite-AZ014/Asset-Management-Group-Undergraduate-Intern_R242550-1",
     "ats": "workday",
     "city": "Franklin Building",
     "company": "PNC",
     "company_id": "pnc",
     "country": null,
-    "date_posted": "2026-11-10",
+    "date_posted": "2026-11-25",
     "deadline": null,
-    "description_snippet": ". Position Overview. At PNC, our people are our greatest differentiator and competitive advantage in the markets we serve. We are all united in delivering the best experience for our customers. We work together each day to foster an inclusive workplace culture where all of our...",
+    "description_snippet": ". Overview. At PNC, our people are our greatest differentiator and competitive advantage in the markets we serve. We are all united in delivering the best experience for our customers. We work together each day to foster an inclusive workplace culture where all of our employees...",
     "eligibility": {
       "reason": "No season or graduation year stated",
       "status": "unclear"
@@ -9593,18 +9593,18 @@
     "first_seen": "2026-11-11",
     "id": "ce4663d5bf2ad8b1",
     "is_remote": false,
-    "last_known_open": "2026-11-12",
+    "last_known_open": null,
     "lat": null,
     "lng": null,
     "location_label": "Location unknown",
-    "location_raw": "PA - Pittsburgh (15222); PNC Center - Cincinnati (OHA45); 12th and Midtown Atlanta (GA114); Phoenix - East Camelback Exec Suite (AZ014); PNC Tower - Louisville (KY012); PNC Place (DC037); PNC Center - Cleveland (OH001); PNC Center - Troy (MIJ40); PNC Harborside (MD124); Downtown Orlando Orange Avenue (FL361); Los Angeles - Constellation Blvd (CA314); San Francisco - Mission (CA295); Downtown Fort Lauderdale (FL145); The Plaza at Coral Gables (FL422); The Tower at PNC Plaza (PAA86); Houston Plaza (TX334); Charlotte Piedmont Center (NC037); Denver - 1144 15th Street (CO034); PNC Bank N.A. (PA375); Columbus Plaza Main Office (OH124); Tampa City Center (FL404); PNC Dallas (TX135); Franklin Building - Chicago (IL016); PNC Plaza - Raleigh (NC207); Two Tower Center (NJ260)",
+    "location_raw": "Phoenix - East Camelback Exec Suite (AZ014); Franklin Building - Chicago (IL016); PNC Dallas (TX135)",
     "match_reasons": [
       "+40 role: 'asset management' in title (investments)",
       "+0 location: unknown",
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 5,
+    "missed_runs": 0,
     "recurring": false,
     "relevance_score": 48,
     "role_category": "investments",
@@ -9615,10 +9615,15 @@
         "source_job_id": "pnc:R230880-1",
         "source_name": "workday",
         "url": "https://pnc.wd5.myworkdayjobs.com/External/job/PA---Pittsburgh-15222/Asset-Management-Group-Undergraduate-Intern_R230880-1"
+      },
+      {
+        "source_job_id": "pnc:R242550-1",
+        "source_name": "workday",
+        "url": "https://pnc.wd5.myworkdayjobs.com/External/job/Phoenix---East-Camelback-Exec-Suite-AZ014/Asset-Management-Group-Undergraduate-Intern_R242550-1"
       }
     ],
     "state": null,
-    "status": "closed",
+    "status": "open",
     "tags": [],
     "title": "Asset Management Group Undergraduate Intern"
   },
@@ -9934,7 +9939,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -10883,7 +10888,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
