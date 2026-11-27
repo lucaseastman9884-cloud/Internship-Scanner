@@ -363,7 +363,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -7)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -587,7 +587,7 @@
     "first_seen": "2026-11-02",
     "id": "09ba5b3f977ca623",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-25",
     "lat": 41.837045,
     "lng": -87.684939,
     "location_label": "Chicago, IL",
@@ -598,7 +598,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -612,7 +612,7 @@
       }
     ],
     "state": "IL",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Actuarial Intern – Summer 2027"
   },
@@ -645,7 +645,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -3117,7 +3117,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5596,7 +5596,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6072,7 +6072,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9275,7 +9275,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -9463,7 +9463,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9546,7 +9546,7 @@
     "first_seen": "2026-11-02",
     "id": "cd4ed4d96767215e",
     "is_remote": false,
-    "last_known_open": null,
+    "last_known_open": "2026-11-25",
     "lat": 39.125155,
     "lng": -94.550313,
     "location_label": "Kansas City, MO",
@@ -9557,7 +9557,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 1,
+    "missed_runs": 2,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -9571,7 +9571,7 @@
       }
     ],
     "state": "MO",
-    "status": "open",
+    "status": "possibly_closed",
     "tags": [],
     "title": "Corporate Legal Intern"
   },
@@ -9939,7 +9939,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -10888,7 +10888,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -10902,7 +10902,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Compensation Intern - Summer 2027"
   },
