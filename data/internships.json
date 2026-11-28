@@ -363,7 +363,7 @@
       "+0 eligibility: unclear",
       "score limited to 0 (raw total -7)"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 0,
     "role_category": null,
@@ -377,7 +377,7 @@
       }
     ],
     "state": "MO",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Legal Intern"
   },
@@ -598,7 +598,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -645,7 +645,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 95,
     "role_category": "insurance_risk",
@@ -659,7 +659,7 @@
       }
     ],
     "state": "IL",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Oliver Wyman Actuarial - Internship - Summer 2027"
   },
@@ -3117,7 +3117,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -5111,7 +5111,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 0,
+    "missed_runs": 1,
     "recurring": false,
     "relevance_score": 8,
     "role_category": null,
@@ -5596,7 +5596,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 68,
     "role_category": "insurance_risk",
@@ -6072,7 +6072,7 @@
       "+10 eligibility: eligible",
       "score capped at 35: no role category matched (raw total 40)"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9275,7 +9275,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 3,
+    "missed_runs": 4,
     "recurring": false,
     "relevance_score": 30,
     "role_category": null,
@@ -9463,7 +9463,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 35,
     "role_category": null,
@@ -9477,7 +9477,7 @@
       }
     ],
     "state": "IA",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Client Service Intern - Summer 2027"
   },
@@ -9557,7 +9557,7 @@
       "+8 season: not stated",
       "+0 eligibility: unclear"
     ],
-    "missed_runs": 2,
+    "missed_runs": 3,
     "recurring": false,
     "relevance_score": 18,
     "role_category": null,
@@ -9939,7 +9939,7 @@
       "+25 season: Summer 2027 (weight 1.0)",
       "+10 eligibility: eligible"
     ],
-    "missed_runs": 4,
+    "missed_runs": 5,
     "recurring": false,
     "relevance_score": 20,
     "role_category": null,
@@ -9953,7 +9953,7 @@
       }
     ],
     "state": "MN",
-    "status": "possibly_closed",
+    "status": "closed",
     "tags": [],
     "title": "Human Resources Leadership Development Program Internship - Summer 2027"
   },
@@ -10434,13 +10434,13 @@
     "title": "2027 Summer Tax Internship - West Des Moines"
   },
   {
-    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-3-Park-Avenue-Des-Moines-IA/Pharmacy-Intern_R259576",
+    "apply_url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-3-Park-Avenue-Des-Moines-IA/Pharmacy-Intern_R263559",
     "ats": "workday",
     "city": "Des Moines",
     "company": "Hy-Vee",
     "company_id": "hy-vee",
     "country": "United States",
-    "date_posted": "2026-10-29",
+    "date_posted": "2026-11-27",
     "deadline": null,
     "description_snippet": "Additional Considerations (if any): . - . At Hy-Vee our people are our strength. We promise “a helpful smile in every aisle” and those smiles can only come from a workforce that is fully engaged and committed to supporting our customers and each other. Job Description:. Job...",
     "eligibility": {
@@ -10473,6 +10473,11 @@
         "source_job_id": "hyvee:R259576",
         "source_name": "workday",
         "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-3-Park-Avenue-Des-Moines-IA/Pharmacy-Intern_R259576"
+      },
+      {
+        "source_job_id": "hyvee:R263559",
+        "source_name": "workday",
+        "url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Des-Moines-3-Park-Avenue-Des-Moines-IA/Pharmacy-Intern_R263559"
       }
     ],
     "state": "IA",
